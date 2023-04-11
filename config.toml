@@ -1,6 +1,9 @@
 # The URL the site will be built for
 base_url = "https://lynndotpy.xyz"
 
+# Theme to use
+theme = "terminimal"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
