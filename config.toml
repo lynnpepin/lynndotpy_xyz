@@ -22,8 +22,8 @@ logo_text = "lynndotpy.xyz"
 author = "Lynn Pepin"
 
 # One of: blue, green, orange, pink, red, dark (background)
-accent_color = "green"
-background_color = "orange" 
+accent_color = "light"
+background_color = "light" 
 #logo_home_link = "/take/me/away!" # TODO
 
 # menu is enabled by adding menu_items (optional)
@@ -34,15 +34,15 @@ menu_items = [
     
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
-    #{name = "tags", url = "$BASE_URL/tags"},
-    #{name = "archive", url = "$BASE_URL/archive"},
-    #{name = "about me", url = "$BASE_URL/about"},
+    {name = "tags", url = "$BASE_URL/tags"},
+    {name = "archive", url = "$BASE_URL/archive"},
+    {name = "about me", url = "$BASE_URL/about"},
     
     # set newtab to true to make the link open in new tab
-    #{name = "github", url = "https://github.com/lynnpepin", newtab = true},
-    #{name = "gitlab", url = "https://gitlab.com/lynnpepin", newtab = true},
+    {name = "github", url = "https://github.com/lynnpepin", newtab = true},
+    {name = "gitlab", url = "https://gitlab.com/lynnpepin", newtab = true},
 
-    #{name = "mastodon", url = "https://mastodon.social/@lynndotpy", newtab = true},
+    {name = "mastodon", url = "https://mastodon.social/@lynndotpy", newtab = true},
 ]
 
 
