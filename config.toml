@@ -22,7 +22,7 @@ logo_text = "lynndotpy.xyz"
 author = "Lynn Pepin"
 
 # One of: blue, green, orange, pink, red, dark (background)
-accent_color = "auto"
+accent_color = "lynn-auto"
 background_color = "auto" 
 #logo_home_link = "/take/me/away!" # TODO
 

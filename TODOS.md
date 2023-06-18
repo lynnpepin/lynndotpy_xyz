@@ -1,10 +1,9 @@
-- [ ] Fork terminimal and create light themes
+- [x] Fork terminimal and create light themes
 
-
-- [ ] Light theme
+- [x] Light theme
   - [x] Create new `background_X.scss`, `X.scss`
-  - [ ] Code to enable dark/light responsivity
-  - [ ] Fun mousover effects
+  - [x] Code to enable dark/light responsivity
+  - [x] Fun mousover effects
 - [ ] Blog index homepage
 - [ ] Fix images
 - [ ] Copy about
