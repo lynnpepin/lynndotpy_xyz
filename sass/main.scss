@@ -124,6 +124,7 @@ code {
   padding: 1px 6px;
   margin: 0 2px;
   font-size: .95rem;
+  border-radius: 4px;
 }
 
 pre {
@@ -133,6 +134,7 @@ pre {
   overflow: auto;
   border-top: 1px solid rgba(255, 255, 255, .1);
   border-bottom: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 4px;
 
   @media (max-width: $phone-max-width) {
     white-space: pre-wrap;

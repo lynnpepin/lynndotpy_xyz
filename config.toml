@@ -8,8 +8,6 @@ compile_sass = true
 # Optional: enable tags
 taxonomies = [
     {name = "tags"},
-    {paginate_path = "posts/page"},
-    {default_section_path = "posts"}
 ]
 
 # Code highlighting
@@ -31,18 +29,17 @@ background_color = "auto"
 menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
-    {name = "blog", url = "$BASE_URL"},
+    #{name = "blog", url = "$BASE_URL/posts"},
     
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
-    {name = "tags", url = "$BASE_URL/tags"},
     {name = "archive", url = "$BASE_URL/archive"},
-    {name = "about me", url = "$BASE_URL/about"},
+    {name = "tags", url = "$BASE_URL/tags"},
+    {name = "about", url = "$BASE_URL/about"},
     
     # set newtab to true to make the link open in new tab
     {name = "github", url = "https://github.com/lynnpepin", newtab = true},
     {name = "gitlab", url = "https://gitlab.com/lynnpepin", newtab = true},
-
     {name = "mastodon", url = "https://mastodon.social/@lynndotpy", newtab = true},
 ]
 
@@ -54,7 +51,7 @@ enable_post_view_navigation = true
 # The text shown at the bottom of a post,
 # before earlier/later post links.
 # Defaults to "Thanks for reading! Read other posts?"
-post_view_navigation_prompt = "Thanks for reading! Read other posts?"
+post_view_navigation_prompt = ""#"Thanks for reading! Read other posts?"
 
 # Use full Hack character set, not just a subset.
 # Switch this to true if you need full unicode support.

@@ -57,6 +57,8 @@
     <div class="content">
         {% block content %}
         <div class="posts">
+            <!-- This points `index.html` to `posts` -->
+            {% set section = get_section(path="posts/_index.md") %}
             {%- if paginator %}
                 {%- set show_pages = paginator.pages -%}
             {% else %}
@@ -64,7 +66,6 @@
             {% endif -%}
 
             {%- for page in show_pages %}
-            
                 <div class="post on-list">
                     {{ post_macros::header(page=page) }}
                     {{ post_macros::content(page=page, summary=true) }}

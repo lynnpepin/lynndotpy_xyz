@@ -8,7 +8,7 @@
     <div class="post">
         <h1 class="post-title">{{ page.title }}</h1>
 
-        {% set section = get_section(path="_index.md") %}
+        {% set section = get_section(path="posts/_index.md") %}
 
         {{ post_macros::list_posts(pages=section.pages) }}
     </div>

@@ -1,8 +1,8 @@
 :root {
   @media (prefers-color-scheme: dark) {
     --accent: oklch(80% 0.4 90);
-    --accent-alpha-70: oklch(80% 0.4 90 .7);
-    --accent-alpha-20: oklch(80% 0.4 90 .2);
+    --accent-alpha-70: oklch(80% 0.4 90 / .70);
+    --accent-alpha-20: oklch(80% 0.4 90 / .20);
 
     div.logo {
       color: black;
@@ -16,8 +16,8 @@
   @media (prefers-color-scheme: light) {
 
     --accent: oklch(0.675 0.375 90);
-    --accent-alpha-70: oklch(0.675 0.375 90);
-    --accent-alpha-20: oklch(64% 0.4 90);
+    --accent-alpha-70: oklch(0.675 0.375 90 / .70);
+    --accent-alpha-20: oklch(0.675 0.375 90 / .20);
 
     div.logo {
       color: white;
