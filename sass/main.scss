@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 h2 {
@@ -149,10 +149,11 @@ pre {
 }
 
 blockquote {
-  border-top: 1px solid var(--accent);
-  border-bottom: 1px solid var(--accent);
-  margin: 40px 0;
-  padding: 25px;
+  //border-top: 1px solid var(--accent);
+  //border-bottom: 1px solid var(--accent);
+  //border-left: 1px solid var(--accent);
+  margin: 0px 0px 0px 10px; //40px 0;
+  padding: 0px 0px 0px 10px; //25px;
 
   @media (max-width: $phone-max-width) {
     padding-right: 0;
@@ -187,6 +188,18 @@ blockquote {
     color: var(--accent);
   }
 }
+
+/*
+blockquote blockquote {
+  p:before {
+    content: '>>';
+    display: block;
+    position: absolute;
+    left: -25px;
+    color: var(--accent);
+  }
+}
+*/
 
 table {
   table-layout: fixed;

@@ -5,6 +5,8 @@ title = "lynndotpy.xyz"
 # Sass compilation is required
 compile_sass = true
 
+generate_feed = true
+
 # Optional: enable tags
 taxonomies = [
     {name = "tags"},
@@ -19,6 +21,8 @@ highlight_theme = "boron"
 # Put all your custom variables here
 logo_text = "lynndotpy.xyz"
 author = "Lynn Pepin"
+copyright_html = "© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme </a> by  pawroman, panr"
+
 
 # One of: blue, green, orange, pink, red, dark (background)
 accent_color = "lynn-auto"
@@ -36,6 +40,7 @@ menu_items = [
     {name = "archive", url = "$BASE_URL/archive"},
     {name = "tags", url = "$BASE_URL/tags"},
     {name = "about", url = "$BASE_URL/about"},
+    {name = "projects", url = "$BASE_URL/projects"},
     
     # set newtab to true to make the link open in new tab
     {name = "github", url = "https://github.com/lynnpepin", newtab = true},

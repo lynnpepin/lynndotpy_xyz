@@ -23,9 +23,8 @@
       color: white;
       font-weight: bold;
     }
-
   
-    --background: oklch(0.99 0.005 240);
+    --background: oklch(0.99 0.002 240);
     --color: #201030; 
     --border-color: rgba(0,0,16,.125);
   }
@@ -37,5 +36,9 @@
   a:hover {
     color: oklch(0.675 0.5 90);
     text-shadow: 0 0 4px oklch(0.875 0.5 60 / 0.25);
+  }
+
+  h1, h2, h3, h4, h5, h6, h1.post-title {
+    text-shadow: 1px 2px 0px var(--accent-alpha-20);
   }
 }

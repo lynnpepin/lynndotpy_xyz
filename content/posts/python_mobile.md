@@ -59,7 +59,13 @@ print("Functions `help(...)` and `quit()` available as `H(...)` and `Q()`.")
 
 Here is a real-time video of the script in action, used for writing a Monte Carlo simulation to estimate the value of Pi. 
 
-![A screenrecording ](../images/ooopy.webm "asdf"){ width=240px }
+
+<!-- ![A screenrecording ](../images/ooopy.webm){ width=240px } -->
+<!-- centered video -->
+<video controls width="360px" style="margin: 0 auto; display: block;" preload="metadata">
+  <source src="../images/ooopy.webm" type="video/webm" > </source>
+  <p> Your browser doesn't support HTML5 video. <a href="../images/ooopy.webm">Here is a direct link instead.</a></p>
+</video>
 
 ---
 

@@ -23,10 +23,9 @@
   }
 
   .copyright {
-    display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: var(--light-color-secondary);
 
     &--user {

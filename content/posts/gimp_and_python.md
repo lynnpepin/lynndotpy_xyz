@@ -20,8 +20,6 @@ tags = ["how-to", "project"]
 
 <!-- more -->
 
----
-
 # gimp is a good image editor, and you can automate it with python
 
 For those unfamiliar with [GIMP (gimp.org)](https://www.gimp.org/), it is a free and open-source image editor, and one of my favorite tools.

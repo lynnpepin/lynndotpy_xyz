@@ -37,11 +37,6 @@ But there were a glorious two months of 2022 where I was able to happily indulge
 
 # I'm still browsing Arxiv-Sanity for Machine Learning stuff, but I still can't keep up
 
-> ![A blue, messy grid that resembles a map. Generated with the prompt 'Boston commuter rail map, PDF, 2017'](../images/boston_stable_diffusion_compressed.png "A blue, messy grid that resembles a map. Generated with the prompt 'Boston commuter rail map, PDF, 2017'.")
-> 
-> > A map of the Boston subway system, generated using Stable Diffusion. It's not even close, of course, and it'd be silly to rely on this. See [the real map](https://www.mbta.com/maps) for comparison.
-
-
 
 > TLDR: I'm surprised by ChatGPT and StableDiffusion. I'm keeping up with deep learning less and less, but Arxiv Sanity is still good.
 
@@ -67,6 +62,12 @@ Then ChatGPT came out. I have a lot of thoughts and concerns, mainly:
 
 
 For more reading, I recommend [Ted Chiang's "ChatGPT Is a Blurry JPEG of the Web"](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web). It surmises my thoughts entirely. If you're interested in the concept of understanding as compression, consider reading on Ray Solomonoff's work, specifically [algorothmic probability](https://en.wikipedia.org/wiki/Algorithmic_probability) and [Solomonoff's theory of inductive inference](https://en.wikipedia.org/wiki/Solomonoff's_theory_of_inductive_inference). This is a fascinating information-theoretic framework for exploring the idea of a "universal prior", which is very relevant in machine learning. It's not widely taught at CS universities. And if you're depressed about the concept of a deterministic universe, Solomonoff's work may ease or worsen that.
+
+... On a side note, check out what Stable Diffusion cranks out for a map of the Boston subway system:
+
+> ![A blue, messy grid that resembles a map. Generated with the prompt 'Boston commuter rail map, PDF, 2017'](../images/boston_stable_diffusion_compressed.png "A blue, messy grid that resembles a map. Generated with the prompt 'Boston commuter rail map, PDF, 2017'.")
+> 
+> A map of the Boston subway system, generated using Stable Diffusion. It's not even close, of course, and it'd be silly to rely on this. See [the real map](https://www.mbta.com/maps) for comparison.
 
 
 # Phillip Rogaway is one of many incredibly cool cryptographers
