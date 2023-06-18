@@ -19,6 +19,9 @@ To address common suspicions:
  - This can be used in the real world.
  - However, it is not an in-place sorting algorithm.
 
+<!-- more -->
+
+
 # ok, how does counting sort work?
 
 The idea of the algorithm is that you count how many times a number appears in a list.

@@ -20,6 +20,9 @@ tags = ["post"]
 > - Outer Wilds is the best game, I reckon.
 > - Nope (the movie) is *really really* good.
 
+<!-- more -->
+
+
 Being a PhD student meant I'd dedicated the past four years of my life to consuming media purely for academic value. Computer science, cryptography, machine learning, ethics, etc.
 
 With the pandemic-induced economic pain, I went on a leave of absence to take on some more profitable work. Having paused my PhD, I had a taste of free-time which I hadn't had since "summer vacation" in K-12.

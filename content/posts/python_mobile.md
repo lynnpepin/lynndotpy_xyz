@@ -50,6 +50,9 @@ Q = quit
 print("Functions `help(...)` and `quit()` available as `H(...)` and `Q()`.")
 ```
 
+<!-- more -->
+
+
 ---
 
 Here is a real-time video of the script in action, used for writing a Monte Carlo simulation to estimate the value of Pi. 

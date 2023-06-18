@@ -12,6 +12,9 @@ Reso is a circuit design language and simulator where the inputs and outputs are
 
 Reso is a pet project of mine that I've been working on in my free time for a little while. This logo is actually an animation of the execution of a Reso circuit.
 
+<!-- more -->
+
+
 * For the math nerds: Reso is a circuit design language and simulator that allows you to define an undirected boolean computational graph by connecting contiguous regions of colored elements in a 2D map.
 
 * For the engineering nerds: Reso is a useless, slow, minimal-feature digital logic simulator where you build wires and gates out of pixels! Its only redeeming qualities are that it's fun, pretty, and maybe a fun project to reimpliment in Rust.

@@ -33,6 +33,7 @@ Send an email to [arbitration-opt-out@discord.com](mailto:arbitration-opt-out@di
 
 Of course, please note that I am not a lawyer and I am not your representative!
 
+<!-- more -->
 
 **You should do this every time Discord changes their Terms of Service.** This is an unjust world, and you are your best advocate! **Discord is not your friend!** They've had bots which scrape your messages from private servers to share them publicly ([since 2019 or earlier](https://gist.github.com/resynth1943/0185f55207dc4d84be99c8d74da9221d#file-dear_discord-txt)), they've had white supremacist Trump supporters organize deadly movements using Discord and commit mass shootings ([2017](https://www.nytimes.com/2017/08/15/technology/discord-chat-app-alt-right.html), [2018](https://slate.com/technology/2018/10/discord-safe-space-white-supremacists.html), [2019](https://unicornriot.ninja/2019/neo-nazi-hipsters-identity-evropa-exposed-in-discord-chat-leak/)), [2022](https://unicornriot.ninja/2022/highland-park-shooter-decried-commies-in-discord-chat/), etc. You should reserve your right to sue if they mistreat you.
 

@@ -15,6 +15,9 @@ tags = ["how-to", "project"]
 > > pdb.gimp_text_layer_set_text(title_layer, "Hello world!")
 > > ```
 
+
+<!-- more -->
+
 ---
 
 # gimp is a good image editor, and you can automate it with python

@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://lynndotpy.xyz"
+base_url = "https://lynndotpy.xyz/posts"
 title = "lynndotpy.xyz"
 
 # Sass compilation is required
@@ -7,14 +7,15 @@ compile_sass = true
 
 # Optional: enable tags
 taxonomies = [
-    {name = "tags"}
+    {name = "tags"},
+    {paginate_path = "posts/page"},
+    {default_section_path = "posts"}
 ]
 
 # Code highlighting
 [markdown]
 highlight_code = true
 highlight_theme = "boron"
-
 
 [extra]
 # Put all your custom variables here
