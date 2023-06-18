@@ -2,6 +2,8 @@
 title = "Oh no, dating spam sites are abusing improperly-configured internal search engines"
 date = 2021-04-30
 
+aliases = [ "/posts/seo_dating_spam.html" ]
+
 [taxonomies]
 tags = ["post", "security"]
 +++

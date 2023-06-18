@@ -2,6 +2,8 @@
 title = "You can sort in linear time!"
 date = 2022-01-07
 
+aliases = ["posts/linear_sorting.html"]
+
 [taxonomies]
 tags = ["post"]
 +++

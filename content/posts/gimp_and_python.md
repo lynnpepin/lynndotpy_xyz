@@ -2,6 +2,8 @@
 title = "GIMP <3 Python! Let's make a YuGiOh rip off"
 date = 2020-12-31
 
+aliases = ["posts/gimp_and_python.html"]
+
 [taxonomies]
 tags = ["how-to", "project"]
 +++

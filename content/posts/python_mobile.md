@@ -2,6 +2,8 @@
 title = "Python on your phone sucks less with `ooo.py` and the `-i` flag."
 date = 2022-05-22
 
+aliases = ["posts/python_mobile.html"]
+
 [taxonomies]
 tags = ["post"]
 +++

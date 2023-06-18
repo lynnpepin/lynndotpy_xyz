@@ -2,6 +2,8 @@
 title = "Things I read, 2022"
 date = 2023-02-13
 
+aliases = ["posts/reading_2022.html"]
+
 [taxonomies]
 tags = ["post"]
 +++

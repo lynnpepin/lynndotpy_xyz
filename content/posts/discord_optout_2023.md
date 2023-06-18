@@ -2,6 +2,8 @@
 title = "Opt out of Discord's arbitration clause by sending a quick email. (Template included)"
 date = 2023-03-08
 
+aliases = ["posts/discord_optout_2023.html"]
+
 [taxonomies]
 tags = ["how-to"]
 +++

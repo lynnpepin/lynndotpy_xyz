@@ -2,6 +2,8 @@
 title = "`reso`, a colorful pixel-art circuit simulator"
 date  = 2021-05-15
 
+aliases = ["posts/reso_intro.html"]
+
 [taxonomies]
 tags  = ["project"]
 +++
