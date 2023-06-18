@@ -64,8 +64,8 @@ use_full_hack_font = false
 #           Mimetype defaults to "image/x-icon".
 #           The URL should point at a file located
 #           in your site's "static" directory.
-# favicon = "/favicon.png"
-# favicon_mimetype = "image/png"
+favicon = "/favicon_package/favicon-32x32.png"
+favicon_mimetype = "image/png"
 
 # Optional: Set how <title> elements are rendered.
 # Values:
