@@ -4,7 +4,7 @@ Major features:
 - [x] Get hosting
 - [ ] Fix all links
 - [ ] Gallery view
-  - [ ] Projects
+  - [ ] Make thumbnails + reasonable res for art
   - [ ] Upload art
   - [ ] No hotlinking
 - [x] Liberapay
@@ -27,7 +27,7 @@ Main content:
 
 Fixes:
 - [ ] Fix through and fix all links
-- [ ] Fix all LaTeX
+- [x] Fix all LaTeX
 
 Add projects:
 - [ ] Network simulator
@@ -101,7 +101,7 @@ Posts:
     - Still relevant, still written
     - Very close analogy to what's happening on the bare metal
     - If you study DS&A, you should do it through C
-    
+- [ ] Minimal base64 encoded 1x1 transparent pixels    
 
 Flair:
 - [ ] Art to each post
