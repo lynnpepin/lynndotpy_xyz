@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>lynndotpy.xyz</title>
-    <link href="https://lynndotpy.xyz/posts/atom.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://lynndotpy.xyz/posts"/>
+    <link href="https://lynndotpy.xyz/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://lynndotpy.xyz/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2023-03-08T00:00:00+00:00</updated>
-    <id>https://lynndotpy.xyz/posts/atom.xml</id>
+    <id>https://lynndotpy.xyz/atom.xml</id>
     <entry xml:lang="en">
         <title>Opt out of Discord&#x27;s arbitration clause by sending a quick email. (Template included)</title>
         <published>2023-03-08T00:00:00+00:00</published>
@@ -13,8 +13,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://lynndotpy.xyz/posts/posts/discord-optout-2023/" type="text/html"/>
-        <id>https://lynndotpy.xyz/posts/posts/discord-optout-2023/</id>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/discord-optout-2023/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/discord-optout-2023/</id>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Send an email to &lt;a href=&quot;mailto:arbitration-opt-out@discord.com&quot;&gt;arbitration-opt-out@discord.com&lt;&#x2F;a&gt; using the email associated with your Discord account. For good measure, add your username. Template below!&lt;&#x2F;p&gt;
 &lt;p&gt;(btw, i&#x27;m not a lawyer and i&#x27;m not your representative)&lt;&#x2F;p&gt;
@@ -70,8 +70,8 @@
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://lynndotpy.xyz/posts/posts/reading-2022/" type="text/html"/>
-        <id>https://lynndotpy.xyz/posts/posts/reading-2022/</id>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/reading-2022/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/reading-2022/</id>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Leaving a PhD gives someone a lot of time to read new things. Here&#x27;s some of my takeaways:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -238,8 +238,8 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://lynndotpy.xyz/posts/posts/python-mobile/" type="text/html"/>
-        <id>https://lynndotpy.xyz/posts/posts/python-mobile/</id>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/python-mobile/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/python-mobile/</id>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Copy the script below, and run it as &lt;code&gt;python -i ooo.py&lt;&#x2F;code&gt;. This will give you a bunch of useful imports with short aliases, and throw you into an interactive shell.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -304,8 +304,8 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://lynndotpy.xyz/posts/posts/linear-sorting/" type="text/html"/>
-        <id>https://lynndotpy.xyz/posts/posts/linear-sorting/</id>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/linear-sorting/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/linear-sorting/</id>
         <content type="html">&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in O(n log n) time is still true, but that assumes you&#x27;re sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)&lt;&#x2F;p&gt;
 &lt;p&gt;To address common suspicions:&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -398,8 +398,8 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://lynndotpy.xyz/posts/posts/reso-intro/" type="text/html"/>
-        <id>https://lynndotpy.xyz/posts/posts/reso-intro/</id>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/reso-intro/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/reso-intro/</id>
         <content type="html">&lt;p&gt;Reso is a circuit design language and simulator where the inputs and outputs are bitmap images!&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_logo.gif&quot; alt=&quot;Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds.&quot; title=&quot;Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds. &quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Reso is a pet project of mine that I&#x27;ve been working on in my free time for a little while. This logo is actually an animation of the execution of a Reso circuit.&lt;&#x2F;p&gt;
@@ -490,8 +490,8 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://lynndotpy.xyz/posts/posts/seo-dating-spam/" type="text/html"/>
-        <id>https://lynndotpy.xyz/posts/posts/seo-dating-spam/</id>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/seo-dating-spam/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/seo-dating-spam/</id>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt;  Malicious entities are abusing sites internal search engines to promote their own URLs. This effectively allows them to advertise using the target site&#x27;s domain in the search results of major search engines. If you own such a site, fix this by putting a &lt;code&gt;disallow&lt;&#x2F;code&gt; entry in your &lt;code&gt;robots.txt&lt;&#x2F;code&gt;, or adding the &lt;code&gt;noindex&lt;&#x2F;code&gt; meta tag.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -523,7 +523,7 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
 &lt;&#x2F;span&gt;&lt;span&gt;🪀❤️️+BEST+DATING+SITE
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;where &#x27;🪀&#x27; and &#x27;❤️️&#x27;, if you can&#x27;t see it, are Yo-Yo and Heart emojis, respectively. Upon inspection, it seems that these are just searches abusing the sites internal search engine. They become emoji in the URL.&lt;&#x2F;p&gt;
-&lt;p&gt;It&#x27;s pretty standard, you can make searches for arbitrary text. For example, &lt;code&gt;chemistry.uconn.edu&#x2F;?s=some+arbitrary+text&lt;&#x2F;code&gt; yields such a URL: &lt;a href=&quot;https:&#x2F;&#x2F;lynndotpy.xyz&#x2F;posts&#x2F;posts&#x2F;seo-dating-spam&#x2F;chemistry.uconn.edu&#x2F;?s=some+arbitrary+text&quot;&gt;https:&#x2F;&#x2F;chemistry.uconn.edu&#x2F;?s=some+arbitrary+text&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s pretty standard, you can make searches for arbitrary text. For example, &lt;code&gt;chemistry.uconn.edu&#x2F;?s=some+arbitrary+text&lt;&#x2F;code&gt; yields such a URL: &lt;a href=&quot;https:&#x2F;&#x2F;lynndotpy.xyz&#x2F;posts&#x2F;seo-dating-spam&#x2F;chemistry.uconn.edu&#x2F;?s=some+arbitrary+text&quot;&gt;https:&#x2F;&#x2F;chemistry.uconn.edu&#x2F;?s=some+arbitrary+text&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;It seems UConn isn&#x27;t the only one impacted. While not exclusive to .edu domains, it looks like they&#x27;re the primary targets. Here, we see the same thing for other .edu domains:&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;datego-edu-spam.png&quot; alt=&quot;A screenshot of a Google Search for &#x27;datego.xyz site:edu&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; title=&quot;A screenshot of a Google Search for &#x27;datego.xyz site:edu&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;So, what&#x27;s going on here? I think I have an idea.&lt;&#x2F;p&gt;
@@ -597,8 +597,8 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://lynndotpy.xyz/posts/posts/gimp-and-python/" type="text/html"/>
-        <id>https://lynndotpy.xyz/posts/posts/gimp-and-python/</id>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/gimp-and-python/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/gimp-and-python/</id>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt;  Open the Python-Fu console (Filters &amp;gt; Python-Fu &amp;gt; Console) and reference GIMP&#x27;s built-in &lt;code&gt;pdb&lt;&#x2F;code&gt; documentation (Help &amp;gt; Procedure browser).  A simple &#x27;hello world&#x27; is presented:&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
