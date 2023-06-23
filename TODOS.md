@@ -28,6 +28,17 @@ Main content:
 Fixes:
 - [ ] Fix through and fix all links
 - [x] Fix all LaTeX
+- [ ] titles should work
+- [ ] Ugly caption scale
+- [ ] Reso captions
+- [ ] Reso logo broken on mainpage
+
+Broken links and images:
+- Footnotes (see: summer reading)
+- Long titles break pagination
+
+Pictures to add:
+- Sorting in linear time graph
 
 Add projects:
 - [ ] Network simulator

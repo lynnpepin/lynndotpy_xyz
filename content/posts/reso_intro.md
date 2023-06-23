@@ -10,7 +10,8 @@ tags  = ["project"]
 
 Reso is a circuit design language and simulator where the inputs and outputs are bitmap images!
 
-![Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds.](../images/reso_logo.gif "Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds. ")
+![Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds.](/posts/images/reso_logo.gif "Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds. ")
+
 
 Reso is a pet project of mine that I've been working on in my free time for a little while. This logo is actually an animation of the execution of a Reso circuit.
 
@@ -58,7 +59,7 @@ With that out of the way, let's get started!
 
 ## Reso's 10-color palette
 
-![A full 24-color Reso palette](../images/reso_full_palette.png "A full 24-color Reso palette")
+![A full 24-color Reso palette](/posts/images/reso_full_palette.png "A full 24-color Reso palette")
 
 Reso circuits are defined by contiguous regions of pixels (called Resels).
 
@@ -80,7 +81,7 @@ While we define 24 colors as "reserved", in practice, there are 10 colors that w
 
 Here is what the limited 10-color palette looks like:
 
-![A mini 10-color Reso palette](../images/reso_mini_palette.png "A mini 10-color Reso palette")
+![A mini 10-color Reso palette](/posts/images/reso_mini_palette.png "A mini 10-color Reso palette")
 
 Six of these colors (three hues, orange, sapphire, and lime, across two tones, dark and bright) are dedicated to wires, which hold on or off states.
 
@@ -95,7 +96,7 @@ So, to cheat,  we use purple to add input and output nodes for logic. This adds 
 
 ... Let's discuss logic gates!
 
-![Four gates (and, or, not, xor) implemented in Reso.](../images/reso_basic_gates.png "Four gates (and, or, not, xor) implemented in Reso.")
+![Four gates (and, or, not, xor) implemented in Reso.](/posts/images/reso_basic_gates.png "Four gates (and, or, not, xor) implemented in Reso.")
 
 
 This... This is pretty much it. Stare at it until it makes sense! These are the four basic logic gates, as implemented in Reso. (Note that the choice of wire color doesn't matter here.)
@@ -106,7 +107,7 @@ Note that the black and white pixels are *outside* of the palette. They are sema
 
 # Example: A one-bit adder.
 
-![A one-bit half adder in Reso.](../images/reso_adder.png "A one-bit half adder in Reso.")
+![A one-bit half adder in Reso.](/posts/images/reso_adder.png "A one-bit half adder in Reso.")
 
 
 Here is an example of a one-bit half adder in Reso. It is implemented in two ways: A "verbose" adder that labels inputs and outputs, and a "mini" adder that is better suited for more tightly-knit circuits.
@@ -115,7 +116,7 @@ Note that the blue and orange wires here cross over one another diagonally: A ne
 
 # Example: A digital clock
 
-![Three Reso clocks forming an 8 bit counter.](../images/reso_clock.png "Three Reso clocks forming an 8 bit counter.")
+![Three Reso clocks forming an 8 bit counter.](/posts/images/reso_clock.png "Three Reso clocks forming an 8 bit counter.")
 
 
 Clocks are rather easy to build for small periods. This is a small, 3-bit (8 value) counter, formed from three digital clocks. An edge-triggered flip-flop can be used to double the period of a clock , but I didn't do that here, because these are small and simple enough.

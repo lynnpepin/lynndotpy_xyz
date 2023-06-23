@@ -65,7 +65,7 @@ For more reading, I recommend [Ted Chiang's "ChatGPT Is a Blurry JPEG of the Web
 
 ... On a side note, check out what Stable Diffusion cranks out for a map of the Boston subway system:
 
-> ![A blue, messy grid that resembles a map. Generated with the prompt 'Boston commuter rail map, PDF, 2017'](../images/boston_stable_diffusion_compressed.png "A blue, messy grid that resembles a map. Generated with the prompt 'Boston commuter rail map, PDF, 2017'.")
+> ![A blue, messy grid that resembles a map. Generated with the prompt 'Boston commuter rail map, PDF, 2017'](/posts/images/boston_stable_diffusion_compressed.png "A blue, messy grid that resembles a map. Generated with the prompt 'Boston commuter rail map, PDF, 2017'.")
 > 
 > A map of the Boston subway system, generated using Stable Diffusion. It's not even close, of course, and it'd be silly to rely on this. See [the real map](https://www.mbta.com/maps) for comparison.
 

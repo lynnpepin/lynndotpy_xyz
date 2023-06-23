@@ -17,7 +17,7 @@ tags = ["post", "security"]
 
 Recently, a colleague of mine was trying to see if our university had any carbon dating expertise. A search on Google for `uconn carbon dating` yielded some results she considered sus:
 
-![A screenshot of a Google Search for 'UConn Carbon Dating', showing some malicious looking results promoting some malicious dating sites.](../images/datego-edu-spam-uconn.png "A screenshot of a Google Search for 'UConn Carbon Dating', showing some malicious looking results promoting some malicious dating sites.")
+![A screenshot of a Google Search for 'UConn Carbon Dating', showing some malicious looking results promoting some malicious dating sites.](/posts/images/datego-edu-spam-uconn.png "A screenshot of a Google Search for 'UConn Carbon Dating', showing some malicious looking results promoting some malicious dating sites.")
 
 Like any fool, I clicked through the link to see what was going on. Here's that first link, with linebreaks to make it easier to interpret:
 
@@ -55,7 +55,7 @@ It's pretty standard, you can make searches for arbitrary text. For example, `ch
 
 It seems UConn isn't the only one impacted. While not exclusive to .edu domains, it looks like they're the primary targets. Here, we see the same thing for other .edu domains:
 
-![A screenshot of a Google Search for 'datego.xyz site:edu', showing some malicious looking results promoting some malicious dating sites.](../images/datego-edu-spam.png "A screenshot of a Google Search for 'datego.xyz site:edu', showing some malicious looking results promoting some malicious dating sites.")
+![A screenshot of a Google Search for 'datego.xyz site:edu', showing some malicious looking results promoting some malicious dating sites.](/posts/images/datego-edu-spam.png "A screenshot of a Google Search for 'datego.xyz site:edu', showing some malicious looking results promoting some malicious dating sites.")
 
 So, what's going on here? I think I have an idea.
 

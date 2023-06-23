@@ -6,7 +6,7 @@ aliases = ["/about.html/"]
 
 
 {{figure(
-  src="../images/opossum_512.png",
+  src="/images/opossum_512.png",
   alt="A circular icon with a stylized opossum and three colorful hearts.",
   position="center",
   style="width: 128px;",

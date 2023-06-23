@@ -8,11 +8,21 @@ aliases = ["posts/linear_sorting.html"]
 tags = ["post"]
 +++
 
+{{figure(
+  src="/posts/images/countsort_graph.jpeg"
+  alt="A log-scale graph showing the runtime (ns) of sorting N elements for different integer depths. They all show a trend towards linear runtime for large N.",
+  position="center",
+  style="width:70%",
+  caption="A log-scale graph showing the linear runtime of count-sort"
+)}}
 
+> **TLDR:** Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in $O(n \log n)$ time is still true, but that assumes you're sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)
+> 
+> See the [Python notebook](https://github.com/lynnpepin/rust_projects/blob/master/countsort/plot_stats.ipynb) wrapping an unoptimized [Rust countsort implementation](https://github.com/lynnpepin/rust_projects/tree/master/countsort): 
 
-**TLDR:** Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in O(n log n) time is still true, but that assumes you're sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)
+--
 
-To address common suspicions:
+Is this truly $O(n)$? Yes!
 
  - Counting sort is not a randomized algorithm, it always outputs the correct solution.
  - Counting sort is not a parallelized algorithm. (And you can't use parallelism to speed past a worst-case big-O run time anyway!)

@@ -122,7 +122,7 @@
 &lt;p&gt;For more reading, I recommend &lt;a href=&quot;https:&#x2F;&#x2F;www.newyorker.com&#x2F;tech&#x2F;annals-of-technology&#x2F;chatgpt-is-a-blurry-jpeg-of-the-web&quot;&gt;Ted Chiang&#x27;s &amp;quot;ChatGPT Is a Blurry JPEG of the Web&amp;quot;&lt;&#x2F;a&gt;. It surmises my thoughts entirely. If you&#x27;re interested in the concept of understanding as compression, consider reading on Ray Solomonoff&#x27;s work, specifically &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Algorithmic_probability&quot;&gt;algorothmic probability&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Solomonoff&amp;#x27;s_theory_of_inductive_inference&quot;&gt;Solomonoff&#x27;s theory of inductive inference&lt;&#x2F;a&gt;. This is a fascinating information-theoretic framework for exploring the idea of a &amp;quot;universal prior&amp;quot;, which is very relevant in machine learning. It&#x27;s not widely taught at CS universities. And if you&#x27;re depressed about the concept of a deterministic universe, Solomonoff&#x27;s work may ease or worsen that.&lt;&#x2F;p&gt;
 &lt;p&gt;... On a side note, check out what Stable Diffusion cranks out for a map of the Boston subway system:&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;boston_stable_diffusion_compressed.png&quot; alt=&quot;A blue, messy grid that resembles a map. Generated with the prompt &#x27;Boston commuter rail map, PDF, 2017&#x27;&quot; title=&quot;A blue, messy grid that resembles a map. Generated with the prompt &#x27;Boston commuter rail map, PDF, 2017&#x27;.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;boston_stable_diffusion_compressed.png&quot; alt=&quot;A blue, messy grid that resembles a map. Generated with the prompt &#x27;Boston commuter rail map, PDF, 2017&#x27;&quot; title=&quot;A blue, messy grid that resembles a map. Generated with the prompt &#x27;Boston commuter rail map, PDF, 2017&#x27;.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;A map of the Boston subway system, generated using Stable Diffusion. It&#x27;s not even close, of course, and it&#x27;d be silly to rely on this. See &lt;a href=&quot;https:&#x2F;&#x2F;www.mbta.com&#x2F;maps&quot;&gt;the real map&lt;&#x2F;a&gt; for comparison.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h1 id=&quot;phillip-rogaway-is-one-of-many-incredibly-cool-cryptographers&quot;&gt;Phillip Rogaway is one of many incredibly cool cryptographers&lt;&#x2F;h1&gt;
@@ -284,11 +284,11 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;Here is a real-time video of the script in action, used for writing a Monte Carlo simulation to estimate the value of Pi. &lt;&#x2F;p&gt;
-&lt;!-- ![A screenrecording ](..&#x2F;images&#x2F;ooopy.webm){ width=240px } --&gt;
+&lt;!-- ![A screenrecording ](&#x2F;posts&#x2F;images&#x2F;ooopy.webm){ width=240px } --&gt;
 &lt;!-- centered video --&gt;
 &lt;video controls width=&quot;360px&quot; style=&quot;margin: 0 auto; display: block;&quot; preload=&quot;metadata&quot;&gt;
-  &lt;source src=&quot;..&#x2F;images&#x2F;ooopy.webm&quot; type=&quot;video&#x2F;webm&quot; &gt; &lt;&#x2F;source&gt;
-  &lt;p&gt; Your browser doesn&#x27;t support HTML5 video. &lt;a href=&quot;..&#x2F;images&#x2F;ooopy.webm&quot;&gt;Here is a direct link instead.&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+  &lt;source src=&quot;&#x2F;posts&#x2F;images&#x2F;ooopy.webm&quot; type=&quot;video&#x2F;webm&quot; &gt; &lt;&#x2F;source&gt;
+  &lt;p&gt; Your browser doesn&#x27;t support HTML5 video. &lt;a href=&quot;&#x2F;posts&#x2F;images&#x2F;ooopy.webm&quot;&gt;Here is a direct link instead.&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;video&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;Python in the terminal has effectively replaced my graphing calculator for quick calculations. Its REPL allows for interactive coding, so there is no compile-run-debug loop. The great thing is, I can also use this on my phone! (I used Termux on Android, but this might work on iOS through iSH.)&lt;&#x2F;p&gt;
@@ -306,8 +306,20 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
         </author>
         <link rel="alternate" href="https://lynndotpy.xyz/posts/linear-sorting/" type="text/html"/>
         <id>https://lynndotpy.xyz/posts/linear-sorting/</id>
-        <content type="html">&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in O(n log n) time is still true, but that assumes you&#x27;re sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)&lt;&#x2F;p&gt;
-&lt;p&gt;To address common suspicions:&lt;&#x2F;p&gt;
+        <content type="html">
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;countsort_graph.jpeg&quot; alt=&quot;A log-scale graph showing the runtime (ns) of sorting N elements for different integer depths. They all show a trend towards linear runtime for large N.&quot; style=&quot;width:70%&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;A log-scale graph showing the linear runtime of count-sort&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in $O(n \log n)$ time is still true, but that assumes you&#x27;re sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)&lt;&#x2F;p&gt;
+&lt;p&gt;See the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;rust_projects&#x2F;blob&#x2F;master&#x2F;countsort&#x2F;plot_stats.ipynb&quot;&gt;Python notebook&lt;&#x2F;a&gt; wrapping an unoptimized &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;rust_projects&#x2F;tree&#x2F;master&#x2F;countsort&quot;&gt;Rust countsort implementation&lt;&#x2F;a&gt;: &lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;--&lt;&#x2F;p&gt;
+&lt;p&gt;Is this truly $O(n)$? Yes!&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;Counting sort is not a randomized algorithm, it always outputs the correct solution.&lt;&#x2F;li&gt;
 &lt;li&gt;Counting sort is not a parallelized algorithm. (And you can&#x27;t use parallelism to speed past a worst-case big-O run time anyway!)&lt;&#x2F;li&gt;
@@ -401,7 +413,7 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
         <link rel="alternate" href="https://lynndotpy.xyz/posts/reso-intro/" type="text/html"/>
         <id>https://lynndotpy.xyz/posts/reso-intro/</id>
         <content type="html">&lt;p&gt;Reso is a circuit design language and simulator where the inputs and outputs are bitmap images!&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_logo.gif&quot; alt=&quot;Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds.&quot; title=&quot;Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds. &quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;reso_logo.gif&quot; alt=&quot;Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds.&quot; title=&quot;Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds. &quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Reso is a pet project of mine that I&#x27;ve been working on in my free time for a little while. This logo is actually an animation of the execution of a Reso circuit.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
 &lt;ul&gt;
@@ -442,7 +454,7 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
 &lt;&#x2F;ol&gt;
 &lt;p&gt;With that out of the way, let&#x27;s get started!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;reso-s-10-color-palette&quot;&gt;Reso&#x27;s 10-color palette&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_full_palette.png&quot; alt=&quot;A full 24-color Reso palette&quot; title=&quot;A full 24-color Reso palette&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;reso_full_palette.png&quot; alt=&quot;A full 24-color Reso palette&quot; title=&quot;A full 24-color Reso palette&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Reso circuits are defined by contiguous regions of pixels (called Resels).&lt;&#x2F;p&gt;
 &lt;p&gt;While we define 24 colors as &amp;quot;reserved&amp;quot;, in practice, there are 10 colors that we use in Reso:&lt;&#x2F;p&gt;
 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Color&lt;&#x2F;th&gt;&lt;th&gt;Meaning&lt;&#x2F;th&gt;&lt;th&gt;Hex code&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
@@ -458,23 +470,23 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
 &lt;tr&gt;&lt;td&gt;Dark teal&lt;&#x2F;td&gt;&lt;td&gt;AND logic node&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;#008040&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
 &lt;p&gt;Here is what the limited 10-color palette looks like:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_mini_palette.png&quot; alt=&quot;A mini 10-color Reso palette&quot; title=&quot;A mini 10-color Reso palette&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;reso_mini_palette.png&quot; alt=&quot;A mini 10-color Reso palette&quot; title=&quot;A mini 10-color Reso palette&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Six of these colors (three hues, orange, sapphire, and lime, across two tones, dark and bright) are dedicated to wires, which hold on or off states.&lt;&#x2F;p&gt;
 &lt;p&gt;Two colors (dark and bright teal) are dedicated to logical-AND and logical-XOR. &lt;&#x2F;p&gt;
 &lt;p&gt;It&#x27;d be nice if we could just connect a wire blob to, say, a logical-XOR blob, but then we&#x27;d lack directionality! How would we tell input from output wires? Reso circuits are defined by adjacencies of pixel blobs, and that is inherently undirected.&lt;&#x2F;p&gt;
 &lt;p&gt;So, to cheat,  we use purple to add input and output nodes for logic. This adds directionality as-needed. With that out of the way...&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;logic-gates-in-reso&quot;&gt;Logic gates in Reso&lt;&#x2F;h1&gt;
 &lt;p&gt;... Let&#x27;s discuss logic gates!&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_basic_gates.png&quot; alt=&quot;Four gates (and, or, not, xor) implemented in Reso.&quot; title=&quot;Four gates (and, or, not, xor) implemented in Reso.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;reso_basic_gates.png&quot; alt=&quot;Four gates (and, or, not, xor) implemented in Reso.&quot; title=&quot;Four gates (and, or, not, xor) implemented in Reso.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;This... This is pretty much it. Stare at it until it makes sense! These are the four basic logic gates, as implemented in Reso. (Note that the choice of wire color doesn&#x27;t matter here.)&lt;&#x2F;p&gt;
 &lt;p&gt;The magic of Reso is that you can copy-paste these all around. You can perform any lossless transformation on it. Flip it, rotate it (by 90 degrees, of course), anything that doesn&#x27;t interpolate pixel colors or mess with contiguities of regions! This makes everything you make entirely modular.&lt;&#x2F;p&gt;
 &lt;p&gt;Note that the black and white pixels are &lt;em&gt;outside&lt;&#x2F;em&gt; of the palette. They are semantically insignificant! You can use these colors like comments or for diagrams, like I do here! You can make your circuits sparse and readable, or you can tightly knit your gates together.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;example-a-one-bit-adder&quot;&gt;Example: A one-bit adder.&lt;&#x2F;h1&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_adder.png&quot; alt=&quot;A one-bit half adder in Reso.&quot; title=&quot;A one-bit half adder in Reso.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;reso_adder.png&quot; alt=&quot;A one-bit half adder in Reso.&quot; title=&quot;A one-bit half adder in Reso.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Here is an example of a one-bit half adder in Reso. It is implemented in two ways: A &amp;quot;verbose&amp;quot; adder that labels inputs and outputs, and a &amp;quot;mini&amp;quot; adder that is better suited for more tightly-knit circuits.&lt;&#x2F;p&gt;
 &lt;p&gt;Note that the blue and orange wires here cross over one another diagonally: A neat trick in Reso is that wires are the only elements for which contiguity is defined on the diagonals.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;example-a-digital-clock&quot;&gt;Example: A digital clock&lt;&#x2F;h1&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_clock.png&quot; alt=&quot;Three Reso clocks forming an 8 bit counter.&quot; title=&quot;Three Reso clocks forming an 8 bit counter.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;reso_clock.png&quot; alt=&quot;Three Reso clocks forming an 8 bit counter.&quot; title=&quot;Three Reso clocks forming an 8 bit counter.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Clocks are rather easy to build for small periods. This is a small, 3-bit (8 value) counter, formed from three digital clocks. An edge-triggered flip-flop can be used to double the period of a clock , but I didn&#x27;t do that here, because these are small and simple enough.&lt;&#x2F;p&gt;
 &lt;p&gt;Note the timing of these things. We add an input&#x2F;output pair at the edge to prevent someone from accidentally messing with the clock from setting the output wire &amp;quot;on&amp;quot;. This causes a delay of one timestep, which is accounted for in the design of the clock. The minimum period for a clock is 2 timesteps (i.e. on for one timestep, off for one timestep.)&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;the-rest&quot;&gt;The rest?&lt;&#x2F;h1&gt;
@@ -497,7 +509,7 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
 &lt;&#x2F;blockquote&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h1 id=&quot;a-mystery-of-malware-in-my-school-s-search-results&quot;&gt;A Mystery of Malware in My School&#x27;s Search Results&lt;&#x2F;h1&gt;
 &lt;p&gt;Recently, a colleague of mine was trying to see if our university had any carbon dating expertise. A search on Google for &lt;code&gt;uconn carbon dating&lt;&#x2F;code&gt; yielded some results she considered sus:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;datego-edu-spam-uconn.png&quot; alt=&quot;A screenshot of a Google Search for &#x27;UConn Carbon Dating&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; title=&quot;A screenshot of a Google Search for &#x27;UConn Carbon Dating&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;datego-edu-spam-uconn.png&quot; alt=&quot;A screenshot of a Google Search for &#x27;UConn Carbon Dating&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; title=&quot;A screenshot of a Google Search for &#x27;UConn Carbon Dating&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Like any fool, I clicked through the link to see what was going on. Here&#x27;s that first link, with linebreaks to make it easier to interpret:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#151515;color:#e8e8d3;&quot;&gt;&lt;code&gt;&lt;span&gt;https:&#x2F;&#x2F;chemistry.uconn.edu&#x2F;?s=
 &lt;&#x2F;span&gt;&lt;span&gt;%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8Fwww.datego.xyz
@@ -525,7 +537,7 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
 &lt;p&gt;where &#x27;🪀&#x27; and &#x27;❤️️&#x27;, if you can&#x27;t see it, are Yo-Yo and Heart emojis, respectively. Upon inspection, it seems that these are just searches abusing the sites internal search engine. They become emoji in the URL.&lt;&#x2F;p&gt;
 &lt;p&gt;It&#x27;s pretty standard, you can make searches for arbitrary text. For example, &lt;code&gt;chemistry.uconn.edu&#x2F;?s=some+arbitrary+text&lt;&#x2F;code&gt; yields such a URL: &lt;a href=&quot;https:&#x2F;&#x2F;lynndotpy.xyz&#x2F;posts&#x2F;seo-dating-spam&#x2F;chemistry.uconn.edu&#x2F;?s=some+arbitrary+text&quot;&gt;https:&#x2F;&#x2F;chemistry.uconn.edu&#x2F;?s=some+arbitrary+text&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;It seems UConn isn&#x27;t the only one impacted. While not exclusive to .edu domains, it looks like they&#x27;re the primary targets. Here, we see the same thing for other .edu domains:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;datego-edu-spam.png&quot; alt=&quot;A screenshot of a Google Search for &#x27;datego.xyz site:edu&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; title=&quot;A screenshot of a Google Search for &#x27;datego.xyz site:edu&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;datego-edu-spam.png&quot; alt=&quot;A screenshot of a Google Search for &#x27;datego.xyz site:edu&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; title=&quot;A screenshot of a Google Search for &#x27;datego.xyz site:edu&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;So, what&#x27;s going on here? I think I have an idea.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;an-explanation-for-these-egregious-search-results&quot;&gt;An Explanation for these Egregious Search Results&lt;&#x2F;h1&gt;
 &lt;p&gt;So, my guess here is that the attack works like this:&lt;&#x2F;p&gt;
@@ -617,7 +629,7 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
 &lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; In four corners: GIMP editor, GIMP Python procedure browser for documentation, Python console, and a Python editor. Run scripts by copy and pasting them.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;If you have experience with GIMP and Python and want to learn how to automate GIMP, then let me show you my basic GIMP Python scripting setup:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;gimp-python-dev-setup.png&quot; alt=&quot;A screenshot showing four windows open in tiled configuration: (1) A GIMP image-editing window with  a card-template reminiscent of Yu-Gi-Oh, (2) A &#x27;procedure browser&#x27; showing a list of GIMP procedures with corresponding documentation, (3) An interactive Python console that programatically modifies the GIMP image, and (4) A text editor used as a &#x27;scratch space&#x27; with a list of commands.&quot; title=&quot;A screenshot showing four windows open in tiled configuration: (1) A GIMP image-editing window with  a card-template reminiscent of Yu-Gi-Oh, (2) A &#x27;procedure browser&#x27; showing a list of GIMP procedures with corresponding documentation, (3) An interactive Python console that programatically modifies the GIMP image, and (4) A text editor used as a &#x27;scratch space&#x27; with a list of commands.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;gimp-python-dev-setup.png&quot; alt=&quot;A screenshot showing four windows open in tiled configuration: (1) A GIMP image-editing window with  a card-template reminiscent of Yu-Gi-Oh, (2) A &#x27;procedure browser&#x27; showing a list of GIMP procedures with corresponding documentation, (3) An interactive Python console that programatically modifies the GIMP image, and (4) A text editor used as a &#x27;scratch space&#x27; with a list of commands.&quot; title=&quot;A screenshot showing four windows open in tiled configuration: (1) A GIMP image-editing window with  a card-template reminiscent of Yu-Gi-Oh, (2) A &#x27;procedure browser&#x27; showing a list of GIMP procedures with corresponding documentation, (3) An interactive Python console that programatically modifies the GIMP image, and (4) A text editor used as a &#x27;scratch space&#x27; with a list of commands.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;I keep keep these four windows open on one screen:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;The GIMP image I want to modify.&lt;&#x2F;li&gt;

@@ -275,8 +275,20 @@
 
                     
         <div class="post-content">
-            <p><strong>TLDR:</strong> Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in O(n log n) time is still true, but that assumes you're sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)</p>
-<p>To address common suspicions:</p>
+            
+  <figure class="center" >
+    <img src="/posts/images/countsort_graph.jpeg" alt="A log-scale graph showing the runtime (ns) of sorting N elements for different integer depths. They all show a trend towards linear runtime for large N." style="width:70%" />
+    
+      <figcaption class="center">A log-scale graph showing the linear runtime of count-sort</figcaption>
+    
+  </figure>
+
+<blockquote>
+<p><strong>TLDR:</strong> Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in $O(n \log n)$ time is still true, but that assumes you're sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)</p>
+<p>See the <a href="https://github.com/lynnpepin/rust_projects/blob/master/countsort/plot_stats.ipynb">Python notebook</a> wrapping an unoptimized <a href="https://github.com/lynnpepin/rust_projects/tree/master/countsort">Rust countsort implementation</a>: </p>
+</blockquote>
+<p>--</p>
+<p>Is this truly $O(n)$? Yes!</p>
 <ul>
 <li>Counting sort is not a randomized algorithm, it always outputs the correct solution.</li>
 <li>Counting sort is not a parallelized algorithm. (And you can't use parallelism to speed past a worst-case big-O run time anyway!)</li>
@@ -318,7 +330,7 @@
                     
         <div class="post-content">
             <p>Reso is a circuit design language and simulator where the inputs and outputs are bitmap images!</p>
-<p><img src="../images/reso_logo.gif" alt="Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds." title="Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds. " /></p>
+<p><img src="/posts/images/reso_logo.gif" alt="Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds." title="Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds. " /></p>
 <p>Reso is a pet project of mine that I've been working on in my free time for a little while. This logo is actually an animation of the execution of a Reso circuit.</p>
 
         </div>
