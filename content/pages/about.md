@@ -4,6 +4,14 @@ path = "about"
 aliases = ["/about.html/"]
 +++
 
+---
+
+
+This is some inline katex formula $e^x$ followed by a block:
+
+$$\int_0^\infty e^{-x}\mathrm{d}x$$
+
+---
 
 {{figure(
   src="../images/opossum_512.png",

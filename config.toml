@@ -22,7 +22,7 @@ highlight_theme = "boron"
 logo_text = "lynndotpy.xyz"
 author = "Lynn Pepin"
 copyright_html = "© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr"
-
+katex = true
 
 # One of: blue, green, orange, pink, red, dark (background)
 accent_color = "lynn-auto"
