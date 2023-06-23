@@ -1,7 +1,7 @@
 {% macro title(page_title, main_title) %}
     {%- if config.extra.page_titles == "combined" -%}
         {%- if page_title -%}
-            {{ page_title }} | {{ main_title }}
+            {{ page_title }} {{ main_title }}
         {%- else -%}
             {{ main_title }}
         {%- endif -%}

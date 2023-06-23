@@ -2,55 +2,77 @@
 
 Major features:
 - [x] Get hosting
-- [ ] Fix all links
+- [x] Fix all links
 - [ ] Gallery view
   - [ ] Make thumbnails + reasonable res for art
   - [ ] Upload art
   - [ ] No hotlinking
+  - [ ] Make a Pleroma?
 - [x] Liberapay
 - [ ] ~~Stop using Hack font?~~ (nevermind)
 - [ ] Selfhosted analytics
 - [x] KaTeX
   - [ ] Add to Terminimal
-- [ ] interactivity:
-  - [ ] "like" button
-  - [ ] comment button
-  - [ ] simple viewcounter? find self-hosted analytics
+- [ ] interactivity?
+  - [ ] "like" button? comment box? discourse? viewcounter?
 - [ ] PP. (Nothing but logs!!)
 
-Silly CSS stuff:
-- [ ] Random accent each load?
-- [ ] Checkerboard git-esque gradient background
-
-Main content:
-- [ ] Opossum raven art, self photo
-
-Fixes:
-- [ ] Fix through and fix all links
-- [x] Fix all LaTeX
-- [ ] titles should work
-- [ ] Ugly caption scale
-- [ ] Reso captions
-- [ ] Reso logo broken on mainpage
-
-Broken links and images:
-- Footnotes (see: summer reading)
-- Long titles break pagination
-
-Pictures to add:
-- Sorting in linear time graph
-
-Add projects:
+Update content:
+- [ ] Rolling log shader post
+  - [ ] Upload Godot demo
+- [ ] Reso contents
+- [x] Sorting in linear time graph
 - [ ] Network simulator
 - [ ] cli-tui-py
 - [ ] rust bin lib plus
+- [ ] rolling log post, with scans from notebook
+- [ ] New art on each post
+
+Silly CSS stuff:
+- [ ] Random accent each load?
+
+Art:
+- [ ] Opossum raven art
+- [ ] self photo
+- [ ] discord arbitration
+- [ ] things i read
+- [ ] python phone
+
+Fixes:
+- [x] Fix through and fix all links
+- [x] Fix all LaTeX
+- [x] titles should work
 
 Do projects:
 - [ ] notanaasm
 - [ ] arbitration opt out as a service
 - [ ] privacy label hall of shame
 - [ ] voxelnet reimplementation
-- [ ] 
+
+Other / Old:
+- [x] Blog index homepage
+- [x] Fix images
+- [x] Copy about
+- [x] Cleanup / remove archive
+- [x] Copy projects
+- [x] Remove Zola intro stuff
+- [x] Favicon
+- [x] Make sure old URLs still work:
+  - [x] https://lynndotpy.xyz/projects.html
+  - [x] https://lynndotpy.xyz/about.html
+  - [x] https://lynndotpy.xyz/index.html
+  - [x] https://lynndotpy.xyz/posts/discord_optout_2023.html (etc)
+    - [x] Posts are under `/posts/post_title/` but no redirect (yet) for `/posts/post_title.html`.
+
+Contributions:
+- RetroHub icon
+- Terminimal theme
+- Bython preprocessor
+- IRSSI readme
+- Internet of Production
+- Old: Pre-GMS GameMaker
+- bibtex python package citations
+- Academic writings
 
 Posts:
 - [ ] Make a project post for all projects, with tags
@@ -113,34 +135,3 @@ Posts:
     - Very close analogy to what's happening on the bare metal
     - If you study DS&A, you should do it through C
 - [ ] Minimal base64 encoded 1x1 transparent pixels    
-
-Flair:
-- [ ] Art to each post
-
-- About:
-  - [ ] Add opossum art, self photo
-- Projects:
-  - [ ] Major rework
-
-- [x] Blog index homepage
-- [x] Fix images
-- [x] Copy about
-- [x] Cleanup / remove archive
-- [x] Copy projects
-- [x] Remove Zola intro stuff
-- [x] Favicon
-- [x] Make sure old URLs still work:
-  - [x] https://lynndotpy.xyz/projects.html
-  - [x] https://lynndotpy.xyz/about.html
-  - [x] https://lynndotpy.xyz/index.html
-  - [ ] https://lynndotpy.xyz/posts/discord_optout_2023.html (etc)
-    - [x] Posts are under `/posts/post_title/` but no redirect (yet) for `/posts/post_title.html`.
-
-Contributions:
-- RetroHub icon
-- Terminimal theme
-- Bython preprocessor
-- IRSSI readme
-- Internet of Production
-- Old: Pre-GMS GameMaker
-- bibtex python package citations

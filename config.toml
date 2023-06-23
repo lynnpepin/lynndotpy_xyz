@@ -37,10 +37,10 @@ menu_items = [
     
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
-    {name = "archive", url = "$BASE_URL/archive"},
-    #{name = "tags", url = "$BASE_URL/tags"},
-    {name = "about", url = "$BASE_URL/about"},
-    {name = "projects", url = "$BASE_URL/projects"},
+    {name = "archive", url = "$BASE_URLarchive"},
+    #{name = "tags", url = "$BASE_URLtags"},
+    {name = "about", url = "$BASE_URLabout"},
+    {name = "projects", url = "$BASE_URLprojects"},
     
     # set newtab to true to make the link open in new tab
     {name = "github", url = "https://github.com/lynnpepin", newtab = true},
@@ -79,5 +79,6 @@ favicon_mimetype = "image/png"
 #                 or if page_title is not defined or empty, fall back to `main_title`
 #
 # Note that the main (index) page only has the main title.
-page_titles = "main_only"
+# change in 'title.html' template
+page_titles = "combined"
 
