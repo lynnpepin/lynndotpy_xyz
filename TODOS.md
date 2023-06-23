@@ -8,9 +8,8 @@ Major features:
   - [ ] Upload art
   - [ ] No hotlinking
 - [x] Liberapay
-- [ ] Stop using Hack font?
-- [ ] big ol button links
-- [ ] GitHub sponsors
+- [ ] ~~Stop using Hack font?~~
+  - ehh
 - [ ] Selfhosted analytics
 - [ ] KaTeX
 - [ ] interactivity:
@@ -74,7 +73,15 @@ Posts:
   - Integer index to/from content with invertible injection
     - Choose one that looks random: Bit substitution
   - "X results" for search easy
-  - 
+- [ ] Some Phone Things The Boomers Know And Care About
+  - A lot of fellow youngins think of boomers as completely tech illiterate
+  - It's unfair to throw away any consideration we have for people just because they dare to reach out to us for help sometimes.
+  - Some things "Boomers" (and Gen X) have complained about, despite being obstensibly not tech literate:
+    - Lightning when everything is on USB C
+    - New iPhones with no bezels or home buttons
+    - Loss of CD drives
+    - Subscription services
+    - Windows 11
 
 Flair:
 - [ ] Art to each post
@@ -97,3 +104,12 @@ Flair:
   - [x] https://lynndotpy.xyz/index.html
   - [ ] https://lynndotpy.xyz/posts/discord_optout_2023.html (etc)
     - [x] Posts are under `/posts/post_title/` but no redirect (yet) for `/posts/post_title.html`.
+
+Contributions:
+- RetroHub icon
+- Terminimal theme
+- Bython preprocessor
+- IRSSI readme
+- Internet of Production
+- Old: Pre-GMS GameMaker
+- bibtex python package citations
