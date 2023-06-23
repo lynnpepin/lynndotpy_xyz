@@ -1,44 +1,56 @@
 :root {
   @media (prefers-color-scheme: dark) {
-    --accent: oklch(80% 0.4 90);
-    --accent-alpha-70: oklch(80% 0.4 90 / .70);
-    --accent-alpha-20: oklch(80% 0.4 90 / .20);
+    --accent: oklch(0.875 0.425 290);
+    --accent-alpha-70: oklch(0.875 0.425 290 / .70);
+    --accent-alpha-20: oklch(0.875 0.425 290 / .20);
 
     div.logo {
       color: black;
     }
   
-    --background: oklch(0.125 0.0625 210);
+    --background: #201030;//oklch(0.125 0.0625 210);
     --color: #f0f0f0;
     --border-color: rgba(255,240,224,.125);
+
+    h1, h2, h3, h4, h5, h6, h1.post-title {
+      text-shadow: 0 2px #000;//, 0 -4px 8px var(--accent-alpha-70);
+    }
   
   }
   @media (prefers-color-scheme: light) {
 
-    --accent: oklch(0.675 0.375 90);
-    --accent-alpha-70: oklch(0.675 0.375 90 / .70);
-    --accent-alpha-20: oklch(0.675 0.375 90 / .20);
+    --accent: oklch(0.875 0.425 290);
+    --accent-alpha-70: oklch(0.875 0.425 290 / .70);
+    --accent-alpha-20: oklch(0.875 0.425 290 / .20);
 
     div.logo {
       color: white;
       font-weight: bold;
     }
   
-    --background: oklch(0.99 0.002 240);
+    --background: oklch(0.99 0.03 300);
     --color: #201030; 
     --border-color: rgba(0,0,16,.125);
+
+    h1, h2, h3, h4, h5, h6, h1.post-title {
+      text-shadow: 0px 1px 1px #20103050;
+    }
+  }
+  
+  div.logo {
+    border-radius: 2px 2px 2px 2px;
   }
 
   div.logo:hover {
-    text-shadow: 0 0 4px white;
+    text-shadow: 1px 0 2px #fff, 0px 1px 2px var(--accent), 0px -1px 2px var(--accent), -1px 0 2px #fff;
   }
 
   a:hover {
-    color: oklch(0.675 0.5 90);
-    text-shadow: 0 0 4px oklch(0.875 0.5 60 / 0.25);
+    color: oklch(0.875 0.425 290);
+    text-shadow: 0 0 4px oklch(0.875 0.425 290 / 0.25);
   }
 
-  h1, h2, h3, h4, h5, h6, h1.post-title {
-    text-shadow: 1px 2px 0px var(--accent-alpha-20);
+  strong {
+    text-shadow: 0 2px 4px var(--accent-alpha-20);
   }
 }

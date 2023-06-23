@@ -23,7 +23,7 @@ Send an email to [arbitration-opt-out@discord.com](mailto:arbitration-opt-out@di
 
 > To Discord,
 > 
-> I am **declining the agreement to arbitrate** and I am **decliing the class-action waiver** in the new Discord Terms of Service.
+> I am **declining the agreement to arbitrate** and I am **declining the class-action waiver** in the new Discord Terms of Service.
 > 
 > I am sending this from my email ✨email here✨, associated with my account ✨username here✨.
 > 

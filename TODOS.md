@@ -1,23 +1,45 @@
 - [x] Fork terminimal and create light themes
 
-- [x] Light theme
-  - [x] Create new `background_X.scss`, `X.scss`
-  - [x] Code to enable dark/light responsivity
-  - [x] Fun mousover effects
-- [x] More theme:
-  - [x] Fix `code` blocks
-  - [x] Differentiate individual posts better
-  - [x] Remove horizontal rules on blockquotes
-  - [ ] Make blockquotes nicer?
-    - [ ] Hand-code `blockquote blockquote...` nested levels
-  - [ ] Captions should be less obtrusive.
-  - [ ] Header text-shadows
+Major features:
+- [ ] Get hosting
+- [ ] Gallery view
+  - [ ] Projects
+  - [ ] Upload art
+  - [ ] No hotlinking
+- [ ] Liberapay
+- [ ] Selfhosted analytics
+- [ ] KaTeX
 - [ ] interactivity:
   - [ ] "like" button
   - [ ] comment button
   - [ ] simple viewcounter? find self-hosted analytics
-- [ ] TOS/PP
+- [ ] PP. (Nothing but logs!)
+- [ ] Built which checks <100kib for each page
 
+Main content:
+- [ ] Opossum raven art, self photo
+
+
+Posts:
+- [ ] All Security Obscurity
+- [ ] Feeld analysis
+- [ ] Apple password analysis
+- [ ] Adjusted world wheel
+- [ ] My Fastmail + IWN setup
+  - Why I went
+    - Gmail -> Protonmail -> Tutanota
+    - Gmail -> Nextcloud -> Fastmail CardDAV, CalDAV
+    - Keep -> Nextcloud Notes -> Obsidian and Dav (reminders)
+    - Drive -> StackEdit -> Nextcloud Notes -> Obsidian
+- [ ] Reading blogpost
+  - Braiding Sweetgrass
+  - Before Me
+  - Moth Monster
+- [ ] RIP DIY SSG 2020-2023
+
+
+Flair:
+- [ ] Art to each post
 
 - About:
   - [ ] Add opossum art, self photo
@@ -37,10 +59,3 @@
   - [x] https://lynndotpy.xyz/index.html
   - [ ] https://lynndotpy.xyz/posts/discord_optout_2023.html (etc)
     - [x] Posts are under `/posts/post_title/` but no redirect (yet) for `/posts/post_title.html`.
-
-- New content:
-  - [ ] Add art to each post
-  - [ ] RIP diy ssg 2020-2023
-  - [ ] "All security is by obscurity" posts
-  - [ ] Update projects
-  - [ ] Add art gallery 

@@ -100,8 +100,16 @@ figure {
     font-size: 14px;
     padding: 5px 10px;
     margin-top: 5px;
-    background: var(--accent);
-    color: var(--background);
+    //background: var(--accent);
+    //color: var(--background);
+    color: var(--accent);
+    //border-bottom: 1px solid var(--accent-alpha-20);
+    //border-left: 1px solid var(--accent-alpha-20);
+    //border-right: 1px solid var(--accent-alpha-20);
+    border-radius: 4px;
+    box-shadow: inset 0 2px 4px var(--accent-alpha-20);
+    box-shadow: inset 0 4px 8px var(--accent-alpha-20);
+    
 
     &.left {
       text-align: left;
