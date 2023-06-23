@@ -1,18 +1,18 @@
 // @flow
 
-import katexReplaceWithTex from './katex2tex';
+import { katexReplaceWithTex } from '/katex/katex2tex.js';
 
 // Return <div class="katex"> element containing node, or null if not found.
-function closestKatex(node: Node): ?Element {
+function closestKatex(node) {
     // If node is a Text Node, for example, go up to containing Element,
     // where we can apply the `closest` method.
-    const element: ?Element =
+    const element =
         (node instanceof Element ? node : node.parentElement);
     return element && element.closest('.katex');
 }
 
 // Global copy handler to modify behavior on/within .katex elements.
-document.addEventListener('copy', function(event: ClipboardEvent) {
+document.addEventListener('copy', function(event) {
     const selection = window.getSelection();
     if (selection.isCollapsed || !event.clipboardData) {
         return; // default action OK if selection is empty or unchangeable

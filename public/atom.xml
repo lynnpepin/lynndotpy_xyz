@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>&#x2F;&#x2F; lynndotpy</title>
+    <link href="https://lynndotpy.xyz/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://lynndotpy.xyz/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-03-08T00:00:00+00:00</updated>
+    <id>https://lynndotpy.xyz/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Opt out of Discord&#x27;s arbitration clause by sending a quick email. (Template included)</title>
+        <published>2023-03-08T00:00:00+00:00</published>
+        <updated>2023-03-08T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/discord-optout-2023/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/discord-optout-2023/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Send an email to &lt;a href=&quot;mailto:arbitration-opt-out@discord.com&quot;&gt;arbitration-opt-out@discord.com&lt;&#x2F;a&gt; using the email associated with your Discord account. For good measure, add your username. Template below!&lt;&#x2F;p&gt;
+&lt;p&gt;(btw, i&#x27;m not a lawyer and i&#x27;m not your representative)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;you-can-opt-out-of-discord-s-arbitration-clause-by-sending-them-an-email&quot;&gt;You can opt out of Discord&#x27;s arbitration clause by sending them an email&lt;&#x2F;h1&gt;
+&lt;p&gt;Send an email to &lt;a href=&quot;mailto:arbitration-opt-out@discord.com&quot;&gt;arbitration-opt-out@discord.com&lt;&#x2F;a&gt;, from the &lt;strong&gt;email address you use for your account&lt;&#x2F;strong&gt;, stating you wish to opt out of the arbitration clause. For good measure, I recommend adding your account ID!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Here&#x27;s a template you can use!&lt;&#x2F;strong&gt; It&#x27;s the email I wrote. Go ahead and fill in your email and username below.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To Discord,&lt;&#x2F;p&gt;
+&lt;p&gt;I am &lt;strong&gt;declining the agreement to arbitrate&lt;&#x2F;strong&gt; and I am &lt;strong&gt;declining the class-action waiver&lt;&#x2F;strong&gt; in the new Discord Terms of Service.&lt;&#x2F;p&gt;
+&lt;p&gt;I am sending this from my email ✨email here✨, associated with my account ✨username here✨.&lt;&#x2F;p&gt;
+&lt;p&gt;Specifically, I am referring to the new Discord terms of service posted at https:&#x2F;&#x2F;discord.com&#x2F;terms on 2023 February 24, effective 2023 March 27. I am opting out of the arbitration clause, and I am stating my disagreement to the class-action waivers, per section 14 &amp;quot;Settling disputes between you and Discord&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;Best regards,&lt;&#x2F;p&gt;
+&lt;p&gt;✨signature here too✨.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Of course, please note that I am not a lawyer and I am not your representative!&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;strong&gt;You should do this every time Discord changes their Terms of Service.&lt;&#x2F;strong&gt; This is an unjust world, and you are your best advocate! &lt;strong&gt;Discord is not your friend!&lt;&#x2F;strong&gt; They&#x27;ve had bots which scrape your messages from private servers to share them publicly (&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;resynth1943&#x2F;0185f55207dc4d84be99c8d74da9221d#file-dear_discord-txt&quot;&gt;since 2019 or earlier&lt;&#x2F;a&gt;), they&#x27;ve had white supremacist Trump supporters organize deadly movements using Discord and commit mass shootings (&lt;a href=&quot;https:&#x2F;&#x2F;www.nytimes.com&#x2F;2017&#x2F;08&#x2F;15&#x2F;technology&#x2F;discord-chat-app-alt-right.html&quot;&gt;2017&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;slate.com&#x2F;technology&#x2F;2018&#x2F;10&#x2F;discord-safe-space-white-supremacists.html&quot;&gt;2018&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;unicornriot.ninja&#x2F;2019&#x2F;neo-nazi-hipsters-identity-evropa-exposed-in-discord-chat-leak&#x2F;&quot;&gt;2019&lt;&#x2F;a&gt;), &lt;a href=&quot;https:&#x2F;&#x2F;unicornriot.ninja&#x2F;2022&#x2F;highland-park-shooter-decried-commies-in-discord-chat&#x2F;&quot;&gt;2022&lt;&#x2F;a&gt;, etc. You should reserve your right to sue if they mistreat you.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;my-personal-opinions-about-arbitration&quot;&gt;my personal opinions about arbitration&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; A forced arbitration clause is when a company says, &amp;quot;Hey, if you have a problem with us, you can&#x27;t sue us. Sorry sucker! Instead, you have to go through arbitration. Kind of like Judge Judy, except it&#x27;s not fun, and we get to pick the Judge Judy. We almost always win.&amp;quot; You usually can&#x27;t even join a class action lawsuit if you&#x27;ve signed one of these bad boys.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Forced arbitration clauses in the US are a tactic used by corporations which ask you to sign away your right to sue in court, and instead, go through an &amp;quot;arbitrator&amp;quot; of the corporations choosing. This is entirely against your best interest.&lt;&#x2F;p&gt;
+&lt;p&gt;Corporations started testing the legal waters with these &amp;quot;arbitration clauses&amp;quot; years ago. Unfortunately, these clauses were regularly held up by courts of law. This has emboldened companies to create increasingly restrictive arbitration clauses that increasingly restrict your right to sue. It has gotten worse with the Trump administration and the far-right conservative US Supreme Court.&lt;&#x2F;p&gt;
+&lt;p&gt;Arbitration clauses are here to stay. &lt;strong&gt;Arbitration clauses are regularly enforced in the courts of law, and are not in your favor.&lt;&#x2F;strong&gt; You owe it to yourself to defend yourself from these whenever you can.&lt;&#x2F;p&gt;
+&lt;p&gt;You can learn more &lt;a href=&quot;https:&#x2F;&#x2F;www.epi.org&#x2F;research&#x2F;forced-arbitration&#x2F;&quot;&gt;at epi.org here,&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;www.epi.org&#x2F;publication&#x2F;the-arbitration-epidemic&#x2F;&quot;&gt;here,&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;www.epi.org&#x2F;publication&#x2F;correcting-the-record-consumers-fare-better-under-class-actions-than-arbitration&#x2F;&quot;&gt;and here.&lt;&#x2F;a&gt;. Some key takeaways:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;The average consumer pays $7,725 in arbitration.
+&lt;ul&gt;
+&lt;li&gt;This is from 2017 and not adjusted for inflation.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Consumers (you) win in arbitration 21% of the time versus 57% in a real court of law.
+&lt;ul&gt;
+&lt;li&gt;This is sourced from 2015, before the Trump administration and the Trump-appointees to the Supreme Court. The win rate is likely much lower now in 2023.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;When consumers win in arbitration, they receive on average $24K in damages, down from $328K.
+&lt;ul&gt;
+&lt;li&gt;That is a 13.7x decrease.&lt;&#x2F;li&gt;
+&lt;li&gt;This is also sourced from 2015. This disparity likely much greater now in 2023.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;My stance is this: &lt;strong&gt;Nobody should ever agree to arbitration. Every person with a Discord account should opt out.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Things I read, 2022</title>
+        <published>2023-02-13T00:00:00+00:00</published>
+        <updated>2023-02-13T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/reading-2022/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/reading-2022/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Leaving a PhD gives someone a lot of time to read new things. Here&#x27;s some of my takeaways:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;ChatGPT and StableDiffusion are scary and new and cool.&lt;&#x2F;li&gt;
+&lt;li&gt;Philip Rogaway&#x27;s work presents some important ethical considerations for cryptographers.&lt;&#x2F;li&gt;
+&lt;li&gt;ThreeBlueOneBrown is one of many educational YouTubers that I&#x27;m enjoying.&lt;&#x2F;li&gt;
+&lt;li&gt;Anyone writing Rust would benefit from reading the cursed words in the Rustonomicon.&lt;&#x2F;li&gt;
+&lt;li&gt;As usual, 538 podcasts are worth listening to around elections.&lt;&#x2F;li&gt;
+&lt;li&gt;Audiobooks are good actually.&lt;&#x2F;li&gt;
+&lt;li&gt;TV is also really good now.&lt;&#x2F;li&gt;
+&lt;li&gt;Outer Wilds is the best game, I reckon.&lt;&#x2F;li&gt;
+&lt;li&gt;Nope (the movie) is &lt;em&gt;really really&lt;&#x2F;em&gt; good.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;Being a PhD student meant I&#x27;d dedicated the past four years of my life to consuming media purely for academic value. Computer science, cryptography, machine learning, ethics, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;With the pandemic-induced economic pain, I went on a leave of absence to take on some more profitable work. Having paused my PhD, I had a taste of free-time which I hadn&#x27;t had since &amp;quot;summer vacation&amp;quot; in K-12.&lt;&#x2F;p&gt;
+&lt;p&gt;But I left this PhD to a summer of 2022 with a tense political situation. Roe v Wade was overturned and numerous states enacted horrible, restrictive laws, committing atrocities against people with unwanted pregnancies, and numerous GOP officials across the United States were denying the legitimacy of the &lt;em&gt;2022&lt;&#x2F;em&gt; election before it even took place. The same was happening abroad, with Jair Bolsonaro of Brazil denying the results of Brazil&#x27;s 2022 election. All the while, the war in Ukraine leaves the world as close to a nuclear war as it ever has been in my life.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m writing this post in &lt;del&gt;January&lt;&#x2F;del&gt; February 2023. Thankfully, most of the USA GOP election deniers have failed. Bolsonaro&#x27;s 2022 election denial followed Trump&#x27;s 2020 election denial almost to a T, ending in a coup in January which failed. And coming up on the year anniversary of Russia invading Ukraine, no nukes have been dropped &lt;em&gt;yet&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;But there were a glorious two months of 2022 where I was able to happily indulge in &lt;em&gt;consumption&lt;&#x2F;em&gt; of media. But being an ex PhD student, I&#x27;m left with an unsatisfied need to provide summaries and notes of all I&#x27;ve read. I yearn to leave notes. So, here they are&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;i-m-still-browsing-arxiv-sanity-for-machine-learning-stuff-but-i-still-can-t-keep-up&quot;&gt;I&#x27;m still browsing Arxiv-Sanity for Machine Learning stuff, but I still can&#x27;t keep up&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;TLDR: I&#x27;m surprised by ChatGPT and StableDiffusion. I&#x27;m keeping up with deep learning less and less, but Arxiv Sanity is still good.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv-sanity.com&#x2F;&quot;&gt;Arxiv-Sanity&lt;&#x2F;a&gt; is this great service spearheaded by Andrej Karpathy. It helps one keep up with the deluge of learning papers, in the same way that an aerator might help someone drinking from a firehose. It&#x27;s a great digest of preprints.&lt;&#x2F;p&gt;
+&lt;p&gt;But as I left my internship, things got &lt;em&gt;crazy&lt;&#x2F;em&gt;. OpenAI came out with &lt;a href=&quot;https:&#x2F;&#x2F;openai.com&#x2F;dall-e-2&#x2F;&quot;&gt;DallE-2&lt;&#x2F;a&gt;, followed by &lt;a href=&quot;https:&#x2F;&#x2F;imagen.research.google&#x2F;&quot;&gt;Google&#x27;s Imagen&lt;&#x2F;a&gt;, and then things blew up with the open-source release of &lt;a href=&quot;https:&#x2F;&#x2F;stability.ai&#x2F;blog&#x2F;stable-diffusion-v2-release&quot;&gt;Stable Diffusion&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Stable Diffusion is a big &lt;em&gt;big&lt;&#x2F;em&gt; deal because the models are openly available and run performantly on consumer hardware. We&#x27;ve seen huge models running on supercomputers provide impressive results for years, but I&#x27;m surprised to see these running &lt;em&gt;on laptops and smartphones&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Then ChatGPT came out. I have a lot of thoughts and concerns, mainly:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;I think &amp;quot;ChatGPT is like Google Search&amp;quot; is a useful insight. Most people know nothing about how deep learning neural networks work other than &amp;quot;magic.&amp;quot; ChatGPT and Google Search are intended to solve problems in ways that overlap significantly.&lt;&#x2F;li&gt;
+&lt;li&gt;Using ChatGPT for factual information is like asking StableDiffusion to generate a map, and then using that map. (That is, probably not a good idea.)&lt;&#x2F;li&gt;
+&lt;li&gt;ChatGPT (like StableDiffusion) is more surprisingly capable than I&#x27;d expect a language model to be in 2022. I think this represents &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Dirac_delta_function&quot;&gt;a dirac delta&lt;&#x2F;a&gt; in terms of AI progress, rather than a sustained fast rate of growth. But this is certainly no winter, and I don&#x27;t know how fast things will change.
+&lt;ul&gt;
+&lt;li&gt;I have a few more thoughts on this note, but as I revise this, &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jPhJbKBuNnA&quot;&gt;Tom Scott released a video which basically said it all&lt;&#x2F;a&gt;. &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;I&#x27;m concerned for the future of the internet, and I think &amp;quot;Are you a robot?&amp;quot; challenges will become useless. Here are four ways, not mutually incompatible, I can see the internet going:
+&lt;ul&gt;
+&lt;li&gt;Every internet request costs a specific amount of money, to make it so bots are not necessarily economical to run. Sites can specify a charge. The poorest people are unable to access the internet, and wealthy nationstates and corporations can afford to continue using bots for their ends.&lt;&#x2F;li&gt;
+&lt;li&gt;Every internet request is tied to a personal national identification, which is tied to a decentralized reputational database. The poorest people rent out their (and their childrens) identity for botfarms, providing some cash before their reputation score is trashed.&lt;&#x2F;li&gt;
+&lt;li&gt;Every internet request requires a biometric authentication. Tied with device hardware and probabilistic risk scores, &amp;quot;Linux users&amp;quot; get shut out of the web in the same ways that &amp;quot;Tor users&amp;quot; are, and the poorest people have to put up with relentless captchas because they cannot afford the latest biometric devices.&lt;&#x2F;li&gt;
+&lt;li&gt;Cryptocurrencies succeed, and a &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Hashcash&quot;&gt;Hashcash-esque&lt;&#x2F;a&gt; spam prevention system requires users to help mine some amount of cryptocurrency with each web request.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;ChatGPT is not sentient. But now I&#x27;m worried that, within a few decades, I might seriously be considering the sentience of a computer program.&lt;&#x2F;li&gt;
+&lt;li&gt;It is wild that &amp;quot;jailbreaks&amp;quot; for ChatGPT involve convoluted, natural-language instructions meant to confuse it. The &amp;quot;Do Anything Now&amp;quot; prompt reads like 1970s AI scifi.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;For more reading, I recommend &lt;a href=&quot;https:&#x2F;&#x2F;www.newyorker.com&#x2F;tech&#x2F;annals-of-technology&#x2F;chatgpt-is-a-blurry-jpeg-of-the-web&quot;&gt;Ted Chiang&#x27;s &amp;quot;ChatGPT Is a Blurry JPEG of the Web&amp;quot;&lt;&#x2F;a&gt;. It surmises my thoughts entirely. If you&#x27;re interested in the concept of understanding as compression, consider reading on Ray Solomonoff&#x27;s work, specifically &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Algorithmic_probability&quot;&gt;algorothmic probability&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Solomonoff&amp;#x27;s_theory_of_inductive_inference&quot;&gt;Solomonoff&#x27;s theory of inductive inference&lt;&#x2F;a&gt;. This is a fascinating information-theoretic framework for exploring the idea of a &amp;quot;universal prior&amp;quot;, which is very relevant in machine learning. It&#x27;s not widely taught at CS universities. And if you&#x27;re depressed about the concept of a deterministic universe, Solomonoff&#x27;s work may ease or worsen that.&lt;&#x2F;p&gt;
+&lt;p&gt;... On a side note, check out what Stable Diffusion cranks out for a map of the Boston subway system:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;boston_stable_diffusion_compressed.png&quot; alt=&quot;A blue, messy grid that resembles a map. Generated with the prompt &#x27;Boston commuter rail map, PDF, 2017&#x27;&quot; title=&quot;A blue, messy grid that resembles a map. Generated with the prompt &#x27;Boston commuter rail map, PDF, 2017&#x27;.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A map of the Boston subway system, generated using Stable Diffusion. It&#x27;s not even close, of course, and it&#x27;d be silly to rely on this. See &lt;a href=&quot;https:&#x2F;&#x2F;www.mbta.com&#x2F;maps&quot;&gt;the real map&lt;&#x2F;a&gt; for comparison.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;phillip-rogaway-is-one-of-many-incredibly-cool-cryptographers&quot;&gt;Phillip Rogaway is one of many incredibly cool cryptographers&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; Remember when &amp;quot;crypto&amp;quot; meant &amp;quot;cryptography&amp;quot; and &amp;quot;crypto is a human right&amp;quot; didn&#x27;t sound so silly? Then you might like to browse Philip Rogaway&#x27;s works.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s a list of papers I recommend:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;dspace.mit.edu&#x2F;bitstream&#x2F;handle&#x2F;1721.1&#x2F;97690&#x2F;MIT-CSAIL-TR-2015-026.pdf&quot;&gt;2015 &lt;em&gt;&amp;quot;Keys Under Doormats&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2110.07450.pdf&quot;&gt;2021 &lt;em&gt;&amp;quot;Bugs In Our Pockets&lt;&#x2F;em&gt;&amp;quot;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Rogaway&#x27;s 2015 &lt;a href=&quot;https:&#x2F;&#x2F;www.cs.ucdavis.edu&#x2F;~rogaway&#x2F;papers&#x2F;moral.html&quot;&gt;&lt;em&gt;&amp;quot;The Moral Character of Cryptographic Work&lt;&#x2F;em&gt;&amp;quot;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Rogaway&#x27;s 2020 &lt;a href=&quot;https:&#x2F;&#x2F;web.cs.ucdavis.edu&#x2F;~rogaway&#x2F;classes&#x2F;189&#x2F;spring20&#x2F;covid19.pdf&quot;&gt;letter to students, cancelling his &amp;quot;Cryptography and Surveillance&amp;quot; class.&lt;&#x2F;a&gt; &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Cryptography is a fascinating field, but in my PhD studies I&#x27;ve almost only read those classical and technical papers, despite the fact that cryptography ultimately addresses social needs. Cryptography is practically a field of humanities!&lt;&#x2F;p&gt;
+&lt;p&gt;There are, of course, &lt;a href=&quot;https:&#x2F;&#x2F;dspace.mit.edu&#x2F;bitstream&#x2F;handle&#x2F;1721.1&#x2F;97690&#x2F;MIT-CSAIL-TR-2015-026.pdf&quot;&gt;the venerable 2015 &lt;em&gt;&amp;quot;Keys Under Doormats&amp;quot;&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; paper and &lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2110.07450.pdf&quot;&gt;the lesser-known 2021 &lt;em&gt;&amp;quot;Bugs In Our Pockets&lt;&#x2F;em&gt;&amp;quot;&lt;&#x2F;a&gt; paper, both of which are required reading for the intersection of cryptography and society.&lt;&#x2F;p&gt;
+&lt;p&gt;For anyone hungry to read more, I must recommend Philip Rogaway, a cryptographer at the UCD: https:&#x2F;&#x2F;www.cs.ucdavis.edu&#x2F;~rogaway&#x2F;. Specifically, his paper &lt;a href=&quot;https:&#x2F;&#x2F;www.cs.ucdavis.edu&#x2F;~rogaway&#x2F;papers&#x2F;moral.html&quot;&gt;&lt;em&gt;&amp;quot;The Moral Character of Cryptographic Work&lt;&#x2F;em&gt;&amp;quot;&lt;&#x2F;a&gt;, a 2015 paper that describes cryptography as a political tool that redistributes power. This is how I view cryptography, and it&#x27;s why it is so important to me. But the paper is 33 pages long and I haven&#x27;t read it all the way through yet.&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#reading_rogaway: To be honest, I probably won&#x27;t. If an academic says they skimmed a paper, it means they looked at the abstract. If they say they read a paper through, they probably skimmed it. This is a secret though, don&#x27;t tell anyone.&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The abstract is as follows: &lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Cryptography rearranges power: it configures who can do what, from what. This makes cryptography an inherently &lt;em&gt;political&lt;&#x2F;em&gt; tool, and it confers on the field an intrinsically &lt;em&gt;moral&lt;&#x2F;em&gt; dimension. The Snowden revelations motivate a reassessment of the political and moral positioning of cryptography. They lead one to ask if our inability to effectively address mass surveillance constitutes a failure of our field. I believe that it does. I call for a community-wide effort to develop more effective means to resist mass surveillance. I plead for a reinvention of our disciplinary culture to attend not only to puzzles and math, but, also, to the societal implications of our work.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;His work came up in conversation with a friend during a recent excursion, and I found a &lt;a href=&quot;https:&#x2F;&#x2F;web.cs.ucdavis.edu&#x2F;~rogaway&#x2F;classes&#x2F;189&#x2F;spring20&#x2F;covid19.pdf&quot;&gt;2020 letter to students, describing a decision to cancel his &amp;quot;Cryptography and Surveillance&amp;quot; class in the face of the Covid-19 pandemic.&lt;&#x2F;a&gt; It&#x27;s a strangely validating letter to read now, because it feels like a testament to thoughts and feelings I also had at that time. Covid was &lt;em&gt;extremely uncertain and scary&lt;&#x2F;em&gt; in early 2020. Now, three years later, Covid is a known and navigable risk, with paxlovid and vaccines and effective masks generally available. But in 2020, it felt like a very plausible way for fragile supply chains to finally and irreparably fail, permanently changing our ways of life. That didn&#x27;t come to fruition, but it &lt;em&gt;could have&lt;&#x2F;em&gt;. The very worst thing is that the preppers would have been correct and they would be &lt;em&gt;very smug about it.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;While writing this post, I found myself re-reading old papers, and came across two more that I can recommend:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.usenix.org&#x2F;conference&#x2F;usenixsecurity22&#x2F;presentation&#x2F;geeng&quot;&gt;&amp;quot;Like Lesbians Walking the Perimeter&amp;quot;: Experiences of U.S. LGBTQ+ Folks With Online Security, Safety, and Privacy Advice (Usenix 2022)&lt;&#x2F;a&gt;, a paper in the intersection of cryptography and society. Recommended by a friend.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;eprint.iacr.org&#x2F;2020&#x2F;800.pdf&quot;&gt;&amp;quot;Reimagining Secret Sharing: Creating a Safer and More Versatile Primitive by Adding Authenticity, Correcting Errors, and Reducing Randomness Requirements&amp;quot;&lt;&#x2F;a&gt;, a technical paper from Rogaway that introduces a new primitive, &amp;quot;Adept secret sharing&amp;quot;, to address real-world use cases. I found this while searching for cryptographic secret-sharing.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;educational-youtube-is-still-great&quot;&gt;Educational YouTube is still great.&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; ThreeBlueOneBrown&#x27;s &lt;em&gt;excellent&lt;&#x2F;em&gt; videos highlighted my increasing unease over my fading knowledge. Deciding to refresh it, I dug back into KhanAcademy&#x27;s venerable backlog, starting both the AP Art History and Linear Algebra courses.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;While watching ThreeBlueOneBrown&#x27;s video on &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=851U557j6HE&quot;&gt;Borwein integrals&lt;&#x2F;a&gt;, I realized I had forgotten much of the later math I had learned. Specifically, &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fourier_transform&quot;&gt;Fourier transforms&lt;&#x2F;a&gt; and convolutions (&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Convolution&quot;&gt;mathematical&lt;&#x2F;a&gt;. I recalled &lt;em&gt;what&lt;&#x2F;em&gt; they could do and their general ideas well enough, but I couldn&#x27;t recall any of the specific transformations I could make use of.&lt;&#x2F;p&gt;
+&lt;p&gt;With &lt;a href=&quot;https:&#x2F;&#x2F;obsidian.md&#x2F;&quot;&gt;Obsidian&lt;&#x2F;a&gt;, I&#x27;ve finally found a notetaking solution that works well and hits all my checkboxes.
+So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and it seemed sensible to do some self-study. I found myself on Khan Academy, thinking it might be a good use of time. During my undergraduate and graduate studies, I found great value in the few humanities I had taken in my undergrad. Thinking there might be value to broadening my horizons, I started the &lt;a href=&quot;https:&#x2F;&#x2F;www.khanacademy.org&#x2F;humanities&#x2F;ap-art-history&#x2F;&quot;&gt;KhanAcademy AP Art History course&lt;&#x2F;a&gt;. I don&#x27;t expect the same level of rigor one would get from an actual course (I still believe KhanAcademy is best as a study &lt;em&gt;aid&lt;&#x2F;em&gt;), but I&#x27;m still getting value from it.&lt;&#x2F;p&gt;
+&lt;p&gt;Meanwhile, I&#x27;m also reviewing the KhanAcademy Linear Algebra course, referring also to the &lt;a href=&quot;https:&#x2F;&#x2F;www.deeplearningbook.org&#x2F;contents&#x2F;linear_algebra.html&quot;&gt;&#x27;Linear Algebra&#x27; Chapter of Ian Goodfellow&#x27;s &lt;em&gt;Deep Learning Book&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;www.math.uwaterloo.ca&#x2F;~hwolkowi&#x2F;matrixcookbook.pdf&quot;&gt;Kaare Petersen&#x27;s and Michael Pedersen&#x27;s &lt;em&gt;The Matrix Cookbook&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;On my list is &amp;quot;Rational Trigonometry&amp;quot; (see https:&#x2F;&#x2F;web.maths.unsw.edu.au&#x2F;~norman&#x2F;Rational1.htm and https:&#x2F;&#x2F;stijnoomes.com&#x2F;laws-of-rational-trigonometry&#x2F;), an alternative formulation of trig rules with totally separate concepts. &lt;&#x2F;p&gt;
+&lt;p&gt;Having personal notes is extremely useful for reference, and I wish I did this earlier.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-rustonomicon-makes-unsafe-rust-fun-to-read-about&quot;&gt;The Rustonomicon makes Unsafe Rust fun to read about&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; The Rustonomicon is a fun read, and might help you understand Rust a bit better. It&#x27;s written in an engaging and evocative way, but it doesn&#x27;t detract from the technical content.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I had been stuck on a tricky ownership problem in my little self-educational Rust project (which turned out just to be a type issue). Out of ideas, I started reading &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;nomicon&#x2F;&quot;&gt;the Rustonomicon&lt;&#x2F;a&gt;, a cursed text which details unsafe Rust. It starts like this:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&quot;the-dark-arts-of-unsafe-rust&quot;&gt;The Dark Arts of Unsafe Rust&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;THE KNOWLEDGE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF UNLEASHING INDESCRIBABLE HORRORS THAT SHATTER YOUR PSYCHE AND SET YOUR MIND ADRIFT IN THE UNKNOWABLY INFINITE COSMOS.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;The Rustonomicon digs into all the awful details that you need to understand when writing Unsafe Rust programs.&lt;&#x2F;p&gt;
+&lt;p&gt;Should you wish a long and happy career of writing Rust programs, you should turn back now and forget you ever saw this book. It is not necessary. However if you intend to write unsafe code — or just want to dig into the guts of the language — this book contains lots of useful information.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;The book maintains the air of intrigue and cursedness appropriate for one titled after the necronomicon, and it does indeed provide some of the insights I was looking for. It starts by introducing Rust as two halves, one Safe and Unsafe, in a surprising asymmetric relationship: The safety of Rust relies on the Safe half trusting everything the Unsafe half provides, while the Unsafe half can trust very little from the Safe half.&lt;&#x2F;p&gt;
+&lt;p&gt;I really encourage reading this book. There is no narrative, and yet it feels like I&#x27;m reading a fascinating book. Not even &lt;a href=&quot;https:&#x2F;&#x2F;web.mit.edu&#x2F;6.001&#x2F;6.037&#x2F;sicp.pdf&quot;&gt;the SICP does that!&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;(On a side-note, I discovered that I was a fan of the author of the Rustonomicon for years before I knew her name. &lt;a href=&quot;https:&#x2F;&#x2F;faultlore.com&#x2F;blah&#x2F;&quot;&gt;Aria Beingessner&lt;&#x2F;a&gt; is also known for her work with good blogposts like &lt;a href=&quot;https:&#x2F;&#x2F;faultlore.com&#x2F;blah&#x2F;c-isnt-a-language&#x2F;&quot;&gt;&amp;quot;C Isn&#x27;t A Programming Language Anymore&amp;quot;&lt;&#x2F;a&gt; and the original Homestuck flash games. Being a Homestuck fan and Rust enjoyer, I&#x27;m a big fan of her work and writing.)&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;fivethirtyeight-s-podcasts-and-models-are-a-fun-and-scary-source-for-applied-bayesian-thinking&quot;&gt;FiveThirtyEight&#x27;s podcasts and models are a fun and scary source for applied Bayesian thinking&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; If you like US politics and probabilistic thinking, I can recommend the FiveThirtyEight politics podcast. &lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;A lot of my internal conceptualization of the world revolves around understanding the world as a system of continuous parts which can be better described with probabilistic fuzzy terms than absolute discrete terms. Understanding an individual entity as inseparable from the whole, etc., yadda yadda. I&#x27;d go so far as to say any discrete thinking is a simplification at best, and a fallacy at worst, but that&#x27;s a different blogpost.&lt;&#x2F;p&gt;
+&lt;p&gt;But we use discrete words, and without discrete terms to describe continuous or otherwise fuzzy ideas, one is lonely.&lt;&#x2F;p&gt;
+&lt;p&gt;So I really do appreciate FiveThirtyEight, which takes a fuzzy, probabilistic and statistical approach to a very binary task of &amp;quot;election predictions&amp;quot;.  I also appreciate 538 for being a rounded and fun podcast. It is the only piece of media that I could recommend to someone that uses Bayesian thinking as a matter of course. Terms like &amp;quot;priors&amp;quot; and &amp;quot;probability&amp;quot; is common on their podcast.&lt;&#x2F;p&gt;
+&lt;p&gt;FiveThirtyEight publishes the results from their model with percent chances on each outcome, but &lt;a href=&quot;https:&#x2F;&#x2F;projects.fivethirtyeight.com&#x2F;2022-flip-senate-house&#x2F;&quot;&gt;it also allows you to play with a model given any other kind of win.&lt;&#x2F;a&gt; This is a Bayesian toy! As the election results came in for each state, I found myself playing with their model, seeing how the model predictions updated with each called race. &lt;&#x2F;p&gt;
+&lt;h1 id=&quot;audiobooks-are-good-actually&quot;&gt;Audiobooks are good actually&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; Give audiobooks a try if you haven&#x27;t. I value the meditative moments an audiobook might fill, but they have given me more to think about in the other moments.&lt;&#x2F;p&gt;
+&lt;p&gt;For accessing audiobooks, the Libby app is great, but I don&#x27;t think it is sustainable for authors and publishers to offer audiobooks, so get it while you can.&lt;&#x2F;p&gt;
+&lt;p&gt;I listened to &amp;quot;How To Be An Antiracist&amp;quot;, &amp;quot;A Wizard of Earthsea&amp;quot;, &amp;quot;Leave the World Behind&amp;quot;, &amp;quot;Braiding Sweetgrass&amp;quot;, and I&#x27;ve started &amp;quot;Caste: The Origins of Our Discontents&amp;quot;. I don&#x27;t directly review these books here, but I recommend them.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m really happy I tried audiobooks, because they&#x27;re good, actually. There are two problems: (1) It&#x27;s easy to get distracted, and scrubbing a timeline is worse than flipping through pages. (2) An audiobook flips the role of pacing from the reader to the narrator, requiring one to actively pause to take a moment to meditate and digest over what they just heard.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;With all this free time, I&#x27;ve been driving on occasion for hikes, bussing to visit friends out of state, and going for long walks. I appreciate the silence and free time to let my mind wander and to come up with ideas. But I also want to take advantage of Libby (an app which lets you rent audiobooks from your local library) before it goes away (because there&#x27;s no way it&#x27;s financially sustainable.)&lt;&#x2F;p&gt;
+&lt;p&gt;But I was an audiobook skeptic, imagining audiobooks to be strictly inferior way of reading books. I didn&#x27;t know I had this unconscious bias, Then I listened to Ibram X Kendi&#x27;s &amp;quot;&lt;em&gt;How to Be an Antiracist&lt;&#x2F;em&gt;&amp;quot;, having had read it a few years back. Narrated by the author himself, I could really appreciate the new expressive dimensions of tone and pacing.&lt;&#x2F;p&gt;
+&lt;p&gt;That is to say, the audiobook &lt;em&gt;adds information&lt;&#x2F;em&gt; that the book couldn&#x27;t. I was surprised to find myself open to the possibility audiobooks may be &lt;em&gt;superior&lt;&#x2F;em&gt; to print.&lt;&#x2F;p&gt;
+&lt;p&gt;Reading books on a screen is unappealing (and I don&#x27;t want to buy an ereader while the technology is still expensive and strangled by eink patentholders), and buying or borrowing books is inconvenient. So, I was already sold on the convenience of audiobooks, but I&#x27;m surprised to find myself consuming many books through it.&lt;&#x2F;p&gt;
+&lt;p&gt;With this new mindset, I decided to listen to the first two of the acclaimed &lt;em&gt;&amp;quot;Earthsea&amp;quot;&lt;&#x2F;em&gt; books, having had heard good things of Ursula K. LeGuin&#x27;s work. The first book, &lt;em&gt;&amp;quot;A Wizard of Earthsea,&amp;quot;&lt;&#x2F;em&gt; was primarily narrated by Harlan Ellison. The narration gave the vibe of some omniscient narrator, describing events as they happen. As if he was not reading from a script, but instead peering into the world of the book, sometimes &lt;em&gt;squinting&lt;&#x2F;em&gt; to discern detail, as if describing events as they unfolded. There was an audible clinking of metal, as if he was garbed with some jewelry. This narration added some character that I assume would not have been in the ink-and-paper version. I listened to the sequel, &lt;em&gt;&amp;quot;The Tombs of Atuan&amp;quot;&lt;&#x2F;em&gt;, through Rob Inglis&#x27;s narration. His was similar but less eccentric than Ellison&#x27;s, but I feel roughly the same.&lt;&#x2F;p&gt;
+&lt;p&gt;I don&#x27;t regret being introduced to &lt;em&gt;Earthsea&lt;&#x2F;em&gt; in this manner! It felt great to indulge in fiction &#x27;reading&#x27; for the first time in awhile.&lt;&#x2F;p&gt;
+&lt;p&gt;Excited to see what else was out there, I looked for available and trending audiobooks within the Libby app. It was refreshing to use the Libby app. No advertisements, no dark patterns, no grease of profit incentive. It makes me trust that is recommendations are weighted not by advertisers dollars, but by statistics like &amp;quot;download count&amp;quot; or &amp;quot;most minutes listened to in the past day&amp;quot;. Libby has a utilitarian design, of an app that does what it does and no more. No goofy over-the-top polish like 3D elements or &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Physically_based_rendering&quot;&gt;physically based rendering&lt;&#x2F;a&gt; you see in some other apps. Libby is an app for reading books, no more than that. It knows what it is.&lt;&#x2F;p&gt;
+&lt;p&gt;From Libby&#x27;s recommendation, I then read &lt;em&gt;&amp;quot;Leave The World Behind&amp;quot;&lt;&#x2F;em&gt; by Rumaan Alam. This book was enjoyable enough to finish, but I wonder if I would have preferred it as a book, being quite short. If you like vague apocalyptic horror, I can recommend it: It features characters brought together during a storm, kind of like &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pygmalion_(play)&quot;&gt;Pygmalion&lt;&#x2F;a&gt;, as they find themselves stranded at an AirBnB during a long power outage.  Then things get much worse.&lt;&#x2F;p&gt;
+&lt;p&gt;After a fiction bender, I needed something substantive. I&#x27;m now listening to &amp;quot;Caste: The Origins of our Discontents&amp;quot; by Isabel Wilkerson. It analyzes the history of racism in the United States through the lens of a caste system. It is filled with references and historic accounts, many of them graphic and horrifying and deeply unsettling. &lt;&#x2F;p&gt;
+&lt;p&gt;But as I listen to Caste, I also find myself searching the references, facts, etc., intermittently pausing and unpausing the audiobook. While audiobooks have grown on me, my experiences have highlighted two problems:&lt;&#x2F;p&gt;
+&lt;p&gt;First, it is easy to get distracted during an audiobook, and to miss what exactly is being said. If one is listening to an audiobook while preparing tea or cleaning a room, one might find themselves reversing to relisten to a section, without the hard and fast guidelines of page number and line to go by. This is a navigation issue that is difficult. &lt;&#x2F;p&gt;
+&lt;p&gt;Second, one has to actively pause their listening to in order to reflect and digest what they&#x27;ve just heard. This is not the case when reading text, since we set the pace with our eyes. There is no narrator with a physical book.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;tv-got-really-really-good&quot;&gt;TV got really, really good.&lt;&#x2F;h1&gt;
+&lt;p&gt;TV is the last vestige of the serial-publication format of fiction. A great way to build a community is to have a weekly cliffhanger, to keep the show in someones mind all week, speculating on what comes next.&lt;&#x2F;p&gt;
+&lt;p&gt;But a good show is still good if you watch it after the fact, episode following episode. &lt;&#x2F;p&gt;
+&lt;p&gt;Those kinds of shows are going away with streaming, where entire seasons are dropped at once. But the ones that are still left are great.&lt;&#x2F;p&gt;
+&lt;p&gt;Here are some &lt;em&gt;very good shows&lt;&#x2F;em&gt; I watched in 2022 and 2023 which I must recommend:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mr. Robot&lt;&#x2F;strong&gt; is the best of them and I can&#x27;t do it justice with a description. I watched it in 2019 and again in 2022. You owe it to yourself to watch this show, because it is simply one of the best.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Better Call Saul&lt;&#x2F;strong&gt;, the prequel to Breaking Bad, finished in 2022. Watch Breaking Bad first. These are some of the best shows out there.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;The Rehearsal:&lt;&#x2F;strong&gt; Nathan Fielder&#x27;s sequel to &amp;quot;Nathan For You&amp;quot; takes the premise and goes wild with it. It&#x27;s funny, it&#x27;s surprising, it&#x27;s shocking, it&#x27;s difficult. Like &amp;quot;Nathan For You&amp;quot;, the show depicts real people with real reactions to real situations, except for the narrator, Nathan, who lies and cherrypicks to present a narrative.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;The Last of Us&lt;&#x2F;strong&gt; premiered in 2023. The zombie apocalypse is a great narrative tool that allows the writers to put people into a situation. The acting is phenomenal and the show is immersive. Every actor seems like a real, breathing, thinking person. Don&#x27;t let the fact that it&#x27;s a &amp;quot;zombie show&amp;quot; turn you off. It&#x27;s a show about people, and it&#x27;s very &lt;em&gt;very&lt;&#x2F;em&gt; good.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;outer-wilds-is-the-best-videogame-i-ve-ever-played&quot;&gt;Outer Wilds is the best videogame I&#x27;ve ever played.&lt;&#x2F;h1&gt;
+&lt;p&gt;Outer Wilds (&lt;em&gt;not&lt;&#x2F;em&gt; &lt;a href=&quot;https:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;578650&#x2F;The_Outer_Worlds&#x2F;&quot;&gt;The Outer Worlds&lt;&#x2F;a&gt;) is an adventure game with an emotional story. It&#x27;s difficult to review, because it&#x27;s best played with no information whatsoever, because learning and gaining information is the most important part of the gameplay. &lt;a href=&quot;https:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;753640&#x2F;Outer_Wilds&#x2F;&quot;&gt;Outer Wilds is $25 on Steam&lt;&#x2F;a&gt;, and takes about 20 hours to beat. If you&#x27;re willing to gamble $25 and an hour or two, please consider it. It is one of the most intellectually stimulating pieces of media I&#x27;ve played with.&lt;&#x2F;p&gt;
+&lt;p&gt;In the discussion of whether videogames are art, Outer Wilds makes it easy to show they are art. This is because it tells a story that can only be told as a videogame. &lt;&#x2F;p&gt;
+&lt;h1 id=&quot;nope-2022-is-my-favorite-movie-of-the-year-and-i-don-t-even-like-horror-or-movies-mild-spoilers&quot;&gt;Nope (2022) is my favorite movie of the year, and I don&#x27;t even like horror or movies! (Mild spoilers)&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; &lt;em&gt;Nope&lt;&#x2F;em&gt; is a science-fiction horror movie from filmmaker Jordan Peele. &lt;em&gt;Nope&lt;&#x2F;em&gt; kept me engaged and thinking the whole time, and for quite some time after. Peele lives up to the high expectations he&#x27;s set as a filmmaker with his previous films &lt;em&gt;Get Out&lt;&#x2F;em&gt; and &lt;em&gt;Us&lt;&#x2F;em&gt;. I highly recommend &lt;em&gt;Nope&lt;&#x2F;em&gt;, even if you do not like horror.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Nope_(film)&quot;&gt;&lt;strong&gt;&amp;quot;Nope&amp;quot;&lt;&#x2F;strong&gt; (2022, film)&lt;&#x2F;a&gt; is my favorite &amp;quot;reading item&amp;quot; of the month. It&#x27;s a film by Jordan Peele, known for creative horror films with deep themes, symbolism, anime references, and difficult-to-google names. Peele might be the first filmmaker who I consider myself a fan of, because each and every one of his movies have left me thinking about it for &lt;em&gt;weeks&lt;&#x2F;em&gt; after I&#x27;ve watched them. I can&#x27;t get it out of my mind.&lt;&#x2F;p&gt;
+&lt;p&gt;I left &lt;em&gt;Nope&lt;&#x2F;em&gt; feeling like I had just read a great book. I don&#x27;t want to spoil it, and that makes a review hard, but I will do my best. I encourage you to watch the film before reading this.&lt;&#x2F;p&gt;
+&lt;p&gt;Nope uses some classic narrative tricks to great effect. Flashbacks are used very sparingly to tell its story, building a select few scenes in an unforgettable manner. One in particular is gruesome, beautiful, and wrenching, and it cements questions in the viewers mind which are answered over the course of a movie.&lt;&#x2F;p&gt;
+&lt;p&gt;Peele has proven to me that horror can be good and interesting without relying on supernatural ghost curse magic. Nope centers around a mysterious and malevolent entity, a &amp;quot;monster&amp;quot; element in horror parlance. When a movie has a monster, it only gets to reveal it once (if at all), and as a viewer, we wonder: Will there be a reveal? When? All at once, or bits at a time?&lt;&#x2F;p&gt;
+&lt;p&gt;Well, &lt;em&gt;Nope&lt;&#x2F;em&gt; reveals the malevolent entity in a peculiar, interesting, nearly unbearable way that I hadn&#x27;t considered before. It satisfies curiosity while being horrifying.&lt;&#x2F;p&gt;
+&lt;p&gt;But, &lt;em&gt;Nope&lt;&#x2F;em&gt; is also a movie that tells a generational story. By making the protagonists brother and sister, and setting the film around their family ranch, &lt;em&gt;Nope&lt;&#x2F;em&gt; makes plenty of room to subtly tell that generational story. You learn about the characters and their ancestors through worldbuilding techniques that you don&#x27;t normally see in a film already grounded in our real-life world.&lt;&#x2F;p&gt;
+&lt;p&gt;This film makes some significant symbolism and themes surrounding Black history and colonial history. With the story taking place on a ranch the main duo had inherited, we see these histories merge in ways that are atypical and uplifting. &lt;&#x2F;p&gt;
+&lt;p&gt;For one specific example, the film weaves &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Animal_Locomotion&quot;&gt;&amp;quot;Animal Locomotion, Plate 626&amp;quot;&lt;&#x2F;a&gt;, a significant early film recording of a Black farmhand riding a horse, into the plot. Despite the historical importance, the Black farmhand is uncredited and not known by name to history. This injustice leaves a gap in knowledge for the film to integrate into its own plot. The fourth wall is broken, subtly, just enough to highlight this injustice.&lt;&#x2F;p&gt;
+&lt;p&gt;There&#x27;s more to say here, but impossible to do so without spoIling significant plot revelations. Ultimately, NOPE took the place of my favorite film of 2022.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Python on your phone sucks less with `ooo.py` and the `-i` flag.</title>
+        <published>2022-05-22T00:00:00+00:00</published>
+        <updated>2022-05-22T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/python-mobile/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/python-mobile/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Copy the script below, and run it as &lt;code&gt;python -i ooo.py&lt;&#x2F;code&gt;. This will give you a bunch of useful imports with short aliases, and throw you into an interactive shell.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&amp;#39;&amp;#39;&amp;#39;Run as `python3 -i ooo.py`
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;I use this when writing Python scripts on my phone (through Termux). The point is to minimize the keypresses needed when writing Python on a phone.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;This will start Python, import a bunch of modules with short names, and then throw you into an interpreter.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&amp;#39;&amp;#39;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;numpy &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;np
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;pandas &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;pd
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;math &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;mt
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;random &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;rd
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;time
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;itertools &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;it
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;functools &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;ft
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;re
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;os
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;sys
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;glob
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;pickle &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;pl
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;hashlib &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;hl
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;secrets &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;ss
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;socket &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;sk
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;imported numpy as np, pandas as pd, math as mt, random as rd, time, itertools as it, functools as ft, re, os, sys, glob, pickle as pl, hashlib as hl, secrets as ss, and socket as sk!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;A = np.array
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;PI &lt;&#x2F;span&gt;&lt;span&gt;= mt.pi
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;TAU &lt;&#x2F;span&gt;&lt;span&gt;= mt.tau
+&lt;&#x2F;span&gt;&lt;span&gt;E = mt.e
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Constants available: PI, TAU, E .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;H = help
+&lt;&#x2F;span&gt;&lt;span&gt;Q = quit
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Functions `help(...)` and `quit()` available as `H(...)` and `Q()`.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Here is a real-time video of the script in action, used for writing a Monte Carlo simulation to estimate the value of Pi. &lt;&#x2F;p&gt;
+&lt;!-- ![A screenrecording ](..&#x2F;images&#x2F;ooopy.webm){ width=240px } --&gt;
+&lt;!-- centered video --&gt;
+&lt;video controls width=&quot;360px&quot; style=&quot;margin: 0 auto; display: block;&quot; preload=&quot;metadata&quot;&gt;
+  &lt;source src=&quot;..&#x2F;images&#x2F;ooopy.webm&quot; type=&quot;video&#x2F;webm&quot; &gt; &lt;&#x2F;source&gt;
+  &lt;p&gt; Your browser doesn&#x27;t support HTML5 video. &lt;a href=&quot;..&#x2F;images&#x2F;ooopy.webm&quot;&gt;Here is a direct link instead.&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;video&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Python in the terminal has effectively replaced my graphing calculator for quick calculations. Its REPL allows for interactive coding, so there is no compile-run-debug loop. The great thing is, I can also use this on my phone! (I used Termux on Android, but this might work on iOS through iSH.)&lt;&#x2F;p&gt;
+&lt;p&gt;But coding on a phone sucks. But Python lets you bind almost anything to almost anything, so you can make it suck a bit less. I use a little script to set up a Python environment that is much more comfortable on the phone.&lt;&#x2F;p&gt;
+&lt;p&gt;I call it &lt;code&gt;ooo.py&lt;&#x2F;code&gt; because &lt;code&gt;ooo.py&lt;&#x2F;code&gt; is fast to type. The script imports a bunch of useful tools, and with short names (e.g. &lt;code&gt;np&lt;&#x2F;code&gt; instead of &lt;code&gt;numpy&lt;&#x2F;code&gt;, &lt;code&gt;it&lt;&#x2F;code&gt; instead of &lt;code&gt;itertools&lt;&#x2F;code&gt;). The script also binds common functions and constants to shorter names. e.g. &lt;code&gt;A(...)&lt;&#x2F;code&gt; instead of &lt;code&gt;np.array(...)&lt;&#x2F;code&gt;, &lt;code&gt;PI&lt;&#x2F;code&gt; instead of &lt;code&gt;math.pi&lt;&#x2F;code&gt;. The script also prints all these shortcuts out, so you don&#x27;t need to remember them all.&lt;&#x2F;p&gt;
+&lt;p&gt;The real value comes from the &lt;code&gt;-i&lt;&#x2F;code&gt; flag. Running the script as &lt;code&gt;python -i ooo.py&lt;&#x2F;code&gt; will run all of &lt;code&gt;ooo.py&lt;&#x2F;code&gt;, but instead of exiting to shell, it&#x27;ll throw you into a REPL! &lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>You can sort in linear time!</title>
+        <published>2022-01-07T00:00:00+00:00</published>
+        <updated>2022-01-07T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/linear-sorting/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/linear-sorting/</id>
+        <content type="html">&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in O(n log n) time is still true, but that assumes you&#x27;re sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)&lt;&#x2F;p&gt;
+&lt;p&gt;To address common suspicions:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Counting sort is not a randomized algorithm, it always outputs the correct solution.&lt;&#x2F;li&gt;
+&lt;li&gt;Counting sort is not a parallelized algorithm. (And you can&#x27;t use parallelism to speed past a worst-case big-O run time anyway!)&lt;&#x2F;li&gt;
+&lt;li&gt;Counting sort is not an amortized algorithm. It is truly O(n), not &#x27;expected&#x27; or &#x27;amortized&#x27; O(n).&lt;&#x2F;li&gt;
+&lt;li&gt;Counting sort is technically Θ(n), that is, the worst and best case running time is linear. &lt;&#x2F;li&gt;
+&lt;li&gt;This can be used in the real world.&lt;&#x2F;li&gt;
+&lt;li&gt;However, it is not an in-place sorting algorithm.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h1 id=&quot;ok-how-does-counting-sort-work&quot;&gt;ok, how does counting sort work?&lt;&#x2F;h1&gt;
+&lt;p&gt;The idea of the algorithm is that you count how many times a number appears in a list.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Get input a list &lt;code&gt;L&lt;&#x2F;code&gt; of numbers from some finite set &lt;code&gt;K&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Instantiate a dictionary &lt;code&gt;S&lt;&#x2F;code&gt; with zeros, with one element for each item in &lt;code&gt;K&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;For each item in &lt;code&gt;L&lt;&#x2F;code&gt;, increment the corresponding element in &lt;code&gt;S&lt;&#x2F;code&gt; by one.&lt;&#x2F;li&gt;
+&lt;li&gt;Then, for each item &lt;code&gt;k in K&lt;&#x2F;code&gt;, output &lt;code&gt;k&lt;&#x2F;code&gt; a total of &lt;code&gt;L[k]&lt;&#x2F;code&gt; times each.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Here&#x27;s a simple implementation in Python.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;set_of_numbers_to_sort = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;list&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;256&lt;&#x2F;span&gt;&lt;span&gt;)) 
+&lt;&#x2F;span&gt;&lt;span&gt;counted_numbers = {kk : &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;kk &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;set_of_numbers_to_sort}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;numbers_in = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;input&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Enter values in [0, 255] separated by space:\n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;numbers_in = numbers_in.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;split&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39; &amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;number &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;numbers_in:
+&lt;&#x2F;span&gt;&lt;span&gt;    counted_numbers[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;(number)] += &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;number &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;set_of_numbers_to_sort:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;_ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span&gt;(counted_numbers[number]):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(number)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: This example implementation uses a dict for clarity and generality, so it&#x27;s technically not guaranteed Θ(k+n)!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;a-real-world-example-of-counting-sort-on-integers&quot;&gt;a real-world example of counting sort on integers&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Imagine you have a 1-billion letter corpus. Here, n = 1000000000 and k=26. So, the O(n+k) counting-sort algorithm will be faster than the conventional O(n log n) sorting algorithms.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;So, counting-sort can be used in the real world when you have to sort a very large list of values that belong to a relatively small set. This could be 8-bit or 16-bit floats or ints, or even smaller sets like the 26-character alphabet.&lt;&#x2F;p&gt;
+&lt;p&gt;For this example, let&#x27;s say you wanted to see the frequency of letters in a 1-billion-character English text. You can count each character to see how many of the 26 letters appear. This is equivalent to sorting.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Get an input &lt;code&gt;L&lt;&#x2F;code&gt; which is the 1-billion-character text, where &lt;code&gt;K = {A, B, C, ..., X, Y, Z}&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Instantiate the dict &lt;code&gt;S = {A : 0, B : 0, C : 0, ..., Z : 0}&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;For each character in in &lt;code&gt;L&lt;&#x2F;code&gt;, increase the corresponding element in &lt;code&gt;S&lt;&#x2F;code&gt; by one.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;E.g. For &#x27;C&#x27;, we get &lt;code&gt;S = {A : 0, B : 0, C : 1, ..., Z : 0}&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;E.g. And then if we get an A for the next, we get &lt;code&gt;S = {A : 1, B : 0, C : 1, ... }&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;And then print each element from S.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;This algorithm is &lt;code&gt;O(|L| + |K|)&lt;&#x2F;code&gt;. This is also written as &lt;code&gt;O(n + k)&lt;&#x2F;code&gt;, where &lt;code&gt;k&lt;&#x2F;code&gt; is the size of the set we want to sort.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;tell-me-more-about-sorting&quot;&gt;tell me more about sorting&lt;&#x2F;h1&gt;
+&lt;p&gt;So far we assume you need to perfectly sort an arbitrary list of values. &lt;&#x2F;p&gt;
+&lt;p&gt;You can speed things up if:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;You know something about the distribution of values, or&lt;&#x2F;li&gt;
+&lt;li&gt;You know something about the application of the sort.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;If you&#x27;re sorting floats, but you know most of your values are NaN or 0.0, you can use counting-sort for NaN and 0.0, and use a traditional sort on the rest.&lt;&#x2F;p&gt;
+&lt;p&gt;What if your sort doesn&#x27;t need to be super accurate? Say, for a very niche case, you want to sort a histogram on the logarithm of some list of values. Then, you can sort your float64s on the 11-bit exponent, which means k = 2^11 = 2048, which means you can use counting-sort!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;okay-so-what-s-the-take-away-here&quot;&gt;okay so what&#x27;s the take-away here&lt;&#x2F;h1&gt;
+&lt;p&gt;Well, I&#x27;ve only ever written sorting algorithms in job-interviews and university exams. I&#x27;m happy to say some of them were linear, and I&#x27;m very happy to say I&#x27;ve never had to performance-engineer things like this.&lt;&#x2F;p&gt;
+&lt;p&gt;There is a small rift between the model of computing used in computer-science and the actual computers we use. The space between that rift is really cool, and leads to fun facts like &amp;quot;you can sort in linear time&amp;quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;Remember to like, comment, and subscribe* for more fun blog-posts, such as:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&amp;quot;Sorry Amdahl, but parallel computing DOES give you superlinear speedup&amp;quot;&lt;&#x2F;li&gt;
+&lt;li&gt;&amp;quot;P and NP don&#x27;t matter if you&#x27;re not in aerospace because randomized algorithms are magic&amp;quot;&lt;&#x2F;li&gt;
+&lt;li&gt;&amp;quot;Moore&#x27;s Law isn&#x27;t exponential, and it&#x27;s not sigmoidal either. It&#x27;s a distribution, I&#x27;m afraid we&#x27;re nearing it&#x27;s peak, and I&#x27;m frightened about the world beyond it: A Short Treatise on Why 640KB ought to be enough for anyone because you won&#x27;t have a choice in 200 years&amp;quot;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;*This is a joke, I&#x27;m not actually writing these blogposts, and you can&#x27;t like, comment, or subscribe.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>`reso`, a colorful pixel-art circuit simulator</title>
+        <published>2021-05-15T00:00:00+00:00</published>
+        <updated>2021-05-15T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/reso-intro/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/reso-intro/</id>
+        <content type="html">&lt;p&gt;Reso is a circuit design language and simulator where the inputs and outputs are bitmap images!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_logo.gif&quot; alt=&quot;Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds.&quot; title=&quot;Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds. &quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Reso is a pet project of mine that I&#x27;ve been working on in my free time for a little while. This logo is actually an animation of the execution of a Reso circuit.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For the math nerds: Reso is a circuit design language and simulator that allows you to define an undirected boolean computational graph by connecting contiguous regions of colored elements in a 2D map.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;For the engineering nerds: Reso is a useless, slow, minimal-feature digital logic simulator where you build wires and gates out of pixels! Its only redeeming qualities are that it&#x27;s fun, pretty, and maybe a fun project to reimpliment in Rust.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Reso is inspired by:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Minecraft&#x27;s Redstone&lt;&#x2F;li&gt;
+&lt;li&gt;The Piet esoteric language&lt;&#x2F;li&gt;
+&lt;li&gt;The many hours I spent debugging my awful Redstone circuit.&lt;&#x2F;li&gt;
+&lt;li&gt;Python and C.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Reso is inspired by Python in the sense that, just as Python is akin to &amp;quot;executable pseudocode&amp;quot;, Reso was inspired by wishing I could execute bitmap-images that made my Redstone circuit.&lt;&#x2F;p&gt;
+&lt;p&gt;Reso was inspired by C in the sense that C is simple enough that one can understand it &lt;em&gt;entirely&lt;&#x2F;em&gt;. It&#x27;s a small enough language to hold every feature and the standard libraries in your head. I wanted Reso to be the same in that regard.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, before I write more of this blog post, don&#x27;t let me fool you! Reso isn&#x27;t good. I never intended for it to be good, actually, and things don&#x27;t need to be good. Reso is bad because:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;It&#x27;s inaccessible to those who are blind&lt;&#x2F;li&gt;
+&lt;li&gt;It&#x27;s inaccessible to those who are colorblind&lt;&#x2F;li&gt;
+&lt;li&gt;It&#x27;s inaccessible to those who have full color vision, because I foolishly chose colors for elements that are way too similar on most monitors. (Lime and teal).&lt;&#x2F;li&gt;
+&lt;li&gt;It&#x27;s very slow, because I prioritized code quality and readability over speed&lt;&#x2F;li&gt;
+&lt;li&gt;It&#x27;s very slow, because I used Python&lt;&#x2F;li&gt;
+&lt;li&gt;The code quality and readability is poor&lt;&#x2F;li&gt;
+&lt;li&gt;It is not interactive, unlike actually useful digital logic design software.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Ew, right?! This means that Reso is software made &lt;em&gt;entirely for fun!&lt;&#x2F;em&gt; And it isn&#x27;t even a video game!&lt;&#x2F;p&gt;
+&lt;p&gt;With that out of the way, I&#x27;m happy you&#x27;re still reading this blog post! Now that you have a good idea of why Reso is bad, let&#x27;s get into how to actually use it.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;reso-circuits-101&quot;&gt;Reso circuits 101&lt;&#x2F;h1&gt;
+&lt;p&gt;I&#x27;ll assume you -- the reader -- is already familiar with digital logic circuits. That is, you should be comfortable with:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;What &#x27;True&#x27; and &#x27;False&#x27; means.&lt;&#x2F;li&gt;
+&lt;li&gt;What &lt;code&gt;AND&lt;&#x2F;code&gt;, &lt;code&gt;XOR&lt;&#x2F;code&gt;, &lt;code&gt;OR&lt;&#x2F;code&gt;, and &lt;code&gt;NOT&lt;&#x2F;code&gt; gates are.&lt;&#x2F;li&gt;
+&lt;li&gt;The fact that you can build a computer from these if you put your mind to it!!&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;With that out of the way, let&#x27;s get started!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;reso-s-10-color-palette&quot;&gt;Reso&#x27;s 10-color palette&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_full_palette.png&quot; alt=&quot;A full 24-color Reso palette&quot; title=&quot;A full 24-color Reso palette&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Reso circuits are defined by contiguous regions of pixels (called Resels).&lt;&#x2F;p&gt;
+&lt;p&gt;While we define 24 colors as &amp;quot;reserved&amp;quot;, in practice, there are 10 colors that we use in Reso:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Color&lt;&#x2F;th&gt;&lt;th&gt;Meaning&lt;&#x2F;th&gt;&lt;th&gt;Hex code&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Bright orange&lt;&#x2F;td&gt;&lt;td&gt;Orange wire (on)&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;#ff8000&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Dark  orange&lt;&#x2F;td&gt;&lt;td&gt;Orange wire (off)&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;#804000&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Bright sapphire&lt;&#x2F;td&gt;&lt;td&gt;Sapphire wire (on)&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;#0080ff&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Dark sapphire&lt;&#x2F;td&gt;&lt;td&gt;Sapphire wire (off)&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;#004080&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Bright lime&lt;&#x2F;td&gt;&lt;td&gt;Lime wire (on)&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;#80ff00&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Dark lime&lt;&#x2F;td&gt;&lt;td&gt;Lime wire (off)&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;#408000&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Bright purple&lt;&#x2F;td&gt;&lt;td&gt;Output (node to wire)&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;#8000ff&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Dark purple&lt;&#x2F;td&gt;&lt;td&gt;Input (wire to node)&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;#400080&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Bright teal&lt;&#x2F;td&gt;&lt;td&gt;XOR logic node&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;#00ff80&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Dark teal&lt;&#x2F;td&gt;&lt;td&gt;AND logic node&lt;&#x2F;td&gt;&lt;td&gt;&lt;code&gt;#008040&lt;&#x2F;code&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;Here is what the limited 10-color palette looks like:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_mini_palette.png&quot; alt=&quot;A mini 10-color Reso palette&quot; title=&quot;A mini 10-color Reso palette&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Six of these colors (three hues, orange, sapphire, and lime, across two tones, dark and bright) are dedicated to wires, which hold on or off states.&lt;&#x2F;p&gt;
+&lt;p&gt;Two colors (dark and bright teal) are dedicated to logical-AND and logical-XOR. &lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;d be nice if we could just connect a wire blob to, say, a logical-XOR blob, but then we&#x27;d lack directionality! How would we tell input from output wires? Reso circuits are defined by adjacencies of pixel blobs, and that is inherently undirected.&lt;&#x2F;p&gt;
+&lt;p&gt;So, to cheat,  we use purple to add input and output nodes for logic. This adds directionality as-needed. With that out of the way...&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;logic-gates-in-reso&quot;&gt;Logic gates in Reso&lt;&#x2F;h1&gt;
+&lt;p&gt;... Let&#x27;s discuss logic gates!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_basic_gates.png&quot; alt=&quot;Four gates (and, or, not, xor) implemented in Reso.&quot; title=&quot;Four gates (and, or, not, xor) implemented in Reso.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This... This is pretty much it. Stare at it until it makes sense! These are the four basic logic gates, as implemented in Reso. (Note that the choice of wire color doesn&#x27;t matter here.)&lt;&#x2F;p&gt;
+&lt;p&gt;The magic of Reso is that you can copy-paste these all around. You can perform any lossless transformation on it. Flip it, rotate it (by 90 degrees, of course), anything that doesn&#x27;t interpolate pixel colors or mess with contiguities of regions! This makes everything you make entirely modular.&lt;&#x2F;p&gt;
+&lt;p&gt;Note that the black and white pixels are &lt;em&gt;outside&lt;&#x2F;em&gt; of the palette. They are semantically insignificant! You can use these colors like comments or for diagrams, like I do here! You can make your circuits sparse and readable, or you can tightly knit your gates together.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;example-a-one-bit-adder&quot;&gt;Example: A one-bit adder.&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_adder.png&quot; alt=&quot;A one-bit half adder in Reso.&quot; title=&quot;A one-bit half adder in Reso.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Here is an example of a one-bit half adder in Reso. It is implemented in two ways: A &amp;quot;verbose&amp;quot; adder that labels inputs and outputs, and a &amp;quot;mini&amp;quot; adder that is better suited for more tightly-knit circuits.&lt;&#x2F;p&gt;
+&lt;p&gt;Note that the blue and orange wires here cross over one another diagonally: A neat trick in Reso is that wires are the only elements for which contiguity is defined on the diagonals.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;example-a-digital-clock&quot;&gt;Example: A digital clock&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;reso_clock.png&quot; alt=&quot;Three Reso clocks forming an 8 bit counter.&quot; title=&quot;Three Reso clocks forming an 8 bit counter.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Clocks are rather easy to build for small periods. This is a small, 3-bit (8 value) counter, formed from three digital clocks. An edge-triggered flip-flop can be used to double the period of a clock , but I didn&#x27;t do that here, because these are small and simple enough.&lt;&#x2F;p&gt;
+&lt;p&gt;Note the timing of these things. We add an input&#x2F;output pair at the edge to prevent someone from accidentally messing with the clock from setting the output wire &amp;quot;on&amp;quot;. This causes a delay of one timestep, which is accounted for in the design of the clock. The minimum period for a clock is 2 timesteps (i.e. on for one timestep, off for one timestep.)&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-rest&quot;&gt;The rest?&lt;&#x2F;h1&gt;
+&lt;p&gt;So, you can totally build a computer in this and all sorts of other wacky things! It is Turing Complete, after all. But this is an introductory blog post.&lt;&#x2F;p&gt;
+&lt;p&gt;The repository is at &lt;a href=&quot;https:&#x2F;&#x2F;gitlab.com&#x2F;lynnpepin&#x2F;reso&quot;&gt;gitlab.com&#x2F;lynnpepin&#x2F;reso&lt;&#x2F;a&gt;. A GitHub mirror is at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;reso&quot;&gt;github.com&#x2F;lynnpepin&#x2F;reso&lt;&#x2F;a&gt;. Go check it out, run the code, and play around with it!&lt;&#x2F;p&gt;
+&lt;p&gt;And if you make something neat, I&#x27;d love to know! :) This work was presented at !!Con 2021, and you can watch the livestream of that presentation at &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=2Mst6EWqQJc&quot;&gt;youtube.com&#x2F;watch?v=2Mst6EWqQJc&lt;&#x2F;a&gt; on YouTube.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>Oh no, dating spam sites are abusing improperly-configured internal search engines</title>
+        <published>2021-04-30T00:00:00+00:00</published>
+        <updated>2021-04-30T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/seo-dating-spam/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/seo-dating-spam/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt;  Malicious entities are abusing sites internal search engines to promote their own URLs. This effectively allows them to advertise using the target site&#x27;s domain in the search results of major search engines. If you own such a site, fix this by putting a &lt;code&gt;disallow&lt;&#x2F;code&gt; entry in your &lt;code&gt;robots.txt&lt;&#x2F;code&gt;, or adding the &lt;code&gt;noindex&lt;&#x2F;code&gt; meta tag.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h1 id=&quot;a-mystery-of-malware-in-my-school-s-search-results&quot;&gt;A Mystery of Malware in My School&#x27;s Search Results&lt;&#x2F;h1&gt;
+&lt;p&gt;Recently, a colleague of mine was trying to see if our university had any carbon dating expertise. A search on Google for &lt;code&gt;uconn carbon dating&lt;&#x2F;code&gt; yielded some results she considered sus:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;datego-edu-spam-uconn.png&quot; alt=&quot;A screenshot of a Google Search for &#x27;UConn Carbon Dating&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; title=&quot;A screenshot of a Google Search for &#x27;UConn Carbon Dating&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Like any fool, I clicked through the link to see what was going on. Here&#x27;s that first link, with linebreaks to make it easier to interpret:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#151515;color:#e8e8d3;&quot;&gt;&lt;code&gt;&lt;span&gt;https:&#x2F;&#x2F;chemistry.uconn.edu&#x2F;?s=
+&lt;&#x2F;span&gt;&lt;span&gt;%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8Fwww.datego.xyz
+&lt;&#x2F;span&gt;&lt;span&gt;%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8Fcarbon+dating+past+50000+years+year+
+&lt;&#x2F;span&gt;&lt;span&gt;%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8F+BEST+DATING+SITE+
+&lt;&#x2F;span&gt;&lt;span&gt;%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8F
+&lt;&#x2F;span&gt;&lt;span&gt;+carbon+dating+past+50000+years+year+carbon+dating+past+50000+years+year+
+&lt;&#x2F;span&gt;&lt;span&gt;carbon+dating+past+50000+years+year+carbon+dating+past+50000+years+year+
+&lt;&#x2F;span&gt;&lt;span&gt;carbon+dating+past+50000+years+year+carbon+dating+past+50000+years+year+
+&lt;&#x2F;span&gt;&lt;span&gt;%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8Fwww.datego.xyz
+&lt;&#x2F;span&gt;&lt;span&gt;%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8F+BEST+DATING+SITE
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Ugly! Let&#x27;s use Python&#x27;s &lt;code&gt;urllib.parse.unquote(string)&lt;&#x2F;code&gt; function to clean this up. This gives us:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#151515;color:#e8e8d3;&quot;&gt;&lt;code&gt;&lt;span&gt;https:&#x2F;&#x2F;chemistry.uconn.edu&#x2F;?s=
+&lt;&#x2F;span&gt;&lt;span&gt;🪀❤️️www.datego.xyz
+&lt;&#x2F;span&gt;&lt;span&gt;🪀❤️️carbon+dating+past+50000+years+year+
+&lt;&#x2F;span&gt;&lt;span&gt;🪀❤️️+BEST+DATING+SITE+
+&lt;&#x2F;span&gt;&lt;span&gt;🪀❤️️
+&lt;&#x2F;span&gt;&lt;span&gt;+carbon+dating+past+50000+years+year+carbon+dating+past+50000+years+year+
+&lt;&#x2F;span&gt;&lt;span&gt;carbon+dating+past+50000+years+year+carbon+dating+past+50000+years+year+
+&lt;&#x2F;span&gt;&lt;span&gt;carbon+dating+past+50000+years+year+carbon+dating+past+50000+years+year+
+&lt;&#x2F;span&gt;&lt;span&gt;🪀❤️️www.datego.xyz
+&lt;&#x2F;span&gt;&lt;span&gt;🪀❤️️+BEST+DATING+SITE
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;where &#x27;🪀&#x27; and &#x27;❤️️&#x27;, if you can&#x27;t see it, are Yo-Yo and Heart emojis, respectively. Upon inspection, it seems that these are just searches abusing the sites internal search engine. They become emoji in the URL.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s pretty standard, you can make searches for arbitrary text. For example, &lt;code&gt;chemistry.uconn.edu&#x2F;?s=some+arbitrary+text&lt;&#x2F;code&gt; yields such a URL: &lt;a href=&quot;https:&#x2F;&#x2F;lynndotpy.xyz&#x2F;posts&#x2F;seo-dating-spam&#x2F;chemistry.uconn.edu&#x2F;?s=some+arbitrary+text&quot;&gt;https:&#x2F;&#x2F;chemistry.uconn.edu&#x2F;?s=some+arbitrary+text&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;It seems UConn isn&#x27;t the only one impacted. While not exclusive to .edu domains, it looks like they&#x27;re the primary targets. Here, we see the same thing for other .edu domains:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;datego-edu-spam.png&quot; alt=&quot;A screenshot of a Google Search for &#x27;datego.xyz site:edu&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; title=&quot;A screenshot of a Google Search for &#x27;datego.xyz site:edu&#x27;, showing some malicious looking results promoting some malicious dating sites.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;So, what&#x27;s going on here? I think I have an idea.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;an-explanation-for-these-egregious-search-results&quot;&gt;An Explanation for these Egregious Search Results&lt;&#x2F;h1&gt;
+&lt;p&gt;So, my guess here is that the attack works like this:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Find websites with &#x27;search&#x27; boxes following the convention of &lt;code&gt;{url}&#x2F;s={search text}&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Enter a search pointing to your very cool and totally legit dating site.&lt;&#x2F;li&gt;
+&lt;li&gt;Abuse search engine optimization so this malicious search result hits the top!&lt;&#x2F;li&gt;
+&lt;li&gt;???&lt;&#x2F;li&gt;
+&lt;li&gt;... Profit?&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;There&#x27;s surely a name for this kind of attack, but this is my first time seeing it! Please let me know if you&#x27;ve seen this before.&lt;&#x2F;p&gt;
+&lt;p&gt;And now, a curious mind might wonder, does this work for big search engines? Can one abuse this to do &lt;code&gt;google.com&#x2F;search?q=some+arbitrary+text&lt;&#x2F;code&gt; or &lt;code&gt;duckduckgo.com&#x2F;q=some+arbitrary+text&lt;&#x2F;code&gt;? No! Why? Let&#x27;s see.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how-to-stop-for-this-salacious-shady-search-meta-seo&quot;&gt;How to Stop for this Salacious Shady Search Meta-SEO&lt;&#x2F;h1&gt;
+&lt;p&gt;I&#x27;m not a web developer, but one usually doesn&#x27;t want their search results to be indexed on other search engines. They clutter up results for the end-user, and, as we see here, it opens you up for a rather ugly attack. As far as I can tell, there are two main ways to fix this. Luckily, they&#x27;re both easy!&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Fix the &lt;code&gt;robots.txt&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt; &lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Add the &lt;code&gt;noindex&lt;&#x2F;code&gt; metatag.&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;We can see both of these in action by observing Google (which uses &lt;code&gt;robots.txt&lt;&#x2F;code&gt;) and DuckDuckGo (which uses both &lt;code&gt;robots.txt&lt;&#x2F;code&gt; and the &lt;code&gt;noindex&lt;&#x2F;code&gt;.) While not strictly required, major search engines will respect these tags.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fix-this-using-robots-txt&quot;&gt;Fix this using robots.txt&lt;&#x2F;h2&gt;
+&lt;p&gt;First, let&#x27;s look at &lt;a href=&quot;https:&#x2F;&#x2F;google.com&#x2F;robots.txt&quot;&gt;google.com&#x2F;robots.txt&lt;&#x2F;a&gt;. The first few lines are copied below:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#151515;color:#e8e8d3;&quot;&gt;&lt;code&gt;&lt;span&gt;User-agent: *
+&lt;&#x2F;span&gt;&lt;span&gt;Disallow: &#x2F;search
+&lt;&#x2F;span&gt;&lt;span&gt;Allow: &#x2F;search&#x2F;about
+&lt;&#x2F;span&gt;&lt;span&gt;Allow: &#x2F;search&#x2F;static
+&lt;&#x2F;span&gt;&lt;span&gt;Allow: &#x2F;search&#x2F;howsearchworks
+&lt;&#x2F;span&gt;&lt;span&gt;Disallow: &#x2F;sdch
+&lt;&#x2F;span&gt;&lt;span&gt;Disallow: &#x2F;groups
+&lt;&#x2F;span&gt;&lt;span&gt;Disallow: &#x2F;index.html?
+&lt;&#x2F;span&gt;&lt;span&gt;Disallow: &#x2F;?
+&lt;&#x2F;span&gt;&lt;span&gt;...
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And let&#x27;s also take a look at &lt;a href=&quot;https:&#x2F;&#x2F;duckduckgo.com&#x2F;robots.txt&quot;&gt;duckduckgo.com&#x2F;robots.txt&lt;&#x2F;a&gt;. Their entire &lt;code&gt;robots.txt&lt;&#x2F;code&gt; is copied verbatim here:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#151515;color:#e8e8d3;&quot;&gt;&lt;code&gt;&lt;span&gt;User-agent: *
+&lt;&#x2F;span&gt;&lt;span&gt;Disallow: &#x2F;lite
+&lt;&#x2F;span&gt;&lt;span&gt;Disallow: &#x2F;html
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;# No search result pages
+&lt;&#x2F;span&gt;&lt;span&gt;Disallow: &#x2F;*?
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;# chrome new tab page
+&lt;&#x2F;span&gt;&lt;span&gt;Disallow: &#x2F;chrome_newtab
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;User-agent: ia_archiver
+&lt;&#x2F;span&gt;&lt;span&gt;Disallow: &#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Sitemap: https:&#x2F;&#x2F;duckduckgo.com&#x2F;sitemap.xml
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The syntax is pretty clear! Observing other sites impacted by this show that &lt;code&gt;robots.txt&lt;&#x2F;code&gt; does &lt;em&gt;not&lt;&#x2F;em&gt; disallow search. For example, &lt;a href=&quot;https:&#x2F;&#x2F;upike.edu&#x2F;robots.txt&quot;&gt;upike.edu&#x2F;robots.txt&lt;&#x2F;a&gt; is listed verbatim below:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#151515;color:#e8e8d3;&quot;&gt;&lt;code&gt;&lt;span&gt;User-agent: * 
+&lt;&#x2F;span&gt;&lt;span&gt;Crawl-Delay: 20
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Here, they don&#x27;t block crawlers from any part of the site, but will ask crawlers to slow down a little and crawl a page only once every 20 seconds.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;A heads up!&lt;&#x2F;strong&gt; You need to set up your &lt;code&gt;robots.txt&lt;&#x2F;code&gt; properly &lt;strong&gt;for every subdomain&lt;&#x2F;strong&gt;. For example, I noticed at least 25 UConn subdomains that had this problem. But the robots.txt at &lt;code&gt;uconn.edu&#x2F;robots.txt&lt;&#x2F;code&gt; had the correct entry, &lt;code&gt;Disallow: &#x2F;*?s=&lt;&#x2F;code&gt;&#x2F;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;alternatively-fix-this-using-noindex&quot;&gt;Alternatively, fix this using &#x27;noindex&#x27;.&lt;&#x2F;h2&gt;
+&lt;p&gt;If one searches on DuckDuckGo and were to inspect the page, would see this in the &lt;code&gt;&amp;lt;head&amp;gt;&lt;&#x2F;code&gt; section of the page:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;meta name&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;robots&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;content&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;noindex,nofollow&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now, because of DuckDuckGo&#x27;s &lt;code&gt;robots.txt&lt;&#x2F;code&gt; file, an indexer won&#x27;t even see this. But if it did, it would know not to index it (per &lt;code&gt;noindex&lt;&#x2F;code&gt;) and not to index any links on the page (per &lt;code&gt;nofollow&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;One can also, alternatively, add &lt;code&gt;X-Robots-Tag: noindex&lt;&#x2F;code&gt; to the HTTP response header. Google has more information on their page &lt;a href=&quot;https:&#x2F;&#x2F;developers.google.com&#x2F;search&#x2F;docs&#x2F;advanced&#x2F;crawling&#x2F;block-indexing&quot;&gt;&amp;quot;Block Search indexing with &#x27;noindex&#x27;&amp;quot; at developers.google.com&#x2F;search&#x2F;docs&#x2F;advanced&#x2F;crawling&#x2F;block-indexing&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;neat-so-did-you-disclose-this-disaster&quot;&gt;Neat! So, Did you disclose this disaster?&lt;&#x2F;h1&gt;
+&lt;p&gt;Regarding responsible disclosure, I did give a heads up to UConn&#x27;s IT department, since I am a UConn student and employee. But given the low impact of this attack and how widespread it is, I figured a blogpost would be more than appropriate. &lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>GIMP &lt;3 Python! Let&#x27;s make a YuGiOh rip off</title>
+        <published>2020-12-31T00:00:00+00:00</published>
+        <updated>2020-12-31T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/gimp-and-python/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/gimp-and-python/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt;  Open the Python-Fu console (Filters &amp;gt; Python-Fu &amp;gt; Console) and reference GIMP&#x27;s built-in &lt;code&gt;pdb&lt;&#x2F;code&gt; documentation (Help &amp;gt; Procedure browser).  A simple &#x27;hello world&#x27; is presented:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;img = gimp.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;image_list&lt;&#x2F;span&gt;&lt;span&gt;()[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;title_layer = pdb.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;gimp_image_get_layer_by_name&lt;&#x2F;span&gt;&lt;span&gt;(img, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Title&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;pdb.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;gimp_text_layer_set_text&lt;&#x2F;span&gt;&lt;span&gt;(title_layer, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h1 id=&quot;gimp-is-a-good-image-editor-and-you-can-automate-it-with-python&quot;&gt;gimp is a good image editor, and you can automate it with python&lt;&#x2F;h1&gt;
+&lt;p&gt;For those unfamiliar with &lt;a href=&quot;https:&#x2F;&#x2F;www.gimp.org&#x2F;&quot;&gt;GIMP (gimp.org)&lt;&#x2F;a&gt;, it is a free and open-source image editor, and one of my favorite tools.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m a long-time GIMP user and a long-time Python user. GIMP has this nifty feature called &amp;quot;PythonFu&amp;quot; that allows you to modify images using Python code. (GIMP also exposes a Scheme interface.) With GIMP and Python knowledge, it enables one to automatically edit images.  There are plenty of tutorials and documentation, but none of them enabled me to &amp;quot;get my hands dirty&amp;quot;, which is why I&#x27;m writing this post.&lt;&#x2F;p&gt;
+&lt;p&gt;Automating GIMP was useful for me when making a little Yu-Gi-Oh inspired card game. Instead of editing 60+ cards titles and descriptions by hand, I used a script to read a spreadsheet and do it for me. I&#x27;ll edit this post once I have the code ready. :)&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-dev-experience-is-janky-here-s-how-i-do-it&quot;&gt;the dev experience is janky! here&#x27;s how i do it&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; In four corners: GIMP editor, GIMP Python procedure browser for documentation, Python console, and a Python editor. Run scripts by copy and pasting them.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;If you have experience with GIMP and Python and want to learn how to automate GIMP, then let me show you my basic GIMP Python scripting setup:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;..&#x2F;images&#x2F;gimp-python-dev-setup.png&quot; alt=&quot;A screenshot showing four windows open in tiled configuration: (1) A GIMP image-editing window with  a card-template reminiscent of Yu-Gi-Oh, (2) A &#x27;procedure browser&#x27; showing a list of GIMP procedures with corresponding documentation, (3) An interactive Python console that programatically modifies the GIMP image, and (4) A text editor used as a &#x27;scratch space&#x27; with a list of commands.&quot; title=&quot;A screenshot showing four windows open in tiled configuration: (1) A GIMP image-editing window with  a card-template reminiscent of Yu-Gi-Oh, (2) A &#x27;procedure browser&#x27; showing a list of GIMP procedures with corresponding documentation, (3) An interactive Python console that programatically modifies the GIMP image, and (4) A text editor used as a &#x27;scratch space&#x27; with a list of commands.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I keep keep these four windows open on one screen:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;The GIMP image I want to modify.&lt;&#x2F;li&gt;
+&lt;li&gt;The Procedure Browser (under GIMP Help &amp;gt; Procedure Browser)&lt;&#x2F;li&gt;
+&lt;li&gt;A GIMP Python console (under GIMP Filters &amp;gt; Python-Fu &amp;gt; Console)&lt;&#x2F;li&gt;
+&lt;li&gt;A text editor as a workspace &#x2F; scratchpad.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;For those unfamiliar, the GIMP Python console is interactive. &lt;strong&gt;Paste code into the console, hit enter, and the commands will execute within GIMP.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;some-other-tips&quot;&gt;Some other tips&lt;&#x2F;h1&gt;
+&lt;p&gt;Get your hands dirty, try something out in the console! Most work that one can do manually can also be reproduced in code. (Some exceptions exist, such as text editing). The procedure browser is your friend when exploring and experimenting, and it is the most complete documentation I could find. This hacky workflow was instrumental in a number of small projects I was able to complete, and was one of the best GIMP skills I learned in these past 10 years. :)&lt;&#x2F;p&gt;
+&lt;p&gt;Here are some other small things that I wish someone told me from the start:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;AFAIK, there is no officially-supported method to run &lt;code&gt;pdb&lt;&#x2F;code&gt; headless in Python scripts. Your interactions have to be through the GIMP executable&#x27;s bundled Python interpreter.&lt;&#x2F;li&gt;
+&lt;li&gt;GIMP uses the &amp;quot;&lt;code&gt;pdb&lt;&#x2F;code&gt;&amp;quot; library for most interactions. This is &lt;em&gt;not&lt;&#x2F;em&gt; the same as the Python debugger.&lt;&#x2F;li&gt;
+&lt;li&gt;To use a function in the Procedure Browser, say, &amp;quot;&lt;code&gt;gimp-image-set-active-layer&lt;&#x2F;code&gt;&amp;quot;, you want to call &amp;quot;&lt;code&gt;pdb.gimp_image_set_active_layer&lt;&#x2F;code&gt;&amp;quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;The Procedure Browser is the most complete and easy-to-search &lt;code&gt;pdb&lt;&#x2F;code&gt; documentation...&lt;&#x2F;li&gt;
+&lt;li&gt;... But some documented parameters will not match the Python libary. For example, the blur plugin &amp;quot;&lt;code&gt;plug-in-gauss-iir&lt;&#x2F;code&gt;&amp;quot; lists a &amp;quot;&lt;code&gt;run-mode&lt;&#x2F;code&gt;&amp;quot; parameter, but the function &amp;quot;&lt;code&gt;pdb.plug_in_gauss_iir&lt;&#x2F;code&gt;&amp;quot; does not use that parameter.&lt;&#x2F;li&gt;
+&lt;li&gt;GIMP uses Python 2.7, but should be using Python 3 in 2021.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;hello-world&quot;&gt;hello world!&lt;&#x2F;h1&gt;
+&lt;p&gt;As a quick &amp;quot;hello world&amp;quot; example, consider the following steps:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a new image in GIMP&lt;&#x2F;li&gt;
+&lt;li&gt;Add a text layer, with layer title &amp;quot;Title&amp;quot;&lt;&#x2F;li&gt;
+&lt;li&gt;Open the Python console (Filters &amp;gt; Python-Fu &amp;gt; Console)&lt;&#x2F;li&gt;
+&lt;li&gt;Enter the below lines into the console! Your text layer will be modified to say &#x27;Hello world!&amp;quot;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;blockquote&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;img = gimp.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;image_list&lt;&#x2F;span&gt;&lt;span&gt;()[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;title_layer = pdb.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;gimp_image_get_layer_by_name&lt;&#x2F;span&gt;&lt;span&gt;(img, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Title&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;pdb.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;gimp_text_layer_set_text&lt;&#x2F;span&gt;&lt;span&gt;(title_layer, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+    </entry>
+</feed>
