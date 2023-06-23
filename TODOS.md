@@ -1,12 +1,16 @@
 - [x] Fork terminimal and create light themes
 
 Major features:
-- [ ] Get hosting
+- [x] Get hosting
+- [ ] Fix all links
 - [ ] Gallery view
   - [ ] Projects
   - [ ] Upload art
   - [ ] No hotlinking
-- [ ] Liberapay
+- [x] Liberapay
+- [ ] Stop using Hack font?
+- [ ] big ol button links
+- [ ] GitHub sponsors
 - [ ] Selfhosted analytics
 - [ ] KaTeX
 - [ ] interactivity:
@@ -16,11 +20,29 @@ Major features:
 - [ ] PP. (Nothing but logs!)
 - [ ] Built which checks <100kib for each page
 
+Silly CSS stuff:
+- [ ] Random accent each load?
+- [ ] Checkerboard git-esque gradient background
+
 Main content:
 - [ ] Opossum raven art, self photo
 
+Fixes:
+- [ ] Fix through and fix all links
+- [ ] Fix all LaTeX
+
+Add projects:
+- [ ] Network simulator
+- [ ] cli-tui-py
+- [ ] rust bin lib plus
+- [ ] notanaasm
+- [ ] arbitration opt out as a service
+- [ ] privacy label hall of shame
+- [ ] voxelnet reimplementation
+- [ ] 
 
 Posts:
+- [ ] Make a project post for all projects, with tags
 - [ ] All Security Obscurity
 - [ ] Feeld analysis
 - [ ] Apple password analysis
@@ -36,7 +58,23 @@ Posts:
   - Before Me
   - Moth Monster
 - [ ] RIP DIY SSG 2020-2023
-
+- [ ] octaves of life
+- [ ] Fixed hamming-weight construction
+- [ ] Some toy floating-points
+- [ ] retones
+- [ ] stop pretending manpages are good
+  - dense, no examples, assumes other knowledge people might not have
+  - alphabetical flags useful for reference, not for learning.
+    - no culture valuing order of importance
+  - less: "opposite of more"
+    - "opposite of more" is about as inaccurate as it can get
+    - description doesn't explain *what* `less` is, except in relation to `more` and `vi`
+    - `man more` gives `file perusal filter for vrt viewing`, but on macos, `more` is aliased to `less`
+- [ ] Implementing the Library of Babel
+  - Integer index to/from content with invertible injection
+    - Choose one that looks random: Bit substitution
+  - "X results" for search easy
+  - 
 
 Flair:
 - [ ] Art to each post

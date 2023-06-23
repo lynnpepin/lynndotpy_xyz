@@ -53,4 +53,12 @@
   strong {
     text-shadow: 0 2px 4px var(--accent-alpha-20);
   }
+
+  button {
+    background-color: var(--accent);
+    // bold
+    font-weight: bold;
+    border-radius: 32px;
+    border: 2px solid var(--color);
+  }
 }

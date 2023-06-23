@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "https://lynndotpy.xyz/"
-title = "lynndotpy.xyz"
+title = "// lynndotpy"
 
 # Sass compilation is required
 compile_sass = true
@@ -21,7 +21,7 @@ highlight_theme = "boron"
 # Put all your custom variables here
 logo_text = "lynndotpy.xyz"
 author = "Lynn Pepin"
-copyright_html = "© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme </a> by  pawroman, panr"
+copyright_html = "© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr"
 
 
 # One of: blue, green, orange, pink, red, dark (background)
@@ -38,7 +38,7 @@ menu_items = [
     # tags should only be enabled if you have "tags" taxonomy
     # see documentation below for more details
     {name = "archive", url = "$BASE_URL/archive"},
-    {name = "tags", url = "$BASE_URL/tags"},
+    #{name = "tags", url = "$BASE_URL/tags"},
     {name = "about", url = "$BASE_URL/about"},
     {name = "projects", url = "$BASE_URL/projects"},
     

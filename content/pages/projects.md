@@ -10,11 +10,6 @@ aliases = ["/projects.html/"]
 > This is a dynamic list and may never be able to satisfy particular standards for completeness. You can help by adding [missing items](https://gitlab.com/users/lynnpepin/starred) with [reliable sources](https://github.com/lynnpepin).
 
 
-
-# Ongoing Projects
-
-These are projects that I am still working on (as of December 2020).
-
 <hr>
 <!-- TODO Blog photo -->
 
@@ -29,7 +24,7 @@ These are projects that I am still working on (as of December 2020).
 
 [⛏️ Reso⛏️ ](https://gitlab.com/lynnpepin/reso), 2018, Python. is a graph-automata circuit-programming language inspired by redstone and wireworld. It is Turing complete, but not very pretty to use. I might revisit this later, it'd be better if it was interactive, web-based, and would interact with GPIO pins (say, on a Raspberry Pi)!
 
-See an explanatory blogpost here: [https://lynndotpy.xyz/posts/reso_intro.html](lynndotpy.xyz/posts/reso_intro.html)
+See an explanatory blogpost here: [https://lynndotpy.xyz/posts/reso_intro.html](/posts/reso_intro.html)
 
 ---
 
