@@ -8,16 +8,15 @@ Major features:
   - [ ] Upload art
   - [ ] No hotlinking
 - [x] Liberapay
-- [ ] ~~Stop using Hack font?~~
-  - ehh
+- [ ] ~~Stop using Hack font?~~ (nevermind)
 - [ ] Selfhosted analytics
-- [ ] KaTeX
+- [x] KaTeX
+  - [ ] Add to Terminimal
 - [ ] interactivity:
   - [ ] "like" button
   - [ ] comment button
   - [ ] simple viewcounter? find self-hosted analytics
-- [ ] PP. (Nothing but logs!)
-- [ ] Built which checks <100kib for each page
+- [ ] PP. (Nothing but logs!!)
 
 Silly CSS stuff:
 - [ ] Random accent each load?
@@ -34,6 +33,8 @@ Add projects:
 - [ ] Network simulator
 - [ ] cli-tui-py
 - [ ] rust bin lib plus
+
+Do projects:
 - [ ] notanaasm
 - [ ] arbitration opt out as a service
 - [ ] privacy label hall of shame
@@ -82,6 +83,25 @@ Posts:
     - Loss of CD drives
     - Subscription services
     - Windows 11
+- [ ] Programming languages worth learning and why
+  - All of these are likely to remain relevant
+  - Python:
+    - Interpreted and interactive; scripting which can run anywhere
+    - Hella tools, "2nd best at everything"
+  - Javascript:
+    - Never going away
+    - Learning pure vanilla JS will serve you no matter what framework-of-the-week is out there
+    - Interpreter available on most machines, even locked down ones
+    - not That Bad
+  - Rust:
+    - Fast
+    - More widely supported than your typical New Language
+    - Tied with WASM and web tech, likely to stay relevant for a long long time
+  - C:
+    - Still relevant, still written
+    - Very close analogy to what's happening on the bare metal
+    - If you study DS&A, you should do it through C
+    
 
 Flair:
 - [ ] Art to each post
