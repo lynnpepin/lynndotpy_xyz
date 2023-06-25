@@ -5,7 +5,7 @@ date = 2020-12-31
 aliases = ["posts/gimp_and_python.html"]
 
 [taxonomies]
-tags = ["how-to", "project"]
+tags = ["how-to", "project", "python"]
 +++
 
 

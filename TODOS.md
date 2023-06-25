@@ -24,9 +24,17 @@ Update content:
 - [x] Sorting in linear time graph
 - [ ] Network simulator
 - [ ] cli-tui-py
+  - Philosophy: CLI args and interactive TUIs should be one and the same
+  - Provide a demo? (How to package so people can use it?)
 - [ ] rust bin lib plus
+  - Philosophy: Most useful libraries should also provide a CLI exposing their functionality
+- [ ] `main-main` pattern
 - [ ] rolling log post, with scans from notebook
 - [ ] New art on each post
+- [ ] Creating your Python grimoire
+  - lynnkit.py
+  - ooo.py
+  - `some_snippets`
 
 Silly CSS stuff:
 - [ ] Random accent each load?
@@ -135,3 +143,8 @@ Posts:
     - Very close analogy to what's happening on the bare metal
     - If you study DS&A, you should do it through C
 - [ ] Minimal base64 encoded 1x1 transparent pixels    
+- [ ] Things which worked for me in CS
+  - Already using Linux and Git and knowing Python.
+  - Doing coursework in advance over a summer.
+  - Speccing heavily into the languages used in the course.
+  - No alcohol. 
