@@ -28,7 +28,7 @@ Among the new choices, there's a lot of issues!
 For my friends asking "where should I move", the answer is Tumblr.
 
 
-# Tumblr is slurping from the Fountain of ~~Youth~~ Relevance
+# Tumblr will stay good for a long while
 
 Tumblr is still alive and kicking. This is because they have been perpetually making Mostly Good Decisions, and more recently, because they were acquired by Automattic (more on that later.)
 
