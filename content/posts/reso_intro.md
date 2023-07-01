@@ -5,7 +5,7 @@ date  = 2021-05-15
 aliases = ["posts/reso_intro.html"]
 
 [taxonomies]
-tags  = ["project"]
+tags  = ["project", "python", "reso"]
 +++
 
 Reso is a circuit design language and simulator where the inputs and outputs are bitmap images!

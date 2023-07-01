@@ -28,6 +28,10 @@
         <lastmod>2022-01-07</lastmod>
     </url>
     <url>
+        <loc>https://lynndotpy.xyz/posts/move-to-tumblr/</loc>
+        <lastmod>2022-01-07</lastmod>
+    </url>
+    <url>
         <loc>https://lynndotpy.xyz/posts/page/1/</loc>
     </url>
     <url>
@@ -50,6 +54,10 @@
         <lastmod>2021-05-15</lastmod>
     </url>
     <url>
+        <loc>https://lynndotpy.xyz/posts/rolling-log/</loc>
+        <lastmod>2023-07-01</lastmod>
+    </url>
+    <url>
         <loc>https://lynndotpy.xyz/posts/seo-dating-spam/</loc>
         <lastmod>2021-04-30</lastmod>
     </url>
@@ -60,7 +68,22 @@
         <loc>https://lynndotpy.xyz/tags/</loc>
     </url>
     <url>
+        <loc>https://lynndotpy.xyz/tags/3d/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.xyz/tags/gimp/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.xyz/tags/godot/</loc>
+    </url>
+    <url>
         <loc>https://lynndotpy.xyz/tags/how-to/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.xyz/tags/internet/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.xyz/tags/legal/</loc>
     </url>
     <url>
         <loc>https://lynndotpy.xyz/tags/post/</loc>
@@ -72,6 +95,15 @@
         <loc>https://lynndotpy.xyz/tags/python/</loc>
     </url>
     <url>
+        <loc>https://lynndotpy.xyz/tags/reso/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.xyz/tags/rust/</loc>
+    </url>
+    <url>
         <loc>https://lynndotpy.xyz/tags/security/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.xyz/tags/shaders/</loc>
     </url>
 </urlset>

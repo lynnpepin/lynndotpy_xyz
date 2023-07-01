@@ -1,35 +1,29 @@
-- [x] Fork terminimal and create light themes
 
 Major features:
-- [x] Get hosting
-- [x] Fix all links
 - [ ] Gallery view
   - [ ] Make thumbnails + reasonable res for art
-  - [ ] Upload art
+  - [ ] Upload art. Pleroma?
   - [ ] No hotlinking
-  - [ ] Make a Pleroma?
-- [x] Liberapay
 - [ ] ~~Stop using Hack font?~~ (nevermind)
 - [ ] Selfhosted analytics
-- [x] KaTeX
-  - [ ] Add to Terminimal
+- [ ] Add KaTeX to Terminimal?
 - [ ] interactivity?
   - [ ] "like" button? comment box? discourse? viewcounter?
 - [ ] PP. (Nothing but logs!!)
+- [ ] Paginate
+
 
 Update content:
 - [ ] Rolling log shader post
   - [ ] Upload Godot demo
 - [ ] Reso contents
-- [x] Sorting in linear time graph
 - [ ] Network simulator
 - [ ] cli-tui-py
   - Philosophy: CLI args and interactive TUIs should be one and the same
   - Provide a demo? (How to package so people can use it?)
 - [ ] rust bin lib plus
-  - Philosophy: Most useful libraries should also provide a CLI exposing their functionality
-- [ ] `main-main` pattern
-- [ ] rolling log post, with scans from notebook
+  - Philosophy: I want my libraries to also provide a CLI exposing their functionality
+  - Plus: I want an interactive CLI if flags are not set
 - [ ] New art on each post
 - [ ] Creating your Python grimoire
   - lynnkit.py
@@ -46,9 +40,6 @@ Art:
 - [ ] things i read
 - [ ] python phone
 
-Fixes:
-- [x] Fix through and fix all links
-- [x] Fix all LaTeX
 - [x] titles should work
 
 Do projects:
@@ -57,20 +48,7 @@ Do projects:
 - [ ] privacy label hall of shame
 - [ ] voxelnet reimplementation
 
-Other / Old:
-- [x] Blog index homepage
-- [x] Fix images
-- [x] Copy about
-- [x] Cleanup / remove archive
-- [x] Copy projects
-- [x] Remove Zola intro stuff
-- [x] Favicon
-- [x] Make sure old URLs still work:
-  - [x] https://lynndotpy.xyz/projects.html
-  - [x] https://lynndotpy.xyz/about.html
-  - [x] https://lynndotpy.xyz/index.html
-  - [x] https://lynndotpy.xyz/posts/discord_optout_2023.html (etc)
-    - [x] Posts are under `/posts/post_title/` but no redirect (yet) for `/posts/post_title.html`.
+
 
 Contributions:
 - RetroHub icon
@@ -81,6 +59,9 @@ Contributions:
 - Old: Pre-GMS GameMaker
 - bibtex python package citations
 - Academic writings
+
+Finished posts:
+- [ ] Python main-main 
 
 Posts:
 - [ ] Make a project post for all projects, with tags
@@ -148,3 +129,38 @@ Posts:
   - Doing coursework in advance over a summer.
   - Speccing heavily into the languages used in the course.
   - No alcohol. 
+- circuit playground ball bearing
+
+---
+
+COMPLETE:
+
+Major features:
+- [x] Get hosting
+- [x] Fix all links
+- [x] Fork terminimal and create light themes
+- [x] Liberapay
+- [x] KaTeX
+
+Update content:
+- [x] Sorting in linear time graph
+- [x] `main-main` pattern
+
+Fixes:
+- [x] Fix through and fix all links
+- [x] Fix all LaTeX
+
+Other / Old:
+- [x] Blog index homepage
+- [x] Fix images
+- [x] Copy about
+- [x] Cleanup / remove archive
+- [x] Copy projects
+- [x] Remove Zola intro stuff
+- [x] Favicon
+- [x] Make sure old URLs still work:
+  - [x] https://lynndotpy.xyz/projects.html
+  - [x] https://lynndotpy.xyz/about.html
+  - [x] https://lynndotpy.xyz/index.html
+  - [x] https://lynndotpy.xyz/posts/discord_optout_2023.html (etc)
+    - [x] Posts are under `/posts/post_title/` but no redirect (yet) for `/posts/post_title.html`.

@@ -5,7 +5,7 @@ date = 2022-01-07
 aliases = ["posts/linear_sorting.html"]
 
 [taxonomies]
-tags = ["post"]
+tags = ["post", "rust", "python", "project"]
 +++
 
 {{figure(

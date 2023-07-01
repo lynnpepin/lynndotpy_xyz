@@ -5,7 +5,7 @@ date = 2023-03-08
 aliases = ["posts/discord_optout_2023.html"]
 
 [taxonomies]
-tags = ["how-to"]
+tags = ["how-to", "legal"]
 +++
 
 

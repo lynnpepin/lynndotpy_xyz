@@ -67,6 +67,51 @@
             
                 <div class="post on-list">
                     
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/rolling-log/">&#x27;Animal Crossing&#x27; Rolling Log shader in Godot</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-07-01
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/3d/">#3D</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/godot/">#godot</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/shaders/">#shaders</a></span>
+    
+
+                    
+        <div class="post-content">
+            <p>todo -- Gif of the shader</p>
+<p>todo -- Link to demo</p>
+<p>Animal Crossing started out as a top-down third-person game. Starting with the DS entry 'Wild World', Animal Crossing started using a vertex transform <a href="https://www.ign.com/articles/2005/05/20/e3-2005-animal-crossing-ds-interview">dubbed the 'rolling log' effect</a>. This effectively combined the top-down view with a view of the horizon and sky. This &quot;extended&quot; how much of the map was visible, while also keeping the stars, constellations, moon, and floating presents within view.</p>
+<!-- 
+todo -- GC screenshot, Wild World screenshot
+
+Vertex transforms were also briefly popular in MineCraft, albeit mainly for trippy warps for YouTube views.
+
+I think vertex transforms like these offer a lot of potential.
+
+-- todo sketch
+
+Imagine a Halo game taking place along an entire ring. The open world map would be integrated into the environment in the form of the ring itself.
+
+No Man's Sky does something like this, implementing a world as a cube and mapping it a sphere when landing.
+
+
+        </div>
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
     <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/python-main-main/">protip.py: the main-main pattern</a></h1>
     <div class="post-meta-inline">
         
@@ -149,7 +194,8 @@
     
         <span class="post-tags-inline">
                 :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/how-to/">#how-to</a></span>
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/how-to/">#how-to</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/legal/">#legal</a></span>
     
 
                     
@@ -251,6 +297,7 @@
         <span class="post-tags-inline">
                 :: tags:&nbsp;
                 <a class="post-tag" href="https://lynndotpy.xyz/tags/how-to/">#how-to</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a>&nbsp;
                 <a class="post-tag" href="https://lynndotpy.xyz/tags/python/">#python</a></span>
     
 
@@ -302,63 +349,6 @@
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
             <a class="read-more button" href="https://lynndotpy.xyz/posts/python-mobile/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/linear-sorting/">You can sort in linear time!</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2022-01-07
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a></span>
-    
-
-                    
-        <div class="post-content">
-            
-  <figure class="center" >
-    <img src="/posts/images/countsort_graph.jpeg" alt="A log-scale graph showing the runtime (ns) of sorting N elements for different integer depths. They all show a trend towards linear runtime for large N." style="width:70%" />
-    
-      <figcaption class="center">A log-scale graph showing the linear runtime of count-sort</figcaption>
-    
-  </figure>
-
-<blockquote>
-<p><strong>TLDR:</strong> Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in $O(n \log n)$ time is still true, but that assumes you're sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)</p>
-<p>See the <a href="https://github.com/lynnpepin/rust_projects/blob/master/countsort/plot_stats.ipynb">Python notebook</a> wrapping an unoptimized <a href="https://github.com/lynnpepin/rust_projects/tree/master/countsort">Rust countsort implementation</a>: </p>
-</blockquote>
-<p>--</p>
-<p>Is this truly $O(n)$? Yes!</p>
-<ul>
-<li>Counting sort is not a randomized algorithm, it always outputs the correct solution.</li>
-<li>Counting sort is not a parallelized algorithm. (And you can't use parallelism to speed past a worst-case big-O run time anyway!)</li>
-<li>Counting sort is not an amortized algorithm. It is truly O(n), not 'expected' or 'amortized' O(n).</li>
-<li>Counting sort is technically Θ(n), that is, the worst and best case running time is linear. </li>
-<li>This can be used in the real world.</li>
-<li>However, it is not an in-place sorting algorithm.</li>
-</ul>
-
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.xyz/posts/linear-sorting/">
                 <span class="button__text">Read more</span>&nbsp;
                 <span class="button__icon">&#8617;&#xFE0E;</span>
             </a>

@@ -4,8 +4,35 @@
     <link href="https://lynndotpy.xyz/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lynndotpy.xyz/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-06-24T00:00:00+00:00</updated>
+    <updated>2023-07-01T00:00:00+00:00</updated>
     <id>https://lynndotpy.xyz/atom.xml</id>
+    <entry xml:lang="en">
+        <title>&#x27;Animal Crossing&#x27; Rolling Log shader in Godot</title>
+        <published>2023-07-01T00:00:00+00:00</published>
+        <updated>2023-07-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/rolling-log/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/rolling-log/</id>
+        <content type="html">&lt;p&gt;todo -- Gif of the shader&lt;&#x2F;p&gt;
+&lt;p&gt;todo -- Link to demo&lt;&#x2F;p&gt;
+&lt;p&gt;Animal Crossing started out as a top-down third-person game. Starting with the DS entry &#x27;Wild World&#x27;, Animal Crossing started using a vertex transform &lt;a href=&quot;https:&#x2F;&#x2F;www.ign.com&#x2F;articles&#x2F;2005&#x2F;05&#x2F;20&#x2F;e3-2005-animal-crossing-ds-interview&quot;&gt;dubbed the &#x27;rolling log&#x27; effect&lt;&#x2F;a&gt;. This effectively combined the top-down view with a view of the horizon and sky. This &amp;quot;extended&amp;quot; how much of the map was visible, while also keeping the stars, constellations, moon, and floating presents within view.&lt;&#x2F;p&gt;
+&lt;!-- 
+todo -- GC screenshot, Wild World screenshot
+
+Vertex transforms were also briefly popular in MineCraft, albeit mainly for trippy warps for YouTube views.
+
+I think vertex transforms like these offer a lot of potential.
+
+-- todo sketch
+
+Imagine a Halo game taking place along an entire ring. The open world map would be integrated into the environment in the form of the ring itself.
+
+No Man&#x27;s Sky does something like this, implementing a world as a cube and mapping it a sphere when landing.
+
+</content>
+    </entry>
     <entry xml:lang="en">
         <title>protip.py: the main-main pattern</title>
         <published>2023-06-24T00:00:00+00:00</published>
@@ -543,6 +570,48 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
 &lt;&#x2F;ol&gt;
 &lt;hr &#x2F;&gt;
 &lt;p&gt;*This is a joke, I&#x27;m not actually writing these blogposts, and you can&#x27;t like, comment, or subscribe.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>The internet is changing again, move to Tumblr</title>
+        <published>2022-01-07T00:00:00+00:00</published>
+        <updated>2022-01-07T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/move-to-tumblr/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/move-to-tumblr/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Tumblr&#x27;s been relevant since 2007, and is run by the same people who&#x27;ve kept Wordpress relevant since 2003. Tumblr is getting on ActivityPub (the same protocol Mastodon uses), along with Facebook, Medium, and others, which will extend it&#x27;s longevity. If you&#x27;re asking &#x27;where should I move my Online Presence to&#x27;, &lt;a href=&quot;https:&#x2F;&#x2F;tumblr.com&#x2F;&quot;&gt;Tumblr&lt;&#x2F;a&gt; is a great choice.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I&#x27;ve been on the internet for about 20 years. Dominant platforms and protocols have waxed on and waxed off. I&#x27;m used to moving from one platform to another.&lt;&#x2F;p&gt;
+&lt;p&gt;IRC died because better software appeared. SomethingAwful died because it was something awful. InvisionFree and phpBB died because they couldn&#x27;t keep up with the convenience of centralization. Skype, Digg, MySpace, and others died because of mismanagement. I&#x27;&lt;&#x2F;p&gt;
+&lt;p&gt;Some bespoke forums like &lt;a href=&quot;http:&#x2F;&#x2F;www.animalcrossingcommunity.com&#x2F;&quot;&gt;AnimalCrossingCommunity.com&lt;&#x2F;a&gt; are still alive and thriving (thank you to the hackers 20 years ago who inspired me to learn how to hack them back), small social media is thriving among &lt;a href=&quot;https:&#x2F;&#x2F;postmill.xyz&#x2F;&quot;&gt;Postmills&lt;&#x2F;a&gt;, some &lt;a href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;Kbin&#x2F;kbin-core&#x2F;wiki&quot;&gt;KBins&lt;&#x2F;a&gt; (based on Postmill), &lt;a href=&quot;https:&#x2F;&#x2F;www.phpbb.com&#x2F;&quot;&gt;phpBBs&lt;&#x2F;a&gt;, and even &lt;a href=&quot;https:&#x2F;&#x2F;www.discourse.org&#x2F;&quot;&gt;Discourses&lt;&#x2F;a&gt;. But I&#x27;m talking about the &lt;em&gt;Big Things&lt;&#x2F;em&gt; in this post.&lt;&#x2F;p&gt;
+&lt;p&gt;Now we&#x27;re seeing Reddit dying, Twitter is dying (except with the far-right), Facebook is dying with gen Z and younger(I know &lt;em&gt;only one&lt;&#x2F;em&gt; person in my life who uses it), and &lt;em&gt;boy I&#x27;m happy we don&#x27;t have a WeChat equivalent in the US.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Among the new choices, there&#x27;s a lot of issues!&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cohost is &lt;a href=&quot;https:&#x2F;&#x2F;cohost.org&#x2F;staff&#x2F;post&#x2F;1690393-h1-2023-financial-up#comments&quot;&gt;having financial issues&lt;&#x2F;a&gt; and my bet is that it&#x27;ll go the way of Ello or Dreamwidth.&lt;&#x2F;li&gt;
+&lt;li&gt;Hive is already dead.&lt;&#x2F;li&gt;
+&lt;li&gt;Bluesky is a protocol and social media with the same flaws as ActivityPub and &lt;a href=&quot;https:&#x2F;&#x2F;chaos.social&#x2F;@jonty&#x2F;110307532009155432&quot;&gt;then some&lt;&#x2F;a&gt;, run by Bitcoin-bro Musk-stanning Jack Dorsey, on an invite-only basis.
+&lt;ul&gt;
+&lt;li&gt;An appeal to my friends: Getting on Bluesky is like adopting NFTs. Don&#x27;t give Dorsey power AGAIN lmao like come ON&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Mastodon finally has general appeal outside fringe groups, but people are worried about their instance going down, which is fair given the protocol assumed &lt;em&gt;way&lt;&#x2F;em&gt; more people would selfhost.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;For my friends asking &amp;quot;where should I move&amp;quot;, the answer is Tumblr.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;tumblr-is-slurping-from-the-fountain-of-youth-relevance&quot;&gt;Tumblr is slurping from the Fountain of &lt;del&gt;Youth&lt;&#x2F;del&gt; Relevance&lt;&#x2F;h1&gt;
+&lt;p&gt;Tumblr is still alive and kicking. This is because they have been perpetually making Mostly Good Decisions, and more recently, because they were acquired by Automattic (more on that later.)&lt;&#x2F;p&gt;
+&lt;p&gt;First, I want to go down a brief history of Tumblr&#x27;s Good Decisions.&lt;&#x2F;p&gt;
+&lt;p&gt;In the mid 2010s, they removed the ability to edit other peoples posts in reblogs after a &lt;a href=&quot;https:&#x2F;&#x2F;mosticonicposts.tumblr.com&#x2F;post&#x2F;186991785202&#x2F;fishingboatproceeds&quot;&gt;high-profile incident of John Green having his posts vulgarly edited. (NSFW)&lt;&#x2F;a&gt; &amp;quot;Editing other peoples posts&amp;quot; sounds CRAZY in retrospect, but at the time, we were all very angry at the removal of that feature.&lt;&#x2F;p&gt;
+&lt;p&gt;Around 2018, with FOSTA&#x2F;SESTA and removal from app stores, Tumblr had to ban porn. &lt;a href=&quot;https:&#x2F;&#x2F;www.tumblr.com&#x2F;photomatt&#x2F;696629352701493248&#x2F;why-go-nuts-show-nuts-doesnt-work-in-2022&quot;&gt;They explained this well in a recent blog post&lt;&#x2F;a&gt; and they restored nipples around 2018. &lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;*As a side note: Tumblr banning porn was horrible for sex workers, but Tumblr really did not have another choice. In addition to a very anti-porn ecosystem, Tumblr had a lot of people under 18 posting nude photos. That&#x27;s a big problem, but because these were originals, they wouldn&#x27;t be caught in a perceptual hash database such as Microsoft&#x27;s PhotoDNA. Solving this would be a logistically difficult machine learning problem, both in terms of safely acquiring and handling the training data, and in training it to reasonable &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Sensitivity_and_specificity&quot;&gt;accuracy metrics&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;In 2019, Tumblr was acquired by Automattic of Wordpress fame. Automattic and Wordpress have a long lineage of maintaining relevance as other technologies died out. Wordpress came out in 2013 and is still &lt;em&gt;the dominant&lt;&#x2F;em&gt; CMS for websites. In 2015, Wordpress switched from PHP to Node.js. This was a huge move, and though I prefer PHP, this is probably a big reason why Wordpress is still relevant today.&lt;&#x2F;p&gt;
+&lt;p&gt;In November 2022, seeing Twitter start to burn, &lt;a href=&quot;https:&#x2F;&#x2F;techcrunch.com&#x2F;2022&#x2F;11&#x2F;21&#x2F;tumblr-to-add-support-for-activitypub-the-social-protocol-powering-mastodon-and-other-apps&#x2F;&quot;&gt;Tumblr started working on ActivityPub support&lt;&#x2F;a&gt;, and in 2023, &lt;a href=&quot;https:&#x2F;&#x2F;techcrunch.com&#x2F;2023&#x2F;03&#x2F;13&#x2F;wordpress-com-owner-automattic-acquires-an-activitypub-plugin-so-blogs-can-join-the-fediverse&#x2F;&quot;&gt;they acquired the ActivityPub for Wordpress plugin&lt;&#x2F;a&gt; &lt;em&gt;and&lt;&#x2F;em&gt; its developer. &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;ActivityPub&quot;&gt;ActivityPub&lt;&#x2F;a&gt; is the protocol on which &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Mastodon_(social_network)&quot;&gt;Mastodon&lt;&#x2F;a&gt; is built, and the &lt;a href=&quot;https:&#x2F;&#x2F;www.theverge.com&#x2F;2023&#x2F;4&#x2F;20&#x2F;23689570&#x2F;activitypub-protocol-standard-social-network&quot;&gt;combined adoption from others&lt;&#x2F;a&gt; like Facebook, Medium, and Mozilla makes me think ActivityPub is going to be the thing that lasts for the next 10 years.&lt;&#x2F;p&gt;
+&lt;p&gt;The cool thing about Tumblr is that it still works well, it&#x27;s spearheaded by folks who I have a lot of faith in, it has a huge already-invested community, and it&#x27;s going to be on the fediverse.&lt;&#x2F;p&gt;
+&lt;p&gt;The biggest hurdle for Tumblr will be overcoming technical limitations from being a huge ActivityPub instance, but I trust they have the funding and know-how to work around that.&lt;&#x2F;p&gt;
 </content>
     </entry>
     <entry xml:lang="en">

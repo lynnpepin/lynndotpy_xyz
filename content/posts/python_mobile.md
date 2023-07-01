@@ -5,7 +5,7 @@ date = 2022-05-22
 aliases = ["posts/python_mobile.html"]
 
 [taxonomies]
-tags = ["how-to", "python"]
+tags = ["how-to", "python", "post"]
 +++
 
 
