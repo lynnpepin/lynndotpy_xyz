@@ -13,6 +13,10 @@
         <loc>https://lynndotpy.xyz/art/</loc>
     </url>
     <url>
+        <loc>https://lynndotpy.xyz/pages/rolling-log/</loc>
+        <lastmod>2023-07-01</lastmod>
+    </url>
+    <url>
         <loc>https://lynndotpy.xyz/posts/</loc>
     </url>
     <url>
@@ -29,7 +33,7 @@
     </url>
     <url>
         <loc>https://lynndotpy.xyz/posts/move-to-tumblr/</loc>
-        <lastmod>2022-01-07</lastmod>
+        <lastmod>2023-07-01</lastmod>
     </url>
     <url>
         <loc>https://lynndotpy.xyz/posts/page/1/</loc>
@@ -52,10 +56,6 @@
     <url>
         <loc>https://lynndotpy.xyz/posts/reso-intro/</loc>
         <lastmod>2021-05-15</lastmod>
-    </url>
-    <url>
-        <loc>https://lynndotpy.xyz/posts/rolling-log/</loc>
-        <lastmod>2023-07-01</lastmod>
     </url>
     <url>
         <loc>https://lynndotpy.xyz/posts/seo-dating-spam/</loc>

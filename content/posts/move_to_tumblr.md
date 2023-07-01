@@ -1,6 +1,6 @@
 +++
 title = "The internet is changing again, move to Tumblr"
-date = 2022-01-07
+date = 2023-07-01
 
 [taxonomies]
 tags = ["post", "internet",]
