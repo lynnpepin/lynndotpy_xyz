@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Oh no, dating spam sites are abusing improperly-configured internal search engines &#x2F;&#x2F; lynndotpy</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.xyz/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.xyz/color/lynn-auto.css">
+
+        <link rel="stylesheet" href="https://lynndotpy.xyz/color/background_auto.css">
+    
+    <link rel="stylesheet" href="https://lynndotpy.xyz/font-hack-subset.css">
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.xyz/rss.xml">
+    
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+        
+<link rel="stylesheet" href="https://lynndotpy.xyz/katex/katex.min.css">
+<script defer src="https://lynndotpy.xyz/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+      ]
+      });
+  });
+</script>
+
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.xyz/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.xyz
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.xyz/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/projects">projects</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://gitlab.com/lynnpepin" target="_blank" rel="noopener noreferrer">gitlab</a></li>
+            
+                <li><a href="https://mastodon.social/@lynndotpy" target="_blank" rel="noopener noreferrer">mastodon</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/seo-dating-spam/">Oh no, dating spam sites are abusing improperly-configured internal search engines</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2021-04-30
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/security/">#security</a></span>
+    
+
+        
+        <div class="post-content">
+            <blockquote>
+<p><strong>tldr:</strong>  Malicious entities are abusing sites internal search engines to promote their own URLs. This effectively allows them to advertise using the target site's domain in the search results of major search engines. If you own such a site, fix this by putting a <code>disallow</code> entry in your <code>robots.txt</code>, or adding the <code>noindex</code> meta tag.</p>
+</blockquote>
+<span id="continue-reading"></span><h1 id="a-mystery-of-malware-in-my-school-s-search-results">A Mystery of Malware in My School's Search Results</h1>
+<p>Recently, a colleague of mine was trying to see if our university had any carbon dating expertise. A search on Google for <code>uconn carbon dating</code> yielded some results she considered sus:</p>
+<p><img src="/posts/images/datego-edu-spam-uconn.png" alt="A screenshot of a Google Search for 'UConn Carbon Dating', showing some malicious looking results promoting some malicious dating sites." title="A screenshot of a Google Search for 'UConn Carbon Dating', showing some malicious looking results promoting some malicious dating sites." /></p>
+<p>Like any fool, I clicked through the link to see what was going on. Here's that first link, with linebreaks to make it easier to interpret:</p>
+<pre style="background-color:#151515;color:#e8e8d3;"><code><span>https://chemistry.uconn.edu/?s=
+</span><span>%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8Fwww.datego.xyz
+</span><span>%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8Fcarbon+dating+past+50000+years+year+
+</span><span>%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8F+BEST+DATING+SITE+
+</span><span>%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8F
+</span><span>+carbon+dating+past+50000+years+year+carbon+dating+past+50000+years+year+
+</span><span>carbon+dating+past+50000+years+year+carbon+dating+past+50000+years+year+
+</span><span>carbon+dating+past+50000+years+year+carbon+dating+past+50000+years+year+
+</span><span>%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8Fwww.datego.xyz
+</span><span>%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8F+BEST+DATING+SITE
+</span></code></pre>
+<p>Ugly! Let's use Python's <code>urllib.parse.unquote(string)</code> function to clean this up. This gives us:</p>
+<pre style="background-color:#151515;color:#e8e8d3;"><code><span>https://chemistry.uconn.edu/?s=
+</span><span>🪀❤️️www.datego.xyz
+</span><span>🪀❤️️carbon+dating+past+50000+years+year+
+</span><span>🪀❤️️+BEST+DATING+SITE+
+</span><span>🪀❤️️
+</span><span>+carbon+dating+past+50000+years+year+carbon+dating+past+50000+years+year+
+</span><span>carbon+dating+past+50000+years+year+carbon+dating+past+50000+years+year+
+</span><span>carbon+dating+past+50000+years+year+carbon+dating+past+50000+years+year+
+</span><span>🪀❤️️www.datego.xyz
+</span><span>🪀❤️️+BEST+DATING+SITE
+</span></code></pre>
+<p>where '🪀' and '❤️️', if you can't see it, are Yo-Yo and Heart emojis, respectively. Upon inspection, it seems that these are just searches abusing the sites internal search engine. They become emoji in the URL.</p>
+<p>It's pretty standard, you can make searches for arbitrary text. For example, <code>chemistry.uconn.edu/?s=some+arbitrary+text</code> yields such a URL: <a href="https://lynndotpy.xyz/posts/seo-dating-spam/chemistry.uconn.edu/?s=some+arbitrary+text">https://chemistry.uconn.edu/?s=some+arbitrary+text</a></p>
+<p>It seems UConn isn't the only one impacted. While not exclusive to .edu domains, it looks like they're the primary targets. Here, we see the same thing for other .edu domains:</p>
+<p><img src="/posts/images/datego-edu-spam.png" alt="A screenshot of a Google Search for 'datego.xyz site:edu', showing some malicious looking results promoting some malicious dating sites." title="A screenshot of a Google Search for 'datego.xyz site:edu', showing some malicious looking results promoting some malicious dating sites." /></p>
+<p>So, what's going on here? I think I have an idea.</p>
+<h1 id="an-explanation-for-these-egregious-search-results">An Explanation for these Egregious Search Results</h1>
+<p>So, my guess here is that the attack works like this:</p>
+<ol>
+<li>Find websites with 'search' boxes following the convention of <code>{url}/s={search text}</code>.</li>
+<li>Enter a search pointing to your very cool and totally legit dating site.</li>
+<li>Abuse search engine optimization so this malicious search result hits the top!</li>
+<li>???</li>
+<li>... Profit?</li>
+</ol>
+<p>There's surely a name for this kind of attack, but this is my first time seeing it! Please let me know if you've seen this before.</p>
+<p>And now, a curious mind might wonder, does this work for big search engines? Can one abuse this to do <code>google.com/search?q=some+arbitrary+text</code> or <code>duckduckgo.com/q=some+arbitrary+text</code>? No! Why? Let's see.</p>
+<h1 id="how-to-stop-for-this-salacious-shady-search-meta-seo">How to Stop for this Salacious Shady Search Meta-SEO</h1>
+<p>I'm not a web developer, but one usually doesn't want their search results to be indexed on other search engines. They clutter up results for the end-user, and, as we see here, it opens you up for a rather ugly attack. As far as I can tell, there are two main ways to fix this. Luckily, they're both easy!</p>
+<ol>
+<li><strong>Fix the <code>robots.txt</code></strong> </li>
+<li><strong>Add the <code>noindex</code> metatag.</strong></li>
+</ol>
+<p>We can see both of these in action by observing Google (which uses <code>robots.txt</code>) and DuckDuckGo (which uses both <code>robots.txt</code> and the <code>noindex</code>.) While not strictly required, major search engines will respect these tags.</p>
+<h2 id="fix-this-using-robots-txt">Fix this using robots.txt</h2>
+<p>First, let's look at <a href="https://google.com/robots.txt">google.com/robots.txt</a>. The first few lines are copied below:</p>
+<pre style="background-color:#151515;color:#e8e8d3;"><code><span>User-agent: *
+</span><span>Disallow: /search
+</span><span>Allow: /search/about
+</span><span>Allow: /search/static
+</span><span>Allow: /search/howsearchworks
+</span><span>Disallow: /sdch
+</span><span>Disallow: /groups
+</span><span>Disallow: /index.html?
+</span><span>Disallow: /?
+</span><span>...
+</span></code></pre>
+<p>And let's also take a look at <a href="https://duckduckgo.com/robots.txt">duckduckgo.com/robots.txt</a>. Their entire <code>robots.txt</code> is copied verbatim here:</p>
+<pre style="background-color:#151515;color:#e8e8d3;"><code><span>User-agent: *
+</span><span>Disallow: /lite
+</span><span>Disallow: /html
+</span><span>
+</span><span># No search result pages
+</span><span>Disallow: /*?
+</span><span>
+</span><span># chrome new tab page
+</span><span>Disallow: /chrome_newtab
+</span><span>
+</span><span>User-agent: ia_archiver
+</span><span>Disallow: /
+</span><span>
+</span><span>Sitemap: https://duckduckgo.com/sitemap.xml
+</span></code></pre>
+<p>The syntax is pretty clear! Observing other sites impacted by this show that <code>robots.txt</code> does <em>not</em> disallow search. For example, <a href="https://upike.edu/robots.txt">upike.edu/robots.txt</a> is listed verbatim below:</p>
+<pre style="background-color:#151515;color:#e8e8d3;"><code><span>User-agent: * 
+</span><span>Crawl-Delay: 20
+</span></code></pre>
+<p>Here, they don't block crawlers from any part of the site, but will ask crawlers to slow down a little and crawl a page only once every 20 seconds.</p>
+<p><strong>A heads up!</strong> You need to set up your <code>robots.txt</code> properly <strong>for every subdomain</strong>. For example, I noticed at least 25 UConn subdomains that had this problem. But the robots.txt at <code>uconn.edu/robots.txt</code> had the correct entry, <code>Disallow: /*?s=</code>/</p>
+<h2 id="alternatively-fix-this-using-noindex">Alternatively, fix this using 'noindex'.</h2>
+<p>If one searches on DuckDuckGo and were to inspect the page, would see this in the <code>&lt;head&gt;</code> section of the page:</p>
+<pre data-lang="html" style="background-color:#151515;color:#e8e8d3;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#ffb964;">meta name</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">robots</span><span style="color:#556633;">&quot; </span><span style="color:#ffb964;">content</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">noindex,nofollow</span><span style="color:#556633;">&quot;</span><span>&gt;
+</span></code></pre>
+<p>Now, because of DuckDuckGo's <code>robots.txt</code> file, an indexer won't even see this. But if it did, it would know not to index it (per <code>noindex</code>) and not to index any links on the page (per <code>nofollow</code>).</p>
+<p>One can also, alternatively, add <code>X-Robots-Tag: noindex</code> to the HTTP response header. Google has more information on their page <a href="https://developers.google.com/search/docs/advanced/crawling/block-indexing">&quot;Block Search indexing with 'noindex'&quot; at developers.google.com/search/docs/advanced/crawling/block-indexing</a></p>
+<h1 id="neat-so-did-you-disclose-this-disaster">Neat! So, Did you disclose this disaster?</h1>
+<p>Regarding responsible disclosure, I did give a heads up to UConn's IT department, since I am a UConn student and employee. But given the low impact of this attack and how widespread it is, I figured a blogpost would be more than appropriate. </p>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h"></span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://lynndotpy.xyz/posts/gimp-and-python/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">GIMP &lt;3 Python! Let&#x27;s make a YuGiOh rip off</span>
+                        </a>
+                    </span>
+                
+                
+                    <span class="button next">
+                        <a href="https://lynndotpy.xyz/posts/reso-intro/">
+                            <span class="button__text">`reso`, a colorful pixel-art circuit simulator</span>&nbsp;
+                            <span class="button__icon">→</span>
+                        </a>
+                    </span>
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>
