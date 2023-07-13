@@ -3,7 +3,7 @@ title = "Private Policy, kind of"
 date = 2023-07-04
 
 [taxonomies]
-tags = ["post"]
+tags = ["post", "privacy"]
 +++
 
 > **TLDR:** This site takes special effort to collect no data. Only normal server logs are collected, which includes IP, OS, browser, and referrer info.

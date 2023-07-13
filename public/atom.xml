@@ -4,8 +4,39 @@
     <link href="https://lynndotpy.xyz/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lynndotpy.xyz/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-07-09T00:00:00+00:00</updated>
+    <updated>2023-07-13T00:00:00+00:00</updated>
     <id>https://lynndotpy.xyz/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Caddy: How to Opt out of Chrome Topics API</title>
+        <published>2023-07-13T00:00:00+00:00</published>
+        <updated>2023-07-13T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/caddy-topics-optout/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/caddy-topics-optout/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Set the following in your caddyfile for each site: &lt;code&gt;header Permissions-Policy &amp;quot;interest-cohort=(),browsing-topics=()&amp;quot;&lt;&#x2F;code&gt;. This disable both the old FLoC and the new Topics.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Here is an abbreviated version of my Caddyfile, showing how I set the &lt;code&gt;header1&lt;&#x2F;code&gt; file for &lt;code&gt;lynndotpy.xyz&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;caddyfile&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-caddyfile &quot;&gt;&lt;code class=&quot;language-caddyfile&quot; data-lang=&quot;caddyfile&quot;&gt;&lt;span&gt;lynndotpy.xyz {
+&lt;&#x2F;span&gt;&lt;span&gt;  header {
+&lt;&#x2F;span&gt;&lt;span&gt;    Permissions-Policy &amp;quot;interest-cohort=(),browsing-topics=()&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To confirm this is set, open the networking tab of your favorite browser&#x27;s dev tools and look for the Permissions-Policy response header. More context below the cut.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;strong&gt;More context:&lt;&#x2F;strong&gt; Google has renamed and tweaked its controversial 2021 &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Federated_Learning_of_Cohorts&quot;&gt;&amp;quot;Federated Learning of Cohorts&amp;quot;&lt;&#x2F;a&gt; tracking project and replaced it with the &lt;a href=&quot;https:&#x2F;&#x2F;www.theverge.com&#x2F;2022&#x2F;1&#x2F;25&#x2F;22900567&#x2F;google-floc-abandon-topics-api-cookies-tracking&quot;&gt;Topics API&lt;&#x2F;a&gt;. These are surveillance capitalism tools built into Chromium-based browsers.  Unless you explicitly opt out, &lt;strong&gt;every website will participate in Google&#x27;s Topics API&lt;&#x2F;strong&gt; when a Chrome user visits it.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is the full &amp;quot;Opt out your site&amp;quot; section from Google&#x27;s &amp;quot;Topics API developer guide&amp;quot; (see &lt;code&gt;https:&#x2F;&#x2F;developer.chrome.com&#x2F;docs&#x2F;privacy-sandbox&#x2F;topics&#x2F;#site-opt-out&lt;&#x2F;code&gt;), accessed 2023-Jul-13:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can opt out of topic calculation for specific pages on your site by including the &lt;code&gt;Permissions-Policy: browsing-topics=()&lt;&#x2F;code&gt; &lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;docs&#x2F;Web&#x2F;HTTP&#x2F;Headers&#x2F;Feature-Policy&quot;&gt;Permissions-Policy&lt;&#x2F;a&gt; header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected: if you set a policy to block the Topics API on one page, this won&#x27;t affect other pages.&lt;&#x2F;p&gt;
+&lt;p&gt;You can also control which third parties have access to topics on your page by using the &lt;code&gt;Permissions-Policy&lt;&#x2F;code&gt; header to control third-party access to the Topics API. As parameters to the header, use &lt;code&gt;self&lt;&#x2F;code&gt; and any domains you would like to allow access to the API. For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and &lt;code&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;code&gt;, set the following HTTP response header:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;Permissions-Policy: browsing-topics=(self &amp;quot;https:&#x2F;&#x2F;example.com&amp;quot;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
+</content>
+    </entry>
     <entry xml:lang="en">
         <title>If BlueSky takes off, Bitcoin will too</title>
         <published>2023-07-09T00:00:00+00:00</published>
