@@ -1,12 +1,12 @@
 +++
 title = "If BlueSky takes off, Bitcoin will too"
-date = 2023-07-02
+date = 2023-07-09
 
 [taxonomies]
 tags = ["post", "internet",]
 +++
 
-> **TLDR:** BlueSky was always intended to integrate with Bitcoin. If BlueSky becomes widely adopted, Bitcoin will too. I don't like Bitcoin, so I don't want BlueSky to become popular.
+> **TLDR:** BlueSky is intended to eventually integrate with Bitcoin. If BlueSky becomes widely adopted, Bitcoin will too. I don't like Bitcoin, so I don't want BlueSky to become popular.
 > 
 > In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After using Lightning, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.
 
@@ -57,4 +57,4 @@ Footnotes:
 2. Note for future people: RFK Jr is one of those wackjob candidates running for the 2024 presidential election. We get a few of those every  presidential election. 
 3. I cut out only the relevant bits from the thread, added emphasis and context
 4. The reward was a mere $300 for designing a novel cryptographic protocol for linking identities. Even PhD students get paid more! 
-5. There was no way anyone other than the Pawoo/Gab people would ever be using Mastodon except for the mistakes Musk made in late 2022.
+5. There was no way anyone other than the Pawoo/Gab people would ever be using Mastodon except for the Twitter mistakes Musk made in late 2022.

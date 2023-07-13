@@ -4,8 +4,63 @@
     <link href="https://lynndotpy.xyz/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lynndotpy.xyz/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-07-04T00:00:00+00:00</updated>
+    <updated>2023-07-09T00:00:00+00:00</updated>
     <id>https://lynndotpy.xyz/atom.xml</id>
+    <entry xml:lang="en">
+        <title>If BlueSky takes off, Bitcoin will too</title>
+        <published>2023-07-09T00:00:00+00:00</published>
+        <updated>2023-07-09T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/bluesky-and-bitcoin/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/bluesky-and-bitcoin/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; BlueSky is intended to eventually integrate with Bitcoin. If BlueSky becomes widely adopted, Bitcoin will too. I don&#x27;t like Bitcoin, so I don&#x27;t want BlueSky to become popular.&lt;&#x2F;p&gt;
+&lt;p&gt;In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After using Lightning, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Jack Dorsey&#x27;s &amp;quot;BlueSky&amp;quot; platform is taking off. Unfortunately, not only is Jack Dorsey a bonkers man who &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;BrianJo78940026&#x2F;status&#x2F;1674770881955115009&quot;&gt;endorses the belief that Jimmy Carter cried when he learned that aliens made up all the religions&lt;&#x2F;a&gt;^1 and is on a &lt;em&gt;big&lt;&#x2F;em&gt; pro-RFK Jr^2 streak, but he also is a longtime Bitcoin believer.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;When Bitcoin came out in 2009, it became immediately evident that it Did Not Work as a digital currency. Transactions took minutes to days, transactions had serious overhead cost, and Bitcoin was inherently limited in the number of transactions the network could do (the &amp;quot;scalability problem&amp;quot;).&lt;&#x2F;p&gt;
+&lt;p&gt;A solution was proposed in 2015, called the &amp;quot;Lightning network&amp;quot;. The solution was to centralize payments to a few processor nodes and to bundle individual transactions as one single payment.&lt;&#x2F;p&gt;
+&lt;p&gt;The Lightning network started &lt;a href=&quot;https:&#x2F;&#x2F;cointelegraph.com&#x2F;news&#x2F;the-lightning-torch-how-the-community-united-to-teach-jack-dorsey-about-feeless-rapid-off-chain-transactions&quot;&gt;being used in earnest January 19th 2019 when a few notable people kicked off the Lightning Network, including Jack Dorsey.&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Later in that same year, &lt;a href=&quot;https:&#x2F;&#x2F;www.theverge.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;21010856&#x2F;twitter-jack-dorsey-bluesky-decentralized-social-network-research-moderation&quot;&gt;Jack Dorsey announced what would ultimately become BlueSky&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Twitter is funding a small independent team of up to five open source architects, engineers, and designers to develop an open and decentralized standard for social media. The goal is for Twitter to ultimately be a client of this standard. 🧵&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;jack&#x2F;status&#x2F;1204766078468911106&quot;&gt;(&lt;code&gt;@jack&lt;&#x2F;code&gt; on Twitter, 2019 December 11th)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;During the many-tweet thread announcing Blue Sky, Jack emphasized the importance of developing blockchain technologies (think: the Lightning network).&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Finally, new technologies have emerged to make a decentralized approach more viable. Blockchain points to a series of decentralized solutions for open and durable hosting, governance, and even monetization. Much work to be done, but the fundamentals are there.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;...&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Square is doing exactly this [&lt;a href=&quot;https:&#x2F;&#x2F;knightcolumbia.org&#x2F;content&#x2F;protocols-not-platforms-a-technological-approach-to-free-speech&quot;&gt;see: &#x27;platforms not protocols&#x27;&lt;&#x2F;a&gt;] for bitcoin with @SqCrypto. For social media, we’d like this team to either find an existing decentralized standard they can help move forward, or failing that, create one from scratch. That’s the only direction we at Twitter, Inc. will provide.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;...&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We’re calling this team  @bluesky. Our CTO @ParagA will be running point to find a lead, who will then hire and direct the rest of the team. Please follow or DM  @bluesky if you’re interested in learning more or joining! 🌐💬💙&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;jack&#x2F;status&#x2F;1204766078468911106&quot;&gt;(&lt;code&gt;@jack&lt;&#x2F;code&gt; on Twitter, 2019 December 11th)&lt;&#x2F;a&gt;^3&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Some context: These tweets came out when Jack was the CEO of Twitter. The &lt;code&gt;@ParagA&lt;&#x2F;code&gt; is Parag Agrawal, former-CTO and now-CEO of Twitter, &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;paraga&#x2F;status&#x2F;1193248318249414656&quot;&gt;who is also a fan of Bitcoin&lt;&#x2F;a&gt;.)&lt;&#x2F;p&gt;
+&lt;p&gt;Over the years, Jack has continued to promote Bitcoin and its&#x27; Lightning network. On June 10th 2021, &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;jack&#x2F;status&#x2F;1403174877444587523&quot;&gt;he said it&#x27;s &amp;quot;only a matter of time&amp;quot;&lt;&#x2F;a&gt; until the Bitcoin Lightning Network is integrated into BlueSky or Twitter. Later in 2021, &lt;a href=&quot;https:&#x2F;&#x2F;blueskyweb.xyz&#x2F;blog&#x2F;satellite&quot;&gt;BlueSky started the &amp;quot;Satellite&amp;quot; contest to reward BlueSky users with Bitcoin and NFTs.&lt;&#x2F;a&gt;.^4&lt;&#x2F;p&gt;
+&lt;p&gt;You probably already know the more recent history: In 2022, they kept Elon Musk to his promise to buy Twitter for $44 billion. That &lt;a href=&quot;https:&#x2F;&#x2F;twitterisgoinggreat.com&#x2F;&quot;&gt;caused immediate issues&lt;&#x2F;a&gt;, prompting a mass exodus to other platforms^5, and prompting Jack and BlueSky to speed up their launch.&lt;&#x2F;p&gt;
+&lt;p&gt;And now, July 1st 2023, &lt;a href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=36552324&quot;&gt;Twitter started rate-limiting Tweets&lt;&#x2F;a&gt;, prompting another mass exodus. BlueSky is being so widely adopted they had to temporarily close down new signups through the invite system.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Footnotes:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Jack retweeted a screenshot of a &lt;a href=&quot;https:&#x2F;&#x2F;www.quora.com&#x2F;What-was-Jimmy-Carter-told-about-UFOs-that-made-him-cry?share=1&quot;&gt;Quora answer by &#x27;Ed Harris&#x27;&lt;&#x2F;a&gt;.  The &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Jimmy_Carter_UFO_incident&quot;&gt;&amp;quot;Jimmy Carter UFO Incident&amp;quot;&lt;&#x2F;a&gt; is reported, but doesn&#x27;t suggest an alien conspiracy.&lt;&#x2F;li&gt;
+&lt;li&gt;Note for future people: RFK Jr is one of those wackjob candidates running for the 2024 presidential election. We get a few of those every  presidential election. &lt;&#x2F;li&gt;
+&lt;li&gt;I cut out only the relevant bits from the thread, added emphasis and context&lt;&#x2F;li&gt;
+&lt;li&gt;The reward was a mere $300 for designing a novel cryptographic protocol for linking identities. Even PhD students get paid more! &lt;&#x2F;li&gt;
+&lt;li&gt;There was no way anyone other than the Pawoo&#x2F;Gab people would ever be using Mastodon except for the Twitter mistakes Musk made in late 2022.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+    </entry>
     <entry xml:lang="en">
         <title>Private Policy, kind of</title>
         <published>2023-07-04T00:00:00+00:00</published>
@@ -66,61 +121,6 @@ slider.oninput = function() {
   console.log(&quot;Current slider value: &quot;, value);
 }
 &lt;&#x2F;script&gt;</content>
-    </entry>
-    <entry xml:lang="en">
-        <title>If BlueSky takes off, Bitcoin will too</title>
-        <published>2023-07-02T00:00:00+00:00</published>
-        <updated>2023-07-02T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://lynndotpy.xyz/posts/not_ready/bluesky-and-bitcoin/" type="text/html"/>
-        <id>https://lynndotpy.xyz/posts/not_ready/bluesky-and-bitcoin/</id>
-        <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; BlueSky was always intended to integrate with Bitcoin. If BlueSky becomes widely adopted, Bitcoin will too. I don&#x27;t like Bitcoin, so I don&#x27;t want BlueSky to become popular.&lt;&#x2F;p&gt;
-&lt;p&gt;In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After using Lightning, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;Jack Dorsey&#x27;s &amp;quot;BlueSky&amp;quot; platform is taking off. Unfortunately, not only is Jack Dorsey a bonkers man who &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;BrianJo78940026&#x2F;status&#x2F;1674770881955115009&quot;&gt;endorses the belief that Jimmy Carter cried when he learned that aliens made up all the religions&lt;&#x2F;a&gt;^1 and is on a &lt;em&gt;big&lt;&#x2F;em&gt; pro-RFK Jr^2 streak, but he also is a longtime Bitcoin believer.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
-&lt;p&gt;When Bitcoin came out in 2009, it became immediately evident that it Did Not Work as a digital currency. Transactions took minutes to days, transactions had serious overhead cost, and Bitcoin was inherently limited in the number of transactions the network could do (the &amp;quot;scalability problem&amp;quot;).&lt;&#x2F;p&gt;
-&lt;p&gt;A solution was proposed in 2015, called the &amp;quot;Lightning network&amp;quot;. The solution was to centralize payments to a few processor nodes and to bundle individual transactions as one single payment.&lt;&#x2F;p&gt;
-&lt;p&gt;The Lightning network started &lt;a href=&quot;https:&#x2F;&#x2F;cointelegraph.com&#x2F;news&#x2F;the-lightning-torch-how-the-community-united-to-teach-jack-dorsey-about-feeless-rapid-off-chain-transactions&quot;&gt;being used in earnest January 19th 2019 when a few notable people kicked off the Lightning Network, including Jack Dorsey.&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Later in that same year, &lt;a href=&quot;https:&#x2F;&#x2F;www.theverge.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;21010856&#x2F;twitter-jack-dorsey-bluesky-decentralized-social-network-research-moderation&quot;&gt;Jack Dorsey announced what would ultimately become BlueSky&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Twitter is funding a small independent team of up to five open source architects, engineers, and designers to develop an open and decentralized standard for social media. The goal is for Twitter to ultimately be a client of this standard. 🧵&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;jack&#x2F;status&#x2F;1204766078468911106&quot;&gt;(&lt;code&gt;@jack&lt;&#x2F;code&gt; on Twitter, 2019 December 11th)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;During the many-tweet thread announcing Blue Sky, Jack emphasized the importance of developing blockchain technologies (think: the Lightning network).&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Finally, new technologies have emerged to make a decentralized approach more viable. Blockchain points to a series of decentralized solutions for open and durable hosting, governance, and even monetization. Much work to be done, but the fundamentals are there.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;...&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Square is doing exactly this [&lt;a href=&quot;https:&#x2F;&#x2F;knightcolumbia.org&#x2F;content&#x2F;protocols-not-platforms-a-technological-approach-to-free-speech&quot;&gt;see: &#x27;platforms not protocols&#x27;&lt;&#x2F;a&gt;] for bitcoin with @SqCrypto. For social media, we’d like this team to either find an existing decentralized standard they can help move forward, or failing that, create one from scratch. That’s the only direction we at Twitter, Inc. will provide.&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;...&lt;&#x2F;p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We’re calling this team  @bluesky. Our CTO @ParagA will be running point to find a lead, who will then hire and direct the rest of the team. Please follow or DM  @bluesky if you’re interested in learning more or joining! 🌐💬💙&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;jack&#x2F;status&#x2F;1204766078468911106&quot;&gt;(&lt;code&gt;@jack&lt;&#x2F;code&gt; on Twitter, 2019 December 11th)&lt;&#x2F;a&gt;^3&lt;&#x2F;p&gt;
-&lt;&#x2F;blockquote&gt;
-&lt;p&gt;Some context: These tweets came out when Jack was the CEO of Twitter. The &lt;code&gt;@ParagA&lt;&#x2F;code&gt; is Parag Agrawal, former-CTO and now-CEO of Twitter, &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;paraga&#x2F;status&#x2F;1193248318249414656&quot;&gt;who is also a fan of Bitcoin&lt;&#x2F;a&gt;.)&lt;&#x2F;p&gt;
-&lt;p&gt;Over the years, Jack has continued to promote Bitcoin and its&#x27; Lightning network. On June 10th 2021, &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;jack&#x2F;status&#x2F;1403174877444587523&quot;&gt;he said it&#x27;s &amp;quot;only a matter of time&amp;quot;&lt;&#x2F;a&gt; until the Bitcoin Lightning Network is integrated into BlueSky or Twitter. Later in 2021, &lt;a href=&quot;https:&#x2F;&#x2F;blueskyweb.xyz&#x2F;blog&#x2F;satellite&quot;&gt;BlueSky started the &amp;quot;Satellite&amp;quot; contest to reward BlueSky users with Bitcoin and NFTs.&lt;&#x2F;a&gt;.^4&lt;&#x2F;p&gt;
-&lt;p&gt;You probably already know the more recent history: In 2022, they kept Elon Musk to his promise to buy Twitter for $44 billion. That &lt;a href=&quot;https:&#x2F;&#x2F;twitterisgoinggreat.com&#x2F;&quot;&gt;caused immediate issues&lt;&#x2F;a&gt;, prompting a mass exodus to other platforms^5, and prompting Jack and BlueSky to speed up their launch.&lt;&#x2F;p&gt;
-&lt;p&gt;And now, July 1st 2023, &lt;a href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=36552324&quot;&gt;Twitter started rate-limiting Tweets&lt;&#x2F;a&gt;, prompting another mass exodus. BlueSky is being so widely adopted they had to temporarily close down new signups through the invite system.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;Footnotes:&lt;&#x2F;p&gt;
-&lt;ol&gt;
-&lt;li&gt;Jack retweeted a screenshot of a &lt;a href=&quot;https:&#x2F;&#x2F;www.quora.com&#x2F;What-was-Jimmy-Carter-told-about-UFOs-that-made-him-cry?share=1&quot;&gt;Quora answer by &#x27;Ed Harris&#x27;&lt;&#x2F;a&gt;.  The &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Jimmy_Carter_UFO_incident&quot;&gt;&amp;quot;Jimmy Carter UFO Incident&amp;quot;&lt;&#x2F;a&gt; is reported, but doesn&#x27;t suggest an alien conspiracy.&lt;&#x2F;li&gt;
-&lt;li&gt;Note for future people: RFK Jr is one of those wackjob candidates running for the 2024 presidential election. We get a few of those every  presidential election. &lt;&#x2F;li&gt;
-&lt;li&gt;I cut out only the relevant bits from the thread, added emphasis and context&lt;&#x2F;li&gt;
-&lt;li&gt;The reward was a mere $300 for designing a novel cryptographic protocol for linking identities. Even PhD students get paid more! &lt;&#x2F;li&gt;
-&lt;li&gt;There was no way anyone other than the Pawoo&#x2F;Gab people would ever be using Mastodon except for the mistakes Musk made in late 2022.&lt;&#x2F;li&gt;
-&lt;&#x2F;ol&gt;
-</content>
     </entry>
     <entry xml:lang="en">
         <title>The internet is changing again, move to Tumblr (update: Cohost)</title>

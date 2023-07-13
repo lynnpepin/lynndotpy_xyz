@@ -16,6 +16,10 @@
         <loc>https://lynndotpy.xyz/posts/</loc>
     </url>
     <url>
+        <loc>https://lynndotpy.xyz/posts/bluesky-and-bitcoin/</loc>
+        <lastmod>2023-07-09</lastmod>
+    </url>
+    <url>
         <loc>https://lynndotpy.xyz/posts/discord-optout-2023/</loc>
         <lastmod>2023-03-08</lastmod>
     </url>
@@ -30,10 +34,6 @@
     <url>
         <loc>https://lynndotpy.xyz/posts/move-to-tumblr/</loc>
         <lastmod>2023-07-01</lastmod>
-    </url>
-    <url>
-        <loc>https://lynndotpy.xyz/posts/not_ready/bluesky-and-bitcoin/</loc>
-        <lastmod>2023-07-02</lastmod>
     </url>
     <url>
         <loc>https://lynndotpy.xyz/posts/not_ready/imaginary-floats/</loc>
