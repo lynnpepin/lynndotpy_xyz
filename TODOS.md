@@ -1,3 +1,9 @@
+Stack:
+- [ ] Fix footnotes in all post
+- [ ] Update Tumblr post to address new Tumblr strategy
+- [ ] Finish BlueSky post
+- [ ] Add KaTeX, footnotes to Terminimal
+- [ ] 
 
 Major features:
 - [ ] Gallery view
@@ -5,12 +11,12 @@ Major features:
   - [ ] Upload art. Pleroma?
   - [ ] No hotlinking
 - [ ] ~~Stop using Hack font?~~ (nevermind)
-- [ ] Selfhosted analytics
 - [ ] Add KaTeX to Terminimal?
 - [ ] interactivity?
   - [ ] "like" button? comment box? discourse? viewcounter?
 - [ ] PP. (Nothing but logs!!)
 - [ ] Paginate
+- [ ] Only load KaTeX with a perp-page env var. (Adds ~100KiB!)
 
 
 Update content:
@@ -130,6 +136,15 @@ Posts:
   - Speccing heavily into the languages used in the course.
   - No alcohol. 
 - circuit playground ball bearing
+- "selfhosting guide"
+  - choose a domain name provider (iwantmyname)
+  - choose a vps provider (digitalocean, linode, iwantmyname)
+  - secure your distro (ssh, updates)
+  - set up caddy and ssl
+  - choose software
+    - static? wordpress? something else?
+    - etc
+  - publish and use RSS 
 
 ---
 

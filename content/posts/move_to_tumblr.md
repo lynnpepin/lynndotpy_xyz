@@ -1,5 +1,5 @@
 +++
-title = "The internet is changing again, move to Tumblr"
+title = "The internet is changing again, move to Tumblr (update: Cohost)"
 date = 2023-07-01
 
 [taxonomies]
@@ -8,6 +8,8 @@ tags = ["post", "internet",]
 
 
 > **TLDR:** Tumblr's been relevant since 2007, and is run by the same people who've kept Wordpress relevant since 2003. Tumblr is getting on ActivityPub (the same protocol Mastodon uses), along with Facebook, Medium, and others, which will extend it's longevity. If you're asking 'where should I move my Online Presence to', [Tumblr](https://tumblr.com/) is a great choice.
+> 
+> **Update, 2023-Jul-12th:** [Cohost's finances are in order](https://cohost.org/staff/post/1999123-june-2023-financial) and [Tumblr has hopped on the "enshittification" train.](https://staff.tumblr.com/post/722477242948747264/tumblrs-core-product-strategy) Don't I feel foolish! The post below has been preserved in its original form. I'm enjoying Cohost for now.
 
 I've been on the internet for about 20 years. Dominant platforms and protocols have waxed on and waxed off. I'm used to moving from one platform to another.
 
@@ -15,7 +17,7 @@ IRC died because better software appeared. SomethingAwful died because it was so
 
 Some bespoke forums like [AnimalCrossingCommunity.com](http://www.animalcrossingcommunity.com/) are still alive and thriving (thank you to the hackers 20 years ago who inspired me to learn how to hack them back), small social media is thriving among [Postmills](https://postmill.xyz/), some [KBins](https://codeberg.org/Kbin/kbin-core/wiki) (based on Postmill), [phpBBs](https://www.phpbb.com/), and even [Discourses](https://www.discourse.org/). But I'm talking about the *Big Things* in this post.
 
-Now we're seeing Reddit dying, Twitter is dying (except with the far-right), Facebook is dying with gen Z and younger(I know *only one* person in my life who uses it), and *boy I'm happy we don't have a WeChat equivalent in the US.*
+Now we're seeing Reddit dying, Twitter is dying (except with the far-right), Facebook is dying with gen Z and younger (I know *only one* person in my life who uses it), and *boy I'm happy we don't have a WeChat equivalent in the US.*
 
 Among the new choices, there's a lot of issues!
 
@@ -27,6 +29,7 @@ Among the new choices, there's a lot of issues!
 
 For my friends asking "where should I move", the answer is Tumblr.
 
+<!-- more -->
 
 # Tumblr will stay good for a long while
 
