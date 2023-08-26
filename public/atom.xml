@@ -4,8 +4,29 @@
     <link href="https://lynndotpy.xyz/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lynndotpy.xyz/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-07-13T00:00:00+00:00</updated>
+    <updated>2023-08-26T00:00:00+00:00</updated>
     <id>https://lynndotpy.xyz/atom.xml</id>
+    <entry xml:lang="en">
+        <title>What am I even up to?</title>
+        <published>2023-08-26T00:00:00+00:00</published>
+        <updated>2023-08-26T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/pages/now/" type="text/html"/>
+        <id>https://lynndotpy.xyz/pages/now/</id>
+        <content type="html">&lt;p&gt;Right now, I&#x27;m:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Working a day job software engineering&lt;&#x2F;li&gt;
+&lt;li&gt;Creating art and collaborating for version 2 of Apocalypse Sirens, an open-source trading card game&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;arbitration-opt-out-templates&#x2F;&quot;&gt;Making it easier to opt out of arbitration clauses&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Learning music theory and composition &lt;code&gt;:)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Getting back into my favorite hobby, gamedev&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;P.S. The &amp;quot;now&amp;quot; page is a cool new fad and I like it. Check out the reasoning behind the now page: &lt;a href=&quot;https:&#x2F;&#x2F;nownownow.com&#x2F;about&quot;&gt;https:&#x2F;&#x2F;nownownow.com&#x2F;about&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+    </entry>
     <entry xml:lang="en">
         <title>Caddy: How to Opt out of Chrome Topics API</title>
         <published>2023-07-13T00:00:00+00:00</published>
