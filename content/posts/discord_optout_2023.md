@@ -15,6 +15,10 @@ tags = ["how-to", "legal"]
 
 ---
 
+> **Update: Want to opt out of arbitration for more services?** I'm building a collection of arbitration opt-out templates here: [github.com/lynnpepin/arbitration-opt-out-templates](https://github.com/lynnpepin/arbitration-opt-out-templates/). Check them out and let me know what you think.
+
+---
+
 # You can opt out of Discord's arbitration clause by sending them an email
 
 Send an email to [arbitration-opt-out@discord.com](mailto:arbitration-opt-out@discord.com), from the **email address you use for your account**, stating you wish to opt out of the arbitration clause. For good measure, I recommend adding your account ID!
