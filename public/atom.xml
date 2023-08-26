@@ -154,20 +154,47 @@ slider.oninput = function() {
 &lt;&#x2F;script&gt;</content>
     </entry>
     <entry xml:lang="en">
+        <title>&#x27;Animal Crossing&#x27; Rolling Log shader in Godot</title>
+        <published>2023-07-01T00:00:00+00:00</published>
+        <updated>2023-07-01T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/not_ready/rolling-log/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/not_ready/rolling-log/</id>
+        <content type="html">&lt;p&gt;todo -- Gif of the shader&lt;&#x2F;p&gt;
+&lt;p&gt;todo -- Link to demo&lt;&#x2F;p&gt;
+&lt;p&gt;Animal Crossing started out as a top-down third-person game. Starting with the DS entry &#x27;Wild World&#x27;, Animal Crossing started using a vertex transform &lt;a href=&quot;https:&#x2F;&#x2F;www.ign.com&#x2F;articles&#x2F;2005&#x2F;05&#x2F;20&#x2F;e3-2005-animal-crossing-ds-interview&quot;&gt;dubbed the &#x27;rolling log&#x27; effect&lt;&#x2F;a&gt;. This effectively combined the top-down view with a view of the horizon and sky. This &amp;quot;extended&amp;quot; how much of the map was visible, while also keeping the stars, constellations, moon, and floating presents within view.&lt;&#x2F;p&gt;
+&lt;!-- 
+todo -- GC screenshot, Wild World screenshot
+
+Vertex transforms were also briefly popular in MineCraft, albeit mainly for trippy warps for YouTube views.
+
+I think vertex transforms like these offer a lot of potential.
+
+-- todo sketch
+
+Imagine a Halo game taking place along an entire ring. The open world map would be integrated into the environment in the form of the ring itself.
+
+No Man&#x27;s Sky does something like this, implementing a world as a cube and mapping it a sphere when landing.
+
+</content>
+    </entry>
+    <entry xml:lang="en">
         <title>The internet is changing again, move to Tumblr (update: Cohost)</title>
         <published>2023-07-01T00:00:00+00:00</published>
         <updated>2023-07-01T00:00:00+00:00</updated>
         <author>
           <name>Unknown</name>
         </author>
-        <link rel="alternate" href="https://lynndotpy.xyz/posts/move-to-tumblr/" type="text/html"/>
-        <id>https://lynndotpy.xyz/posts/move-to-tumblr/</id>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/unlisted/move-to-tumblr/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/unlisted/move-to-tumblr/</id>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Tumblr&#x27;s been relevant since 2007, and is run by the same people who&#x27;ve kept Wordpress relevant since 2003. Tumblr is getting on ActivityPub (the same protocol Mastodon uses), along with Facebook, Medium, and others, which will extend it&#x27;s longevity. If you&#x27;re asking &#x27;where should I move my Online Presence to&#x27;, &lt;a href=&quot;https:&#x2F;&#x2F;tumblr.com&#x2F;&quot;&gt;Tumblr&lt;&#x2F;a&gt; is a great choice.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Update, 2023-Jul-12th:&lt;&#x2F;strong&gt; &lt;a href=&quot;https:&#x2F;&#x2F;cohost.org&#x2F;staff&#x2F;post&#x2F;1999123-june-2023-financial&quot;&gt;Cohost&#x27;s finances are in order&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;staff.tumblr.com&#x2F;post&#x2F;722477242948747264&#x2F;tumblrs-core-product-strategy&quot;&gt;Tumblr has hopped on the &amp;quot;enshittification&amp;quot; train.&lt;&#x2F;a&gt; Don&#x27;t I feel foolish! The post below has been preserved in its original form. I&#x27;m enjoying Cohost for now.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;I&#x27;ve been on the internet for about 20 years. Dominant platforms and protocols have waxed on and waxed off. I&#x27;m used to moving from one platform to another.&lt;&#x2F;p&gt;
-&lt;p&gt;IRC died because better software appeared. SomethingAwful died because it was something awful. InvisionFree and phpBB died because they couldn&#x27;t keep up with the convenience of centralization. Skype, Digg, MySpace, and others died because of mismanagement. I&#x27;&lt;&#x2F;p&gt;
+&lt;p&gt;IRC died because better software appeared. SomethingAwful died because it was something awful. InvisionFree and phpBB died because they couldn&#x27;t keep up with the convenience of centralization. Skype, Digg, MySpace, and others died because of mismanagement.&lt;&#x2F;p&gt;
 &lt;p&gt;Some bespoke forums like &lt;a href=&quot;http:&#x2F;&#x2F;www.animalcrossingcommunity.com&#x2F;&quot;&gt;AnimalCrossingCommunity.com&lt;&#x2F;a&gt; are still alive and thriving (thank you to the hackers 20 years ago who inspired me to learn how to hack them back), small social media is thriving among &lt;a href=&quot;https:&#x2F;&#x2F;postmill.xyz&#x2F;&quot;&gt;Postmills&lt;&#x2F;a&gt;, some &lt;a href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;Kbin&#x2F;kbin-core&#x2F;wiki&quot;&gt;KBins&lt;&#x2F;a&gt; (based on Postmill), &lt;a href=&quot;https:&#x2F;&#x2F;www.phpbb.com&#x2F;&quot;&gt;phpBBs&lt;&#x2F;a&gt;, and even &lt;a href=&quot;https:&#x2F;&#x2F;www.discourse.org&#x2F;&quot;&gt;Discourses&lt;&#x2F;a&gt;. But I&#x27;m talking about the &lt;em&gt;Big Things&lt;&#x2F;em&gt; in this post.&lt;&#x2F;p&gt;
 &lt;p&gt;Now we&#x27;re seeing Reddit dying, Twitter is dying (except with the far-right), Facebook is dying with gen Z and younger (I know &lt;em&gt;only one&lt;&#x2F;em&gt; person in my life who uses it), and &lt;em&gt;boy I&#x27;m happy we don&#x27;t have a WeChat equivalent in the US.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Among the new choices, there&#x27;s a lot of issues!&lt;&#x2F;p&gt;
@@ -194,33 +221,6 @@ slider.oninput = function() {
 &lt;p&gt;In November 2022, seeing Twitter start to burn, &lt;a href=&quot;https:&#x2F;&#x2F;techcrunch.com&#x2F;2022&#x2F;11&#x2F;21&#x2F;tumblr-to-add-support-for-activitypub-the-social-protocol-powering-mastodon-and-other-apps&#x2F;&quot;&gt;Tumblr started working on ActivityPub support&lt;&#x2F;a&gt;, and in 2023, &lt;a href=&quot;https:&#x2F;&#x2F;techcrunch.com&#x2F;2023&#x2F;03&#x2F;13&#x2F;wordpress-com-owner-automattic-acquires-an-activitypub-plugin-so-blogs-can-join-the-fediverse&#x2F;&quot;&gt;they acquired the ActivityPub for Wordpress plugin&lt;&#x2F;a&gt; &lt;em&gt;and&lt;&#x2F;em&gt; its developer. &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;ActivityPub&quot;&gt;ActivityPub&lt;&#x2F;a&gt; is the protocol on which &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Mastodon_(social_network)&quot;&gt;Mastodon&lt;&#x2F;a&gt; is built, and the &lt;a href=&quot;https:&#x2F;&#x2F;www.theverge.com&#x2F;2023&#x2F;4&#x2F;20&#x2F;23689570&#x2F;activitypub-protocol-standard-social-network&quot;&gt;combined adoption from others&lt;&#x2F;a&gt; like Facebook, Medium, and Mozilla makes me think ActivityPub is going to be the thing that lasts for the next 10 years.&lt;&#x2F;p&gt;
 &lt;p&gt;The cool thing about Tumblr is that it still works well, it&#x27;s spearheaded by folks who I have a lot of faith in, it has a huge already-invested community, and it&#x27;s going to be on the fediverse.&lt;&#x2F;p&gt;
 &lt;p&gt;The biggest hurdle for Tumblr will be overcoming technical limitations from being a huge ActivityPub instance, but I trust they have the funding and know-how to work around that.&lt;&#x2F;p&gt;
-</content>
-    </entry>
-    <entry xml:lang="en">
-        <title>&#x27;Animal Crossing&#x27; Rolling Log shader in Godot</title>
-        <published>2023-07-01T00:00:00+00:00</published>
-        <updated>2023-07-01T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://lynndotpy.xyz/posts/not_ready/rolling-log/" type="text/html"/>
-        <id>https://lynndotpy.xyz/posts/not_ready/rolling-log/</id>
-        <content type="html">&lt;p&gt;todo -- Gif of the shader&lt;&#x2F;p&gt;
-&lt;p&gt;todo -- Link to demo&lt;&#x2F;p&gt;
-&lt;p&gt;Animal Crossing started out as a top-down third-person game. Starting with the DS entry &#x27;Wild World&#x27;, Animal Crossing started using a vertex transform &lt;a href=&quot;https:&#x2F;&#x2F;www.ign.com&#x2F;articles&#x2F;2005&#x2F;05&#x2F;20&#x2F;e3-2005-animal-crossing-ds-interview&quot;&gt;dubbed the &#x27;rolling log&#x27; effect&lt;&#x2F;a&gt;. This effectively combined the top-down view with a view of the horizon and sky. This &amp;quot;extended&amp;quot; how much of the map was visible, while also keeping the stars, constellations, moon, and floating presents within view.&lt;&#x2F;p&gt;
-&lt;!-- 
-todo -- GC screenshot, Wild World screenshot
-
-Vertex transforms were also briefly popular in MineCraft, albeit mainly for trippy warps for YouTube views.
-
-I think vertex transforms like these offer a lot of potential.
-
--- todo sketch
-
-Imagine a Halo game taking place along an entire ring. The open world map would be integrated into the environment in the form of the ring itself.
-
-No Man&#x27;s Sky does something like this, implementing a world as a cube and mapping it a sphere when landing.
-
 </content>
     </entry>
     <entry xml:lang="en">

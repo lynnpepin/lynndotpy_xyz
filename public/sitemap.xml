@@ -36,10 +36,6 @@
         <lastmod>2022-01-07</lastmod>
     </url>
     <url>
-        <loc>https://lynndotpy.xyz/posts/move-to-tumblr/</loc>
-        <lastmod>2023-07-01</lastmod>
-    </url>
-    <url>
         <loc>https://lynndotpy.xyz/posts/not_ready/imaginary-floats/</loc>
         <lastmod>2023-07-03</lastmod>
     </url>
@@ -56,9 +52,6 @@
     </url>
     <url>
         <loc>https://lynndotpy.xyz/posts/page/2/</loc>
-    </url>
-    <url>
-        <loc>https://lynndotpy.xyz/posts/page/3/</loc>
     </url>
     <url>
         <loc>https://lynndotpy.xyz/posts/python-main-main/</loc>
@@ -79,6 +72,10 @@
     <url>
         <loc>https://lynndotpy.xyz/posts/seo-dating-spam/</loc>
         <lastmod>2021-04-30</lastmod>
+    </url>
+    <url>
+        <loc>https://lynndotpy.xyz/posts/unlisted/move-to-tumblr/</loc>
+        <lastmod>2023-07-01</lastmod>
     </url>
     <url>
         <loc>https://lynndotpy.xyz/projects/</loc>
@@ -133,5 +130,8 @@
     </url>
     <url>
         <loc>https://lynndotpy.xyz/tags/shaders/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.xyz/tags/unlisted/</loc>
     </url>
 </urlset>
