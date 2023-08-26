@@ -9,7 +9,7 @@ tags = ["how-to", "caddy", "privacy"]
 > **TLDR:** Set the following in your caddyfile for each site: `header Permissions-Policy "interest-cohort=(),browsing-topics=()"`. This disable both the old FLoC and the new Topics.
 
 
-Here is an abbreviated version of my Caddyfile, showing how I set the `header1` file for `lynndotpy.xyz`:
+Here is an abbreviated version of my Caddyfile, showing how I set the `header` directive in my Caddyfile for `lynndotpy.xyz`:
 
 ```caddyfile
 lynndotpy.xyz {
@@ -19,11 +19,11 @@ lynndotpy.xyz {
 }
 ```
 
-To confirm this is set, open the networking tab of your favorite browser's dev tools and look for the Permissions-Policy response header. More context below the cut.
+To confirm the header is set, you can use a Firefox or Chrome's devtools, open the networking tab, and look for the Permissions-Policy response header. More context below the cut.
 
 <!-- more -->
 
-**More context:** Google has renamed and tweaked its controversial 2021 ["Federated Learning of Cohorts"](https://en.wikipedia.org/wiki/Federated_Learning_of_Cohorts) tracking project and replaced it with the [Topics API](https://www.theverge.com/2022/1/25/22900567/google-floc-abandon-topics-api-cookies-tracking). These are surveillance capitalism tools built into Chromium-based browsers.  Unless you explicitly opt out, **every website will participate in Google's Topics API** when a Chrome user visits it.
+**More context:** Google has renamed and tweaked its controversial 2021 ["Federated Learning of Cohorts"](https://en.wikipedia.org/wiki/Federated_Learning_of_Cohorts) tracking project and replaced it with the [Topics API](https://www.theverge.com/2022/1/25/22900567/google-floc-abandon-topics-api-cookies-tracking). These are surveillance capitalism tools built into Chromium-based browsers.  Unless you explicitly set the `Permissions-Policy "browsing-topics=()"` header, **every website will participate in Google's Topics API** when a Chrome user visits it.
 
 Here is the full "Opt out your site" section from Google's "Topics API developer guide" (see `https://developer.chrome.com/docs/privacy-sandbox/topics/#site-opt-out`), accessed 2023-Jul-13:
 
@@ -31,8 +31,6 @@ Here is the full "Opt out your site" section from Google's "Topics API developer
 > 
 > You can also control which third parties have access to topics on your page by using the `Permissions-Policy` header to control third-party access to the Topics API. As parameters to the header, use `self` and any domains you would like to allow access to the API. For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and `https://example.com`, set the following HTTP response header:
 > 
-> ```text
-> Permissions-Policy: browsing-topics=(self "https://example.com")
-> ```
-
-
+> > ```text
+> > Permissions-Policy: browsing-topics=(self "https://example.com")
+> > ```

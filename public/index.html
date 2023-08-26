@@ -112,14 +112,14 @@
             <blockquote>
 <p><strong>TLDR:</strong> Set the following in your caddyfile for each site: <code>header Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;</code>. This disable both the old FLoC and the new Topics.</p>
 </blockquote>
-<p>Here is an abbreviated version of my Caddyfile, showing how I set the <code>header1</code> file for <code>lynndotpy.xyz</code>:</p>
+<p>Here is an abbreviated version of my Caddyfile, showing how I set the <code>header</code> directive in my Caddyfile for <code>lynndotpy.xyz</code>:</p>
 <pre data-lang="caddyfile" style="background-color:#151515;color:#e8e8d3;" class="language-caddyfile "><code class="language-caddyfile" data-lang="caddyfile"><span>lynndotpy.xyz {
 </span><span>  header {
 </span><span>    Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;
 </span><span>  }
 </span><span>}
 </span></code></pre>
-<p>To confirm this is set, open the networking tab of your favorite browser's dev tools and look for the Permissions-Policy response header. More context below the cut.</p>
+<p>To confirm the header is set, you can use a Firefox or Chrome's devtools, open the networking tab, and look for the Permissions-Policy response header. More context below the cut.</p>
 
         </div>
         <div>
@@ -155,7 +155,7 @@
         <div class="post-content">
             <blockquote>
 <p><strong>TLDR:</strong> BlueSky is intended to eventually integrate with Bitcoin. If BlueSky becomes widely adopted, Bitcoin will too. I don't like Bitcoin, so I don't want BlueSky to become popular.</p>
-<p>In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After using Lightning, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.</p>
+<p>Here's why I believe this: In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After helping kickstart the Lightning network, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.</p>
 </blockquote>
 <p>Jack Dorsey's &quot;BlueSky&quot; platform is taking off. Unfortunately, not only is Jack Dorsey a bonkers man who <a href="https://twitter.com/BrianJo78940026/status/1674770881955115009">endorses the belief that Jimmy Carter cried when he learned that aliens made up all the religions</a>^1 and is on a <em>big</em> pro-RFK Jr^2 streak, but he also is a longtime Bitcoin believer.</p>
 
@@ -191,8 +191,11 @@
 
                     
         <div class="post-content">
-            <p>Consider a Python program <code>leftpad.py</code>, which takes an input string (say, <code>trans rights</code>), and pads it to the left (so, <code>python leftpad.py -s 'trans rights' -n 16</code> prints <code>'    trans rights'</code>.</p>
-<p>Here's how you should write it: With a &quot;main&quot; function <code>leftpad</code> and a <code>__main__</code> block:</p>
+            <blockquote>
+<p><strong>TLDR:</strong> Your Python program will be better if you define a <code>main()</code> function separate from the <code>__main__</code> block.</p>
+</blockquote>
+<p>Consider a Python program <code>leftpad.py</code>, which takes an input string (say, <code>trans rights</code>), and pads it to the left (so, <code>python leftpad.py -s 'trans rights' -n 16</code> prints <code>'    trans rights'</code>.)</p>
+<p>This is a great way to structure it:</p>
 <pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad.py
 </span><span style="color:#8fbfdc;">import </span><span>argparse
 </span><span>
@@ -212,7 +215,8 @@
 </span><span>    args = parser.</span><span style="color:#ffb964;">parse_args</span><span>()
 </span><span>    </span><span style="color:#ffb964;">print</span><span>(</span><span style="color:#ffb964;">leftpad</span><span>(args.string[</span><span style="color:#cf6a4c;">0</span><span>], args.num))
 </span></code></pre>
-<p>And here's a template you can use for almost any Python script:</p>
+<p>The main functionality and the parser can be imported as <code>leftpad.leftpad(...)</code> and <code>leftpad.parser</code>. These could not be imported if <code>__main__</code> had the definition for <code>leftpad</code> and the instantiation of <code>parser</code>.</p>
+<p>Here's a template you can use for your Python scripts:</p>
 <pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">import </span><span>sys
 </span><span>
 </span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">main</span><span>():
@@ -269,16 +273,6 @@
 <hr />
 <h1 id="you-can-opt-out-of-discord-s-arbitration-clause-by-sending-them-an-email">You can opt out of Discord's arbitration clause by sending them an email</h1>
 <p>Send an email to <a href="mailto:arbitration-opt-out@discord.com">arbitration-opt-out@discord.com</a>, from the <strong>email address you use for your account</strong>, stating you wish to opt out of the arbitration clause. For good measure, I recommend adding your account ID!</p>
-<p><strong>Here's a template you can use!</strong> It's the email I wrote. Go ahead and fill in your email and username below.</p>
-<blockquote>
-<p>To Discord,</p>
-<p>I am <strong>declining the agreement to arbitrate</strong> and I am <strong>declining the class-action waiver</strong> in the new Discord Terms of Service.</p>
-<p>I am sending this from my email ✨email here✨, associated with my account ✨username here✨.</p>
-<p>Specifically, I am referring to the new Discord terms of service posted at https://discord.com/terms on 2023 February 24, effective 2023 March 27. I am opting out of the arbitration clause, and I am stating my disagreement to the class-action waivers, per section 14 &quot;Settling disputes between you and Discord&quot;</p>
-<p>Best regards,</p>
-<p>✨signature here too✨.</p>
-</blockquote>
-<p>Of course, please note that I am not a lawyer and I am not your representative!</p>
 
         </div>
         <div>
@@ -452,8 +446,8 @@
 <ul>
 <li>Counting sort is not a randomized algorithm, it always outputs the correct solution.</li>
 <li>Counting sort is not a parallelized algorithm. (And you can't use parallelism to speed past a worst-case big-O run time anyway!)</li>
-<li>Counting sort is not an amortized algorithm. It is truly O(n), not 'expected' or 'amortized' O(n).</li>
-<li>Counting sort is technically Θ(n), that is, the worst and best case running time is linear. </li>
+<li>Counting sort is not an amortized algorithm. It is truly $O(n)$, not 'expected' or 'amortized' $O(n)$.</li>
+<li>Counting sort is technically $Θ(n)$, that is, the worst and best case running time is linear. </li>
 <li>This can be used in the real world.</li>
 <li>However, it is not an in-place sorting algorithm.</li>
 </ul>

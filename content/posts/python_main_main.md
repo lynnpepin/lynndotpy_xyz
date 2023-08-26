@@ -6,12 +6,11 @@ date = 2023-06-24
 tags = ["how-to", "python"]
 +++
 
+> **TLDR:** Your Python program will be better if you define a `main()` function separate from the `__main__` block.
 
+Consider a Python program `leftpad.py`, which takes an input string (say, `trans rights`), and pads it to the left (so, `python leftpad.py -s 'trans rights' -n 16` prints `'    trans rights'`.)
 
-Consider a Python program `leftpad.py`, which takes an input string (say, `trans rights`), and pads it to the left (so, `python leftpad.py -s 'trans rights' -n 16` prints `'    trans rights'`.
-
-Here's how you should write it: With a "main" function `leftpad` and a `__main__` block:
-
+This is a great way to structure it:
 
 ```python
 # leftpad.py
@@ -34,7 +33,9 @@ if __name__ == '__main__':
     print(leftpad(args.string[0], args.num))
 ```
 
-And here's a template you can use for almost any Python script:
+The main functionality and the parser can be imported as `leftpad.leftpad(...)` and `leftpad.parser`. These could not be imported if `__main__` had the definition for `leftpad` and the instantiation of `parser`.
+
+Here's a template you can use for your Python scripts:
 
 
 ```python
@@ -55,17 +56,17 @@ Let me explain why this is good, how it could be worse, and how it could be bett
 <!-- more -->
 
 
-1. This uses the `if __name__ == '__main__'` block, so `import leftpad` won't try to parse args and print them.
-2. Very little functionality is kept inside the `__main__` block. This allows one to `from leftpad` and use `leftpad.leftpad` and `leftpad.parser`. This is good for re-usability and testing.
+1. This uses the `if __name__ == '__main__'` block, so `import leftpad` won't try to parse args and print them with `args = parser.parse_args()`.
+2. Very little functionality is kept inside the `__main__` block. This allows one to `import leftpad` and use `leftpad.leftpad` and `leftpad.parser`. This is good for code reuse, for code testing, etc.
 
-Compare it to a naive version, where all the functionality lives inside the `__main__` block. This is bad!
+Compare it to this naive version, where all the functionality lives inside the `__main__` block. This is bad!
 
 ```python
-# leftpad_naive.py
-# this one is worse!
+# leftpad_naive.py -- bad!
 import argparse
 
 if __name__ == '__main__':
+    # parser can't be imported, it's trapped in __main__
     parser = argparse.ArgumentParser()
     parser.add_argument("--string", "-s", type=str, nargs=1)
     parser.add_argument("--num","-n", type=int)
@@ -74,8 +75,7 @@ if __name__ == '__main__':
     string = args.string[0]
     num_chars = args.num
     
-    # bad! the main functionality is trapped in the `__main__` block.
-    # these lines cannot be imported 
+    # the leftpad functionality is also trapped in __main__
     if len(string) >= num_chars:
         print(string)
     else:
@@ -84,14 +84,11 @@ if __name__ == '__main__':
         
 ```
 
-I came up with this pattern independently, but then learned [the Python docs consider this pattern idiomatic](https://docs.python.org/3/library/__main__.html).
-
-Here is a more complete version, which extends the functionality, wraps `leftpad.leftpad` in a `main` function which returns exit codes, and provides a function to generate `parser` (rather than a singleton).
+[The Python docs consider this pattern idiomatic](https://docs.python.org/3/library/__main__.html). Here is a more complete version, which extends the functionality, wraps `leftpad.leftpad` in a `main` function which returns exit codes, and provides a function to generate `parser` (rather than instantiating it as a singleton).
 
 
 ```python
 # leftpad_best.py
-# this one is the best!
 
 import sys
 import argparse
@@ -151,10 +148,11 @@ if __name__ == '__main__':
     sys.exit(main(args.string[0], args.num, args.char))
 ```
 
-One can improve the above further with type hints, documentations, and raising errors.
+One can improve the above further with type hints, docstrings, and raising errors.
 
 
 For more reading,
- - https://tldp.org/LDP/abs/html/exitcodes.html
- - Read more about `__main__`, the top-level code environment, and the main-main pattern: https://docs.python.org/3/library/__main__.html
- - The `__main__` block is not the only special "dunder". Read more about all the other special names here: https://docs.python.org/3/reference/datamodel.html#special-method-names
+ - [tldp.org/LDP/abs/html/exitcodes.html](https://tldp.org/LDP/abs/html/exitcodes.html) for standard exit codes to exit on with `sys.exit()`
+ - Read more about `__main__`, the top-level code environment, and the main-main pattern: [docs.python.org/3/library/\_\_main\_\_.html](https://docs.python.org/3/library/__main__.html)
+ - The `__main__` block is not the only special "dunder". Read more about all the other special names here: [docs.python.org/3/reference/datamodel.html#special-method-names](https://docs.python.org/3/reference/datamodel.html#special-method-names
+ )

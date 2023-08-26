@@ -8,7 +8,7 @@ tags = ["post", "internet",]
 
 > **TLDR:** BlueSky is intended to eventually integrate with Bitcoin. If BlueSky becomes widely adopted, Bitcoin will too. I don't like Bitcoin, so I don't want BlueSky to become popular.
 > 
-> In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After using Lightning, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.
+> Here's why I believe this: In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After helping kickstart the Lightning network, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.
 
 
 Jack Dorsey's "BlueSky" platform is taking off. Unfortunately, not only is Jack Dorsey a bonkers man who [endorses the belief that Jimmy Carter cried when he learned that aliens made up all the religions](https://twitter.com/BrianJo78940026/status/1674770881955115009)^1 and is on a *big* pro-RFK Jr^2 streak, but he also is a longtime Bitcoin believer.
@@ -55,6 +55,6 @@ Footnotes:
 
 1. Jack retweeted a screenshot of a [Quora answer by 'Ed Harris'](https://www.quora.com/What-was-Jimmy-Carter-told-about-UFOs-that-made-him-cry?share=1).  The ["Jimmy Carter UFO Incident"](https://en.wikipedia.org/wiki/Jimmy_Carter_UFO_incident) is reported, but doesn't suggest an alien conspiracy.
 2. Note for future people: RFK Jr is one of those wackjob candidates running for the 2024 presidential election. We get a few of those every  presidential election. 
-3. I cut out only the relevant bits from the thread, added emphasis and context
+3. I cut out only the relevant bits from the thread, added emphasis and context.
 4. The reward was a mere $300 for designing a novel cryptographic protocol for linking identities. Even PhD students get paid more! 
-5. There was no way anyone other than the Pawoo/Gab people would ever be using Mastodon except for the Twitter mistakes Musk made in late 2022.
+5. I love Mastodon, but it was dead until the mistakes Musk made with Twitter starting late 2022. Before then, only the audiences like those of Pawoo and Gab had interest in the software.

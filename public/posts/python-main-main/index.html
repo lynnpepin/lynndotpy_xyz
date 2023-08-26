@@ -105,8 +105,11 @@
 
         
         <div class="post-content">
-            <p>Consider a Python program <code>leftpad.py</code>, which takes an input string (say, <code>trans rights</code>), and pads it to the left (so, <code>python leftpad.py -s 'trans rights' -n 16</code> prints <code>'    trans rights'</code>.</p>
-<p>Here's how you should write it: With a &quot;main&quot; function <code>leftpad</code> and a <code>__main__</code> block:</p>
+            <blockquote>
+<p><strong>TLDR:</strong> Your Python program will be better if you define a <code>main()</code> function separate from the <code>__main__</code> block.</p>
+</blockquote>
+<p>Consider a Python program <code>leftpad.py</code>, which takes an input string (say, <code>trans rights</code>), and pads it to the left (so, <code>python leftpad.py -s 'trans rights' -n 16</code> prints <code>'    trans rights'</code>.)</p>
+<p>This is a great way to structure it:</p>
 <pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad.py
 </span><span style="color:#8fbfdc;">import </span><span>argparse
 </span><span>
@@ -126,7 +129,8 @@
 </span><span>    args = parser.</span><span style="color:#ffb964;">parse_args</span><span>()
 </span><span>    </span><span style="color:#ffb964;">print</span><span>(</span><span style="color:#ffb964;">leftpad</span><span>(args.string[</span><span style="color:#cf6a4c;">0</span><span>], args.num))
 </span></code></pre>
-<p>And here's a template you can use for almost any Python script:</p>
+<p>The main functionality and the parser can be imported as <code>leftpad.leftpad(...)</code> and <code>leftpad.parser</code>. These could not be imported if <code>__main__</code> had the definition for <code>leftpad</code> and the instantiation of <code>parser</code>.</p>
+<p>Here's a template you can use for your Python scripts:</p>
 <pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">import </span><span>sys
 </span><span>
 </span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">main</span><span>():
@@ -141,15 +145,15 @@
 <p>Let me explain why this is good, how it could be worse, and how it could be better.</p>
 <span id="continue-reading"></span>
 <ol>
-<li>This uses the <code>if __name__ == '__main__'</code> block, so <code>import leftpad</code> won't try to parse args and print them.</li>
-<li>Very little functionality is kept inside the <code>__main__</code> block. This allows one to <code>from leftpad</code> and use <code>leftpad.leftpad</code> and <code>leftpad.parser</code>. This is good for re-usability and testing.</li>
+<li>This uses the <code>if __name__ == '__main__'</code> block, so <code>import leftpad</code> won't try to parse args and print them with <code>args = parser.parse_args()</code>.</li>
+<li>Very little functionality is kept inside the <code>__main__</code> block. This allows one to <code>import leftpad</code> and use <code>leftpad.leftpad</code> and <code>leftpad.parser</code>. This is good for code reuse, for code testing, etc.</li>
 </ol>
-<p>Compare it to a naive version, where all the functionality lives inside the <code>__main__</code> block. This is bad!</p>
-<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad_naive.py
-</span><span style="color:#888888;"># this one is worse!
+<p>Compare it to this naive version, where all the functionality lives inside the <code>__main__</code> block. This is bad!</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad_naive.py -- bad!
 </span><span style="color:#8fbfdc;">import </span><span>argparse
 </span><span>
 </span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
+</span><span>    </span><span style="color:#888888;"># parser can&#39;t be imported, it&#39;s trapped in __main__
 </span><span>    parser = argparse.</span><span style="color:#ffb964;">ArgumentParser</span><span>()
 </span><span>    parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--string</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-s</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=str, </span><span style="color:#ffb964;">nargs</span><span>=</span><span style="color:#cf6a4c;">1</span><span>)
 </span><span>    parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--num</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-n</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=int)
@@ -158,8 +162,7 @@
 </span><span>    string = args.string[</span><span style="color:#cf6a4c;">0</span><span>]
 </span><span>    num_chars = args.num
 </span><span>    
-</span><span>    </span><span style="color:#888888;"># bad! the main functionality is trapped in the `__main__` block.
-</span><span>    </span><span style="color:#888888;"># these lines cannot be imported 
+</span><span>    </span><span style="color:#888888;"># the leftpad functionality is also trapped in __main__
 </span><span>    </span><span style="color:#8fbfdc;">if </span><span style="color:#ffb964;">len</span><span>(string) &gt;= num_chars:
 </span><span>        </span><span style="color:#ffb964;">print</span><span>(string)
 </span><span>    </span><span style="color:#8fbfdc;">else</span><span>:
@@ -167,10 +170,8 @@
 </span><span>        </span><span style="color:#ffb964;">print</span><span>(pad + string)
 </span><span>        
 </span></code></pre>
-<p>I came up with this pattern independently, but then learned <a href="https://docs.python.org/3/library/__main__.html">the Python docs consider this pattern idiomatic</a>.</p>
-<p>Here is a more complete version, which extends the functionality, wraps <code>leftpad.leftpad</code> in a <code>main</code> function which returns exit codes, and provides a function to generate <code>parser</code> (rather than a singleton).</p>
+<p><a href="https://docs.python.org/3/library/__main__.html">The Python docs consider this pattern idiomatic</a>. Here is a more complete version, which extends the functionality, wraps <code>leftpad.leftpad</code> in a <code>main</code> function which returns exit codes, and provides a function to generate <code>parser</code> (rather than instantiating it as a singleton).</p>
 <pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad_best.py
-</span><span style="color:#888888;"># this one is the best!
 </span><span>
 </span><span style="color:#8fbfdc;">import </span><span>sys
 </span><span style="color:#8fbfdc;">import </span><span>argparse
@@ -229,12 +230,12 @@
 </span><span>    </span><span style="color:#888888;"># improvement 2 (see above): exit code returned here
 </span><span>    sys.</span><span style="color:#ffb964;">exit</span><span>(</span><span style="color:#ffb964;">main</span><span>(args.string[</span><span style="color:#cf6a4c;">0</span><span>], args.num, args.char))
 </span></code></pre>
-<p>One can improve the above further with type hints, documentations, and raising errors.</p>
+<p>One can improve the above further with type hints, docstrings, and raising errors.</p>
 <p>For more reading,</p>
 <ul>
-<li>https://tldp.org/LDP/abs/html/exitcodes.html</li>
-<li>Read more about <code>__main__</code>, the top-level code environment, and the main-main pattern: https://docs.python.org/3/library/<strong>main</strong>.html</li>
-<li>The <code>__main__</code> block is not the only special &quot;dunder&quot;. Read more about all the other special names here: https://docs.python.org/3/reference/datamodel.html#special-method-names</li>
+<li><a href="https://tldp.org/LDP/abs/html/exitcodes.html">tldp.org/LDP/abs/html/exitcodes.html</a> for standard exit codes to exit on with <code>sys.exit()</code></li>
+<li>Read more about <code>__main__</code>, the top-level code environment, and the main-main pattern: <a href="https://docs.python.org/3/library/__main__.html">docs.python.org/3/library/__main__.html</a></li>
+<li>The <code>__main__</code> block is not the only special &quot;dunder&quot;. Read more about all the other special names here: <a href="https://docs.python.org/3/reference/datamodel.html#special-method-names">docs.python.org/3/reference/datamodel.html#special-method-names</a></li>
 </ul>
 
         </div>

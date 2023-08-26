@@ -124,8 +124,8 @@
 <ul>
 <li>Counting sort is not a randomized algorithm, it always outputs the correct solution.</li>
 <li>Counting sort is not a parallelized algorithm. (And you can't use parallelism to speed past a worst-case big-O run time anyway!)</li>
-<li>Counting sort is not an amortized algorithm. It is truly O(n), not 'expected' or 'amortized' O(n).</li>
-<li>Counting sort is technically Θ(n), that is, the worst and best case running time is linear. </li>
+<li>Counting sort is not an amortized algorithm. It is truly $O(n)$, not 'expected' or 'amortized' $O(n)$.</li>
+<li>Counting sort is technically $Θ(n)$, that is, the worst and best case running time is linear. </li>
 <li>This can be used in the real world.</li>
 <li>However, it is not an in-place sorting algorithm.</li>
 </ul>
@@ -155,7 +155,7 @@
 </blockquote>
 <h1 id="a-real-world-example-of-counting-sort-on-integers">a real-world example of counting sort on integers</h1>
 <blockquote>
-<p><strong>TLDR:</strong> Imagine you have a 1-billion letter corpus. Here, n = 1000000000 and k=26. So, the O(n+k) counting-sort algorithm will be faster than the conventional O(n log n) sorting algorithms.</p>
+<p><strong>TLDR:</strong> Imagine you have a 1-billion letter corpus. Here, n = 1000000000 and k=26. So, the O(n+k) counting-sort algorithm will be faster than the conventional $O(n \log n)$ sorting algorithms.</p>
 </blockquote>
 <p>So, counting-sort can be used in the real world when you have to sort a very large list of values that belong to a relatively small set. This could be 8-bit or 16-bit floats or ints, or even smaller sets like the 26-character alphabet.</p>
 <p>For this example, let's say you wanted to see the frequency of letters in a 1-billion-character English text. You can count each character to see how many of the 26 letters appear. This is equivalent to sorting.</p>
@@ -190,7 +190,7 @@
 <li>You know something about the application of the sort.</li>
 </ol>
 <p>If you're sorting floats, but you know most of your values are NaN or 0.0, you can use counting-sort for NaN and 0.0, and use a traditional sort on the rest.</p>
-<p>What if your sort doesn't need to be super accurate? Say, for a very niche case, you want to sort a histogram on the logarithm of some list of values. Then, you can sort your float64s on the 11-bit exponent, which means k = 2^11 = 2048, which means you can use counting-sort!</p>
+<p>What if your sort doesn't need to be super accurate? Say, for a very niche case, you want to sort a histogram on the logarithm of some list of values. Then, you can sort your float64s on the 11-bit exponent, which means <code>k = 2^11 = 2048</code>, which means you can use counting-sort!</p>
 <h1 id="okay-so-what-s-the-take-away-here">okay so what's the take-away here</h1>
 <p>Well, I've only ever written sorting algorithms in job-interviews and university exams. I'm happy to say some of them were linear, and I'm very happy to say I've never had to performance-engineer things like this.</p>
 <p>There is a small rift between the model of computing used in computer-science and the actual computers we use. The space between that rift is really cool, and leads to fun facts like &quot;you can sort in linear time&quot;.</p>

@@ -1,9 +1,8 @@
 Stack:
-- [ ] Fix footnotes in all post
-- [ ] Update Tumblr post to address new Tumblr strategy
-- [ ] Finish BlueSky post
+- [ ] "Test your internal SMTP"
+-
 - [ ] Add KaTeX, footnotes to Terminimal
-- [ ] 
+
 
 Major features:
 - [ ] Gallery view

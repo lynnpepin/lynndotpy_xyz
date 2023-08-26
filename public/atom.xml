@@ -18,22 +18,24 @@
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Set the following in your caddyfile for each site: &lt;code&gt;header Permissions-Policy &amp;quot;interest-cohort=(),browsing-topics=()&amp;quot;&lt;&#x2F;code&gt;. This disable both the old FLoC and the new Topics.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;p&gt;Here is an abbreviated version of my Caddyfile, showing how I set the &lt;code&gt;header1&lt;&#x2F;code&gt; file for &lt;code&gt;lynndotpy.xyz&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;p&gt;Here is an abbreviated version of my Caddyfile, showing how I set the &lt;code&gt;header&lt;&#x2F;code&gt; directive in my Caddyfile for &lt;code&gt;lynndotpy.xyz&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;caddyfile&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-caddyfile &quot;&gt;&lt;code class=&quot;language-caddyfile&quot; data-lang=&quot;caddyfile&quot;&gt;&lt;span&gt;lynndotpy.xyz {
 &lt;&#x2F;span&gt;&lt;span&gt;  header {
 &lt;&#x2F;span&gt;&lt;span&gt;    Permissions-Policy &amp;quot;interest-cohort=(),browsing-topics=()&amp;quot;
 &lt;&#x2F;span&gt;&lt;span&gt;  }
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;To confirm this is set, open the networking tab of your favorite browser&#x27;s dev tools and look for the Permissions-Policy response header. More context below the cut.&lt;&#x2F;p&gt;
+&lt;p&gt;To confirm the header is set, you can use a Firefox or Chrome&#x27;s devtools, open the networking tab, and look for the Permissions-Policy response header. More context below the cut.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
-&lt;p&gt;&lt;strong&gt;More context:&lt;&#x2F;strong&gt; Google has renamed and tweaked its controversial 2021 &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Federated_Learning_of_Cohorts&quot;&gt;&amp;quot;Federated Learning of Cohorts&amp;quot;&lt;&#x2F;a&gt; tracking project and replaced it with the &lt;a href=&quot;https:&#x2F;&#x2F;www.theverge.com&#x2F;2022&#x2F;1&#x2F;25&#x2F;22900567&#x2F;google-floc-abandon-topics-api-cookies-tracking&quot;&gt;Topics API&lt;&#x2F;a&gt;. These are surveillance capitalism tools built into Chromium-based browsers.  Unless you explicitly opt out, &lt;strong&gt;every website will participate in Google&#x27;s Topics API&lt;&#x2F;strong&gt; when a Chrome user visits it.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;More context:&lt;&#x2F;strong&gt; Google has renamed and tweaked its controversial 2021 &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Federated_Learning_of_Cohorts&quot;&gt;&amp;quot;Federated Learning of Cohorts&amp;quot;&lt;&#x2F;a&gt; tracking project and replaced it with the &lt;a href=&quot;https:&#x2F;&#x2F;www.theverge.com&#x2F;2022&#x2F;1&#x2F;25&#x2F;22900567&#x2F;google-floc-abandon-topics-api-cookies-tracking&quot;&gt;Topics API&lt;&#x2F;a&gt;. These are surveillance capitalism tools built into Chromium-based browsers.  Unless you explicitly set the &lt;code&gt;Permissions-Policy &amp;quot;browsing-topics=()&amp;quot;&lt;&#x2F;code&gt; header, &lt;strong&gt;every website will participate in Google&#x27;s Topics API&lt;&#x2F;strong&gt; when a Chrome user visits it.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is the full &amp;quot;Opt out your site&amp;quot; section from Google&#x27;s &amp;quot;Topics API developer guide&amp;quot; (see &lt;code&gt;https:&#x2F;&#x2F;developer.chrome.com&#x2F;docs&#x2F;privacy-sandbox&#x2F;topics&#x2F;#site-opt-out&lt;&#x2F;code&gt;), accessed 2023-Jul-13:&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You can opt out of topic calculation for specific pages on your site by including the &lt;code&gt;Permissions-Policy: browsing-topics=()&lt;&#x2F;code&gt; &lt;a href=&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;docs&#x2F;Web&#x2F;HTTP&#x2F;Headers&#x2F;Feature-Policy&quot;&gt;Permissions-Policy&lt;&#x2F;a&gt; header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected: if you set a policy to block the Topics API on one page, this won&#x27;t affect other pages.&lt;&#x2F;p&gt;
 &lt;p&gt;You can also control which third parties have access to topics on your page by using the &lt;code&gt;Permissions-Policy&lt;&#x2F;code&gt; header to control third-party access to the Topics API. As parameters to the header, use &lt;code&gt;self&lt;&#x2F;code&gt; and any domains you would like to allow access to the API. For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and &lt;code&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;code&gt;, set the following HTTP response header:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
 &lt;pre data-lang=&quot;text&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;Permissions-Policy: browsing-topics=(self &amp;quot;https:&#x2F;&#x2F;example.com&amp;quot;)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
 &lt;&#x2F;blockquote&gt;
 </content>
     </entry>
@@ -48,7 +50,7 @@
         <id>https://lynndotpy.xyz/posts/bluesky-and-bitcoin/</id>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; BlueSky is intended to eventually integrate with Bitcoin. If BlueSky becomes widely adopted, Bitcoin will too. I don&#x27;t like Bitcoin, so I don&#x27;t want BlueSky to become popular.&lt;&#x2F;p&gt;
-&lt;p&gt;In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After using Lightning, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s why I believe this: In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After helping kickstart the Lightning network, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;Jack Dorsey&#x27;s &amp;quot;BlueSky&amp;quot; platform is taking off. Unfortunately, not only is Jack Dorsey a bonkers man who &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;BrianJo78940026&#x2F;status&#x2F;1674770881955115009&quot;&gt;endorses the belief that Jimmy Carter cried when he learned that aliens made up all the religions&lt;&#x2F;a&gt;^1 and is on a &lt;em&gt;big&lt;&#x2F;em&gt; pro-RFK Jr^2 streak, but he also is a longtime Bitcoin believer.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
@@ -86,9 +88,9 @@
 &lt;ol&gt;
 &lt;li&gt;Jack retweeted a screenshot of a &lt;a href=&quot;https:&#x2F;&#x2F;www.quora.com&#x2F;What-was-Jimmy-Carter-told-about-UFOs-that-made-him-cry?share=1&quot;&gt;Quora answer by &#x27;Ed Harris&#x27;&lt;&#x2F;a&gt;.  The &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Jimmy_Carter_UFO_incident&quot;&gt;&amp;quot;Jimmy Carter UFO Incident&amp;quot;&lt;&#x2F;a&gt; is reported, but doesn&#x27;t suggest an alien conspiracy.&lt;&#x2F;li&gt;
 &lt;li&gt;Note for future people: RFK Jr is one of those wackjob candidates running for the 2024 presidential election. We get a few of those every  presidential election. &lt;&#x2F;li&gt;
-&lt;li&gt;I cut out only the relevant bits from the thread, added emphasis and context&lt;&#x2F;li&gt;
+&lt;li&gt;I cut out only the relevant bits from the thread, added emphasis and context.&lt;&#x2F;li&gt;
 &lt;li&gt;The reward was a mere $300 for designing a novel cryptographic protocol for linking identities. Even PhD students get paid more! &lt;&#x2F;li&gt;
-&lt;li&gt;There was no way anyone other than the Pawoo&#x2F;Gab people would ever be using Mastodon except for the Twitter mistakes Musk made in late 2022.&lt;&#x2F;li&gt;
+&lt;li&gt;I love Mastodon, but it was dead until the mistakes Musk made with Twitter starting late 2022. Before then, only the audiences like those of Pawoo and Gab had interest in the software.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 </content>
     </entry>
@@ -232,8 +234,11 @@ No Man&#x27;s Sky does something like this, implementing a world as a cube and m
         </author>
         <link rel="alternate" href="https://lynndotpy.xyz/posts/python-main-main/" type="text/html"/>
         <id>https://lynndotpy.xyz/posts/python-main-main/</id>
-        <content type="html">&lt;p&gt;Consider a Python program &lt;code&gt;leftpad.py&lt;&#x2F;code&gt;, which takes an input string (say, &lt;code&gt;trans rights&lt;&#x2F;code&gt;), and pads it to the left (so, &lt;code&gt;python leftpad.py -s &#x27;trans rights&#x27; -n 16&lt;&#x2F;code&gt; prints &lt;code&gt;&#x27;    trans rights&#x27;&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Here&#x27;s how you should write it: With a &amp;quot;main&amp;quot; function &lt;code&gt;leftpad&lt;&#x2F;code&gt; and a &lt;code&gt;__main__&lt;&#x2F;code&gt; block:&lt;&#x2F;p&gt;
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Your Python program will be better if you define a &lt;code&gt;main()&lt;&#x2F;code&gt; function separate from the &lt;code&gt;__main__&lt;&#x2F;code&gt; block.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Consider a Python program &lt;code&gt;leftpad.py&lt;&#x2F;code&gt;, which takes an input string (say, &lt;code&gt;trans rights&lt;&#x2F;code&gt;), and pads it to the left (so, &lt;code&gt;python leftpad.py -s &#x27;trans rights&#x27; -n 16&lt;&#x2F;code&gt; prints &lt;code&gt;&#x27;    trans rights&#x27;&lt;&#x2F;code&gt;.)&lt;&#x2F;p&gt;
+&lt;p&gt;This is a great way to structure it:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# leftpad.py
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;argparse
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -253,7 +258,8 @@ No Man&#x27;s Sky does something like this, implementing a world as a cube and m
 &lt;&#x2F;span&gt;&lt;span&gt;    args = parser.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;parse_args&lt;&#x2F;span&gt;&lt;span&gt;()
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;leftpad&lt;&#x2F;span&gt;&lt;span&gt;(args.string[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;], args.num))
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;And here&#x27;s a template you can use for almost any Python script:&lt;&#x2F;p&gt;
+&lt;p&gt;The main functionality and the parser can be imported as &lt;code&gt;leftpad.leftpad(...)&lt;&#x2F;code&gt; and &lt;code&gt;leftpad.parser&lt;&#x2F;code&gt;. These could not be imported if &lt;code&gt;__main__&lt;&#x2F;code&gt; had the definition for &lt;code&gt;leftpad&lt;&#x2F;code&gt; and the instantiation of &lt;code&gt;parser&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s a template you can use for your Python scripts:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;sys
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;():
@@ -268,15 +274,15 @@ No Man&#x27;s Sky does something like this, implementing a world as a cube and m
 &lt;p&gt;Let me explain why this is good, how it could be worse, and how it could be better.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
 &lt;ol&gt;
-&lt;li&gt;This uses the &lt;code&gt;if __name__ == &#x27;__main__&#x27;&lt;&#x2F;code&gt; block, so &lt;code&gt;import leftpad&lt;&#x2F;code&gt; won&#x27;t try to parse args and print them.&lt;&#x2F;li&gt;
-&lt;li&gt;Very little functionality is kept inside the &lt;code&gt;__main__&lt;&#x2F;code&gt; block. This allows one to &lt;code&gt;from leftpad&lt;&#x2F;code&gt; and use &lt;code&gt;leftpad.leftpad&lt;&#x2F;code&gt; and &lt;code&gt;leftpad.parser&lt;&#x2F;code&gt;. This is good for re-usability and testing.&lt;&#x2F;li&gt;
+&lt;li&gt;This uses the &lt;code&gt;if __name__ == &#x27;__main__&#x27;&lt;&#x2F;code&gt; block, so &lt;code&gt;import leftpad&lt;&#x2F;code&gt; won&#x27;t try to parse args and print them with &lt;code&gt;args = parser.parse_args()&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Very little functionality is kept inside the &lt;code&gt;__main__&lt;&#x2F;code&gt; block. This allows one to &lt;code&gt;import leftpad&lt;&#x2F;code&gt; and use &lt;code&gt;leftpad.leftpad&lt;&#x2F;code&gt; and &lt;code&gt;leftpad.parser&lt;&#x2F;code&gt;. This is good for code reuse, for code testing, etc.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;p&gt;Compare it to a naive version, where all the functionality lives inside the &lt;code&gt;__main__&lt;&#x2F;code&gt; block. This is bad!&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# leftpad_naive.py
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# this one is worse!
+&lt;p&gt;Compare it to this naive version, where all the functionality lives inside the &lt;code&gt;__main__&lt;&#x2F;code&gt; block. This is bad!&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# leftpad_naive.py -- bad!
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;argparse
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;__name__ == &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;__main__&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# parser can&amp;#39;t be imported, it&amp;#39;s trapped in __main__
 &lt;&#x2F;span&gt;&lt;span&gt;    parser = argparse.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;ArgumentParser&lt;&#x2F;span&gt;&lt;span&gt;()
 &lt;&#x2F;span&gt;&lt;span&gt;    parser.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;add_argument&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;--string&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;-s&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span&gt;=str, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;nargs&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;)
 &lt;&#x2F;span&gt;&lt;span&gt;    parser.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;add_argument&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;--num&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;-n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span&gt;=int)
@@ -285,8 +291,7 @@ No Man&#x27;s Sky does something like this, implementing a world as a cube and m
 &lt;&#x2F;span&gt;&lt;span&gt;    string = args.string[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]
 &lt;&#x2F;span&gt;&lt;span&gt;    num_chars = args.num
 &lt;&#x2F;span&gt;&lt;span&gt;    
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# bad! the main functionality is trapped in the `__main__` block.
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# these lines cannot be imported 
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# the leftpad functionality is also trapped in __main__
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(string) &amp;gt;= num_chars:
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(string)
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span&gt;:
@@ -294,10 +299,8 @@ No Man&#x27;s Sky does something like this, implementing a world as a cube and m
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(pad + string)
 &lt;&#x2F;span&gt;&lt;span&gt;        
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;I came up with this pattern independently, but then learned &lt;a href=&quot;https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;__main__.html&quot;&gt;the Python docs consider this pattern idiomatic&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Here is a more complete version, which extends the functionality, wraps &lt;code&gt;leftpad.leftpad&lt;&#x2F;code&gt; in a &lt;code&gt;main&lt;&#x2F;code&gt; function which returns exit codes, and provides a function to generate &lt;code&gt;parser&lt;&#x2F;code&gt; (rather than a singleton).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;__main__.html&quot;&gt;The Python docs consider this pattern idiomatic&lt;&#x2F;a&gt;. Here is a more complete version, which extends the functionality, wraps &lt;code&gt;leftpad.leftpad&lt;&#x2F;code&gt; in a &lt;code&gt;main&lt;&#x2F;code&gt; function which returns exit codes, and provides a function to generate &lt;code&gt;parser&lt;&#x2F;code&gt; (rather than instantiating it as a singleton).&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# leftpad_best.py
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# this one is the best!
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;sys
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;argparse
@@ -356,12 +359,12 @@ No Man&#x27;s Sky does something like this, implementing a world as a cube and m
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# improvement 2 (see above): exit code returned here
 &lt;&#x2F;span&gt;&lt;span&gt;    sys.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;exit&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;(args.string[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;], args.num, args.char))
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;One can improve the above further with type hints, documentations, and raising errors.&lt;&#x2F;p&gt;
+&lt;p&gt;One can improve the above further with type hints, docstrings, and raising errors.&lt;&#x2F;p&gt;
 &lt;p&gt;For more reading,&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;https:&#x2F;&#x2F;tldp.org&#x2F;LDP&#x2F;abs&#x2F;html&#x2F;exitcodes.html&lt;&#x2F;li&gt;
-&lt;li&gt;Read more about &lt;code&gt;__main__&lt;&#x2F;code&gt;, the top-level code environment, and the main-main pattern: https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;&lt;strong&gt;main&lt;&#x2F;strong&gt;.html&lt;&#x2F;li&gt;
-&lt;li&gt;The &lt;code&gt;__main__&lt;&#x2F;code&gt; block is not the only special &amp;quot;dunder&amp;quot;. Read more about all the other special names here: https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;reference&#x2F;datamodel.html#special-method-names&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tldp.org&#x2F;LDP&#x2F;abs&#x2F;html&#x2F;exitcodes.html&quot;&gt;tldp.org&#x2F;LDP&#x2F;abs&#x2F;html&#x2F;exitcodes.html&lt;&#x2F;a&gt; for standard exit codes to exit on with &lt;code&gt;sys.exit()&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Read more about &lt;code&gt;__main__&lt;&#x2F;code&gt;, the top-level code environment, and the main-main pattern: &lt;a href=&quot;https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;__main__.html&quot;&gt;docs.python.org&#x2F;3&#x2F;library&#x2F;__main__.html&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;code&gt;__main__&lt;&#x2F;code&gt; block is not the only special &amp;quot;dunder&amp;quot;. Read more about all the other special names here: &lt;a href=&quot;https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;reference&#x2F;datamodel.html#special-method-names&quot;&gt;docs.python.org&#x2F;3&#x2F;reference&#x2F;datamodel.html#special-method-names&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 </content>
     </entry>
@@ -385,6 +388,7 @@ No Man&#x27;s Sky does something like this, implementing a world as a cube and m
 &lt;hr &#x2F;&gt;
 &lt;h1 id=&quot;you-can-opt-out-of-discord-s-arbitration-clause-by-sending-them-an-email&quot;&gt;You can opt out of Discord&#x27;s arbitration clause by sending them an email&lt;&#x2F;h1&gt;
 &lt;p&gt;Send an email to &lt;a href=&quot;mailto:arbitration-opt-out@discord.com&quot;&gt;arbitration-opt-out@discord.com&lt;&#x2F;a&gt;, from the &lt;strong&gt;email address you use for your account&lt;&#x2F;strong&gt;, stating you wish to opt out of the arbitration clause. For good measure, I recommend adding your account ID!&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
 &lt;p&gt;&lt;strong&gt;Here&#x27;s a template you can use!&lt;&#x2F;strong&gt; It&#x27;s the email I wrote. Go ahead and fill in your email and username below.&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;To Discord,&lt;&#x2F;p&gt;
@@ -395,7 +399,6 @@ No Man&#x27;s Sky does something like this, implementing a world as a cube and m
 &lt;p&gt;✨signature here too✨.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;Of course, please note that I am not a lawyer and I am not your representative!&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
 &lt;p&gt;&lt;strong&gt;You should do this every time Discord changes their Terms of Service.&lt;&#x2F;strong&gt; This is an unjust world, and you are your best advocate! &lt;strong&gt;Discord is not your friend!&lt;&#x2F;strong&gt; They&#x27;ve had bots which scrape your messages from private servers to share them publicly (&lt;a href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;resynth1943&#x2F;0185f55207dc4d84be99c8d74da9221d#file-dear_discord-txt&quot;&gt;since 2019 or earlier&lt;&#x2F;a&gt;), they&#x27;ve had white supremacist Trump supporters organize deadly movements using Discord and commit mass shootings (&lt;a href=&quot;https:&#x2F;&#x2F;www.nytimes.com&#x2F;2017&#x2F;08&#x2F;15&#x2F;technology&#x2F;discord-chat-app-alt-right.html&quot;&gt;2017&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;slate.com&#x2F;technology&#x2F;2018&#x2F;10&#x2F;discord-safe-space-white-supremacists.html&quot;&gt;2018&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;unicornriot.ninja&#x2F;2019&#x2F;neo-nazi-hipsters-identity-evropa-exposed-in-discord-chat-leak&#x2F;&quot;&gt;2019&lt;&#x2F;a&gt;), &lt;a href=&quot;https:&#x2F;&#x2F;unicornriot.ninja&#x2F;2022&#x2F;highland-park-shooter-decried-commies-in-discord-chat&#x2F;&quot;&gt;2022&lt;&#x2F;a&gt;, etc. You should reserve your right to sue if they mistreat you.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;my-personal-opinions-about-arbitration&quot;&gt;my personal opinions about arbitration&lt;&#x2F;h1&gt;
 &lt;blockquote&gt;
@@ -416,7 +419,7 @@ No Man&#x27;s Sky does something like this, implementing a world as a cube and m
 &lt;li&gt;This is sourced from 2015, before the Trump administration and the Trump-appointees to the Supreme Court. The win rate is likely much lower now in 2023.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;When consumers win in arbitration, they receive on average $24K in damages, down from $328K.
+&lt;li&gt;When consumers win in arbitration, they receive on average &lt;span&gt;$&lt;&#x2F;span&gt;24K in damages, down from $328K.
 &lt;ul&gt;
 &lt;li&gt;That is a 13.7x decrease.&lt;&#x2F;li&gt;
 &lt;li&gt;This is also sourced from 2015. This disparity likely much greater now in 2023.&lt;&#x2F;li&gt;
@@ -686,8 +689,8 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
 &lt;ul&gt;
 &lt;li&gt;Counting sort is not a randomized algorithm, it always outputs the correct solution.&lt;&#x2F;li&gt;
 &lt;li&gt;Counting sort is not a parallelized algorithm. (And you can&#x27;t use parallelism to speed past a worst-case big-O run time anyway!)&lt;&#x2F;li&gt;
-&lt;li&gt;Counting sort is not an amortized algorithm. It is truly O(n), not &#x27;expected&#x27; or &#x27;amortized&#x27; O(n).&lt;&#x2F;li&gt;
-&lt;li&gt;Counting sort is technically Θ(n), that is, the worst and best case running time is linear. &lt;&#x2F;li&gt;
+&lt;li&gt;Counting sort is not an amortized algorithm. It is truly $O(n)$, not &#x27;expected&#x27; or &#x27;amortized&#x27; $O(n)$.&lt;&#x2F;li&gt;
+&lt;li&gt;Counting sort is technically $Θ(n)$, that is, the worst and best case running time is linear. &lt;&#x2F;li&gt;
 &lt;li&gt;This can be used in the real world.&lt;&#x2F;li&gt;
 &lt;li&gt;However, it is not an in-place sorting algorithm.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -717,7 +720,7 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
 &lt;&#x2F;blockquote&gt;
 &lt;h1 id=&quot;a-real-world-example-of-counting-sort-on-integers&quot;&gt;a real-world example of counting sort on integers&lt;&#x2F;h1&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Imagine you have a 1-billion letter corpus. Here, n = 1000000000 and k=26. So, the O(n+k) counting-sort algorithm will be faster than the conventional O(n log n) sorting algorithms.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Imagine you have a 1-billion letter corpus. Here, n = 1000000000 and k=26. So, the O(n+k) counting-sort algorithm will be faster than the conventional $O(n \log n)$ sorting algorithms.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;So, counting-sort can be used in the real world when you have to sort a very large list of values that belong to a relatively small set. This could be 8-bit or 16-bit floats or ints, or even smaller sets like the 26-character alphabet.&lt;&#x2F;p&gt;
 &lt;p&gt;For this example, let&#x27;s say you wanted to see the frequency of letters in a 1-billion-character English text. You can count each character to see how many of the 26 letters appear. This is equivalent to sorting.&lt;&#x2F;p&gt;
@@ -752,7 +755,7 @@ So I&#x27;ve been longing to build a personal wiki&#x2F;reference of sorts, and 
 &lt;li&gt;You know something about the application of the sort.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;If you&#x27;re sorting floats, but you know most of your values are NaN or 0.0, you can use counting-sort for NaN and 0.0, and use a traditional sort on the rest.&lt;&#x2F;p&gt;
-&lt;p&gt;What if your sort doesn&#x27;t need to be super accurate? Say, for a very niche case, you want to sort a histogram on the logarithm of some list of values. Then, you can sort your float64s on the 11-bit exponent, which means k = 2^11 = 2048, which means you can use counting-sort!&lt;&#x2F;p&gt;
+&lt;p&gt;What if your sort doesn&#x27;t need to be super accurate? Say, for a very niche case, you want to sort a histogram on the logarithm of some list of values. Then, you can sort your float64s on the 11-bit exponent, which means &lt;code&gt;k = 2^11 = 2048&lt;&#x2F;code&gt;, which means you can use counting-sort!&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;okay-so-what-s-the-take-away-here&quot;&gt;okay so what&#x27;s the take-away here&lt;&#x2F;h1&gt;
 &lt;p&gt;Well, I&#x27;ve only ever written sorting algorithms in job-interviews and university exams. I&#x27;m happy to say some of them were linear, and I&#x27;m very happy to say I&#x27;ve never had to performance-engineer things like this.&lt;&#x2F;p&gt;
 &lt;p&gt;There is a small rift between the model of computing used in computer-science and the actual computers we use. The space between that rift is really cool, and leads to fun facts like &amp;quot;you can sort in linear time&amp;quot;.&lt;&#x2F;p&gt;

@@ -26,8 +26,8 @@ Is this truly $O(n)$? Yes!
 
  - Counting sort is not a randomized algorithm, it always outputs the correct solution.
  - Counting sort is not a parallelized algorithm. (And you can't use parallelism to speed past a worst-case big-O run time anyway!)
- - Counting sort is not an amortized algorithm. It is truly O(n), not 'expected' or 'amortized' O(n).
- - Counting sort is technically Θ(n), that is, the worst and best case running time is linear. 
+ - Counting sort is not an amortized algorithm. It is truly $O(n)$, not 'expected' or 'amortized' $O(n)$.
+ - Counting sort is technically $Θ(n)$, that is, the worst and best case running time is linear. 
  - This can be used in the real world.
  - However, it is not an in-place sorting algorithm.
 
@@ -63,7 +63,7 @@ for number in set_of_numbers_to_sort:
 
 # a real-world example of counting sort on integers
 
-> **TLDR:** Imagine you have a 1-billion letter corpus. Here, n = 1000000000 and k=26. So, the O(n+k) counting-sort algorithm will be faster than the conventional O(n log n) sorting algorithms.
+> **TLDR:** Imagine you have a 1-billion letter corpus. Here, n = 1000000000 and k=26. So, the O(n+k) counting-sort algorithm will be faster than the conventional $O(n \log n)$ sorting algorithms.
 
 So, counting-sort can be used in the real world when you have to sort a very large list of values that belong to a relatively small set. This could be 8-bit or 16-bit floats or ints, or even smaller sets like the 26-character alphabet.
 
@@ -91,7 +91,7 @@ You can speed things up if:
 
 If you're sorting floats, but you know most of your values are NaN or 0.0, you can use counting-sort for NaN and 0.0, and use a traditional sort on the rest.
 
-What if your sort doesn't need to be super accurate? Say, for a very niche case, you want to sort a histogram on the logarithm of some list of values. Then, you can sort your float64s on the 11-bit exponent, which means k = 2^11 = 2048, which means you can use counting-sort!
+What if your sort doesn't need to be super accurate? Say, for a very niche case, you want to sort a histogram on the logarithm of some list of values. Then, you can sort your float64s on the 11-bit exponent, which means `k = 2^11 = 2048`, which means you can use counting-sort!
 
 # okay so what's the take-away here
 
