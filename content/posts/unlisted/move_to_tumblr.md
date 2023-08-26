@@ -3,7 +3,7 @@ title = "The internet is changing again, move to Tumblr (update: Cohost)"
 date = 2023-07-01
 
 [taxonomies]
-tags = ["post", "internet",]
+tags = ["post", "internet", "unlisted"]
 +++
 
 
@@ -13,7 +13,7 @@ tags = ["post", "internet",]
 
 I've been on the internet for about 20 years. Dominant platforms and protocols have waxed on and waxed off. I'm used to moving from one platform to another.
 
-IRC died because better software appeared. SomethingAwful died because it was something awful. InvisionFree and phpBB died because they couldn't keep up with the convenience of centralization. Skype, Digg, MySpace, and others died because of mismanagement. I'
+IRC died because better software appeared. SomethingAwful died because it was something awful. InvisionFree and phpBB died because they couldn't keep up with the convenience of centralization. Skype, Digg, MySpace, and others died because of mismanagement.
 
 Some bespoke forums like [AnimalCrossingCommunity.com](http://www.animalcrossingcommunity.com/) are still alive and thriving (thank you to the hackers 20 years ago who inspired me to learn how to hack them back), small social media is thriving among [Postmills](https://postmill.xyz/), some [KBins](https://codeberg.org/Kbin/kbin-core/wiki) (based on Postmill), [phpBBs](https://www.phpbb.com/), and even [Discourses](https://www.discourse.org/). But I'm talking about the *Big Things* in this post.
 
