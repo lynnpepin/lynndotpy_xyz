@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>protip.py: the main-main pattern &#x2F;&#x2F; lynndotpy</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.xyz/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.xyz/color/lynn-auto.css">
+
+        <link rel="stylesheet" href="https://lynndotpy.xyz/color/background_auto.css">
+    
+    <link rel="stylesheet" href="https://lynndotpy.xyz/font-hack-subset.css">
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.xyz/rss.xml">
+    
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+        
+<link rel="stylesheet" href="https://lynndotpy.xyz/katex/katex.min.css">
+<script defer src="https://lynndotpy.xyz/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+      ]
+      });
+  });
+</script>
+
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.xyz/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.xyz
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.xyz/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/projects">projects</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/now">now</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://gitlab.com/lynnpepin" target="_blank" rel="noopener noreferrer">gitlab</a></li>
+            
+                <li><a href="https://mastodon.social/@lynndotpy" target="_blank" rel="noopener noreferrer">mastodon</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/python-main-main/">protip.py: the main-main pattern</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-06-24
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/how-to/">#how-to</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/python/">#python</a></span>
+    
+
+        
+        <div class="post-content">
+            <blockquote>
+<p><strong>TLDR:</strong> Your Python program will be better if you define a <code>main()</code> function separate from the <code>__main__</code> block.</p>
+</blockquote>
+<p>Consider a Python program <code>leftpad.py</code>, which takes an input string (say, <code>trans rights</code>), and pads it to the left (so, <code>python leftpad.py -s 'trans rights' -n 16</code> prints <code>'    trans rights'</code>.)</p>
+<p>This is a great way to structure it:</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad.py
+</span><span style="color:#8fbfdc;">import </span><span>argparse
+</span><span>
+</span><span style="color:#888888;"># leftpad function in global scope can be imported
+</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">leftpad</span><span>(</span><span style="color:#ffb964;">string</span><span>, </span><span style="color:#ffb964;">num_chars</span><span>):
+</span><span>    </span><span style="color:#8fbfdc;">if </span><span style="color:#ffb964;">len</span><span>(string) &gt;= num_chars:
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span>string
+</span><span>    </span><span style="color:#8fbfdc;">else</span><span>:
+</span><span>        pad = </span><span style="color:#556633;">&#39; &#39; </span><span>* (num_chars - </span><span style="color:#ffb964;">len</span><span>(string))
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span>pad + string
+</span><span>
+</span><span>parser = argparse.</span><span style="color:#ffb964;">ArgumentParser</span><span>()
+</span><span>parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--string</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-s</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=str, </span><span style="color:#ffb964;">nargs</span><span>=</span><span style="color:#cf6a4c;">1</span><span>)
+</span><span>parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--num</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-n</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=int)
+</span><span>
+</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
+</span><span>    args = parser.</span><span style="color:#ffb964;">parse_args</span><span>()
+</span><span>    </span><span style="color:#ffb964;">print</span><span>(</span><span style="color:#ffb964;">leftpad</span><span>(args.string[</span><span style="color:#cf6a4c;">0</span><span>], args.num))
+</span></code></pre>
+<p>The main functionality and the parser can be imported as <code>leftpad.leftpad(...)</code> and <code>leftpad.parser</code>. These could not be imported if <code>__main__</code> had the definition for <code>leftpad</code> and the instantiation of <code>parser</code>.</p>
+<p>Here's a template you can use for your Python scripts:</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">import </span><span>sys
+</span><span>
+</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">main</span><span>():
+</span><span>    </span><span style="color:#8fbfdc;">try</span><span>:
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">1
+</span><span>    </span><span style="color:#8fbfdc;">except</span><span>:
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">0
+</span><span>
+</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
+</span><span>    sys.</span><span style="color:#ffb964;">exit</span><span>(</span><span style="color:#ffb964;">main</span><span>())
+</span></code></pre>
+<p>Let me explain why this is good, how it could be worse, and how it could be better.</p>
+<span id="continue-reading"></span>
+<ol>
+<li>This uses the <code>if __name__ == '__main__'</code> block, so <code>import leftpad</code> won't try to parse args and print them with <code>args = parser.parse_args()</code>.</li>
+<li>Very little functionality is kept inside the <code>__main__</code> block. This allows one to <code>import leftpad</code> and use <code>leftpad.leftpad</code> and <code>leftpad.parser</code>. This is good for code reuse, for code testing, etc.</li>
+</ol>
+<p>Compare it to this naive version, where all the functionality lives inside the <code>__main__</code> block. This is bad!</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad_naive.py -- bad!
+</span><span style="color:#8fbfdc;">import </span><span>argparse
+</span><span>
+</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
+</span><span>    </span><span style="color:#888888;"># parser can&#39;t be imported, it&#39;s trapped in __main__
+</span><span>    parser = argparse.</span><span style="color:#ffb964;">ArgumentParser</span><span>()
+</span><span>    parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--string</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-s</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=str, </span><span style="color:#ffb964;">nargs</span><span>=</span><span style="color:#cf6a4c;">1</span><span>)
+</span><span>    parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--num</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-n</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=int)
+</span><span>    
+</span><span>    args = parser.</span><span style="color:#ffb964;">parse_args</span><span>()
+</span><span>    string = args.string[</span><span style="color:#cf6a4c;">0</span><span>]
+</span><span>    num_chars = args.num
+</span><span>    
+</span><span>    </span><span style="color:#888888;"># the leftpad functionality is also trapped in __main__
+</span><span>    </span><span style="color:#8fbfdc;">if </span><span style="color:#ffb964;">len</span><span>(string) &gt;= num_chars:
+</span><span>        </span><span style="color:#ffb964;">print</span><span>(string)
+</span><span>    </span><span style="color:#8fbfdc;">else</span><span>:
+</span><span>        pad = </span><span style="color:#556633;">&#39; &#39; </span><span>* (num_chars - </span><span style="color:#ffb964;">len</span><span>(string))
+</span><span>        </span><span style="color:#ffb964;">print</span><span>(pad + string)
+</span><span>        
+</span></code></pre>
+<p><a href="https://docs.python.org/3/library/__main__.html">The Python docs consider this pattern idiomatic</a>. Here is a more complete version, which extends the functionality, wraps <code>leftpad.leftpad</code> in a <code>main</code> function which returns exit codes, and provides a function to generate <code>parser</code> (rather than instantiating it as a singleton).</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad_best.py
+</span><span>
+</span><span style="color:#8fbfdc;">import </span><span>sys
+</span><span style="color:#8fbfdc;">import </span><span>argparse
+</span><span>
+</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">leftpad</span><span>(</span><span style="color:#ffb964;">string</span><span>, </span><span style="color:#ffb964;">num_chars</span><span>, </span><span style="color:#ffb964;">pad_char</span><span>=</span><span style="color:#556633;">&#39; &#39;</span><span>):
+</span><span>    </span><span style="color:#888888;"># improvement 1: pad_char parameter
+</span><span>    </span><span style="color:#888888;"># pad_char defines a default, so we can call leftpad
+</span><span>    </span><span style="color:#888888;"># as leftpad(&#39;trans rights&#39;, 16), just as before.
+</span><span>    </span><span style="color:#8fbfdc;">if </span><span>pad_char is None:
+</span><span>        pad_char = </span><span style="color:#556633;">&#39; &#39;
+</span><span>    </span><span style="color:#8fbfdc;">if </span><span style="color:#ffb964;">len</span><span>(string) &gt;= num_chars:
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span>string
+</span><span>    </span><span style="color:#8fbfdc;">else</span><span>:
+</span><span>        pad = pad_char * (num_chars - </span><span style="color:#ffb964;">len</span><span>(string))
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span>pad + string
+</span><span>
+</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">main</span><span>(</span><span style="color:#ffb964;">string</span><span>, </span><span style="color:#ffb964;">num_chars</span><span>, </span><span style="color:#ffb964;">pad_char</span><span>=</span><span style="color:#556633;">&#39; &#39;</span><span>):
+</span><span>    </span><span style="color:#888888;"># improvement 2: `main()` returns an exit code
+</span><span>    </span><span style="color:#888888;"># 0 = good, 1 = error
+</span><span>    </span><span style="color:#888888;"># note: &#39;main&#39; is not a special function name
+</span><span>    </span><span style="color:#8fbfdc;">try</span><span>:
+</span><span>        </span><span style="color:#ffb964;">print</span><span>(
+</span><span>            </span><span style="color:#ffb964;">leftpad</span><span>(
+</span><span>                </span><span style="color:#ffb964;">string</span><span>=string,
+</span><span>                </span><span style="color:#ffb964;">num_chars</span><span>=num_chars,
+</span><span>                </span><span style="color:#ffb964;">pad_char</span><span>=pad_char
+</span><span>            )
+</span><span>        )
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">0
+</span><span>    </span><span style="color:#8fbfdc;">except</span><span>:
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">1
+</span><span>
+</span><span style="color:#888888;"># improvement 3: parser is provided by a function, not a singleton
+</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">get_parser</span><span>():
+</span><span>    parser = argparse.</span><span style="color:#ffb964;">ArgumentParser</span><span>(</span><span style="color:#ffb964;">description</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">like echo, but leftpad</span><span style="color:#556633;">&quot;</span><span>)
+</span><span>    parser.</span><span style="color:#ffb964;">add_argument</span><span>(
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--string</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-s</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#ffb964;">help</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">String to pad.</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#ffb964;">type</span><span>=str,
+</span><span>        </span><span style="color:#ffb964;">nargs</span><span>=</span><span style="color:#cf6a4c;">1
+</span><span>    )
+</span><span>    parser.</span><span style="color:#ffb964;">add_argument</span><span>(
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--num</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-n</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#ffb964;">help</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Number of integers to leftpad with</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#ffb964;">type</span><span>=int
+</span><span>    )
+</span><span>    parser.</span><span style="color:#ffb964;">add_argument</span><span>(
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--char</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-c</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#ffb964;">help</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Char to pad with</span><span style="color:#556633;">&quot;
+</span><span>    )
+</span><span>    </span><span style="color:#8fbfdc;">return </span><span>parser
+</span><span>
+</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
+</span><span>    parser = </span><span style="color:#ffb964;">get_parser</span><span>()
+</span><span>    args = parser.</span><span style="color:#ffb964;">parse_args</span><span>()
+</span><span>    </span><span style="color:#888888;"># improvement 2 (see above): exit code returned here
+</span><span>    sys.</span><span style="color:#ffb964;">exit</span><span>(</span><span style="color:#ffb964;">main</span><span>(args.string[</span><span style="color:#cf6a4c;">0</span><span>], args.num, args.char))
+</span></code></pre>
+<p>One can improve the above further with type hints, docstrings, and raising errors.</p>
+<p>For more reading,</p>
+<ul>
+<li><a href="https://tldp.org/LDP/abs/html/exitcodes.html">tldp.org/LDP/abs/html/exitcodes.html</a> for standard exit codes to exit on with <code>sys.exit()</code></li>
+<li>Read more about <code>__main__</code>, the top-level code environment, and the main-main pattern: <a href="https://docs.python.org/3/library/__main__.html">docs.python.org/3/library/__main__.html</a></li>
+<li>The <code>__main__</code> block is not the only special &quot;dunder&quot;. Read more about all the other special names here: <a href="https://docs.python.org/3/reference/datamodel.html#special-method-names">docs.python.org/3/reference/datamodel.html#special-method-names</a></li>
+</ul>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h"></span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://lynndotpy.xyz/posts/discord-optout-2023/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">Opt out of Discord&#x27;s arbitration clause by sending a quick email. (Template included)</span>
+                        </a>
+                    </span>
+                
+                
+                    <span class="button next">
+                        <a href="https://lynndotpy.xyz/posts/bluesky-and-bitcoin/">
+                            <span class="button__text">If BlueSky takes off, Bitcoin will too</span>&nbsp;
+                            <span class="button__icon">→</span>
+                        </a>
+                    </span>
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>
