@@ -118,11 +118,18 @@
 <li>Wirecutter and Rtings for prodcut reviews (to replace Reddit.)</li>
 <li>OBS for screen recording and streaming.</li>
 <li>DaVinci Resolve for video editing.</li>
+<li>micro for an easy-to-use terminal editor... But also vim.</li>
+<li>Fastmail + IWantMyName for personal email.</li>
 </ul>
 </blockquote>
 <p>I've had friends ask me for recommendations for software. They ask me this because I am a hollow person who has spent too much of my life on the computer. I love when people ask me these questions, because my strong opinions on software are usually otherwise &quot;offputting&quot; and considered a &quot;personality flaw&quot;.</p>
 <p>All jokes aside, I wanted one place to chronicle recommendations I tend to make. In no particular order, here are some of my favorites.</p>
-<span id="continue-reading"></span><h1 id="best-linux-distribution-pop-os">Best Linux distribution: Pop! OS</h1>
+<span id="continue-reading"></span>
+<p>Changelog:</p>
+<table><thead><tr><th>Date</th><th>What changed</th></tr></thead><tbody>
+<tr><td>2023-11-15</td><td>Added <code>micro</code> editor and the Fastmail+IWantMyName email combo</td></tr>
+</tbody></table>
+<h1 id="best-linux-distribution-pop-os">Best Linux distribution: Pop! OS</h1>
 <p><a href="https://pop.system76.com/">Pop! OS</a> is my favorite Linux distribution. It's based on Ubuntu, so the vast trove of Ubuntu-related support such as the <a href="https://askubuntu.com/">AskUbuntu StackExchange</a> still applies. Unlike Ubuntu, Pop! OS offers an installation that comes with Nvidia drivers out-of-the-box, and does not distribute snap packages by default. (I've had a lot of pain with snap packages.) Pop! OS also comes with a custom flavor of GNOME with built-in easy-to-use tiling, which I absolutely love.</p>
 <p>When my friends ask me what Linux distro I use or what they should start with, I usually tell them Pop! OS.</p>
 <h1 id="best-3d-graphics-program-blender">Best 3D graphics program: Blender.</h1>
@@ -184,7 +191,7 @@
 </ul>
 <p>Obsidian is proprietary, but it's backed by the native filesystem with mostly-open formats. If Obsidian gets <a href="https://en.wikipedia.org/wiki/Enshittification">enshittified</a>, <em>I can just leave</em>. And if I'm leaving Obsidian, I won't be alone, which means I can rely on (or help make!) community-driven migration tools.</p>
 <p>The only thing Obsidian lacks (as of October 2023) is good handwritten notetaking.</p>
-<h2 id="best-handwritten-notetaking-pen-and-paper-really">Best handwritten notetaking: Pen and paper, really.</h2>
+<h1 id="best-handwritten-notetaking-pen-and-paper-really">Best handwritten notetaking: Pen and paper, really.</h1>
 <p>As of October 2023, Obsidian lacks good handwritten notetaking. While <a href="https://github.com/zsviczian/obsidian-excalidraw-plugin">Obsidian's Exclaidraw plugin</a> is fine in a pinch, I wouldn't use it regularly.</p>
 <p>I've tried various notetaking apps on iPads (Apple Notes, GoodNotes, and Bear), but the 264ppi screen density and 60Hz refresh rate is too low for how I write. I've also tried the reMarkable 2 tablet, which gets close to delivering on the promise of being &quot;like paper&quot;, but I returned my model for having digitizer issues.</p>
 <p>There is just too much benefit in the physicality of paper.</p>
@@ -217,6 +224,24 @@
 <p>I've tried a number of FOSS video editors, and <a href="https://www.blackmagicdesign.com/products/davinciresolve">DaVinci Resolve</a> blew my mind.</p>
 <p>It's proprietary, but it has a powerful free version, and it's cross platform: Window, MacOS, and Linux. </p>
 <p>For anyone who wishes to stick with FOSS, I've tried a lot of videoeditors and I've found <a href="https://kdenlive.org/">Kdenlive</a> and Blender's built-in video editor to be the second best I've used.</p>
+<h1 id="command-line-terminal-editors-micro-but-also-learn-vim">Command-line / terminal editors: <code>micro</code>, but also learn <code>vim</code></h1>
+<p><a href="https://micro-editor.github.io/">Micro</a> is a terminal editor that's easy to use. It has familiar shortcuts (<code>ctrl+c</code>, <code>ctrl+s</code>, etc.), mouse support, and syntax highlighting. It's fantastic, and I wholeheartedly recommend it to anyone new to Linux.</p>
+<p>That said, I also recommend learning enough vim (or <code>vi</code>) to be useful. The reason is that it's pre-installed on every Linux distribution I've heard of, and you don't want to be stuck in a locked-down server with <code>nano</code> as your only other option.</p>
+<p>There are a lot of very good command-line editors out there. I got good use out of <a href="https://helix-editor.com/"><code>helix</code></a> and <a href="https://neovim.io/"><code>neovim</code></a>, but I keep finding myself coming back to <code>vim</code> and <code>micro</code>.</p>
+<h1 id="personal-email-fastmail-iwantmyname">Personal email: Fastmail + IWantMyName</h1>
+<p>I use <a href="https://iwantmyname.com/">IWantMyName</a> for domains and <a href="https://app.fastmail.com/">Fastmail</a> for emails. With these two, I'm able to have as many <code>*@*.lynndotpy.xyz</code> emails as I want.</p>
+<h2 id="fastmail-5-mo-for-everything-i-need">Fastmail: $5/mo for everything I need</h2>
+<p>I chose Fastmail after using ProtonMail and Tutanota for some time. The latter two make a lot of inconvenience as part of their &quot;encrypted email&quot; offering, but I only wanted to move from GMail because I wanted a servicer that doesn't scan my emails for marketing. My threat model doesn't need my emails to be resistant to espionage or subpoenas.</p>
+<p>The setup for using custom domains on Fastmail is a bit involved, but that's because I purchased then through IWantMyName rather than through Fastmail.</p>
+<p>I also chose Fastmail because it was able to replace a lot of what I used NextCloud for. Fastmail supports CalDAV and CardDAV, which lets me sync my contacts, calendars, and reminders easily across all the major desktop and mobile operating systems. (Yes, even iOS and MacOS!)</p>
+<h2 id="iwantmyname-good-reputation-and-good-tos">IWantMyName: Good reputation and good ToS</h2>
+<p>Google Domains was the last thing I used Google for during a whole de-googling journey (which involved a lot of time with Nextcloud). I wanted to move off Google Domains <a href="https://killedbygoogle.com/">because of the long list of product lines Google has killed</a>, which is 293 items long as of this writing and includes Domains! They sold to <em>SquareSpace</em>, which I hold to low repute for other reasons.</p>
+<p>I read up on a few different domain registrars, and I also read their Terms of Service. (I actually emailed them a correction!) Some things I like about it:</p>
+<ul>
+<li>They actively encourage you to read the ToS on signup</li>
+<li>There is no arbitration clause or similar provision in the ToS.</li>
+<li>The privacy policy is decent.</li>
+</ul>
 <h1 id="anti-recommendations">Anti-recommendations</h1>
 <p>Here are some things I would recommend avoiding entirely:</p>
 <ul>

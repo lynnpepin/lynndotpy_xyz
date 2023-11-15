@@ -17,6 +17,8 @@ tags = ["post"]
 > - Wirecutter and Rtings for prodcut reviews (to replace Reddit.)
 > - OBS for screen recording and streaming.
 > - DaVinci Resolve for video editing.
+> - micro for an easy-to-use terminal editor... But also vim.
+> - Fastmail + IWantMyName for personal email.
 
 
 I've had friends ask me for recommendations for software. They ask me this because I am a hollow person who has spent too much of my life on the computer. I love when people ask me these questions, because my strong opinions on software are usually otherwise "offputting" and considered a "personality flaw".
@@ -24,6 +26,12 @@ I've had friends ask me for recommendations for software. They ask me this becau
 All jokes aside, I wanted one place to chronicle recommendations I tend to make. In no particular order, here are some of my favorites.
 
 <!-- more -->
+
+Changelog:
+
+| Date | What changed |
+| ---- | ------------ |
+| 2023-11-15 | Added `micro` editor and the Fastmail+IWantMyName email combo |
 
 # Best Linux distribution: Pop! OS
 
@@ -117,7 +125,7 @@ Obsidian is proprietary, but it's backed by the native filesystem with mostly-op
 The only thing Obsidian lacks (as of October 2023) is good handwritten notetaking.
 
 
-## Best handwritten notetaking: Pen and paper, really.
+# Best handwritten notetaking: Pen and paper, really.
 
 As of October 2023, Obsidian lacks good handwritten notetaking. While [Obsidian's Exclaidraw plugin](https://github.com/zsviczian/obsidian-excalidraw-plugin) is fine in a pinch, I wouldn't use it regularly.
 
@@ -177,6 +185,36 @@ It's proprietary, but it has a powerful free version, and it's cross platform: W
 
 For anyone who wishes to stick with FOSS, I've tried a lot of videoeditors and I've found [Kdenlive](https://kdenlive.org/) and Blender's built-in video editor to be the second best I've used.
 
+
+# Command-line / terminal editors: `micro`, but also learn `vim`
+
+[Micro](https://micro-editor.github.io/) is a terminal editor that's easy to use. It has familiar shortcuts (`ctrl+c`, `ctrl+s`, etc.), mouse support, and syntax highlighting. It's fantastic, and I wholeheartedly recommend it to anyone new to Linux.
+
+That said, I also recommend learning enough vim (or `vi`) to be useful. The reason is that it's pre-installed on every Linux distribution I've heard of, and you don't want to be stuck in a locked-down server with `nano` as your only other option.
+
+There are a lot of very good command-line editors out there. I got good use out of [`helix`](https://helix-editor.com/) and [`neovim`](https://neovim.io/), but I keep finding myself coming back to `vim` and `micro`.
+
+# Personal email: Fastmail + IWantMyName
+
+I use [IWantMyName](https://iwantmyname.com/) for domains and [Fastmail](https://app.fastmail.com/) for emails. With these two, I'm able to have as many `*@*.lynndotpy.xyz` emails as I want.
+
+## Fastmail: $5/mo for everything I need
+
+I chose Fastmail after using ProtonMail and Tutanota for some time. The latter two make a lot of inconvenience as part of their "encrypted email" offering, but I only wanted to move from GMail because I wanted a servicer that doesn't scan my emails for marketing. My threat model doesn't need my emails to be resistant to espionage or subpoenas.
+
+The setup for using custom domains on Fastmail is a bit involved, but that's because I purchased then through IWantMyName rather than through Fastmail.
+
+I also chose Fastmail because it was able to replace a lot of what I used NextCloud for. Fastmail supports CalDAV and CardDAV, which lets me sync my contacts, calendars, and reminders easily across all the major desktop and mobile operating systems. (Yes, even iOS and MacOS!)
+
+## IWantMyName: Good reputation and good ToS
+
+Google Domains was the last thing I used Google for during a whole de-googling journey (which involved a lot of time with Nextcloud). I wanted to move off Google Domains [because of the long list of product lines Google has killed](https://killedbygoogle.com/), which is 293 items long as of this writing and includes Domains! They sold to *SquareSpace*, which I hold to low repute for other reasons.
+
+I read up on a few different domain registrars, and I also read their Terms of Service. (I actually emailed them a correction!) Some things I like about it:
+
+- They actively encourage you to read the ToS on signup
+- There is no arbitration clause or similar provision in the ToS.
+- The privacy policy is decent.
 
 
 # Anti-recommendations
