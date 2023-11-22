@@ -4,8 +4,102 @@
     <link href="https://lynndotpy.xyz/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lynndotpy.xyz/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-09-30T00:00:00+00:00</updated>
+    <updated>2023-11-22T00:00:00+00:00</updated>
     <id>https://lynndotpy.xyz/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Fixing my insecure SSH bastion host</title>
+        <published>2023-11-22T00:00:00+00:00</published>
+        <updated>2023-11-22T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/hardening-bastion/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/hardening-bastion/</id>
+        <content type="html">&lt;p&gt;I maintain an SSH bastion server for all my beloved VPSes. The server I host this blog on only accepts SSH connections from the IP of that bastion, and I keep that bastion hardened. It&#x27;s a minimal Alpine install with nothing but an SSH server.&lt;&#x2F;p&gt;
+&lt;p&gt;So I felt some dismay when I found the server got a score of F on &lt;a href=&quot;https:&#x2F;&#x2F;www.sshaudit.com&#x2F;&quot;&gt;sshaudit.com&lt;&#x2F;a&gt;. I got an F! My bastion failed 2 of 5 host key tests, 4 of 9 key-exchange tests, and 7 of 10 MAC tests. &lt;&#x2F;p&gt;
+&lt;p&gt;These are the steps I took. Although I&#x27;m on Alpine, I was able to cherry pick commands from &lt;a href=&quot;https:&#x2F;&#x2F;www.ssh-audit.com&#x2F;hardening_guides.html&quot;&gt;the Debian-focused server guides hardening guides on sshaudit.com.&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Replace 3\.12 below with whatever `cat &#x2F;etc&#x2F;os-release` tells you
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -i -e &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;s&#x2F;v3\.12&#x2F;latest-stable&#x2F;g&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;apk&#x2F;repositories
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apk upgrade&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -U
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sync &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# I last used sync in ~2008, but hey, the wiki says to do it
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; reboot
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Update host keys
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;rm&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;ssh&#x2F;ssh_host_*
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# As root:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;ssh-keygen -t&lt;&#x2F;span&gt;&lt;span&gt; rsa&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -b&lt;&#x2F;span&gt;&lt;span&gt; 4096&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -f&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;ssh&#x2F;ssh_host_rsa_key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -N &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;ssh-keygen -t&lt;&#x2F;span&gt;&lt;span&gt; ed25519&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -f&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;ssh&#x2F;ssh_host_ed25519_key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -N &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# As user:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; service sshd restart
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# You&amp;#39;ll probably need to remove lines in ~&#x2F;.ssh&#x2F;known-hosts on your client machines
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Custom config to remove insecure ciphers, kex, and mac
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# OpenSSH on Alpine doesn&amp;#39;t use and Include an sshd config folder by default, so make one
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;etc&#x2F;ssh&#x2F;sshd_config.d&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; sed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -i&lt;&#x2F;span&gt;&lt;span&gt;.bak &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;1i Include &#x2F;etc&#x2F;ssh&#x2F;sshd_config.d&#x2F;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Set up restricted algorithms
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# As root:
+&lt;&#x2F;span&gt;&lt;span&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;-e &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;# Restrict key exchange, cipher, and MAC algorithms, as per \
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;sshaudit.com hardening guide.\n\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256,\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;curve25519-sha256@libssh.org,gss-curve25519-sha256-,\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;diffie-hellman-group-exchange-sha256\n\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Ciphers chacha20-poly1305@openssh.com,\aes256-gcm@openssh.com,\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr\n\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;MACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;umac-128-etm@openssh.com\n\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;HostKeyAlgorithms ssh-ed25519,\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;ssh-ed25519-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;sk-ssh-ed25519-cert-v01@openssh.com,\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256,\
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;rsa-sha2-256-cert-v01@openssh.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &#x2F;etc&#x2F;ssh&#x2F;sshd_config.d&#x2F;ssh-audit_hardening.conf
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# As user:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; service sshd testart
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Backup&lt;&#x2F;strong&gt; the server on my VPS host. If anything goes wrong, I don&#x27;t want to be locked out of my other servers.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Updating&lt;&#x2F;strong&gt; to the latest major Alpine release improved my score a bit.
+&lt;ul&gt;
+&lt;li&gt;According to &lt;code&gt;cat &#x2F;etc&#x2F;os-release&lt;&#x2F;code&gt;, I&#x27;m on Alpine 3.12.12, whereas the latest major version is 3.18.4.&lt;&#x2F;li&gt;
+&lt;li&gt;According &lt;a href=&quot;https:&#x2F;&#x2F;wiki.alpinelinux.org&#x2F;wiki&#x2F;Include:Upgrading_to_latest_release&quot;&gt;to this Wiki page&lt;&#x2F;a&gt;: I run &lt;code&gt;sudo sed -i -e &#x27;s&#x2F;v3\.12&#x2F;latest-stable&#x2F;g&#x27; &#x2F;etc&#x2F;apk&#x2F;repositories&lt;&#x2F;code&gt; to keep me on the latest stable release. I verify with a quick &lt;code&gt;cat&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Then, &lt;code&gt;sudo apk upgrade -U&lt;&#x2F;code&gt;, &lt;code&gt;sync&lt;&#x2F;code&gt;, &lt;code&gt;sudo reboot&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;After updating, I&#x27;m failing 1 of 4 Host Key checks, 4 of 10 Key Exchange checks, and 7 of 10 MAC checks.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Fixing host keys:&lt;&#x2F;strong&gt; This was simple to run. As root,
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rm &#x2F;etc&#x2F;ssh&#x2F;ssh_host_*; ssh-keygen -t rsa -b 4096 -f &#x2F;etc&#x2F;ssh&#x2F;ssh_host_rsa_key -N &amp;quot;&amp;quot;;ssh-keygen -t ed25519 -f &#x2F;etc&#x2F;ssh&#x2F;ssh_host_ed25519_key -N &amp;quot;&amp;quot;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;This improved my score to a 49&#x2F;100! I now fail no Host Key checks, 4 of 10 Key Exchange tests, and 7 of 10 MAC checks.&lt;&#x2F;li&gt;
+&lt;li&gt;This changes the host keys, so I had to hand-modify my entries in &lt;code&gt;~&#x2F;.ssh&#x2F;known_hosts&lt;&#x2F;code&gt; on all my clients. &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;ul&gt;
+&lt;li&gt;...
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;awk &#x27;$5 &amp;gt;= 3071&#x27; &#x2F;etc&#x2F;ssh&#x2F;moduli &amp;gt; &#x2F;etc&#x2F;ssh&#x2F;moduli.safe&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;mv &#x2F;etc&#x2F;ssh&#x2F;moduli.safe &#x2F;etc&#x2F;ssh&#x2F;moduli&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Restricting algorithms:&lt;&#x2F;strong&gt; As root,
+&lt;ul&gt;
+&lt;li&gt;OpenSSH on Alpine does not have &lt;code&gt;sshd_config.d&lt;&#x2F;code&gt; by default. So, &lt;code&gt;mkdir &#x2F;etc&#x2F;ssh&#x2F;sshd_config.d&#x2F;; sudo sed -i.bak &#x27;1i Include &#x2F;etc&#x2F;ssh&#x2F;sshd_config.d&#x2F;*&#x27; &#x2F;etc&#x2F;ssh&#x2F;sshd_config&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;The OpenSSH shipped with Alpine doesn&#x27;t support all the algorithms from the OG hardening guide. Add the following: &lt;code&gt;echo -e &amp;quot;\n# Restrict key exchange, cipher, and MAC algorithms, as per sshaudit.com hardening guide.\nKexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,gss-curve25519-sha256-,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha256\nCiphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr\nMACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,umac-128-etm@openssh.com\nHostKeyAlgorithms ssh-ed25519,ssh-ed25519-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256,rsa-sha2-256-cert-v01@openssh.com&amp;quot; &amp;gt; &#x2F;etc&#x2F;ssh&#x2F;sshd_config.d&#x2F;ssh-audit_hardening.conf&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;After a reboot, this brought me to an A+ score! :)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+    </entry>
     <entry xml:lang="en">
         <title>Things I can recommend</title>
         <published>2023-09-30T00:00:00+00:00</published>

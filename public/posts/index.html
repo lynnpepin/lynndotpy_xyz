@@ -69,6 +69,88 @@
             
                 <div class="post on-list">
                     
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/hardening-bastion/">Fixing my insecure SSH bastion host</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-11-22
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a></span>
+    
+
+                    
+        <div class="post-content">
+            <p>I maintain an SSH bastion server for all my beloved VPSes. The server I host this blog on only accepts SSH connections from the IP of that bastion, and I keep that bastion hardened. It's a minimal Alpine install with nothing but an SSH server.</p>
+<p>So I felt some dismay when I found the server got a score of F on <a href="https://www.sshaudit.com/">sshaudit.com</a>. I got an F! My bastion failed 2 of 5 host key tests, 4 of 9 key-exchange tests, and 7 of 10 MAC tests. </p>
+<p>These are the steps I took. Although I'm on Alpine, I was able to cherry pick commands from <a href="https://www.ssh-audit.com/hardening_guides.html">the Debian-focused server guides hardening guides on sshaudit.com.</a></p>
+<p><strong>TLDR:</strong></p>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#888888;"># Replace 3\.12 below with whatever `cat /etc/os-release` tells you
+</span><span style="color:#ffb964;">sudo</span><span> sed</span><span style="color:#ffb964;"> -i -e </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">s/v3\.12/latest-stable/g</span><span style="color:#556633;">&#39;</span><span> /etc/apk/repositories
+</span><span style="color:#ffb964;">sudo</span><span> apk upgrade</span><span style="color:#ffb964;"> -U
+</span><span style="color:#ffb964;">sync </span><span style="color:#888888;"># I last used sync in ~2008, but hey, the wiki says to do it
+</span><span style="color:#ffb964;">sudo</span><span> reboot
+</span><span>
+</span><span style="color:#888888;"># Update host keys
+</span><span style="color:#ffb964;">rm</span><span> /etc/ssh/ssh_host_*
+</span><span style="color:#888888;"># As root:
+</span><span style="color:#ffb964;">ssh-keygen -t</span><span> rsa</span><span style="color:#ffb964;"> -b</span><span> 4096</span><span style="color:#ffb964;"> -f</span><span> /etc/ssh/ssh_host_rsa_key</span><span style="color:#ffb964;"> -N </span><span style="color:#556633;">&quot;&quot;
+</span><span style="color:#ffb964;">ssh-keygen -t</span><span> ed25519</span><span style="color:#ffb964;"> -f</span><span> /etc/ssh/ssh_host_ed25519_key</span><span style="color:#ffb964;"> -N </span><span style="color:#556633;">&quot;&quot;
+</span><span style="color:#888888;"># As user:
+</span><span style="color:#ffb964;">sudo</span><span> service sshd restart
+</span><span style="color:#888888;"># You&#39;ll probably need to remove lines in ~/.ssh/known-hosts on your client machines
+</span><span>
+</span><span style="color:#888888;"># Custom config to remove insecure ciphers, kex, and mac
+</span><span style="color:#888888;"># OpenSSH on Alpine doesn&#39;t use and Include an sshd config folder by default, so make one
+</span><span style="color:#ffb964;">mkdir</span><span> /etc/ssh/sshd_config.d/
+</span><span style="color:#ffb964;">sudo</span><span> sed</span><span style="color:#ffb964;"> -i</span><span>.bak </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">1i Include /etc/ssh/sshd_config.d/*</span><span style="color:#556633;">&#39;
+</span><span>
+</span><span>
+</span><span style="color:#888888;"># Set up restricted algorithms
+</span><span style="color:#888888;"># As root:
+</span><span>echo </span><span style="color:#ffb964;">-e </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;"># Restrict key exchange, cipher, and MAC algorithms, as per \
+</span><span style="color:#99ad6a;">sshaudit.com hardening guide.\n\
+</span><span style="color:#99ad6a;">KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256,\
+</span><span style="color:#99ad6a;">curve25519-sha256@libssh.org,gss-curve25519-sha256-,\
+</span><span style="color:#99ad6a;">diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,\
+</span><span style="color:#99ad6a;">diffie-hellman-group-exchange-sha256\n\
+</span><span style="color:#99ad6a;">Ciphers chacha20-poly1305@openssh.com,\aes256-gcm@openssh.com,\
+</span><span style="color:#99ad6a;">aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr\n\
+</span><span style="color:#99ad6a;">MACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,\
+</span><span style="color:#99ad6a;">umac-128-etm@openssh.com\n\
+</span><span style="color:#99ad6a;">HostKeyAlgorithms ssh-ed25519,\
+</span><span style="color:#99ad6a;">ssh-ed25519-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,\
+</span><span style="color:#99ad6a;">sk-ssh-ed25519-cert-v01@openssh.com,\
+</span><span style="color:#99ad6a;">rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256,\
+</span><span style="color:#99ad6a;">rsa-sha2-256-cert-v01@openssh.com</span><span style="color:#556633;">&quot; </span><span>\
+</span><span>&gt; /etc/ssh/sshd_config.d/ssh-audit_hardening.conf
+</span><span>
+</span><span style="color:#888888;"># As user:
+</span><span style="color:#ffb964;">sudo</span><span> service sshd testart
+</span></code></pre>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/hardening-bastion/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
     <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/recommendations/">Things I can recommend</a></h1>
     <div class="post-meta-inline">
         
@@ -240,80 +322,6 @@
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
             <a class="read-more button" href="https://lynndotpy.xyz/posts/bluesky-and-bitcoin/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/python-main-main/">protip.py: the main-main pattern</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2023-06-24
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/how-to/">#how-to</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/python/">#python</a></span>
-    
-
-                    
-        <div class="post-content">
-            <blockquote>
-<p><strong>TLDR:</strong> Your Python program will be better if you define a <code>main()</code> function separate from the <code>__main__</code> block.</p>
-</blockquote>
-<p>Consider a Python program <code>leftpad.py</code>, which takes an input string (say, <code>trans rights</code>), and pads it to the left (so, <code>python leftpad.py -s 'trans rights' -n 16</code> prints <code>'    trans rights'</code>.)</p>
-<p>This is a great way to structure it:</p>
-<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad.py
-</span><span style="color:#8fbfdc;">import </span><span>argparse
-</span><span>
-</span><span style="color:#888888;"># leftpad function in global scope can be imported
-</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">leftpad</span><span>(</span><span style="color:#ffb964;">string</span><span>, </span><span style="color:#ffb964;">num_chars</span><span>):
-</span><span>    </span><span style="color:#8fbfdc;">if </span><span style="color:#ffb964;">len</span><span>(string) &gt;= num_chars:
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span>string
-</span><span>    </span><span style="color:#8fbfdc;">else</span><span>:
-</span><span>        pad = </span><span style="color:#556633;">&#39; &#39; </span><span>* (num_chars - </span><span style="color:#ffb964;">len</span><span>(string))
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span>pad + string
-</span><span>
-</span><span>parser = argparse.</span><span style="color:#ffb964;">ArgumentParser</span><span>()
-</span><span>parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--string</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-s</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=str, </span><span style="color:#ffb964;">nargs</span><span>=</span><span style="color:#cf6a4c;">1</span><span>)
-</span><span>parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--num</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-n</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=int)
-</span><span>
-</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
-</span><span>    args = parser.</span><span style="color:#ffb964;">parse_args</span><span>()
-</span><span>    </span><span style="color:#ffb964;">print</span><span>(</span><span style="color:#ffb964;">leftpad</span><span>(args.string[</span><span style="color:#cf6a4c;">0</span><span>], args.num))
-</span></code></pre>
-<p>The main functionality and the parser can be imported as <code>leftpad.leftpad(...)</code> and <code>leftpad.parser</code>. These could not be imported if <code>__main__</code> had the definition for <code>leftpad</code> and the instantiation of <code>parser</code>.</p>
-<p>Here's a template you can use for your Python scripts:</p>
-<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">import </span><span>sys
-</span><span>
-</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">main</span><span>():
-</span><span>    </span><span style="color:#8fbfdc;">try</span><span>:
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">1
-</span><span>    </span><span style="color:#8fbfdc;">except</span><span>:
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">0
-</span><span>
-</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
-</span><span>    sys.</span><span style="color:#ffb964;">exit</span><span>(</span><span style="color:#ffb964;">main</span><span>())
-</span></code></pre>
-<p>Let me explain why this is good, how it could be worse, and how it could be better.</p>
-
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.xyz/posts/python-main-main/">
                 <span class="button__text">Read more</span>&nbsp;
                 <span class="button__icon">&#8617;&#xFE0E;</span>
             </a>
