@@ -60,7 +60,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &#x2F;etc&#x2F;ssh&#x2F;sshd_config.d&#x2F;ssh-audit_hardening.conf
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# As user:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; service sshd testart
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; service sshd restart
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
 &lt;ol&gt;

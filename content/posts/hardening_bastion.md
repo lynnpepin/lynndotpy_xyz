@@ -56,7 +56,7 @@ rsa-sha2-256-cert-v01@openssh.com" \
 > /etc/ssh/sshd_config.d/ssh-audit_hardening.conf
 
 # As user:
-sudo service sshd testart
+sudo service sshd restart
 ```
 
 <!-- more -->
