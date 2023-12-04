@@ -12,9 +12,13 @@ So I felt some dismay when I found the server got a score of F on [sshaudit.com]
 
 These are the steps I took. Although I'm on Alpine, I was able to cherry pick commands from [the Debian-focused server guides hardening guides on sshaudit.com.](https://www.ssh-audit.com/hardening_guides.html)
 
-**TLDR:**
+**TLDR** provided below the cut, with some script script to do the work for you.
+
+<!-- more -->
 
 ```sh
+# You can't just copy and paste this! You need to edit some parts, run some parts as su and some parts as user, etc.
+# Read and understand this before running it okay?
 # Replace 3\.12 below with whatever `cat /etc/os-release` tells you
 sudo sed -i -e 's/v3\.12/latest-stable/g' /etc/apk/repositories
 sudo apk upgrade -U
@@ -58,8 +62,6 @@ rsa-sha2-256-cert-v01@openssh.com" \
 # As user:
 sudo service sshd restart
 ```
-
-<!-- more -->
 
 
 1. **Backup** the server on my VPS host. If anything goes wrong, I don't want to be locked out of my other servers.

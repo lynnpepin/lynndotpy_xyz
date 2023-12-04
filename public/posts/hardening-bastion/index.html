@@ -109,8 +109,10 @@
             <p>I maintain an SSH bastion server for all my beloved VPSes. The server I host this blog on only accepts SSH connections from the IP of that bastion, and I keep that bastion hardened. It's a minimal Alpine install with nothing but an SSH server.</p>
 <p>So I felt some dismay when I found the server got a score of F on <a href="https://www.sshaudit.com/">sshaudit.com</a>. I got an F! My bastion failed 2 of 5 host key tests, 4 of 9 key-exchange tests, and 7 of 10 MAC tests. </p>
 <p>These are the steps I took. Although I'm on Alpine, I was able to cherry pick commands from <a href="https://www.ssh-audit.com/hardening_guides.html">the Debian-focused server guides hardening guides on sshaudit.com.</a></p>
-<p><strong>TLDR:</strong></p>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#888888;"># Replace 3\.12 below with whatever `cat /etc/os-release` tells you
+<p><strong>TLDR</strong> provided below the cut, with some script script to do the work for you.</p>
+<span id="continue-reading"></span><pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#888888;"># You can&#39;t just copy and paste this! You need to edit some parts, run some parts as su and some parts as user, etc.
+</span><span style="color:#888888;"># Read and understand this before running it okay?
+</span><span style="color:#888888;"># Replace 3\.12 below with whatever `cat /etc/os-release` tells you
 </span><span style="color:#ffb964;">sudo</span><span> sed</span><span style="color:#ffb964;"> -i -e </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">s/v3\.12/latest-stable/g</span><span style="color:#556633;">&#39;</span><span> /etc/apk/repositories
 </span><span style="color:#ffb964;">sudo</span><span> apk upgrade</span><span style="color:#ffb964;"> -U
 </span><span style="color:#ffb964;">sync </span><span style="color:#888888;"># I last used sync in ~2008, but hey, the wiki says to do it
@@ -153,7 +155,6 @@
 </span><span style="color:#888888;"># As user:
 </span><span style="color:#ffb964;">sudo</span><span> service sshd restart
 </span></code></pre>
-<span id="continue-reading"></span>
 <ol>
 <li><strong>Backup</strong> the server on my VPS host. If anything goes wrong, I don't want to be locked out of my other servers.</li>
 <li><strong>Updating</strong> to the latest major Alpine release improved my score a bit.
@@ -206,6 +207,13 @@
                         </a>
                     </span>
                 
+                
+                    <span class="button next">
+                        <a href="https://lynndotpy.xyz/posts/college-course-success/">
+                            <span class="button__text">Prescriptions for success in college courses</span>&nbsp;
+                            <span class="button__icon">→</span>
+                        </a>
+                    </span>
                 </div>
         </div>
     

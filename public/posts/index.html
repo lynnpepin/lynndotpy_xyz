@@ -69,6 +69,53 @@
             
                 <div class="post on-list">
                     
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/college-course-success/">Prescriptions for success in college courses</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-12-04
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a></span>
+    
+
+                    
+        <div class="post-content">
+            <p>There is no replacement for doing the work of studying. There are no shortcuts, there is no way to make it more fun. However, there are ways to make sure you make good use of your time and to maximize the chance of a good grade.</p>
+<p>Here's a list of prescriptions I took away from my time at the University of Connecticut. I graduated with a 3.99 GPA, taking a Computer Science and Engineering major and a Mathematics minor, and later got a Masters in the same area.</p>
+<blockquote>
+<p><strong>TLDR:</strong></p>
+<ul>
+<li>Do the syllabus reading and homework in advance. This maintains a time buffer that will save you when the going gets rough.</li>
+<li>Write notes by hand, and digitally transcribe them later. This helps cement knowledge in your mind.</li>
+<li>Take practice exams like real exams. This is the best way to practice for an exam. Grade yourself after.</li>
+<li>Foundational courses like calc 1 or or general chemistry don't change much over the years. This means old practice exams and other coursework can be useful studying tools.</li>
+<li>These prescriptions require budgeting your time, and it's okay if you don't budget for all of this. Your time at college shouldn't just be about getting straight As.</li>
+</ul>
+</blockquote>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/college-course-success/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
     <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/hardening-bastion/">Fixing my insecure SSH bastion host</a></h1>
     <div class="post-meta-inline">
         
@@ -89,50 +136,7 @@
             <p>I maintain an SSH bastion server for all my beloved VPSes. The server I host this blog on only accepts SSH connections from the IP of that bastion, and I keep that bastion hardened. It's a minimal Alpine install with nothing but an SSH server.</p>
 <p>So I felt some dismay when I found the server got a score of F on <a href="https://www.sshaudit.com/">sshaudit.com</a>. I got an F! My bastion failed 2 of 5 host key tests, 4 of 9 key-exchange tests, and 7 of 10 MAC tests. </p>
 <p>These are the steps I took. Although I'm on Alpine, I was able to cherry pick commands from <a href="https://www.ssh-audit.com/hardening_guides.html">the Debian-focused server guides hardening guides on sshaudit.com.</a></p>
-<p><strong>TLDR:</strong></p>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#888888;"># Replace 3\.12 below with whatever `cat /etc/os-release` tells you
-</span><span style="color:#ffb964;">sudo</span><span> sed</span><span style="color:#ffb964;"> -i -e </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">s/v3\.12/latest-stable/g</span><span style="color:#556633;">&#39;</span><span> /etc/apk/repositories
-</span><span style="color:#ffb964;">sudo</span><span> apk upgrade</span><span style="color:#ffb964;"> -U
-</span><span style="color:#ffb964;">sync </span><span style="color:#888888;"># I last used sync in ~2008, but hey, the wiki says to do it
-</span><span style="color:#ffb964;">sudo</span><span> reboot
-</span><span>
-</span><span style="color:#888888;"># Update host keys
-</span><span style="color:#ffb964;">rm</span><span> /etc/ssh/ssh_host_*
-</span><span style="color:#888888;"># As root:
-</span><span style="color:#ffb964;">ssh-keygen -t</span><span> rsa</span><span style="color:#ffb964;"> -b</span><span> 4096</span><span style="color:#ffb964;"> -f</span><span> /etc/ssh/ssh_host_rsa_key</span><span style="color:#ffb964;"> -N </span><span style="color:#556633;">&quot;&quot;
-</span><span style="color:#ffb964;">ssh-keygen -t</span><span> ed25519</span><span style="color:#ffb964;"> -f</span><span> /etc/ssh/ssh_host_ed25519_key</span><span style="color:#ffb964;"> -N </span><span style="color:#556633;">&quot;&quot;
-</span><span style="color:#888888;"># As user:
-</span><span style="color:#ffb964;">sudo</span><span> service sshd restart
-</span><span style="color:#888888;"># You&#39;ll probably need to remove lines in ~/.ssh/known-hosts on your client machines
-</span><span>
-</span><span style="color:#888888;"># Custom config to remove insecure ciphers, kex, and mac
-</span><span style="color:#888888;"># OpenSSH on Alpine doesn&#39;t use and Include an sshd config folder by default, so make one
-</span><span style="color:#ffb964;">mkdir</span><span> /etc/ssh/sshd_config.d/
-</span><span style="color:#ffb964;">sudo</span><span> sed</span><span style="color:#ffb964;"> -i</span><span>.bak </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">1i Include /etc/ssh/sshd_config.d/*</span><span style="color:#556633;">&#39;
-</span><span>
-</span><span>
-</span><span style="color:#888888;"># Set up restricted algorithms
-</span><span style="color:#888888;"># As root:
-</span><span>echo </span><span style="color:#ffb964;">-e </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;"># Restrict key exchange, cipher, and MAC algorithms, as per \
-</span><span style="color:#99ad6a;">sshaudit.com hardening guide.\n\
-</span><span style="color:#99ad6a;">KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256,\
-</span><span style="color:#99ad6a;">curve25519-sha256@libssh.org,gss-curve25519-sha256-,\
-</span><span style="color:#99ad6a;">diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,\
-</span><span style="color:#99ad6a;">diffie-hellman-group-exchange-sha256\n\
-</span><span style="color:#99ad6a;">Ciphers chacha20-poly1305@openssh.com,\aes256-gcm@openssh.com,\
-</span><span style="color:#99ad6a;">aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr\n\
-</span><span style="color:#99ad6a;">MACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,\
-</span><span style="color:#99ad6a;">umac-128-etm@openssh.com\n\
-</span><span style="color:#99ad6a;">HostKeyAlgorithms ssh-ed25519,\
-</span><span style="color:#99ad6a;">ssh-ed25519-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,\
-</span><span style="color:#99ad6a;">sk-ssh-ed25519-cert-v01@openssh.com,\
-</span><span style="color:#99ad6a;">rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256,\
-</span><span style="color:#99ad6a;">rsa-sha2-256-cert-v01@openssh.com</span><span style="color:#556633;">&quot; </span><span>\
-</span><span>&gt; /etc/ssh/sshd_config.d/ssh-audit_hardening.conf
-</span><span>
-</span><span style="color:#888888;"># As user:
-</span><span style="color:#ffb964;">sudo</span><span> service sshd restart
-</span></code></pre>
+<p><strong>TLDR</strong> provided below the cut, with some script script to do the work for you.</p>
 
         </div>
         <div>
@@ -281,47 +285,6 @@
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
             <a class="read-more button" href="https://lynndotpy.xyz/posts/caddy-topics-optout/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/bluesky-and-bitcoin/">If BlueSky takes off, Bitcoin will too</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2023-07-09
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/internet/">#internet</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a></span>
-    
-
-                    
-        <div class="post-content">
-            <blockquote>
-<p><strong>TLDR:</strong> BlueSky is intended to eventually integrate with Bitcoin. If BlueSky becomes widely adopted, Bitcoin will too. I don't like Bitcoin, so I don't want BlueSky to become popular.</p>
-<p>Here's why I believe this: In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After helping kickstart the Lightning network, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.</p>
-</blockquote>
-<p>Jack Dorsey's &quot;BlueSky&quot; platform is taking off. Unfortunately, not only is Jack Dorsey a bonkers man who <a href="https://twitter.com/BrianJo78940026/status/1674770881955115009">endorses the belief that Jimmy Carter cried when he learned that aliens made up all the religions</a>^1 and is on a <em>big</em> pro-RFK Jr^2 streak, but he also is a longtime Bitcoin believer.</p>
-
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.xyz/posts/bluesky-and-bitcoin/">
                 <span class="button__text">Read more</span>&nbsp;
                 <span class="button__icon">&#8617;&#xFE0E;</span>
             </a>

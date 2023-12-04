@@ -69,6 +69,66 @@
             
                 <div class="post on-list">
                     
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/linear-sorting/">You can sort in linear time!</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2022-01-07
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/project/">#project</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/python/">#python</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/rust/">#rust</a></span>
+    
+
+                    
+        <div class="post-content">
+            
+  <figure class="center" >
+    <img src="/posts/images/countsort_graph.jpeg" alt="A log-scale graph showing the runtime (ns) of sorting N elements for different integer depths. They all show a trend towards linear runtime for large N." style="width:70%" />
+    
+      <figcaption class="center">A log-scale graph showing the linear runtime of count-sort</figcaption>
+    
+  </figure>
+
+<blockquote>
+<p><strong>TLDR:</strong> Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in $O(n \log n)$ time is still true, but that assumes you're sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)</p>
+<p>See the <a href="https://github.com/lynnpepin/rust_projects/blob/master/countsort/plot_stats.ipynb">Python notebook</a> wrapping an unoptimized <a href="https://github.com/lynnpepin/rust_projects/tree/master/countsort">Rust countsort implementation</a>: </p>
+</blockquote>
+<p>--</p>
+<p>Is this truly $O(n)$? Yes!</p>
+<ul>
+<li>Counting sort is not a randomized algorithm, it always outputs the correct solution.</li>
+<li>Counting sort is not a parallelized algorithm. (And you can't use parallelism to speed past a worst-case big-O run time anyway!)</li>
+<li>Counting sort is not an amortized algorithm. It is truly $O(n)$, not 'expected' or 'amortized' $O(n)$.</li>
+<li>Counting sort is technically $Θ(n)$, that is, the worst and best case running time is linear. </li>
+<li>This can be used in the real world.</li>
+<li>However, it is not an in-place sorting algorithm.</li>
+</ul>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/linear-sorting/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
     <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/reso-intro/">`reso`, a colorful pixel-art circuit simulator</a></h1>
     <div class="post-meta-inline">
         
