@@ -1,6 +1,6 @@
 +++
 title = "SSDs are bad again. I had many failures in 2023"
-date = 2023-11-22
+date = 2023-12-08
 
 [taxonomies]
 tags = ["post"]
