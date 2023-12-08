@@ -164,6 +164,44 @@
 </content>
     </entry>
     <entry xml:lang="en">
+        <title>SSDs are bad again. I had many failures in 2023</title>
+        <published>2023-11-22T00:00:00+00:00</published>
+        <updated>2023-11-22T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/ssds-bad-2023/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/ssds-bad-2023/</id>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; In 2014, SSDs were unreliable but cool and new. They&#x27;ve become more reliable over the years, but going into 2024, they&#x27;re showing a streak of unreliability again. I&#x27;ve had three failures in 2023 alone across SSDs and enclosures.&lt;&#x2F;p&gt;
+&lt;p&gt;The worst offenders are SanDisk, Western Digital, Samsung. &lt;a href=&quot;https:&#x2F;&#x2F;www.backblaze.com&#x2F;blog&#x2F;ssd-edition-2023-mid-year-drive-stats-review&#x2F;&quot;&gt;Backblaze reports&lt;&#x2F;a&gt; roughly confirm this. See &lt;a href=&quot;https:&#x2F;&#x2F;www.backblaze.com&#x2F;cloud-storage&#x2F;resources&#x2F;hard-drive-test-data&quot;&gt;their full stats page&lt;&#x2F;a&gt; here.&lt;&#x2F;p&gt;
+&lt;p&gt;I didn&#x27;t even know Dell made SSDs, but BackBlaze reports Dell as the lowest failure rate.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;My first piece of external storage was a 512MB USB 2.0 flash drive, which I made good use of in elementary school.&lt;&#x2F;p&gt;
+&lt;p&gt;I made sure to keep backups of everything, everywhere, all the time, until one stressful day in junior year that I lost a 16GB flashdrive. I had hours of homework completed on it, fighting for a competitive GPA-based scholarship where every point mattered. I sobbed having had lost it. My fault for not keeping a copy.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve fastidiously maintained backups of my backups, ensuring to have no single point of failure (short of a house fire) since then. For these purposes I recommend &lt;a href=&quot;https:&#x2F;&#x2F;syncthing.net&#x2F;&quot;&gt;SyncThing&lt;&#x2F;a&gt;, a FOSS tool to sync files between your devices in a peer-to-peer manner.&lt;&#x2F;p&gt;
+&lt;p&gt;This paranoid commitment to data integrity finally held up in 2023, the year of &lt;em&gt;atrocious SSDs.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve had the following SSDs and enclosures fail on me in the past year:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Either the Plugable USB C M.2 NVMe enclosure (B07N48N5GR) or a WD_Black 850 drive.
+&lt;ul&gt;
+&lt;li&gt;After use, the 850 drive wouldn&#x27;t respond in any other enclosure, and I wasn&#x27;t willing to test any drive in the Plugable.&lt;&#x2F;li&gt;
+&lt;li&gt;There had been reports that the Plugable enclosure fried drives, so I&#x27;m inclined to blame the enclosure.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;The Sabrent Utlra Slim USB 3.0 to 2.5 inch SATA aluminum enclosure (B00LS31KQG), which simply stopped reading disks after one use. The disk is still fine:&lt;&#x2F;li&gt;
+&lt;li&gt;The SanDisk 2TB Extreme PRO Portable SSD (B08GV4YYV7), due to problems impacting &lt;em&gt;every single one of these&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Of these, the greatest betrayal was the SanDisk 2TB Extreme Pro. I had my failure in January 2023, and now (December 2023), people are still suffering failures (&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;DataHoarder&#x2F;comments&#x2F;102l844&#x2F;sandisk_extreme_2tb_vs_samsung_t7_2tb_they_are&#x2F;j77w8bv&#x2F;&quot;&gt;Reddit Feb 2023&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.theverge.com&#x2F;22291828&#x2F;sandisk-extreme-pro-portable-my-passport-failure-continued&quot;&gt;The Verge August 2023&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.tomshardware.com&#x2F;news&#x2F;sandisk-extreme-pro-failures-are-due-to-design-flaw&quot;&gt;TomsHardware Nov 2023&lt;&#x2F;a&gt;), despite Western Digital&#x27;s insistence that it&#x27;s been fixed. Everything I put on the SanDisk were files I considered &amp;quot;non-critical&amp;quot;, but I miss them now. Old photos, homeworks, notes, server logs, and project repositories. &lt;&#x2F;p&gt;
+&lt;p&gt;Everything lost. And Amazon is still selling them.&lt;&#x2F;p&gt;
+&lt;p&gt;Now, looking for a new SSD feels like walking a field of landmines. I can&#x27;t trust SanDisk, I can&#x27;t trust Western Digital, I can&#x27;t trust Samsung (who has reported problems with the 870 Evo and 970 Evo and &lt;a href=&quot;https:&#x2F;&#x2F;www.theverge.com&#x2F;2023&#x2F;2&#x2F;7&#x2F;23589116&#x2F;samsung-ssd-990-980-pro-m2-health-failing-defective&quot;&gt;the 990 especially, per The Verge&lt;&#x2F;a&gt;), and you can&#x27;t trust Amazon, which is notoriously full of counterfeits.&lt;&#x2F;p&gt;
+&lt;p&gt;SSDs were notoriously unreliable a decade ago, and that was a price people accepted for the performance benefits they offered over HHDs. (It was amazing to watch Windows 7 boot in seconds rather than minutes. In 2014, I was proud of my one-minute Ubuntu boot time!).&lt;&#x2F;p&gt;
+&lt;p&gt;BackBlaze, famous for reporting their experienced HDD reliability, &lt;a href=&quot;https:&#x2F;&#x2F;www.backblaze.com&#x2F;blog&#x2F;ssd-edition-2023-mid-year-drive-stats-review&#x2F;&quot;&gt;has started reporting SSD reliability&lt;&#x2F;a&gt;. Their stats confirm a trend others have observed: SSDs over the past few years have had some &lt;em&gt;bad&lt;&#x2F;em&gt; design flaws and some &lt;em&gt;bad&lt;&#x2F;em&gt; batches.&lt;&#x2F;p&gt;
+&lt;p&gt;From what I see, Dell looks like the most reliable SSD manufacturer. I didn&#x27;t even know Dell made SSDs, but I think I know where I&#x27;m going for my next purchase.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
         <title>Things I can recommend</title>
         <published>2023-09-30T00:00:00+00:00</published>
         <updated>2023-09-30T00:00:00+00:00</updated>
