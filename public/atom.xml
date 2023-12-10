@@ -7,7 +7,7 @@
     <updated>2023-12-08T00:00:00+00:00</updated>
     <id>https://lynndotpy.xyz/atom.xml</id>
     <entry xml:lang="en">
-        <title>SSDs are bad again. I had many failures in 2023</title>
+        <title>I&#x27;ve had a lot (one or two) SSDs fail in 2023, which is a lot.</title>
         <published>2023-12-08T00:00:00+00:00</published>
         <updated>2023-12-08T00:00:00+00:00</updated>
         <author>
@@ -16,7 +16,7 @@
         <link rel="alternate" href="https://lynndotpy.xyz/posts/ssds-bad-2023/" type="text/html"/>
         <id>https://lynndotpy.xyz/posts/ssds-bad-2023/</id>
         <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; In 2014, SSDs were unreliable but cool and new. They&#x27;ve become more reliable over the years, but going into 2024, they&#x27;re showing a streak of unreliability again. I&#x27;ve had three failures in 2023 alone across SSDs and enclosures.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; In 2014, SSDs were unreliable but cool and new. They&#x27;ve become more reliable over the years, but going into 2024, they&#x27;re showing a streak of unreliability again. I&#x27;ve had had an SSD fail, an enclosure fail, and an SSD+enclosure which seemed to break eachother.&lt;&#x2F;p&gt;
 &lt;p&gt;The worst offenders are SanDisk, Western Digital, Samsung. &lt;a href=&quot;https:&#x2F;&#x2F;www.backblaze.com&#x2F;blog&#x2F;ssd-edition-2023-mid-year-drive-stats-review&#x2F;&quot;&gt;Backblaze reports&lt;&#x2F;a&gt; roughly confirm this. See &lt;a href=&quot;https:&#x2F;&#x2F;www.backblaze.com&#x2F;cloud-storage&#x2F;resources&#x2F;hard-drive-test-data&quot;&gt;their full stats page&lt;&#x2F;a&gt; here.&lt;&#x2F;p&gt;
 &lt;p&gt;I didn&#x27;t even know Dell made SSDs, but BackBlaze reports Dell as the lowest failure rate.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;

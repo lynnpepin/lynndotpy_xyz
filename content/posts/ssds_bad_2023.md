@@ -1,5 +1,5 @@
 +++
-title = "SSDs are bad again. I had many failures in 2023"
+title = "I've had a lot (one or two) SSDs fail in 2023, which is a lot."
 date = 2023-12-08
 
 [taxonomies]
@@ -7,7 +7,7 @@ tags = ["post"]
 +++
 
 
-> **TLDR:** In 2014, SSDs were unreliable but cool and new. They've become more reliable over the years, but going into 2024, they're showing a streak of unreliability again. I've had three failures in 2023 alone across SSDs and enclosures.
+> **TLDR:** In 2014, SSDs were unreliable but cool and new. They've become more reliable over the years, but going into 2024, they're showing a streak of unreliability again. I've had had an SSD fail, an enclosure fail, and an SSD+enclosure which seemed to break eachother.
 > 
 > The worst offenders are SanDisk, Western Digital, Samsung. [Backblaze reports](https://www.backblaze.com/blog/ssd-edition-2023-mid-year-drive-stats-review/) roughly confirm this. See [their full stats page](https://www.backblaze.com/cloud-storage/resources/hard-drive-test-data) here.
 > 
