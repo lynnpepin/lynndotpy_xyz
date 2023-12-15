@@ -4,10 +4,46 @@
     <link href="https://lynndotpy.xyz/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lynndotpy.xyz/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2023-12-08T00:00:00+00:00</updated>
+    <updated>2023-12-14T00:00:00+00:00</updated>
     <id>https://lynndotpy.xyz/atom.xml</id>
     <entry xml:lang="en">
-        <title>I&#x27;ve had a lot (one or two) SSDs fail in 2023, which is a lot.</title>
+        <title>What I&#x27;m working on, December 2023</title>
+        <published>2023-12-14T00:00:00+00:00</published>
+        <updated>2023-12-14T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.xyz/posts/2023-eoy-wiwo/" type="text/html"/>
+        <id>https://lynndotpy.xyz/posts/2023-eoy-wiwo/</id>
+        <content type="html">&lt;p&gt;2023 has been my year of Rust. I&#x27;ve gotten 50% of the way on my fantasy assembly language &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;phantasm&quot;&gt;Phantasm&lt;&#x2F;a&gt;, the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;reso-rust&quot;&gt;Rust implementation of Reso&lt;&#x2F;a&gt; is nearing the &lt;code&gt;0.1.0&lt;&#x2F;code&gt; release. I&#x27;m also preparing a Commodore64 emulator Christmas gift for my mother in law.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve also started publishing &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;arbitration-opt-out-templates&quot;&gt;arbitration opt-out templates&lt;&#x2F;a&gt; to make it easier for people to opt out of arbitration.&lt;&#x2F;p&gt;
+&lt;p&gt;In projects not-even-near completion, I&#x27;ve been drafting up a puzzler with 5 space and 2 time dimensions, and I&#x27;m resurrecting drafts for a cryptographic hash primitive with a variable hamming weight digest.&lt;&#x2F;p&gt;
+&lt;p&gt;For me, my biggest side project right now is definitely Reso. I&#x27;m super proud of it. The language implementation work is done, and I&#x27;m excited to build tooling to make it easy and fun to use :0&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;phantasm&quot;&gt;Phantasm&lt;&#x2F;a&gt;&lt;&#x2F;strong&gt; is a fantasy assembly language and interpreter, written in Rust. It&#x27;s incomplete and rough, and I&#x27;m abandoning it for now. It features a custom &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;phantasm&#x2F;blob&#x2F;main&#x2F;src&#x2F;number.rs&quot;&gt;dynamic Number type&lt;&#x2F;a&gt;. The small remaining tasks to the core interpreter are to create a CLI, preprocess jump labels, and rework how arrays are indexed. In the larger scope, I&#x27;d like to add strings and pointers&#x2F;references, create an in-browser IDE, add graphical output, and rework &lt;code&gt;Number&lt;&#x2F;code&gt; to type between &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Arbitrary-precision_arithmetic&quot;&gt;arbitrary precision values.&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;reso-rust&quot;&gt;&lt;strong&gt;My Rust implementation of Reso&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt; is going very nicely. I reworked the compilation and iteration algorithm to be more performant, avoiding the use of hash maps (as I made heavy use of &lt;code&gt;dicts&lt;&#x2F;code&gt; in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;reso&quot;&gt;Python original implementation&lt;&#x2F;a&gt;.) It will be running by Christmas, and future goals are to have a nice example processor, parallelization, and a WASM &amp;quot;IDE&amp;quot;. I&#x27;d love to be able to compile a Reso circuit to an executable that could be run directly on embedded hardware, but that&#x27;s a ways away.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;reso-rust&#x2F;blob&#x2F;main&#x2F;src&#x2F;regionmap.rs&quot;&gt;As part of the new compiler in Rust Reso, the &amp;quot;region_map_from_reselboard&amp;quot; implements a version of the Connected Component Labeling algorithm.&lt;&#x2F;a&gt; As far as I can know, this isn&#x27;t generically implemented in Rust. This was the gnarliest bit of code. I don&#x27;t have the skills to make this a generic method that&#x27;s available on &lt;code&gt;crates.io&lt;&#x2F;code&gt;, but... Once it is, I&#x27;ll post about it?&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve also been working on &lt;strong&gt;an untitled 5-space 2-time dimension puzzler.&lt;&#x2F;strong&gt; There are many issues with multiple time dimensions, &lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;1001.2485.pdf&quot;&gt;explored in this paper &amp;quot;Physics with Two Time Dimensions&amp;quot;&lt;&#x2F;a&gt;. Specifically, with time dimensions $t,s$, a naive implementation of classical rules results in a world where dynamics depend on the path taken from $(0,0)$ to $(t,s)$. If a player does not interact with the world, then the path they take  to a given $(t,s)$ should not matter.&lt;&#x2F;p&gt;
+&lt;p&gt;This can be solved by modeling the entire world as a dynamic system (i.e. rules written using ordinary differential equations over integer $(t,s)$ and $(x,y,z,u,v)$ coordinates), but I &lt;em&gt;haven&#x27;t found a way to do this that can feasibly be fun.&lt;&#x2F;em&gt; So instead, I&#x27;m writing it as a world where the state at $(t,s)$ &lt;em&gt;does&lt;&#x2F;em&gt; depend on the player&#x27;s observed path from $(0,0)$ to $(t,s)$.&lt;&#x2F;p&gt;
+&lt;p&gt;There&#x27;s not any difficulty from the space dimension, btw. Any arbitrary integer amount of spacial dimensions is dead-easy to work with if you&#x27;re playing with discrete tiles (i.e. on a grid). Look at 3D or 4D tic-tac-toe, which uses 4x4x4 and 5x5x5x5 grids, respectively. The only question is how to render it.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;I&#x27;ve also been working on a small collection of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;arbitration-opt-out-templates&quot;&gt;&lt;strong&gt;arbitration opt-out templates&lt;&#x2F;strong&gt;&lt;&#x2F;a&gt;. Most Terms of Services nowadays in the US have forced arbitration clauses, class-action waivers, etc. My opinion is that those are evil and should not be legal. But they are.&lt;&#x2F;p&gt;
+&lt;p&gt;This project has very little code, it&#x27;s really just templates + context. &lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;For Christmas, I&#x27;ve been preparing a &lt;strong&gt;Commodore64 emulator&lt;&#x2F;strong&gt; on a Raspberry Pi 400 for my mother in law. This is pretty much a straight shot following of &lt;a href=&quot;https:&#x2F;&#x2F;retrocombs.com&#x2F;combianpi400-1&quot;&gt;this RetroCombs project&lt;&#x2F;a&gt;. I found a &lt;a href=&quot;https:&#x2F;&#x2F;en.wiktionary.org&#x2F;wiki&#x2F;lode&quot;&gt;lode&lt;&#x2F;a&gt; of Commodore .nib files, which required &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;markusC64&#x2F;nibtools&quot;&gt;some compilation and tooling&lt;&#x2F;a&gt; to get working on the VICE emulator.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;strong&gt;Variable hamming weight hash:&lt;&#x2F;strong&gt; Years ago, during a course project during my PhD work, I came up with a proposal for an extra-evil cryptocurrency, which existed to offer bounties for cracking password hashes. Like traditional Bitcoin Proof-of-Work, you can roughly adjust the difficulty level, but only by a bit mask (meaning it has far less fidelity than Bitcoin&#x27;s PoW protocol). The idea was to offer a primitive, &lt;em&gt;built on other password-hashing primitives&lt;&#x2F;em&gt;, that awarded people if their hash cracked the password or matched a mask.&lt;&#x2F;p&gt;
+&lt;p&gt;But to control the difficulty, the mask needed a variable hamming weight (i.e. a controllable number of bits which are on.) I.e. Instead of $hash(x)$ with digest size $N$, you have $hash(x;k)$ with $0 \leq k \leq N$. I got stuck on the security definition (because it&#x27;s substantially less preimage resistance, especially for $k$ near $0$ or $N$) and my only proposed implementations had variable runtime (making it insuitable for real-world cryptography, which would require a constant runtime.)&lt;&#x2F;p&gt;
+&lt;p&gt;I don&#x27;t intend to create the cryptocurrency (ewww), but I would love to finally formalize this hash idea and get it out of my head.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;strong&gt;In other news,&lt;&#x2F;strong&gt; I&#x27;ve been looking to resurrect + open source my &lt;a href=&quot;https:&#x2F;&#x2F;gymnasium.farama.org&#x2F;&quot;&gt;Gyms&lt;&#x2F;a&gt; for &lt;a href=&quot;https:&#x2F;&#x2F;carla.org&#x2F;&quot;&gt;CARLA&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.rtds.com&#x2F;&quot;&gt;RTDS&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;sourceforge.net&#x2F;projects&#x2F;electricdss&#x2F;&quot;&gt;OpenDSS&lt;&#x2F;a&gt;. I made these during my PhD research at the University of Connecticut, doing work on both connected autonomous vehicles and power grid attacks. This is pretty low priority for me, and it&#x27;d take a lot of work to get it up to my standards. Email me if these interest you, because right now the &amp;quot;open sourcing&amp;quot; part will be slow. (It&#x27;d be a whole thing-- getting in contact with my own university, figuring out a license, etc.)&lt;&#x2F;p&gt;
+&lt;p&gt;In my day job, I&#x27;m primarily doing &amp;quot;full-stack&amp;quot; development: C# and Go for backend services, Angular + the usual for frontend work, and a touch of AWS. I&#x27;m also the go-to analysis person for datascience work.&lt;&#x2F;p&gt;
+</content>
+    </entry>
+    <entry xml:lang="en">
+        <title>2023: The year of high SSD failure rates</title>
         <published>2023-12-08T00:00:00+00:00</published>
         <updated>2023-12-08T00:00:00+00:00</updated>
         <author>
@@ -107,7 +143,7 @@
 </content>
     </entry>
     <entry xml:lang="en">
-        <title>Fixing my insecure SSH bastion host</title>
+        <title>sshaudit.com gave my Bastion an F, now it&#x27;s an A</title>
         <published>2023-11-22T00:00:00+00:00</published>
         <updated>2023-11-22T00:00:00+00:00</updated>
         <author>
@@ -202,7 +238,7 @@
 </content>
     </entry>
     <entry xml:lang="en">
-        <title>Things I can recommend</title>
+        <title>Software I recommend</title>
         <published>2023-09-30T00:00:00+00:00</published>
         <updated>2023-09-30T00:00:00+00:00</updated>
         <author>
@@ -445,7 +481,7 @@
 </content>
     </entry>
     <entry xml:lang="en">
-        <title>Caddy: How to Opt out of Chrome Topics API</title>
+        <title>How to Opt out of Chrome Topics API on Caddy servers</title>
         <published>2023-07-13T00:00:00+00:00</published>
         <updated>2023-07-13T00:00:00+00:00</updated>
         <author>

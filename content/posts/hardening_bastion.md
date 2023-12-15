@@ -1,5 +1,5 @@
 +++
-title = "Fixing my insecure SSH bastion host"
+title = "sshaudit.com gave my Bastion an F, now it's an A"
 date = 2023-11-22
 
 [taxonomies]

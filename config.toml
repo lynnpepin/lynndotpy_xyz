@@ -41,7 +41,6 @@ menu_items = [
     #{name = "tags", url = "$BASE_URLtags"},
     {name = "about", url = "$BASE_URLabout"},
     {name = "projects", url = "$BASE_URLprojects"},
-    {name = "now", url = "$BASE_URLnow"},
     
     # set newtab to true to make the link open in new tab
     {name = "github", url = "https://github.com/lynnpepin", newtab = true},

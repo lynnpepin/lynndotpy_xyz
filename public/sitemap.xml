@@ -20,6 +20,10 @@
         <loc>https://lynndotpy.xyz/posts/</loc>
     </url>
     <url>
+        <loc>https://lynndotpy.xyz/posts/2023-eoy-wiwo/</loc>
+        <lastmod>2023-12-14</lastmod>
+    </url>
+    <url>
         <loc>https://lynndotpy.xyz/posts/bluesky-and-bitcoin/</loc>
         <lastmod>2023-07-09</lastmod>
     </url>
@@ -69,6 +73,9 @@
         <loc>https://lynndotpy.xyz/posts/page/3/</loc>
     </url>
     <url>
+        <loc>https://lynndotpy.xyz/posts/page/4/</loc>
+    </url>
+    <url>
         <loc>https://lynndotpy.xyz/posts/python-main-main/</loc>
         <lastmod>2023-06-24</lastmod>
     </url>
@@ -112,6 +119,9 @@
     </url>
     <url>
         <loc>https://lynndotpy.xyz/tags/3d/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.xyz/tags/blog/</loc>
     </url>
     <url>
         <loc>https://lynndotpy.xyz/tags/caddy/</loc>

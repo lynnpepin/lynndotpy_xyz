@@ -1,5 +1,5 @@
 +++
-title = "Things I can recommend"
+title = "Software I recommend"
 date = 2023-09-30
 
 [taxonomies]

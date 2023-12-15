@@ -1,5 +1,5 @@
 +++
-title = "Caddy: How to Opt out of Chrome Topics API"
+title = "How to Opt out of Chrome Topics API on Caddy servers"
 date = 2023-07-13
 
 [taxonomies]

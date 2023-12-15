@@ -1,5 +1,5 @@
 +++
-title = "I've had a lot (one or two) SSDs fail in 2023, which is a lot."
+title = "2023: The year of high SSD failure rates"
 date = 2023-12-08
 
 [taxonomies]
