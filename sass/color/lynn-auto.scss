@@ -2,6 +2,7 @@
   @media (prefers-color-scheme: dark) {
     --accent: oklch(0.875 0.425 290);
     --accent-alpha-70: oklch(0.875 0.425 290 / .70);
+    --accent-alpha-50: oklch(0.875 0.425 290 / .50);
     --accent-alpha-20: oklch(0.875 0.425 290 / .20);
 
     div.logo {
