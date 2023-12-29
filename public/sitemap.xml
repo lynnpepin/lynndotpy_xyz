@@ -52,18 +52,6 @@
         <lastmod>2022-01-07</lastmod>
     </url>
     <url>
-        <loc>https://lynndotpy.xyz/posts/not_ready/imaginary-floats/</loc>
-        <lastmod>2023-07-03</lastmod>
-    </url>
-    <url>
-        <loc>https://lynndotpy.xyz/posts/not_ready/privacy-policy-kinda/</loc>
-        <lastmod>2023-07-04</lastmod>
-    </url>
-    <url>
-        <loc>https://lynndotpy.xyz/posts/not_ready/rolling-log/</loc>
-        <lastmod>2023-07-01</lastmod>
-    </url>
-    <url>
         <loc>https://lynndotpy.xyz/posts/page/1/</loc>
     </url>
     <url>
@@ -108,17 +96,10 @@
         <lastmod>2023-12-08</lastmod>
     </url>
     <url>
-        <loc>https://lynndotpy.xyz/posts/unlisted/move-to-tumblr/</loc>
-        <lastmod>2023-07-01</lastmod>
-    </url>
-    <url>
         <loc>https://lynndotpy.xyz/projects/</loc>
     </url>
     <url>
         <loc>https://lynndotpy.xyz/tags/</loc>
-    </url>
-    <url>
-        <loc>https://lynndotpy.xyz/tags/3d/</loc>
     </url>
     <url>
         <loc>https://lynndotpy.xyz/tags/blog/</loc>
@@ -130,9 +111,6 @@
         <loc>https://lynndotpy.xyz/tags/gimp/</loc>
     </url>
     <url>
-        <loc>https://lynndotpy.xyz/tags/godot/</loc>
-    </url>
-    <url>
         <loc>https://lynndotpy.xyz/tags/how-to/</loc>
     </url>
     <url>
@@ -140,9 +118,6 @@
     </url>
     <url>
         <loc>https://lynndotpy.xyz/tags/legal/</loc>
-    </url>
-    <url>
-        <loc>https://lynndotpy.xyz/tags/notready/</loc>
     </url>
     <url>
         <loc>https://lynndotpy.xyz/tags/post/</loc>
@@ -164,11 +139,5 @@
     </url>
     <url>
         <loc>https://lynndotpy.xyz/tags/security/</loc>
-    </url>
-    <url>
-        <loc>https://lynndotpy.xyz/tags/shaders/</loc>
-    </url>
-    <url>
-        <loc>https://lynndotpy.xyz/tags/unlisted/</loc>
     </url>
 </urlset>

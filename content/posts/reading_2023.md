@@ -1,5 +1,5 @@
 +++
-title = "Some things I read in the first half of 2023"
+title = "Things I read, first have of 2023"
 date = 2023-08-26
 
 [taxonomies]
