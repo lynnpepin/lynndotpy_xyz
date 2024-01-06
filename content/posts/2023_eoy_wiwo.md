@@ -13,7 +13,7 @@ I've also started publishing [arbitration opt-out templates](https://github.com/
 
 In projects not-even-near completion, I've been drafting up a puzzler with 5 space and 2 time dimensions, and I'm resurrecting drafts for a cryptographic hash primitive with a variable hamming weight digest.
 
-For me, my biggest side project right now is definitely Reso. I'm super proud of it. The language implementation work is done, and I'm excited to build tooling to make it easy and fun to use :0
+For me, my biggest side project right now is definitely Reso. I'm super proud of it. The language implementation work is done, and I'm excited to build tooling to make it easy and fun to use.
 
 <!-- more -->
 
