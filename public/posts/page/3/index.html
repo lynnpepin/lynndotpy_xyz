@@ -67,6 +67,80 @@
             
                 <div class="post on-list">
                     
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/python-main-main/">protip.py: the main-main pattern</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-06-24
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/how-to/">#how-to</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/python/">#python</a></span>
+    
+
+                    
+        <div class="post-content">
+            <blockquote>
+<p><strong>TLDR:</strong> Your Python program will be better if you define a <code>main()</code> function separate from the <code>__main__</code> block.</p>
+</blockquote>
+<p>Consider a Python program <code>leftpad.py</code>, which takes an input string (say, <code>trans rights</code>), and pads it to the left (so, <code>python leftpad.py -s 'trans rights' -n 16</code> prints <code>'    trans rights'</code>.)</p>
+<p>This is a great way to structure it:</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad.py
+</span><span style="color:#8fbfdc;">import </span><span>argparse
+</span><span>
+</span><span style="color:#888888;"># leftpad function in global scope can be imported
+</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">leftpad</span><span>(</span><span style="color:#ffb964;">string</span><span>, </span><span style="color:#ffb964;">num_chars</span><span>):
+</span><span>    </span><span style="color:#8fbfdc;">if </span><span style="color:#ffb964;">len</span><span>(string) &gt;= num_chars:
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span>string
+</span><span>    </span><span style="color:#8fbfdc;">else</span><span>:
+</span><span>        pad = </span><span style="color:#556633;">&#39; &#39; </span><span>* (num_chars - </span><span style="color:#ffb964;">len</span><span>(string))
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span>pad + string
+</span><span>
+</span><span>parser = argparse.</span><span style="color:#ffb964;">ArgumentParser</span><span>()
+</span><span>parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--string</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-s</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=str, </span><span style="color:#ffb964;">nargs</span><span>=</span><span style="color:#cf6a4c;">1</span><span>)
+</span><span>parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--num</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-n</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=int)
+</span><span>
+</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
+</span><span>    args = parser.</span><span style="color:#ffb964;">parse_args</span><span>()
+</span><span>    </span><span style="color:#ffb964;">print</span><span>(</span><span style="color:#ffb964;">leftpad</span><span>(args.string[</span><span style="color:#cf6a4c;">0</span><span>], args.num))
+</span></code></pre>
+<p>The main functionality and the parser can be imported as <code>leftpad.leftpad(...)</code> and <code>leftpad.parser</code>. These could not be imported if <code>__main__</code> had the definition for <code>leftpad</code> and the instantiation of <code>parser</code>.</p>
+<p>Here's a template you can use for your Python scripts:</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">import </span><span>sys
+</span><span>
+</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">main</span><span>():
+</span><span>    </span><span style="color:#8fbfdc;">try</span><span>:
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">1
+</span><span>    </span><span style="color:#8fbfdc;">except</span><span>:
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">0
+</span><span>
+</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
+</span><span>    sys.</span><span style="color:#ffb964;">exit</span><span>(</span><span style="color:#ffb964;">main</span><span>())
+</span></code></pre>
+<p>Let me explain why this is good, how it could be worse, and how it could be better.</p>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/python-main-main/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
     <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/discord-optout-2023/">Opt out of Discord&#x27;s arbitration clause by sending a quick email. (Template included)</a></h1>
     <div class="post-meta-inline">
         
@@ -288,46 +362,6 @@
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
             <a class="read-more button" href="https://lynndotpy.xyz/posts/linear-sorting/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/reso-intro/">`reso`, a colorful pixel-art circuit simulator</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2021-05-15
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/project/">#project</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/python/">#python</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/reso/">#reso</a></span>
-    
-
-                    
-        <div class="post-content">
-            <p>Reso is a circuit design language and simulator where the inputs and outputs are bitmap images!</p>
-<p><img src="/posts/images/reso_logo.gif" alt="Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds." title="Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds. " /></p>
-<p>Reso is a pet project of mine that I've been working on in my free time for a little while. This logo is actually an animation of the execution of a Reso circuit.</p>
-
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.xyz/posts/reso-intro/">
                 <span class="button__text">Read more</span>&nbsp;
                 <span class="button__icon">&#8617;&#xFE0E;</span>
             </a>
