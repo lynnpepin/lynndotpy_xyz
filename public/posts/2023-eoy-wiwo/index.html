@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>What I&#x27;m working on, December 2023 &#x2F;&#x2F; lynndotpy</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.xyz/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.xyz/color/lynn-auto.css">
+
+        <link rel="stylesheet" href="https://lynndotpy.xyz/color/background_auto.css">
+    
+    <link rel="stylesheet" href="https://lynndotpy.xyz/font-hack-subset.css">
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.xyz/rss.xml">
+    
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+        
+<link rel="stylesheet" href="https://lynndotpy.xyz/katex/katex.min.css">
+<script defer src="https://lynndotpy.xyz/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+      ]
+      });
+  });
+</script>
+
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.xyz/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.xyz
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.xyz/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/projects">projects</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://gitlab.com/lynnpepin" target="_blank" rel="noopener noreferrer">gitlab</a></li>
+            
+                <li><a href="https://mastodon.social/@lynndotpy" target="_blank" rel="noopener noreferrer">mastodon</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/2023-eoy-wiwo/">What I&#x27;m working on, December 2023</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-12-14
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/blog/">#blog</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a></span>
+    
+
+        
+        <div class="post-content">
+            <p>2023 has been my year of Rust. I've gotten 50% of the way on my fantasy assembly language <a href="https://github.com/lynnpepin/phantasm">Phantasm</a>, the <a href="https://github.com/lynnpepin/reso-rust">Rust implementation of Reso</a> is nearing the <code>0.1.0</code> release. I'm also preparing a Commodore64 emulator Christmas gift for my mother in law.</p>
+<p>I've also started publishing <a href="https://github.com/lynnpepin/arbitration-opt-out-templates">arbitration opt-out templates</a> to make it easier for people to opt out of arbitration.</p>
+<p>In projects not-even-near completion, I've been drafting up a puzzler with 5 space and 2 time dimensions, and I'm resurrecting drafts for a cryptographic hash primitive with a variable hamming weight digest.</p>
+<p>For me, my biggest side project right now is definitely Reso. I'm super proud of it. The language implementation work is done, and I'm excited to build tooling to make it easy and fun to use.</p>
+<span id="continue-reading"></span>
+<hr />
+<p><strong><a href="https://github.com/lynnpepin/phantasm">Phantasm</a></strong> is a fantasy assembly language and interpreter, written in Rust. It's incomplete and rough, and I'm abandoning it for now. It features a custom <a href="https://github.com/lynnpepin/phantasm/blob/main/src/number.rs">dynamic Number type</a>. The small remaining tasks to the core interpreter are to create a CLI, preprocess jump labels, and rework how arrays are indexed. In the larger scope, I'd like to add strings and pointers/references, create an in-browser IDE, add graphical output, and rework <code>Number</code> to type between <a href="https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic">arbitrary precision values.</a></p>
+<hr />
+<p><a href="https://github.com/lynnpepin/reso-rust"><strong>My Rust implementation of Reso</strong></a> is going very nicely. I reworked the compilation and iteration algorithm to be more performant, avoiding the use of hash maps (as I made heavy use of <code>dicts</code> in the <a href="https://github.com/lynnpepin/reso">Python original implementation</a>.) It will be running by Christmas, and future goals are to have a nice example processor, parallelization, and a WASM &quot;IDE&quot;. I'd love to be able to compile a Reso circuit to an executable that could be run directly on embedded hardware, but that's a ways away.</p>
+<p><a href="https://github.com/lynnpepin/reso-rust/blob/main/src/regionmap.rs">As part of the new compiler in Rust Reso, the &quot;region_map_from_reselboard&quot; implements a version of the Connected Component Labeling algorithm.</a> As far as I can know, this isn't generically implemented in Rust. This was the gnarliest bit of code. I don't have the skills to make this a generic method that's available on <code>crates.io</code>, but... Once it is, I'll post about it?</p>
+<p>I've also been working on <strong>an untitled 5-space 2-time dimension puzzler.</strong> There are many issues with multiple time dimensions, <a href="https://arxiv.org/pdf/1001.2485.pdf">explored in this paper &quot;Physics with Two Time Dimensions&quot;</a>. Specifically, with time dimensions $t,s$, a naive implementation of classical rules results in a world where dynamics depend on the path taken from $(0,0)$ to $(t,s)$. If a player does not interact with the world, then the path they take  to a given $(t,s)$ should not matter.</p>
+<p>This can be solved by modeling the entire world as a dynamic system (i.e. rules written using ordinary differential equations over integer $(t,s)$ and $(x,y,z,u,v)$ coordinates), but I <em>haven't found a way to do this that can feasibly be fun.</em> So instead, I'm writing it as a world where the state at $(t,s)$ <em>does</em> depend on the player's observed path from $(0,0)$ to $(t,s)$.</p>
+<p>There's not any difficulty from the space dimension, btw. Any arbitrary integer amount of spacial dimensions is dead-easy to work with if you're playing with discrete tiles (i.e. on a grid). Look at 3D or 4D tic-tac-toe, which uses 4x4x4 and 5x5x5x5 grids, respectively. The only question is how to render it.</p>
+<hr />
+<p>I've also been working on a small collection of <a href="https://github.com/lynnpepin/arbitration-opt-out-templates"><strong>arbitration opt-out templates</strong></a>. Most Terms of Services nowadays in the US have forced arbitration clauses, class-action waivers, etc. My opinion is that those are evil and should not be legal. But they are.</p>
+<p>This project has very little code, it's really just templates + context. </p>
+<hr />
+<p>For Christmas, I've been preparing a <strong>Commodore64 emulator</strong> on a Raspberry Pi 400 for my mother in law. This is pretty much a straight shot following of <a href="https://retrocombs.com/combianpi400-1">this RetroCombs project</a>. I found a <a href="https://en.wiktionary.org/wiki/lode">lode</a> of Commodore .nib files, which required <a href="https://github.com/markusC64/nibtools">some compilation and tooling</a> to get working on the VICE emulator.</p>
+<hr />
+<p><strong>Variable hamming weight hash:</strong> Years ago, during a course project during my PhD work, I came up with a proposal for an extra-evil cryptocurrency, which existed to offer bounties for cracking password hashes. Like traditional Bitcoin Proof-of-Work, you can roughly adjust the difficulty level, but only by a bit mask (meaning it has far less fidelity than Bitcoin's PoW protocol). The idea was to offer a primitive, <em>built on other password-hashing primitives</em>, that awarded people if their hash cracked the password or matched a mask.</p>
+<p>But to control the difficulty, the mask needed a variable hamming weight (i.e. a controllable number of bits which are on.) I.e. Instead of $hash(x)$ with digest size $N$, you have $hash(x;k)$ with $0 \leq k \leq N$. I got stuck on the security definition (because it's substantially less preimage resistance, especially for $k$ near $0$ or $N$) and my only proposed implementations had variable runtime (making it insuitable for real-world cryptography, which would require a constant runtime.)</p>
+<p>I don't intend to create the cryptocurrency (ewww), but I would love to finally formalize this hash idea and get it out of my head.</p>
+<hr />
+<p><strong>In other news,</strong> I've been looking to resurrect + open source my <a href="https://gymnasium.farama.org/">Gyms</a> for <a href="https://carla.org/">CARLA</a>, <a href="https://www.rtds.com/">RTDS</a> and <a href="https://sourceforge.net/projects/electricdss/">OpenDSS</a>. I made these during my PhD research at the University of Connecticut, doing work on both connected autonomous vehicles and power grid attacks. This is pretty low priority for me, and it'd take a lot of work to get it up to my standards. Email me if these interest you, because right now the &quot;open sourcing&quot; part will be slow. (It'd be a whole thing-- getting in contact with my own university, figuring out a license, etc.)</p>
+<p>In my day job, I'm primarily doing &quot;full-stack&quot; development: C# and Go for backend services, Angular + the usual for frontend work, and a touch of AWS. I'm also the go-to analysis person for datascience work.</p>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h"></span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://lynndotpy.xyz/posts/ssds-bad-2023/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">2023: The year of high SSD failure rates</span>
+                        </a>
+                    </span>
+                
+                
+                    <span class="button next">
+                        <a href="https://lynndotpy.xyz/posts/written-in-rust/">
+                            <span class="button__text">Yes, I want to know if your project is written in Rust</span>&nbsp;
+                            <span class="button__icon">→</span>
+                        </a>
+                    </span>
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

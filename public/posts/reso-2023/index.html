@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Reso: Rewritten in Rust and now 20000x faster!! &#x2F;&#x2F; lynndotpy</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.xyz/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.xyz/color/lynn-auto.css">
+
+        <link rel="stylesheet" href="https://lynndotpy.xyz/color/background_auto.css">
+    
+    <link rel="stylesheet" href="https://lynndotpy.xyz/font-hack-subset.css">
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.xyz/rss.xml">
+    
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+        
+<link rel="stylesheet" href="https://lynndotpy.xyz/katex/katex.min.css">
+<script defer src="https://lynndotpy.xyz/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+      ]
+      });
+  });
+</script>
+
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.xyz/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.xyz
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.xyz/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/projects">projects</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://gitlab.com/lynnpepin" target="_blank" rel="noopener noreferrer">gitlab</a></li>
+            
+                <li><a href="https://mastodon.social/@lynndotpy" target="_blank" rel="noopener noreferrer">mastodon</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/reso-2023/">Reso: Rewritten in Rust and now 20000x faster!!</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-01-13
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/project/">#project</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/reso/">#reso</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/rust/">#rust</a></span>
+    
+
+        
+        <div class="post-content">
+            <blockquote>
+<p><strong>tldr:</strong> Reso has been re-implemented in Rust, deprecating the Python original. The underlying datastructure is new, with an incidence-map based algorithm. This makes Reso very fast, at about 20000x faster than the original in some cases.</p>
+</blockquote>
+<p>Reso is a logic circuit language and simulator, <a href="https://lynndotpy.xyz/posts/reso-intro/">first written in Python</a> and now revived in Rust. It's a visual language, where inputs and outputs are both <code>.png</code> images, making MS Paint a totally appropriate IDE. :)</p>
+<p>This post assumes you already know the idea behind Reso. You can <a href="https://github.com/resolang/reso">check Reso out on GitHub</a> and <a href="https://crates.io/crates/reso">crates.io</a>. You can install it with <code>cargo install reso</code>.</p>
+<span id="continue-reading"></span><h1 id="the-story-behind-reso">The story behind Reso</h1>
+<blockquote>
+<p><strong>TLDR:</strong> I made Reso out of the desire to have a Redstone-like circuit tool. </p>
+</blockquote>
+<p>In 2015, I took a digital logic design course, and I finally started to understand how those magnificent Minecraft redstone computers were built. But Minecraft was such an unwieldy tool for making circuits, and the existing digital logic design tools felt too stuffy and un-fun. I wanted something quick and direct.</p>
+<p>In 2017, I started working on Reso, inspired by redstone, piet, and other esolangs. Rather than a simple cellular-automata based system, the language would be made from a series of connected components. The first release was in 2018, with this dinky logo, which doubles as a functional Reso circuit:</p>
+<p><img src="/posts/images/first_reso_logo.gif" alt="first_reso_logo.gif" /></p>
+<p>In the first iteration, there were red and blue wires, AND nodes and XOR nodes (on the cyans), and input/output nodes (to force directionality on logic flow, on the magnetas). To make wiring easier, <em>wires</em> can be contiguous in eight directions, allowing them to cross, but the other components are contiguous in only four.</p>
+<p>In 2019, I started using Rust for the first time, and I made my first attempts to tackle a Rust port of the language.</p>
+<p>In 2021, <a href="https://bangbangcon.com/2021/recordings.html">I presented reso at !!con (bangbangcon)</a>! Reso stayed mostly unchanged, but the the palette was shifted from RGB/CYM to the tertiary colors (for more consistent brightness), and a third color wire color was added. It got a brand new logo, which <em>also</em> is a functioning Reso circuit:
+<img src="/posts/images/reso_logo_2021.gif" alt="reso_logo_2021.gif" />
+It's ugly as hell, but I like it, and it showcases the basic language features: Three wires (underlining the <code>r</code>, <code>e</code>, <code>s</code> characters) feed into the three basic logic gates in the <code>o</code> character: From top to bottom, AND, OR, and XOR. These output to three new wires, arranged as diamonds. But stuck in Python, Reso was still <em>slow</em>. It took about 40 seconds per iteration of this logo, even after a decent amount of profiling and optimization.</p>
+<p>So in 2022 and 2023, I started learning Rust in earnest and and porting Reso. In early 2022, <a href="https://github.com/ashirviskas/rust_reso/">ashirviskas</a> also wrote a Rust port of Reso, but I didn't know enough to understand or extend this port. I ultimately took a different direction with the Rust port I made, with a roadmap of new features in mind.</p>
+<p>In the latter parts of 2023, I wrote a number of projects along the way to learn, like <a href="https://github.com/lynnpepin/phantasm">this fantasy assembly language</a>. During this time, I had to deprecate the original Python reso because of some breaking changes on dependencies. I didn't care to fix it, in favor of the new Rust port.</p>
+<p>In December 2023, I finally ran my first Reso cycle in Rust. With all exports and printing disabled, and using the logo as a test case, I got to about <em>two milliseconds per iteration!</em> Recall the original logo took about 40 seconds per iteration. That means we see a <em>20000x performance boost!</em></p>
+<p>I expected swapping to Rust alone would yield a 10x to 100x performance boost, as would the algorithmic changes, so a 10000x boost was the upper limit of what I expected. A very welcome surprise :)</p>
+<h1 id="the-big-algorithmic-change-is-in-the-logic-graph">The big algorithmic change is in the logic graph</h1>
+<blockquote>
+<p><strong>tldr:</strong> The Python version uses an <a href="https://en.wikipedia.org/wiki/Adjacency_list">adjacency list</a> based on a dictionary (hashmap) to identify which nodes are adjacent to one another. The Rust rewrite uses an incidence list based on dense indices to identify which nodes are adjacent to one another, using no hashmaps to maintain relationships. </p>
+<p>Generally, direct integer indexing is faster than using a hashmap. </p>
+<p>Both versions only maintain &quot;relevant&quot; adjacencies: Wire-to-inputs, input-to-logics, input-to-outputs, logic-to-outputs, and output-to-wires. We don't care about some adjacencies, like wires adjacent to logic nodes.</p>
+</blockquote>
+<p>Reso works by compiling down to a list of nodes and their adjacencies. A minimal &quot;AND&quot; has six elements: Two input wires, an input node, the &quot;AND&quot; node, the output node, and an output wire. </p>
+<p>The key thing here is that every region has a global &quot;region index&quot; integer which identifies it, as well as a &quot;dense index&quot; which identifies it among a class. (Wires, inputs, outputs, and logic nodes each have their own indices.) So, a wire might be the 10th region, but the 3rd wire.</p>
+<p>The code is the best description of the algorithms, <a href="https://github.com/resolang/reso">check Reso out on GitHub</a>.</p>
+<h1 id="here-s-to-a-bright-2024">Here's to a bright 2024</h1>
+<p>I have so many ideas, and so little time. I want to make Reso more colorblind-friendly, I want to build tooling to make it easier to build in Reso, I want to make prefab components (i.e. sprites), I want to build a circuit in Reso, I want to make it easy to run a Reso circuit on a microcontroller, to make it easy to connect Reso wires to real-world GPIO pins, etc.</p>
+<p>The main thing is I want Reso to be <em>a toy</em> people can use to make <em>cool things</em>. The ideal end state is a web editor with a bunch of tools builtin. </p>
+<p>I'm on a roll with Reso, but I'm pausing to do <a href="https://lynndotpy.xyz/posts/reso-2023/genuary.art">genuary</a> in Rust. <a href="https://github.com/lynnpepin/genuary">You can see my progress here.</a></p>
+<p>So, here's a list of what's coming the next time I get a chance to fixate on this:</p>
+<p><strong>A computer made in Reso:</strong> I started writing Reso at a time when I held all the knowledge in my head to build a computer, <a href="https://www.nand2tetris.org/">or even Tetris,</a> from logic gates. Now that Reso is written in Rust, such a </p>
+<p><strong>Onion-skin algorithm walkthrough:</strong> While working on Reso, I drew an example input circuit, and added &quot;onion skin&quot; layers explaining every step of the way: The mapping from pixel to <code>Resel</code>, the compilation to a <code>Vec&lt;Vec&lt;Resel&gt;&gt;</code> to a <code>ReselBoard</code>, the results from <code>RegionMap</code>, then from <code>IncidenceMap</code>, and then eventually the steps <code>ResoCircuit</code> takes to iterate. I <em>really</em> want to make this step-by-step onionskinner, and this is probably an easy-ish trick of SVG. But that kind of stuff is far outside the perview of my webdev skills.</p>
+<p><strong>A cool new logo :) The current one is ugly :)</strong></p>
+<p><strong>Docs:</strong> Right now, there are no docs outside of what's contained in the code. This is probably a huge barrier to contributing, but I really want to make a tool that walks you through how Reso compiles. </p>
+<p><strong>Better ASCII support:</strong> Right now, Reso only operates on images, but is pretty close to ASCII support. Right now, I imagine it'd be hard to make Reso circuits while colorblind.</p>
+<p><strong>Palette support:</strong> The default colors are chosen to be nice and easy to remember, but they're not the prettiest. An optional <code>palette.png</code> mapping should be simple to add.</p>
+<p><strong>A Reso editor:</strong> I want to make an editor specifically for Reso circuits, with no reliance on color, and in-editor compilation and running.</p>
+<p><strong>GPIO support</strong>, allowing you to connect Reso wires to GPIO, allowing you to run your circuits on a Raspberry Pi.</p>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h"></span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://lynndotpy.xyz/posts/written-in-rust/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">Yes, I want to know if your project is written in Rust</span>
+                        </a>
+                    </span>
+                
+                
+                    <span class="button next">
+                        <a href="https://lynndotpy.xyz/posts/boycott-app-security/">
+                            <span class="button__text">Privacy breakdown of three recent boycott apps</span>&nbsp;
+                            <span class="button__icon">→</span>
+                        </a>
+                    </span>
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

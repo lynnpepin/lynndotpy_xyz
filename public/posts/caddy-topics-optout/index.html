@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>How to Opt out of Chrome Topics API on Caddy servers &#x2F;&#x2F; lynndotpy</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.xyz/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.xyz/color/lynn-auto.css">
+
+        <link rel="stylesheet" href="https://lynndotpy.xyz/color/background_auto.css">
+    
+    <link rel="stylesheet" href="https://lynndotpy.xyz/font-hack-subset.css">
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.xyz/rss.xml">
+    
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+        
+<link rel="stylesheet" href="https://lynndotpy.xyz/katex/katex.min.css">
+<script defer src="https://lynndotpy.xyz/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+      ]
+      });
+  });
+</script>
+
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.xyz/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.xyz
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.xyz/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/projects">projects</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://gitlab.com/lynnpepin" target="_blank" rel="noopener noreferrer">gitlab</a></li>
+            
+                <li><a href="https://mastodon.social/@lynndotpy" target="_blank" rel="noopener noreferrer">mastodon</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/caddy-topics-optout/">How to Opt out of Chrome Topics API on Caddy servers</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-07-13
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/caddy/">#caddy</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/how-to/">#how-to</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/privacy/">#privacy</a></span>
+    
+
+        
+        <div class="post-content">
+            <blockquote>
+<p><strong>TLDR:</strong> Set the following in your caddyfile for each site: <code>header Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;</code>. This disable both the old FLoC and the new Topics.</p>
+</blockquote>
+<p>Here is an abbreviated version of my Caddyfile, showing how I set the <code>header</code> directive in my Caddyfile for <code>lynndotpy.xyz</code>:</p>
+<pre data-lang="caddyfile" style="background-color:#151515;color:#e8e8d3;" class="language-caddyfile "><code class="language-caddyfile" data-lang="caddyfile"><span>lynndotpy.xyz {
+</span><span>  header {
+</span><span>    Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<p>To confirm the header is set, you can use a Firefox or Chrome's devtools, open the networking tab, and look for the Permissions-Policy response header. More context below the cut.</p>
+<span id="continue-reading"></span>
+<p><strong>More context:</strong> Google has renamed and tweaked its controversial 2021 <a href="https://en.wikipedia.org/wiki/Federated_Learning_of_Cohorts">&quot;Federated Learning of Cohorts&quot;</a> tracking project and replaced it with the <a href="https://www.theverge.com/2022/1/25/22900567/google-floc-abandon-topics-api-cookies-tracking">Topics API</a>. These are surveillance capitalism tools built into Chromium-based browsers.  Unless you explicitly set the <code>Permissions-Policy &quot;browsing-topics=()&quot;</code> header, <strong>every website will participate in Google's Topics API</strong> when a Chrome user visits it.</p>
+<p>Here is the full &quot;Opt out your site&quot; section from Google's &quot;Topics API developer guide&quot; (see <code>https://developer.chrome.com/docs/privacy-sandbox/topics/#site-opt-out</code>), accessed 2023-Jul-13:</p>
+<blockquote>
+<p>You can opt out of topic calculation for specific pages on your site by including the <code>Permissions-Policy: browsing-topics=()</code> <a href="https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy">Permissions-Policy</a> header on a page to prevent topics calculation for all users on that page only. Subsequent visits to other pages on your site will not be affected: if you set a policy to block the Topics API on one page, this won't affect other pages.</p>
+<p>You can also control which third parties have access to topics on your page by using the <code>Permissions-Policy</code> header to control third-party access to the Topics API. As parameters to the header, use <code>self</code> and any domains you would like to allow access to the API. For example, to completely disable use of the Topics API within all browsing contexts except for your own origin and <code>https://example.com</code>, set the following HTTP response header:</p>
+<blockquote>
+<pre data-lang="text" style="background-color:#151515;color:#e8e8d3;" class="language-text "><code class="language-text" data-lang="text"><span>Permissions-Policy: browsing-topics=(self &quot;https://example.com&quot;)
+</span></code></pre>
+</blockquote>
+</blockquote>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h"></span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://lynndotpy.xyz/posts/bluesky-and-bitcoin/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">If BlueSky takes off, Bitcoin will too</span>
+                        </a>
+                    </span>
+                
+                
+                    <span class="button next">
+                        <a href="https://lynndotpy.xyz/posts/reading-2023/">
+                            <span class="button__text">Things I read, first have of 2023</span>&nbsp;
+                            <span class="button__icon">→</span>
+                        </a>
+                    </span>
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

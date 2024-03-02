@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>&#x2F;&#x2F; lynndotpy</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.xyz/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.xyz/color/lynn-auto.css">
+
+        <link rel="stylesheet" href="https://lynndotpy.xyz/color/background_auto.css">
+    
+    <link rel="stylesheet" href="https://lynndotpy.xyz/font-hack-subset.css">
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.xyz/rss.xml">
+    
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.xyz/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.xyz
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.xyz/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/projects">projects</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://gitlab.com/lynnpepin" target="_blank" rel="noopener noreferrer">gitlab</a></li>
+            
+                <li><a href="https://mastodon.social/@lynndotpy" target="_blank" rel="noopener noreferrer">mastodon</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+        <div class="posts">
+            <!-- This points `index.html` to `posts` -->
+            
+                <div class="post on-list">
+                    
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/college-course-success/">Prescriptions for success in college courses</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-12-04
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a></span>
+    
+
+                    
+        <div class="post-content">
+            <p>There is no replacement for doing the work of studying. There are no shortcuts, there is no way to make it more fun. However, there are ways to make sure you make good use of your time and to maximize the chance of a good grade.</p>
+<p>Here's a list of prescriptions I took away from my time at the University of Connecticut. I graduated with a 3.99 GPA, taking a Computer Science and Engineering major and a Mathematics minor, and later got a Masters in the same area.</p>
+<blockquote>
+<p><strong>TLDR:</strong></p>
+<ul>
+<li>Do the syllabus reading and homework in advance. This maintains a time buffer that will save you when the going gets rough.</li>
+<li>Write notes by hand, and digitally transcribe them later. This helps cement knowledge in your mind.</li>
+<li>Take practice exams like real exams. This is the best way to practice for an exam. Grade yourself after.</li>
+<li>Foundational courses like calc 1 or or general chemistry don't change much over the years. This means old practice exams and other coursework can be useful studying tools.</li>
+<li>These prescriptions require budgeting your time, and it's okay if you don't budget for all of this. Your time at college shouldn't just be about getting straight As.</li>
+</ul>
+</blockquote>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/college-course-success/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/hardening-bastion/">sshaudit.com gave my Bastion an F, now it&#x27;s an A</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-11-22
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a></span>
+    
+
+                    
+        <div class="post-content">
+            <p>I maintain an SSH bastion server for all my beloved VPSes. The server I host this blog on only accepts SSH connections from the IP of that bastion, and I keep that bastion hardened. It's a minimal Alpine install with nothing but an SSH server.</p>
+<p>So I felt some dismay when I found the server got a score of F on <a href="https://www.sshaudit.com/">sshaudit.com</a>. I got an F! My bastion failed 2 of 5 host key tests, 4 of 9 key-exchange tests, and 7 of 10 MAC tests. </p>
+<p>These are the steps I took. Although I'm on Alpine, I was able to cherry pick commands from <a href="https://www.ssh-audit.com/hardening_guides.html">the Debian-focused server guides hardening guides on sshaudit.com.</a></p>
+<p><strong>TLDR</strong> provided below the cut, with some script script to do the work for you.</p>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/hardening-bastion/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/recommendations/">Software I recommend</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-09-30
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a></span>
+    
+
+                    
+        <div class="post-content">
+            <blockquote>
+<p><strong>TLDR:</strong> Here are things I like and can recommend.</p>
+<ul>
+<li>Pop! OS for a Linux distribution.</li>
+<li>Blender for 3D graphics.</li>
+<li>Python or Javascript for those learning programming, but it's complicated.</li>
+<li>1password for password managers.</li>
+<li>Signal for messaging.</li>
+<li>Obsidian for notetaking.</li>
+<li>Wirecutter and Rtings for prodcut reviews (to replace Reddit.)</li>
+<li>OBS for screen recording and streaming.</li>
+<li>DaVinci Resolve for video editing.</li>
+<li>micro for an easy-to-use terminal editor... But also vim.</li>
+<li>Fastmail + IWantMyName for personal email.</li>
+</ul>
+</blockquote>
+<p>I've had friends ask me for recommendations for software. They ask me this because I am a hollow person who has spent too much of my life on the computer. I love when people ask me these questions, because my strong opinions on software are usually otherwise &quot;offputting&quot; and considered a &quot;personality flaw&quot;.</p>
+<p>All jokes aside, I wanted one place to chronicle recommendations I tend to make. In no particular order, here are some of my favorites.</p>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/recommendations/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/reading-2023/">Things I read, first have of 2023</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-08-26
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a></span>
+    
+
+                    
+        <div class="post-content">
+            <p>I read and Consumed™️ a number of things the first half of 2023. Let me detail some of them:</p>
+<ul>
+<li><em>Braiding Sweetgrass</em> by Robin Wall Kimmerer helped me reconcile disillusionment and frustration I had with academic science, and to help me appreciate different philosophies of thought.</li>
+<li><em>The Magicians</em> by Lev Grossman is a grounded examination of the fantasy genre within a well-fleshed fantasy world. If &quot;Houlden Caulfield seeks Narnia but goes to Hogwarts&quot; sounds interesting, then check this out.</li>
+<li><em>This is How You Lose the Time War</em> by Amal El-Mohtar and Max Gladstone is a short story about star-crossed lovers from two advanced, warring, timeline-hopping scifi empires. I didn't like it that much, but it was 200 pages and fun to read.</li>
+<li>The <em>Before Me</em> podcast series is a well-constructed narrative built around interviews with the narrators mother, who arrived to America fleeing the Khmer Rouge in Cambodia. It's worth a listen.</li>
+</ul>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/reading-2023/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/caddy-topics-optout/">How to Opt out of Chrome Topics API on Caddy servers</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-07-13
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/caddy/">#caddy</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/how-to/">#how-to</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/privacy/">#privacy</a></span>
+    
+
+                    
+        <div class="post-content">
+            <blockquote>
+<p><strong>TLDR:</strong> Set the following in your caddyfile for each site: <code>header Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;</code>. This disable both the old FLoC and the new Topics.</p>
+</blockquote>
+<p>Here is an abbreviated version of my Caddyfile, showing how I set the <code>header</code> directive in my Caddyfile for <code>lynndotpy.xyz</code>:</p>
+<pre data-lang="caddyfile" style="background-color:#151515;color:#e8e8d3;" class="language-caddyfile "><code class="language-caddyfile" data-lang="caddyfile"><span>lynndotpy.xyz {
+</span><span>  header {
+</span><span>    Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<p>To confirm the header is set, you can use a Firefox or Chrome's devtools, open the networking tab, and look for the Permissions-Policy response header. More context below the cut.</p>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/caddy-topics-optout/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            <div class="pagination">
+                <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://lynndotpy.xyz/posts/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">Newer posts</span>
+                        </a>
+                    </span>
+                
+                    <span class="button next">
+                        <a href="https://lynndotpy.xyz/posts/page/3/">
+                            <span class="button__text">Older posts</span>&nbsp;
+                            <span class="button__icon">→</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

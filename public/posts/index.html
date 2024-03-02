@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>&#x2F;&#x2F; lynndotpy</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.xyz/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.xyz/color/lynn-auto.css">
+
+        <link rel="stylesheet" href="https://lynndotpy.xyz/color/background_auto.css">
+    
+    <link rel="stylesheet" href="https://lynndotpy.xyz/font-hack-subset.css">
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.xyz/rss.xml">
+    
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.xyz/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.xyz
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.xyz/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/projects">projects</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://gitlab.com/lynnpepin" target="_blank" rel="noopener noreferrer">gitlab</a></li>
+            
+                <li><a href="https://mastodon.social/@lynndotpy" target="_blank" rel="noopener noreferrer">mastodon</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+        <div class="posts">
+            <!-- This points `index.html` to `posts` -->
+            
+                <div class="post on-list">
+                    
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/boycott-app-security/">Privacy breakdown of three recent boycott apps</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-02-29
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/activism/">#activism</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/privacy/">#privacy</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/security/">#security</a></span>
+    
+
+                    
+        <div class="post-content">
+            <blockquote>
+<p><strong>Super short TLDR:</strong> I looked at three barcode-scanning boycott apps. &quot;Boycat&quot; and &quot;Boycott for Peace&quot; have reasonable network traces, but loading images exposes your IP to third parties. &quot;No Thanks&quot; has no Privacy Policy, falsely claims to collect no data, and makes numerous unnecessary calls to Facebook and Google.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>Longer TLDR:</strong></p>
+<p>The iOS versions of these apps were analyzed in February.</p>
+<p><a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">&quot;Boycat&quot;</a> and <a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">&quot;Boycott for Peace&quot;</a> expose your IPs to some third parties to load images, and have similar features. Both are good and easy to recommend, but Boycat has an overly-broad Privacy Policy and a Terms of Service which includes Arbitration.</p>
+<p>Boycat has aims to be a more general purpose boycotting platform, whereas Boycott for Peace is focused singularly on the BDS movement.</p>
+<p>&quot;No Thanks&quot; makes many tracking calls to Facebook and Google and has integrated advertisements. It offers no compelling features over Boycat or Boycott for Peace, and cannot be recommended. Further, it does not have a working link to a Privacy Policy, and falsely claims &quot;No Data Collected&quot; on the iOS app store.</p>
+</blockquote>
+<hr />
+<p>Boycotting a corporation is hard to do when there are so many corporations to keep track of.</p>
+<p>There are a number of apps coming out lately which promise to make it easier to participate <a href="https://en.wikipedia.org/wiki/Boycott,_Divestment_and_Sanctions">in BDS boycotts</a>. Thirty-seven US states <a href="https://en.wikipedia.org/wiki/Anti-BDS_laws">have passed anti-BDS laws</a> alongside Canada, France, Germany, Spain, and the UK. Given the US Government's long history of using apps to spy, <a href="https://www.vice.com/en/article/jgqm5x/us-military-location-data-xmode-locate-x">such as with the U.S. Military buying location data from Muslim prayer and Quran apps</a>,</p>
+<p>I'm one of those big skeptical privacy freaks. Apps, either through malice or unawareness, can leak huge amounts of data that can later be used to surveil and suppress people.</p>
+<p>So I decided to take a look into these apps. I used mitmproxy to inspect and modify traffic between the app and the server for this analysis, but I did not touch the server or internal code in any other way.</p>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/boycott-app-security/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/reso-2023/">Reso: Rewritten in Rust and now 20000x faster!!</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-01-13
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/project/">#project</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/reso/">#reso</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/rust/">#rust</a></span>
+    
+
+                    
+        <div class="post-content">
+            <blockquote>
+<p><strong>tldr:</strong> Reso has been re-implemented in Rust, deprecating the Python original. The underlying datastructure is new, with an incidence-map based algorithm. This makes Reso very fast, at about 20000x faster than the original in some cases.</p>
+</blockquote>
+<p>Reso is a logic circuit language and simulator, <a href="https://lynndotpy.xyz/posts/reso-intro/">first written in Python</a> and now revived in Rust. It's a visual language, where inputs and outputs are both <code>.png</code> images, making MS Paint a totally appropriate IDE. :)</p>
+<p>This post assumes you already know the idea behind Reso. You can <a href="https://github.com/resolang/reso">check Reso out on GitHub</a> and <a href="https://crates.io/crates/reso">crates.io</a>. You can install it with <code>cargo install reso</code>.</p>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/reso-2023/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/written-in-rust/">Yes, I want to know if your project is written in Rust</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-01-06
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/rust/">#rust</a></span>
+    
+
+                    
+        <div class="post-content">
+            <blockquote>
+<p><strong>tldr:</strong> A post is titled &quot;My cool new thing, written in Rust.&quot; The top comment asks, &quot;Why should I care that it's written in Rust?&quot;</p>
+<p>Well, I care! I love knowing when something is written in Rust. The main thing is that it's probably easy to <code>cargo install your_cool_new_thing</code>. I can't say the same for anything asking me to interact with <code>npm</code>, <code>pip</code>, <code>make</code>, <code>apt</code>, flatpaks or appimages, etc.</p>
+<p>This post starts with a diatribe about <code>pip</code> and <code>npm</code>, evangelizing the virtues of <code>cargo</code>. The other benefits listed are the performance benefits from Rust's memory safety, and reassurances that Rust won't die anything soon (meaning it won't drag other projects down with it.) </p>
+<p>So, yes, I want to know your thing is written in Rust!</p>
+</blockquote>
+<p>Over the past few years, line after line, project after project, I've become one of those annoying Rust evangelists. It's hard to go back to the old way of doing things, and a big reason is <code>cargo</code>.</p>
+<p>On occasion, a new Rust project will be posted to a site like <a href="https://lobste.rs/s/hheh5v/cli_email_client_written_rust">lobste.rs</a>, with a title like &quot;A <code>$THING</code>, written in Rust&quot;. Somone will invariable reply &quot;Why should I care it's written in Rust?&quot;</p>
+<p>Well, I care, and this is why.</p>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/written-in-rust/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/2023-eoy-wiwo/">What I&#x27;m working on, December 2023</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-12-14
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/blog/">#blog</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a></span>
+    
+
+                    
+        <div class="post-content">
+            <p>2023 has been my year of Rust. I've gotten 50% of the way on my fantasy assembly language <a href="https://github.com/lynnpepin/phantasm">Phantasm</a>, the <a href="https://github.com/lynnpepin/reso-rust">Rust implementation of Reso</a> is nearing the <code>0.1.0</code> release. I'm also preparing a Commodore64 emulator Christmas gift for my mother in law.</p>
+<p>I've also started publishing <a href="https://github.com/lynnpepin/arbitration-opt-out-templates">arbitration opt-out templates</a> to make it easier for people to opt out of arbitration.</p>
+<p>In projects not-even-near completion, I've been drafting up a puzzler with 5 space and 2 time dimensions, and I'm resurrecting drafts for a cryptographic hash primitive with a variable hamming weight digest.</p>
+<p>For me, my biggest side project right now is definitely Reso. I'm super proud of it. The language implementation work is done, and I'm excited to build tooling to make it easy and fun to use.</p>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/2023-eoy-wiwo/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/ssds-bad-2023/">2023: The year of high SSD failure rates</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-12-08
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a></span>
+    
+
+                    
+        <div class="post-content">
+            <blockquote>
+<p><strong>TLDR:</strong> In 2014, SSDs were unreliable but cool and new. They've become more reliable over the years, but going into 2024, they're showing a streak of unreliability again. I've had had an SSD fail, an enclosure fail, and an SSD+enclosure which seemed to break eachother.</p>
+<p>The worst offenders are SanDisk, Western Digital, Samsung. <a href="https://www.backblaze.com/blog/ssd-edition-2023-mid-year-drive-stats-review/">Backblaze reports</a> roughly confirm this. See <a href="https://www.backblaze.com/cloud-storage/resources/hard-drive-test-data">their full stats page</a> here.</p>
+<p>I didn't even know Dell made SSDs, but BackBlaze reports Dell as the lowest failure rate.</p>
+</blockquote>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.xyz/posts/ssds-bad-2023/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            <div class="pagination">
+                <div class="pagination__buttons">
+                    <span class="button next">
+                        <a href="https://lynndotpy.xyz/posts/page/2/">
+                            <span class="button__text">Older posts</span>&nbsp;
+                            <span class="button__icon">→</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>&#x2F;&#x2F; lynndotpy</title>
+    <link rel="self" type="application/atom+xml" href="https://lynndotpy.xyz/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-02-29T00:00:00+00:00</updated>
+    <id>https://lynndotpy.xyz/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Privacy breakdown of three recent boycott apps</title>
+        <published>2024-02-29T00:00:00+00:00</published>
+        <updated>2024-02-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/boycott-app-security/"/>
+        <id>https://lynndotpy.xyz/posts/boycott-app-security/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Super short TLDR:&lt;&#x2F;strong&gt; I looked at three barcode-scanning boycott apps. &amp;quot;Boycat&amp;quot; and &amp;quot;Boycott for Peace&amp;quot; have reasonable network traces, but loading images exposes your IP to third parties. &amp;quot;No Thanks&amp;quot; has no Privacy Policy, falsely claims to collect no data, and makes numerous unnecessary calls to Facebook and Google.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;hr &#x2F;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Longer TLDR:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The iOS versions of these apps were analyzed in February.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;apps.apple.com&#x2F;us&#x2F;app&#x2F;boycott-for-peace&#x2F;id6472617524&quot;&gt;&amp;quot;Boycat&amp;quot;&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;apps.apple.com&#x2F;us&#x2F;app&#x2F;boycott-for-peace&#x2F;id6472617524&quot;&gt;&amp;quot;Boycott for Peace&amp;quot;&lt;&#x2F;a&gt; expose your IPs to some third parties to load images, and have similar features. Both are good and easy to recommend, but Boycat has an overly-broad Privacy Policy and a Terms of Service which includes Arbitration.&lt;&#x2F;p&gt;
+&lt;p&gt;Boycat has aims to be a more general purpose boycotting platform, whereas Boycott for Peace is focused singularly on the BDS movement.&lt;&#x2F;p&gt;
+&lt;p&gt;&amp;quot;No Thanks&amp;quot; makes many tracking calls to Facebook and Google and has integrated advertisements. It offers no compelling features over Boycat or Boycott for Peace, and cannot be recommended. Further, it does not have a working link to a Privacy Policy, and falsely claims &amp;quot;No Data Collected&amp;quot; on the iOS app store.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;Boycotting a corporation is hard to do when there are so many corporations to keep track of.&lt;&#x2F;p&gt;
+&lt;p&gt;There are a number of apps coming out lately which promise to make it easier to participate &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Boycott,_Divestment_and_Sanctions&quot;&gt;in BDS boycotts&lt;&#x2F;a&gt;. Thirty-seven US states &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Anti-BDS_laws&quot;&gt;have passed anti-BDS laws&lt;&#x2F;a&gt; alongside Canada, France, Germany, Spain, and the UK. Given the US Government&#x27;s long history of using apps to spy, &lt;a href=&quot;https:&#x2F;&#x2F;www.vice.com&#x2F;en&#x2F;article&#x2F;jgqm5x&#x2F;us-military-location-data-xmode-locate-x&quot;&gt;such as with the U.S. Military buying location data from Muslim prayer and Quran apps&lt;&#x2F;a&gt;,&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m one of those big skeptical privacy freaks. Apps, either through malice or unawareness, can leak huge amounts of data that can later be used to surveil and suppress people.&lt;&#x2F;p&gt;
+&lt;p&gt;So I decided to take a look into these apps. I used mitmproxy to inspect and modify traffic between the app and the server for this analysis, but I did not touch the server or internal code in any other way.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Reso: Rewritten in Rust and now 20000x faster!!</title>
+        <published>2024-01-13T00:00:00+00:00</published>
+        <updated>2024-01-13T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/reso-2023/"/>
+        <id>https://lynndotpy.xyz/posts/reso-2023/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; Reso has been re-implemented in Rust, deprecating the Python original. The underlying datastructure is new, with an incidence-map based algorithm. This makes Reso very fast, at about 20000x faster than the original in some cases.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Reso is a logic circuit language and simulator, &lt;a href=&quot;https:&#x2F;&#x2F;lynndotpy.xyz&#x2F;posts&#x2F;reso-intro&#x2F;&quot;&gt;first written in Python&lt;&#x2F;a&gt; and now revived in Rust. It&#x27;s a visual language, where inputs and outputs are both &lt;code&gt;.png&lt;&#x2F;code&gt; images, making MS Paint a totally appropriate IDE. :)&lt;&#x2F;p&gt;
+&lt;p&gt;This post assumes you already know the idea behind Reso. You can &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;resolang&#x2F;reso&quot;&gt;check Reso out on GitHub&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;reso&quot;&gt;crates.io&lt;&#x2F;a&gt;. You can install it with &lt;code&gt;cargo install reso&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Yes, I want to know if your project is written in Rust</title>
+        <published>2024-01-06T00:00:00+00:00</published>
+        <updated>2024-01-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/written-in-rust/"/>
+        <id>https://lynndotpy.xyz/posts/written-in-rust/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; A post is titled &amp;quot;My cool new thing, written in Rust.&amp;quot; The top comment asks, &amp;quot;Why should I care that it&#x27;s written in Rust?&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;Well, I care! I love knowing when something is written in Rust. The main thing is that it&#x27;s probably easy to &lt;code&gt;cargo install your_cool_new_thing&lt;&#x2F;code&gt;. I can&#x27;t say the same for anything asking me to interact with &lt;code&gt;npm&lt;&#x2F;code&gt;, &lt;code&gt;pip&lt;&#x2F;code&gt;, &lt;code&gt;make&lt;&#x2F;code&gt;, &lt;code&gt;apt&lt;&#x2F;code&gt;, flatpaks or appimages, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;This post starts with a diatribe about &lt;code&gt;pip&lt;&#x2F;code&gt; and &lt;code&gt;npm&lt;&#x2F;code&gt;, evangelizing the virtues of &lt;code&gt;cargo&lt;&#x2F;code&gt;. The other benefits listed are the performance benefits from Rust&#x27;s memory safety, and reassurances that Rust won&#x27;t die anything soon (meaning it won&#x27;t drag other projects down with it.) &lt;&#x2F;p&gt;
+&lt;p&gt;So, yes, I want to know your thing is written in Rust!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Over the past few years, line after line, project after project, I&#x27;ve become one of those annoying Rust evangelists. It&#x27;s hard to go back to the old way of doing things, and a big reason is &lt;code&gt;cargo&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;On occasion, a new Rust project will be posted to a site like &lt;a href=&quot;https:&#x2F;&#x2F;lobste.rs&#x2F;s&#x2F;hheh5v&#x2F;cli_email_client_written_rust&quot;&gt;lobste.rs&lt;&#x2F;a&gt;, with a title like &amp;quot;A &lt;code&gt;$THING&lt;&#x2F;code&gt;, written in Rust&amp;quot;. Somone will invariable reply &amp;quot;Why should I care it&#x27;s written in Rust?&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;Well, I care, and this is why.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>What I&#x27;m working on, December 2023</title>
+        <published>2023-12-14T00:00:00+00:00</published>
+        <updated>2023-12-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/2023-eoy-wiwo/"/>
+        <id>https://lynndotpy.xyz/posts/2023-eoy-wiwo/</id>
+        
+        <summary type="html">&lt;p&gt;2023 has been my year of Rust. I&#x27;ve gotten 50% of the way on my fantasy assembly language &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;phantasm&quot;&gt;Phantasm&lt;&#x2F;a&gt;, the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;reso-rust&quot;&gt;Rust implementation of Reso&lt;&#x2F;a&gt; is nearing the &lt;code&gt;0.1.0&lt;&#x2F;code&gt; release. I&#x27;m also preparing a Commodore64 emulator Christmas gift for my mother in law.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve also started publishing &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;arbitration-opt-out-templates&quot;&gt;arbitration opt-out templates&lt;&#x2F;a&gt; to make it easier for people to opt out of arbitration.&lt;&#x2F;p&gt;
+&lt;p&gt;In projects not-even-near completion, I&#x27;ve been drafting up a puzzler with 5 space and 2 time dimensions, and I&#x27;m resurrecting drafts for a cryptographic hash primitive with a variable hamming weight digest.&lt;&#x2F;p&gt;
+&lt;p&gt;For me, my biggest side project right now is definitely Reso. I&#x27;m super proud of it. The language implementation work is done, and I&#x27;m excited to build tooling to make it easy and fun to use.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>2023: The year of high SSD failure rates</title>
+        <published>2023-12-08T00:00:00+00:00</published>
+        <updated>2023-12-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/ssds-bad-2023/"/>
+        <id>https://lynndotpy.xyz/posts/ssds-bad-2023/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; In 2014, SSDs were unreliable but cool and new. They&#x27;ve become more reliable over the years, but going into 2024, they&#x27;re showing a streak of unreliability again. I&#x27;ve had had an SSD fail, an enclosure fail, and an SSD+enclosure which seemed to break eachother.&lt;&#x2F;p&gt;
+&lt;p&gt;The worst offenders are SanDisk, Western Digital, Samsung. &lt;a href=&quot;https:&#x2F;&#x2F;www.backblaze.com&#x2F;blog&#x2F;ssd-edition-2023-mid-year-drive-stats-review&#x2F;&quot;&gt;Backblaze reports&lt;&#x2F;a&gt; roughly confirm this. See &lt;a href=&quot;https:&#x2F;&#x2F;www.backblaze.com&#x2F;cloud-storage&#x2F;resources&#x2F;hard-drive-test-data&quot;&gt;their full stats page&lt;&#x2F;a&gt; here.&lt;&#x2F;p&gt;
+&lt;p&gt;I didn&#x27;t even know Dell made SSDs, but BackBlaze reports Dell as the lowest failure rate.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Prescriptions for success in college courses</title>
+        <published>2023-12-04T00:00:00+00:00</published>
+        <updated>2023-12-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/college-course-success/"/>
+        <id>https://lynndotpy.xyz/posts/college-course-success/</id>
+        
+        <summary type="html">&lt;p&gt;There is no replacement for doing the work of studying. There are no shortcuts, there is no way to make it more fun. However, there are ways to make sure you make good use of your time and to maximize the chance of a good grade.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s a list of prescriptions I took away from my time at the University of Connecticut. I graduated with a 3.99 GPA, taking a Computer Science and Engineering major and a Mathematics minor, and later got a Masters in the same area.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Do the syllabus reading and homework in advance. This maintains a time buffer that will save you when the going gets rough.&lt;&#x2F;li&gt;
+&lt;li&gt;Write notes by hand, and digitally transcribe them later. This helps cement knowledge in your mind.&lt;&#x2F;li&gt;
+&lt;li&gt;Take practice exams like real exams. This is the best way to practice for an exam. Grade yourself after.&lt;&#x2F;li&gt;
+&lt;li&gt;Foundational courses like calc 1 or or general chemistry don&#x27;t change much over the years. This means old practice exams and other coursework can be useful studying tools.&lt;&#x2F;li&gt;
+&lt;li&gt;These prescriptions require budgeting your time, and it&#x27;s okay if you don&#x27;t budget for all of this. Your time at college shouldn&#x27;t just be about getting straight As.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>sshaudit.com gave my Bastion an F, now it&#x27;s an A</title>
+        <published>2023-11-22T00:00:00+00:00</published>
+        <updated>2023-11-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/hardening-bastion/"/>
+        <id>https://lynndotpy.xyz/posts/hardening-bastion/</id>
+        
+        <summary type="html">&lt;p&gt;I maintain an SSH bastion server for all my beloved VPSes. The server I host this blog on only accepts SSH connections from the IP of that bastion, and I keep that bastion hardened. It&#x27;s a minimal Alpine install with nothing but an SSH server.&lt;&#x2F;p&gt;
+&lt;p&gt;So I felt some dismay when I found the server got a score of F on &lt;a href=&quot;https:&#x2F;&#x2F;www.sshaudit.com&#x2F;&quot;&gt;sshaudit.com&lt;&#x2F;a&gt;. I got an F! My bastion failed 2 of 5 host key tests, 4 of 9 key-exchange tests, and 7 of 10 MAC tests. &lt;&#x2F;p&gt;
+&lt;p&gt;These are the steps I took. Although I&#x27;m on Alpine, I was able to cherry pick commands from &lt;a href=&quot;https:&#x2F;&#x2F;www.ssh-audit.com&#x2F;hardening_guides.html&quot;&gt;the Debian-focused server guides hardening guides on sshaudit.com.&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;TLDR&lt;&#x2F;strong&gt; provided below the cut, with some script script to do the work for you.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Software I recommend</title>
+        <published>2023-09-30T00:00:00+00:00</published>
+        <updated>2023-09-30T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/recommendations/"/>
+        <id>https://lynndotpy.xyz/posts/recommendations/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Here are things I like and can recommend.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pop! OS for a Linux distribution.&lt;&#x2F;li&gt;
+&lt;li&gt;Blender for 3D graphics.&lt;&#x2F;li&gt;
+&lt;li&gt;Python or Javascript for those learning programming, but it&#x27;s complicated.&lt;&#x2F;li&gt;
+&lt;li&gt;1password for password managers.&lt;&#x2F;li&gt;
+&lt;li&gt;Signal for messaging.&lt;&#x2F;li&gt;
+&lt;li&gt;Obsidian for notetaking.&lt;&#x2F;li&gt;
+&lt;li&gt;Wirecutter and Rtings for prodcut reviews (to replace Reddit.)&lt;&#x2F;li&gt;
+&lt;li&gt;OBS for screen recording and streaming.&lt;&#x2F;li&gt;
+&lt;li&gt;DaVinci Resolve for video editing.&lt;&#x2F;li&gt;
+&lt;li&gt;micro for an easy-to-use terminal editor... But also vim.&lt;&#x2F;li&gt;
+&lt;li&gt;Fastmail + IWantMyName for personal email.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I&#x27;ve had friends ask me for recommendations for software. They ask me this because I am a hollow person who has spent too much of my life on the computer. I love when people ask me these questions, because my strong opinions on software are usually otherwise &amp;quot;offputting&amp;quot; and considered a &amp;quot;personality flaw&amp;quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;All jokes aside, I wanted one place to chronicle recommendations I tend to make. In no particular order, here are some of my favorites.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>What am I even up to?</title>
+        <published>2023-08-26T00:00:00+00:00</published>
+        <updated>2023-08-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/pages/now/"/>
+        <id>https://lynndotpy.xyz/pages/now/</id>
+        
+        <content type="html" xml:base="https://lynndotpy.xyz/pages/now/">&lt;p&gt;Right now, I&#x27;m:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Working a day job software engineering&lt;&#x2F;li&gt;
+&lt;li&gt;Creating art and collaborating for version 2 of Apocalypse Sirens, an open-source trading card game&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;arbitration-opt-out-templates&#x2F;&quot;&gt;Making it easier to opt out of arbitration clauses&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Learning music theory and composition &lt;code&gt;:)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Getting back into my favorite hobby, gamedev&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;P.S. The &amp;quot;now&amp;quot; page is a cool new fad and I like it. Check out the reasoning behind the now page: &lt;a href=&quot;https:&#x2F;&#x2F;nownownow.com&#x2F;about&quot;&gt;https:&#x2F;&#x2F;nownownow.com&#x2F;about&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Things I read, first have of 2023</title>
+        <published>2023-08-26T00:00:00+00:00</published>
+        <updated>2023-08-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/reading-2023/"/>
+        <id>https://lynndotpy.xyz/posts/reading-2023/</id>
+        
+        <summary type="html">&lt;p&gt;I read and Consumed™️ a number of things the first half of 2023. Let me detail some of them:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Braiding Sweetgrass&lt;&#x2F;em&gt; by Robin Wall Kimmerer helped me reconcile disillusionment and frustration I had with academic science, and to help me appreciate different philosophies of thought.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;The Magicians&lt;&#x2F;em&gt; by Lev Grossman is a grounded examination of the fantasy genre within a well-fleshed fantasy world. If &amp;quot;Houlden Caulfield seeks Narnia but goes to Hogwarts&amp;quot; sounds interesting, then check this out.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;This is How You Lose the Time War&lt;&#x2F;em&gt; by Amal El-Mohtar and Max Gladstone is a short story about star-crossed lovers from two advanced, warring, timeline-hopping scifi empires. I didn&#x27;t like it that much, but it was 200 pages and fun to read.&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;em&gt;Before Me&lt;&#x2F;em&gt; podcast series is a well-constructed narrative built around interviews with the narrators mother, who arrived to America fleeing the Khmer Rouge in Cambodia. It&#x27;s worth a listen.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>How to Opt out of Chrome Topics API on Caddy servers</title>
+        <published>2023-07-13T00:00:00+00:00</published>
+        <updated>2023-07-13T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/caddy-topics-optout/"/>
+        <id>https://lynndotpy.xyz/posts/caddy-topics-optout/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Set the following in your caddyfile for each site: &lt;code&gt;header Permissions-Policy &amp;quot;interest-cohort=(),browsing-topics=()&amp;quot;&lt;&#x2F;code&gt;. This disable both the old FLoC and the new Topics.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Here is an abbreviated version of my Caddyfile, showing how I set the &lt;code&gt;header&lt;&#x2F;code&gt; directive in my Caddyfile for &lt;code&gt;lynndotpy.xyz&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;caddyfile&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-caddyfile &quot;&gt;&lt;code class=&quot;language-caddyfile&quot; data-lang=&quot;caddyfile&quot;&gt;&lt;span&gt;lynndotpy.xyz {
+&lt;&#x2F;span&gt;&lt;span&gt;  header {
+&lt;&#x2F;span&gt;&lt;span&gt;    Permissions-Policy &amp;quot;interest-cohort=(),browsing-topics=()&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To confirm the header is set, you can use a Firefox or Chrome&#x27;s devtools, open the networking tab, and look for the Permissions-Policy response header. More context below the cut.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>If BlueSky takes off, Bitcoin will too</title>
+        <published>2023-07-09T00:00:00+00:00</published>
+        <updated>2023-07-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/bluesky-and-bitcoin/"/>
+        <id>https://lynndotpy.xyz/posts/bluesky-and-bitcoin/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; BlueSky is intended to eventually integrate with Bitcoin. If BlueSky becomes widely adopted, Bitcoin will too. I don&#x27;t like Bitcoin, so I don&#x27;t want BlueSky to become popular.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s why I believe this: In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After helping kickstart the Lightning network, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Jack Dorsey&#x27;s &amp;quot;BlueSky&amp;quot; platform is taking off. Unfortunately, not only is Jack Dorsey a bonkers man who &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;BrianJo78940026&#x2F;status&#x2F;1674770881955115009&quot;&gt;endorses the belief that Jimmy Carter cried when he learned that aliens made up all the religions&lt;&#x2F;a&gt;^1 and is on a &lt;em&gt;big&lt;&#x2F;em&gt; pro-RFK Jr^2 streak, but he also is a longtime Bitcoin believer.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>protip.py: the main-main pattern</title>
+        <published>2023-06-24T00:00:00+00:00</published>
+        <updated>2023-06-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/python-main-main/"/>
+        <id>https://lynndotpy.xyz/posts/python-main-main/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Your Python program will be better if you define a &lt;code&gt;main()&lt;&#x2F;code&gt; function separate from the &lt;code&gt;__main__&lt;&#x2F;code&gt; block.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Consider a Python program &lt;code&gt;leftpad.py&lt;&#x2F;code&gt;, which takes an input string (say, &lt;code&gt;trans rights&lt;&#x2F;code&gt;), and pads it to the left (so, &lt;code&gt;python leftpad.py -s &#x27;trans rights&#x27; -n 16&lt;&#x2F;code&gt; prints &lt;code&gt;&#x27;    trans rights&#x27;&lt;&#x2F;code&gt;.)&lt;&#x2F;p&gt;
+&lt;p&gt;This is a great way to structure it:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# leftpad.py
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;argparse
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# leftpad function in global scope can be imported
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;leftpad&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;string&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;num_chars&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(string) &amp;gt;= num_chars:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;string
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        pad = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39; &amp;#39; &lt;&#x2F;span&gt;&lt;span&gt;* (num_chars - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(string))
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;pad + string
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;parser = argparse.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;ArgumentParser&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;parser.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;add_argument&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;--string&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;-s&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span&gt;=str, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;nargs&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;parser.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;add_argument&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;--num&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;-n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span&gt;=int)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;__name__ == &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;__main__&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    args = parser.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;parse_args&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;leftpad&lt;&#x2F;span&gt;&lt;span&gt;(args.string[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;], args.num))
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The main functionality and the parser can be imported as &lt;code&gt;leftpad.leftpad(...)&lt;&#x2F;code&gt; and &lt;code&gt;leftpad.parser&lt;&#x2F;code&gt;. These could not be imported if &lt;code&gt;__main__&lt;&#x2F;code&gt; had the definition for &lt;code&gt;leftpad&lt;&#x2F;code&gt; and the instantiation of &lt;code&gt;parser&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s a template you can use for your Python scripts:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;sys
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;():
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;try&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;except&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;__name__ == &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;__main__&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    sys.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;exit&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;())
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Let me explain why this is good, how it could be worse, and how it could be better.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Opt out of Discord&#x27;s arbitration clause by sending a quick email. (Template included)</title>
+        <published>2023-03-08T00:00:00+00:00</published>
+        <updated>2023-03-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/discord-optout-2023/"/>
+        <id>https://lynndotpy.xyz/posts/discord-optout-2023/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Send an email to &lt;a href=&quot;mailto:arbitration-opt-out@discord.com&quot;&gt;arbitration-opt-out@discord.com&lt;&#x2F;a&gt; using the email associated with your Discord account. For good measure, add your username. Template below!&lt;&#x2F;p&gt;
+&lt;p&gt;(btw, i&#x27;m not a lawyer and i&#x27;m not your representative)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;hr &#x2F;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Update: Want to opt out of arbitration for more services?&lt;&#x2F;strong&gt; I&#x27;m building a collection of arbitration opt-out templates here: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;arbitration-opt-out-templates&#x2F;&quot;&gt;github.com&#x2F;lynnpepin&#x2F;arbitration-opt-out-templates&lt;&#x2F;a&gt;. Check them out and let me know what you think.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;you-can-opt-out-of-discord-s-arbitration-clause-by-sending-them-an-email&quot;&gt;You can opt out of Discord&#x27;s arbitration clause by sending them an email&lt;&#x2F;h1&gt;
+&lt;p&gt;Send an email to &lt;a href=&quot;mailto:arbitration-opt-out@discord.com&quot;&gt;arbitration-opt-out@discord.com&lt;&#x2F;a&gt;, from the &lt;strong&gt;email address you use for your account&lt;&#x2F;strong&gt;, stating you wish to opt out of the arbitration clause. For good measure, I recommend adding your account ID!&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Things I read, 2022</title>
+        <published>2023-02-13T00:00:00+00:00</published>
+        <updated>2023-02-13T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/reading-2022/"/>
+        <id>https://lynndotpy.xyz/posts/reading-2022/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Leaving a PhD gives someone a lot of time to read new things. Here&#x27;s some of my takeaways:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;ChatGPT and StableDiffusion are scary and new and cool.&lt;&#x2F;li&gt;
+&lt;li&gt;Philip Rogaway&#x27;s work presents some important ethical considerations for cryptographers.&lt;&#x2F;li&gt;
+&lt;li&gt;ThreeBlueOneBrown is one of many educational YouTubers that I&#x27;m enjoying.&lt;&#x2F;li&gt;
+&lt;li&gt;Anyone writing Rust would benefit from reading the cursed words in the Rustonomicon.&lt;&#x2F;li&gt;
+&lt;li&gt;As usual, 538 podcasts are worth listening to around elections.&lt;&#x2F;li&gt;
+&lt;li&gt;Audiobooks are good actually.&lt;&#x2F;li&gt;
+&lt;li&gt;TV is also really good now.&lt;&#x2F;li&gt;
+&lt;li&gt;Outer Wilds is the best game, I reckon.&lt;&#x2F;li&gt;
+&lt;li&gt;Nope (the movie) is &lt;em&gt;really really&lt;&#x2F;em&gt; good.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Python on your phone sucks less with `ooo.py` and the `-i` flag.</title>
+        <published>2022-05-22T00:00:00+00:00</published>
+        <updated>2022-05-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/python-mobile/"/>
+        <id>https://lynndotpy.xyz/posts/python-mobile/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Copy the script below, and run it as &lt;code&gt;python -i ooo.py&lt;&#x2F;code&gt;. This will give you a bunch of useful imports with short aliases, and throw you into an interactive shell.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&amp;#39;&amp;#39;&amp;#39;Run as `python3 -i ooo.py`
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;I use this when writing Python scripts on my phone (through Termux). The point is to minimize the keypresses needed when writing Python on a phone.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;This will start Python, import a bunch of modules with short names, and then throw you into an interpreter.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&amp;#39;&amp;#39;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;numpy &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;np
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;pandas &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;pd
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;math &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;mt
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;random &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;rd
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;time
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;itertools &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;it
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;functools &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;ft
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;re
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;os
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;sys
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;glob
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;pickle &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;pl
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;hashlib &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;hl
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;secrets &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;ss
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;socket &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;sk
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;imported numpy as np, pandas as pd, math as mt, random as rd, time, itertools as it, functools as ft, re, os, sys, glob, pickle as pl, hashlib as hl, secrets as ss, and socket as sk!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;A = np.array
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;PI &lt;&#x2F;span&gt;&lt;span&gt;= mt.pi
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;TAU &lt;&#x2F;span&gt;&lt;span&gt;= mt.tau
+&lt;&#x2F;span&gt;&lt;span&gt;E = mt.e
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Constants available: PI, TAU, E .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;H = help
+&lt;&#x2F;span&gt;&lt;span&gt;Q = quit
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Functions `help(...)` and `quit()` available as `H(...)` and `Q()`.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>You can sort in linear time!</title>
+        <published>2022-01-07T00:00:00+00:00</published>
+        <updated>2022-01-07T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/linear-sorting/"/>
+        <id>https://lynndotpy.xyz/posts/linear-sorting/</id>
+        
+        <summary type="html">
+  &lt;figure class=&quot;center&quot; &gt;
+    &lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;countsort_graph.jpeg&quot; alt=&quot;A log-scale graph showing the runtime (ns) of sorting N elements for different integer depths. They all show a trend towards linear runtime for large N.&quot; style=&quot;width:70%&quot; &#x2F;&gt;
+    
+      &lt;figcaption class=&quot;center&quot;&gt;A log-scale graph showing the linear runtime of count-sort&lt;&#x2F;figcaption&gt;
+    
+  &lt;&#x2F;figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR:&lt;&#x2F;strong&gt; Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in $O(n \log n)$ time is still true, but that assumes you&#x27;re sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)&lt;&#x2F;p&gt;
+&lt;p&gt;See the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;rust_projects&#x2F;blob&#x2F;master&#x2F;countsort&#x2F;plot_stats.ipynb&quot;&gt;Python notebook&lt;&#x2F;a&gt; wrapping an unoptimized &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lynnpepin&#x2F;rust_projects&#x2F;tree&#x2F;master&#x2F;countsort&quot;&gt;Rust countsort implementation&lt;&#x2F;a&gt;: &lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;--&lt;&#x2F;p&gt;
+&lt;p&gt;Is this truly $O(n)$? Yes!&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Counting sort is not a randomized algorithm, it always outputs the correct solution.&lt;&#x2F;li&gt;
+&lt;li&gt;Counting sort is not a parallelized algorithm. (And you can&#x27;t use parallelism to speed past a worst-case big-O run time anyway!)&lt;&#x2F;li&gt;
+&lt;li&gt;Counting sort is not an amortized algorithm. It is truly $O(n)$, not &#x27;expected&#x27; or &#x27;amortized&#x27; $O(n)$.&lt;&#x2F;li&gt;
+&lt;li&gt;Counting sort is technically $Θ(n)$, that is, the worst and best case running time is linear. &lt;&#x2F;li&gt;
+&lt;li&gt;This can be used in the real world.&lt;&#x2F;li&gt;
+&lt;li&gt;However, it is not an in-place sorting algorithm.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>`reso`, a colorful pixel-art circuit simulator</title>
+        <published>2021-05-15T00:00:00+00:00</published>
+        <updated>2021-05-15T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/reso-intro/"/>
+        <id>https://lynndotpy.xyz/posts/reso-intro/</id>
+        
+        <summary type="html">&lt;p&gt;Reso is a circuit design language and simulator where the inputs and outputs are bitmap images!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;posts&#x2F;images&#x2F;reso_logo.gif&quot; alt=&quot;Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds.&quot; title=&quot;Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds. &quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Reso is a pet project of mine that I&#x27;ve been working on in my free time for a little while. This logo is actually an animation of the execution of a Reso circuit.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Oh no, dating spam sites are abusing improperly-configured internal search engines</title>
+        <published>2021-04-30T00:00:00+00:00</published>
+        <updated>2021-04-30T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/seo-dating-spam/"/>
+        <id>https://lynndotpy.xyz/posts/seo-dating-spam/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt;  Malicious entities are abusing sites internal search engines to promote their own URLs. This effectively allows them to advertise using the target site&#x27;s domain in the search results of major search engines. If you own such a site, fix this by putting a &lt;code&gt;disallow&lt;&#x2F;code&gt; entry in your &lt;code&gt;robots.txt&lt;&#x2F;code&gt;, or adding the &lt;code&gt;noindex&lt;&#x2F;code&gt; meta tag.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>GIMP &lt;3 Python! Let&#x27;s make a YuGiOh rip off</title>
+        <published>2020-12-31T00:00:00+00:00</published>
+        <updated>2020-12-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/gimp-and-python/"/>
+        <id>https://lynndotpy.xyz/posts/gimp-and-python/</id>
+        
+        <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt;  Open the Python-Fu console (Filters &amp;gt; Python-Fu &amp;gt; Console) and reference GIMP&#x27;s built-in &lt;code&gt;pdb&lt;&#x2F;code&gt; documentation (Help &amp;gt; Procedure browser).  A simple &#x27;hello world&#x27; is presented:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;img = gimp.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;image_list&lt;&#x2F;span&gt;&lt;span&gt;()[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;title_layer = pdb.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;gimp_image_get_layer_by_name&lt;&#x2F;span&gt;&lt;span&gt;(img, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Title&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;pdb.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;gimp_text_layer_set_text&lt;&#x2F;span&gt;&lt;span&gt;(title_layer, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;blockquote&gt;
+</summary>
+        
+    </entry>
+</feed>

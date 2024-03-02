@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Privacy breakdown of three recent boycott apps &#x2F;&#x2F; lynndotpy</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.xyz/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.xyz/color/lynn-auto.css">
+
+        <link rel="stylesheet" href="https://lynndotpy.xyz/color/background_auto.css">
+    
+    <link rel="stylesheet" href="https://lynndotpy.xyz/font-hack-subset.css">
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.xyz/rss.xml">
+    
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+        
+<link rel="stylesheet" href="https://lynndotpy.xyz/katex/katex.min.css">
+<script defer src="https://lynndotpy.xyz/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+      ]
+      });
+  });
+</script>
+
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.xyz/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.xyz
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.xyz/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.xyz/projects">projects</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            
+                <li><a href="https://gitlab.com/lynnpepin" target="_blank" rel="noopener noreferrer">gitlab</a></li>
+            
+                <li><a href="https://mastodon.social/@lynndotpy" target="_blank" rel="noopener noreferrer">mastodon</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/boycott-app-security/">Privacy breakdown of three recent boycott apps</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-02-29
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/activism/">#activism</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/privacy/">#privacy</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.xyz/tags/security/">#security</a></span>
+    
+
+        
+        <div class="post-content">
+            <blockquote>
+<p><strong>Super short TLDR:</strong> I looked at three barcode-scanning boycott apps. &quot;Boycat&quot; and &quot;Boycott for Peace&quot; have reasonable network traces, but loading images exposes your IP to third parties. &quot;No Thanks&quot; has no Privacy Policy, falsely claims to collect no data, and makes numerous unnecessary calls to Facebook and Google.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>Longer TLDR:</strong></p>
+<p>The iOS versions of these apps were analyzed in February.</p>
+<p><a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">&quot;Boycat&quot;</a> and <a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">&quot;Boycott for Peace&quot;</a> expose your IPs to some third parties to load images, and have similar features. Both are good and easy to recommend, but Boycat has an overly-broad Privacy Policy and a Terms of Service which includes Arbitration.</p>
+<p>Boycat has aims to be a more general purpose boycotting platform, whereas Boycott for Peace is focused singularly on the BDS movement.</p>
+<p>&quot;No Thanks&quot; makes many tracking calls to Facebook and Google and has integrated advertisements. It offers no compelling features over Boycat or Boycott for Peace, and cannot be recommended. Further, it does not have a working link to a Privacy Policy, and falsely claims &quot;No Data Collected&quot; on the iOS app store.</p>
+</blockquote>
+<hr />
+<p>Boycotting a corporation is hard to do when there are so many corporations to keep track of.</p>
+<p>There are a number of apps coming out lately which promise to make it easier to participate <a href="https://en.wikipedia.org/wiki/Boycott,_Divestment_and_Sanctions">in BDS boycotts</a>. Thirty-seven US states <a href="https://en.wikipedia.org/wiki/Anti-BDS_laws">have passed anti-BDS laws</a> alongside Canada, France, Germany, Spain, and the UK. Given the US Government's long history of using apps to spy, <a href="https://www.vice.com/en/article/jgqm5x/us-military-location-data-xmode-locate-x">such as with the U.S. Military buying location data from Muslim prayer and Quran apps</a>,</p>
+<p>I'm one of those big skeptical privacy freaks. Apps, either through malice or unawareness, can leak huge amounts of data that can later be used to surveil and suppress people.</p>
+<p>So I decided to take a look into these apps. I used mitmproxy to inspect and modify traffic between the app and the server for this analysis, but I did not touch the server or internal code in any other way.</p>
+<span id="continue-reading"></span>
+<hr />
+<h1 id="boycat-my-personal-favorite">Boycat: My personal favorite</h1>
+<blockquote>
+<p><strong>TLDR:</strong> Boycat has the cleanest network stack of these all, and has the best UI/UX to boot. It requires no email to scan, only to recommend alternatives or report problems. It does not ping to Google or Facebook or other adware companies or report location data.</p>
+<p>There are a few minor issues: The ToS has an arbitration clause and the Privacy Policy is broader than the app network stack implies, the alternatives are vulnerable to vote manipulation, and the app makes requests directly to third-parties like Walmart to load images.</p>
+<p>There is also a minor security flaw that allows someone to exploit the alternatives voting system, but this should not harm end-user privacy.</p>
+</blockquote>
+<p><a href="https://apps.apple.com/us/app/boycat/id6474510742">Boycat</a> is one of the many new barcode-scanning apps meant to make boycotting easier. Initially aimed at the BDS boycotts, it's promising to be useful for any particular boycott campaign.</p>
+<p>This is going to be a dry post about pretty rote security analysis. This post only looks at the legal promises (in the Terms of Service and Privacy Policy), as well as the actual network calls thea pp makes, but I can't say anything else about what goes on inside the app or the servers it talks to.</p>
+<p>I reached out to the dev on 2024-Feb-21, detailing two issues with the Terms of Service and Privacy Policy, the IP-leakage to third parties when loading images, and an exploit allowing technical users to manipulate votes. </p>
+<h2 id="suggestions-to-the-devs">Suggestions to the devs</h2>
+<ol>
+<li>Currently, devices request images directly from third-party servers, like <code>walmartimages.com</code>. Consider proxying images, so that users IP address is not leaked to third parties.</li>
+<li>The Terms of Service has a mandatory arbitration clause with no opt-out provision. Consider adding an opt-out provision.</li>
+<li>The Privacy Policy is overly broad. The app does not collect as much data as the Privacy Policy states.</li>
+<li>Users can recommend arbitrary alternatives and manipulate the vote counts. The details are not published in this blog, but details on how to reproduce and fix this bug were sent to the app creator.</li>
+</ol>
+<h2 id="the-boycat-legal-promises">The Boycat legal promises</h2>
+<blockquote>
+<p><strong>TLDR:</strong> Boycat's Privacy Policy has the standard red-flags, including the sale of location data to third-parties. The ToS has a mandatory arbitration clause with no opt-out, but the developer says an opt-out is coming. Until arbitration is opt-out, this is &quot;proceed with caution&quot;. But the app thankfully is far less invasive than its ToS and Privacy Policy suggests.</p>
+</blockquote>
+<p>Boycat on the iOS app store has these &quot;privacy card&quot; disclaimers, which are never reviewed by Apple:</p>
+<ul>
+<li>Data Linked to You: Identifiers, Usage Data, and Diagnostics</li>
+<li>Data Not Linked to You: Usage Data</li>
+</ul>
+<p>The <a href="https://www.boycat.io/privacy-policy">Privacy Policy</a> is brief and, according to the founder, <a href="https://twitter.com/adilbuilds/status/1759758998449107363">&quot;was a generic template from legal&quot;.</a> </p>
+<ul>
+<li>Personal Identification Information: Collect name, email address, and &quot;other contact details&quot;</li>
+<li>Usage data (frequency, navigation paths)</li>
+<li>Device information (model, OS, unique IDs, IP.)</li>
+<li>Location Data</li>
+<li>Cookies and other tracking information, including for advertisements.</li>
+<li>Third-party data.</li>
+</ul>
+<p>The Privacy Policy permits to sell data, including for marketing and advertising.</p>
+<p>To make things worse, <a href="https://www.boycat.io/terms-of-service">the Terms of Service</a> has a mandatory arbitration clause. These are widely upheld in the United States and are a red flag for any consumer. *(P.S.! I maintain <a href="https://github.com/lynnpepin/arbitration-opt-out-templates/">arbitration opt-out templates</a> to make it easier to opt out of these. If Boycat adds an arbitration opt-out, I'll update this at the earliest convenience.)</p>
+<h2 id="boycat-network-activity">Boycat network activity</h2>
+<blockquote>
+<p><strong>TLDR:</strong> This app has a very clean network trace. The only concerning things are calls to third-parties like Walmart Images. </p>
+</blockquote>
+<p>![[IMG_3604.png]]</p>
+<p>There are <strong>no network pings</strong> when you start the app, which is fantastic, and the app's UI is very simple. There are three things you can do in this app:</p>
+<ol>
+<li>Scan items</li>
+<li>Make an account</li>
+<li>Report a problem or provide an alternative</li>
+</ol>
+<h3 id="what-happens-when-you-scan-an-item">What happens when you scan an item?</h3>
+<blockquote>
+<p><strong>TLDR:</strong> This app uses Supabase and the network call stack is clean, with HTTP calls only made when necessary. One call to scan the barcode, and another call to load the image of the product. This call to load the image is concerning, since it pings arbitrary IPs with a user agent from the Boycat app, leaking the users IP to third parties. But otherwise, this is a clean app.</p>
+<p>Besides IP, I could find no location or other usage information transmitted.</p>
+</blockquote>
+<p>I used MITM proxy to dig into the network calls Boycat makes.</p>
+<blockquote>
+<p>A quick guide on how to use <code>mitmproxy</code> to do this yourself (on iOS at least):</p>
+<ol>
+<li>Install and run <code>mitmproxy</code> on the host device (i.e. a laptop):
+<ol>
+<li>
+<ol>
+<li>Download <code>mitmproxy</code>: https://mitmproxy.org/</li>
+</ol>
+</li>
+<li>Run <code>mitmweb</code> on the host device</li>
+</ol>
+</li>
+<li>Connect your iOS device to the host proxy:
+<ol>
+<li>Find your host devices IP (e.g. through network settings). Mine is <code>192.168.1.4</code></li>
+<li>Find the port <code>mitmproxy</code> is running on. Default is <code>8080</code>.</li>
+<li>Go to WiFi settings on iOS device and manually assign a proxy with said IP and port. (No authentication)</li>
+</ol>
+</li>
+<li>Install the MITM cert from <code>mitm.it</code>:
+<ol>
+<li>Visit <code>mitm.it</code> on Safari on the iOS device.</li>
+<li>Click the &quot;Get mitmproxy-ca-cert.pem&quot; to install the profile onto your iPhone.</li>
+<li>Open the &quot;Settings&quot; app, find the &quot;Profile downloaded&quot; icon, and install it.</li>
+<li>From Settings, find the &quot;Certificate Trust Settings&quot; and trust <code>mitmproxy</code>.</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+<p>First, I tried scanning a few things without signing in. Each time, it yielded a predictable and clean set of calls. Scanning that barcode yields a <code>POST</code> to <code>https://tjqnayzkemnkjthmraae.supabase.co/functions/v1/check-barcode-compliance</code> with a body <code>{&quot;barcode&quot;: &quot;0051500025017&quot;}</code>, with a bearer token which may operate as an API key. In response, we get</p>
+<pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">alternatives</span><span style="color:#556633;">&quot;</span><span>: [],
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">boycott</span><span style="color:#556633;">&quot;</span><span>: false,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">brand</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Smucker&#39;s</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">campaign</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">doesn&#39;t matter for now</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">category</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Unknown</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">data_source</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">API</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">image</span><span style="color:#556633;">&quot;</span><span>: [
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://openfoodfacts-images.s3.eu-west-3.amazonaws.com/data/005/150/002/5017/1.full.jpg</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://openfoodfacts-images.s3.eu-west-3.amazonaws.com/data/005/150/002/5017/3.full.jpg</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://openfoodfacts-images.s3.eu-west-3.amazonaws.com/data/005/150/002/5017/2.full.jpg</span><span style="color:#556633;">&quot;
+</span><span>    ],
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">product_id</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#cf6a4c;">63872</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">signedImage</span><span style="color:#556633;">&quot;</span><span>: null,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">title</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Smucker&#39;s Magic Shell Chocolate Fudge Flavor Topping</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">upc</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">0051500025017</span><span style="color:#556633;">&quot;
+</span><span>}
+</span></code></pre>
+<p>This is as expected. A list of possible alternatives, a boycott boolean, brand information, etc. The <code>&quot;campaign&quot;: &quot;doesn't matter for now&quot;</code> is in-line with the apps intentions to allow users to pick a campaign to choose from.</p>
+<p>Things get more concerning when the app processes the items under <code>&quot;image&quot;</code>. The app makes a <code>GET</code> call to <code>https://openfoodfacts-images.s3.eu-west-3.amazonaws.com/data/005/150/002/5017/1.full.jpg</code> in this example, but the app also makes calls directly to a variety of other domains, such as <code>walmartimages.com</code>. These calls are made with the user agent <code>boycatfrontend/3 CFNetwork/1492.0.1 Darwin/23.3.0</code>. Because they are made directly from the phone, this also leaks the users IP address.</p>
+<p>I'm going to try to find something which returns <code>&quot;boycott&quot;: true</code>, so I looked for SodaStream photos on eBay and found one with a very high-resolution barcode. Scanning the SodaStream yielded this body:</p>
+<pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">alternatives</span><span style="color:#556633;">&quot;</span><span>: [],
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">boycott</span><span style="color:#556633;">&quot;</span><span>: true,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">brand</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Sodastream</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">campaign</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">doesn&#39;t matter for now</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">category</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Home &amp; Garden &gt; Kitchen &amp; Dining &gt; Kitchen Appliances &gt; Soda Makers</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">image</span><span style="color:#556633;">&quot;</span><span>: [
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">http://www.homedepot.com/catalog/productImages/1000/3e/3e6908c3-cfb7-4335-94dd-814f1e7fddac_1000.jpg</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">http://s7d4.scene7.com/is/image/BonTon/787730?$ibm_large$</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">http://img.bbystatic.com/BestBuy_US/images/products/9359/9359293_sc.jpg</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://i5.walmartimages.com/asr/75e777ad-bde7-4159-8c6d-05d4a918289a_1.0f8df12830dd17d5568f04bffec69495.jpeg?odnHeight=450&amp;odnWidth=450&amp;odnBg=ffffff</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">http://ecx.images-amazon.com/images/I/41oAuXgrJtL._SL160_.jpg</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">http://scene7.targetimg1.com/is/image/Target/16271062?wid=1000&amp;hei=1000</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">http://s7d9.scene7.com/is/image/TheBay/811369007506_main?$PDPLARGE$</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">http://img1.r10.io/PIC/90759793/0/1/250/90759793.jpg</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://m.media-amazon.com/images/I/41oAuXgrJtL._UL320_.jpg</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">http://cache.air-n-water.com/images/1613211010-1-l.jpg</span><span style="color:#556633;">&quot;
+</span><span>    ],
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">product_id</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#cf6a4c;">4185485</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">reasoning</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">SodaStream is an Israeli company which manufactured its products in Occupied Palestine. Now owned by Pepsico after a $3.2b acquisition. It since moved its factory from the West Bank to main Israel, however is still subject to boycott for its firing of 60 Palestinian workers and dark history.</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">signedImage</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://tjqnayzkemnkjthmraae.supabase.co/storage/v1/object/sign/boycat-production/product-images/4185485?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJib3ljYXQtcHJvZHVjdGlvbi9wcm9kdWN0LWltYWdlcy80MTg1NDg1IiwiaWF0IjoxNzA4NTY0OTY4LCJleHAiOjE3MDg1NjUwMjh9._IrOKqZ2j1XQhLbOZXeEScKuY9qofe6_vS6lAa3qPeE</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">source</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://bdsmovement.net/news/%E2%80%9Csodastream-still-subject-boycott%E2%80%9D</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">title</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">SodaStream PLAY Starter Kit</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">upc</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">811369007506</span><span style="color:#556633;">&quot;
+</span><span>}
+</span></code></pre>
+<p>Nothing surprising or concerning.</p>
+<h3 id="what-happens-when-you-sign-up">What happens when you sign up?</h3>
+<blockquote>
+<p><strong>TLDR:</strong> Nothing surprising or concerning. After signing up, a number of calls are made to fetch boycott and alternatives information. They're <code>POST</code> calls, but are used like <code>GET</code>. It might be a little inefficient, but this is better than most apps out there.</p>
+</blockquote>
+<p>A <code>POST</code> call is made to <code>https://tjqnayzkemnkjthmraae.supabase.co/auth/v1/signup?redirect_to=boycat%3A%2F%2Fverify%2F</code> with a body like:</p>
+<pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>
+</span><span>{
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">code_challenge</span><span style="color:#556633;">&quot;</span><span>: null,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">code_challenge_method</span><span style="color:#556633;">&quot;</span><span>: null,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">data</span><span style="color:#556633;">&quot;</span><span>: {},
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">email</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">redacted</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">gotrue_meta_security</span><span style="color:#556633;">&quot;</span><span>: {},
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">password</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">redacted</span><span style="color:#556633;">&quot;
+</span><span>}
+</span></code></pre>
+<p>This is a standard supabase signup/login form, as evidenced by the <code>gotrue_meta_security</code>. Security novices might be surprised to know the password is transmitted unencrypted and unhashed, but that's standard: Passwords are hashed server-side and it's encrypted <em>within</em> the TLS transport tunnel. I can only see it here because I am MITM-ing it. :)</p>
+<p>I check my email for a signup confirmation, and voila! Signing-in makes a <code>POST</code> call to <code>https://tjqnayzkemnkjthmraae.supabase.co/auth/v1/token?grant_type=password</code> with the email and password, and then a number of calls happen.</p>
+<p>First, the app makes a call to the <code>fetch-campaign-data</code> API <code>POST https://tjqnayzkemnkjthmraae.supabase.co/functions/v1/fetch-campaign-data HTTP/2.0</code> which yields the body</p>
+<pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">brands</span><span style="color:#556633;">&quot;</span><span>: [
+</span><span>        {
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">name</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Acqua Panna</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">reasoning</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">The owner of the Acqua Panna brand, Nestle, owns a controlling stake in Osem. Osem is an Israeli food manufacturer which operates in Occupied Palestine.</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">source</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://en.wikipedia.org/wiki/Osem_(company)</span><span style="color:#556633;">&quot;
+</span><span>        },
+</span><span>        {
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">name</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Aero</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">reasoning</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">The owner of the Aero brand, Nestle, owns a controlling stake in Osem. Osem is an Israeli food manufacturer which operates in Occupied Palestine.</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">source</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://en.wikipedia.org/wiki/Osem_(company)</span><span style="color:#556633;">&quot;
+</span><span>        },
+</span><span>        ... and so forth
+</span><span>    ]
+</span><span>}
+</span></code></pre>
+<p>encoding <em>all</em> the brands to boycott. This is only 20kB now, but it's unclear why this data is fetched in advance rather than living in the server-side API. I might be misinterpreting this.</p>
+<p>Next is a <code>POST</code> call to <code>https://tjqnayzkemnkjthmraae.supabase.co/functions/v1/fetch-recent-alternatives</code>  which yields a 7.5kB list of alternatives. This is another thing which seems like it should live server-side.</p>
+<p>Then a call to <code>https://tjqnayzkemnkjthmraae.supabase.co/functions/v1/fetch-recent-no-alternatives</code> which lists only Pringles, Oreos, and Tide, and then another call to <code>ttps://tjqnayzkemnkjthmraae.supabase.co/functions/v1/fetch-campaign-data</code>. Not sure why.</p>
+<h3 id="what-happens-when-you-scan-an-alternative">What happens when you scan an alternative?</h3>
+<blockquote>
+<p><strong>TLDR:</strong> Nothing surprising or concerning, but it is possible to push alternatives to the top of the leaderboard by modifying network calls. </p>
+</blockquote>
+<p>The <code>alternatives</code> array is empty, but I know of an alternative to SodaStream! I'm a logged in user, so I suggest the &quot;OTE Portable Sparking Water Machine&quot;. A POST to search by name, a few GETs from Walmart Images, and a POST to recommend the alternative.</p>
+<p>I forgot to get screenshots here, but the call stack was minimal (save for the concerning WalMart requests.)</p>
+<p>My suggestion showed up right away, this time, with <code>alternatives</code>:</p>
+<pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>  </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">alternatives</span><span style="color:#556633;">&quot;</span><span>: [
+</span><span>        {
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">barcode</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">0679283546361</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">brand</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">OTE</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">category</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">created_at</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">2024-02-22T01:42:08.462881+00:00</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">id</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">c4462ae6-ea2c-4131-a5ee-cf810616b7f9</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">images</span><span style="color:#556633;">&quot;</span><span>: [
+</span><span>                </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://i5.walmartimages.com/asr/dfc15965-9cd4-4957-a0ff-fbd4c1c1b0aa.d8a2dffcdf10e771f616ef72b57ba8c4.jpeg?odnHeight=450&amp;odnWidth=450&amp;odnBg=ffffff</span><span style="color:#556633;">&quot;
+</span><span>            ],
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">manually_entered</span><span style="color:#556633;">&quot;</span><span>: false,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">num_of_submissions</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#cf6a4c;">1</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">product_id</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#cf6a4c;">4185485</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">title</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">OTE Portable Sparkling Water Maker</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">total_votes</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#cf6a4c;">0</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">verified_status</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">NOT_VERIFIED</span><span style="color:#556633;">&quot;
+</span><span>        }
+</span><span>    ],
+</span></code></pre>
+<p>I vote it up, and a <code>POST</code> to <code>https://tjqnayzkemnkjthmraae.supabase.co/functions/v1/insert-alternative-vote</code> is made with the info:</p>
+<pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>  
+</span><span>{
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">alternative_submissions_id</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">redacted-guid</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">user_id</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">redacted-guid</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">vote_value</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#cf6a4c;">1
+</span><span>}
+</span></code></pre>
+<p>I found it was possible to manipulate the vote count, but I won't explain how in this post. I undid the exploit and let the devs know.</p>
+<hr />
+<h1 id="boycott-for-peace-close-second">Boycott for Peace: Close second</h1>
+<p>The app privacy policy reports &quot;Data Not Linked to You&quot; might be collected, and <a href="https://boycottforpeace.org/privacy-policy/">the privacy policy</a> correctly reports that embedded content from other apps might allow them to collect data from you. It's super straightforward.</p>
+<h2 id="boycott-for-peace-s-network-activity">Boycott for Peace's network activity</h2>
+<p>When you start the <a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">'Boycott for Peace'</a> app, it makes one <code>GET</code> call to <code>https://apps.apple.com/us/app/boycott-for-peace/id6472617524</code> with a body like</p>
+<pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>[
+</span><span>    {
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">eventName</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">app_started</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">props</span><span style="color:#556633;">&quot;</span><span>: {},
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">sessionId</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">170933806435083527</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">systemProps</span><span style="color:#556633;">&quot;</span><span>: {
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">appBuildNumber</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">2</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">appVersion</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">1.4.2</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">isDebug</span><span style="color:#556633;">&quot;</span><span>: false,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">locale</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">en</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">osName</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">iOS</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">osVersion</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">17.3.1</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">sdkVersion</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">aptabase-swift@0.3.6</span><span style="color:#556633;">&quot;
+</span><span>        },
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">timestamp</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">2024-03-02T00:07:44Z</span><span style="color:#556633;">&quot;
+</span><span>    }
+</span><span>]
+</span></code></pre>
+<p>as well as a <code>GET</code> to <code>https://apps.apple.com/us/app/boycott-for-peace/id6472617524</code> which <code>https://api.howtohelpgaza.org/static/json/w/e7e715a341bfad11b714e97ff62cebd79e509561/w.json</code> which loads a JSON of brands to boycott and alternatives, with a body that starts with</p>
+<pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>[
+</span><span>    {
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">alternatives</span><span style="color:#556633;">&quot;</span><span>: [
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Supermarket own brand products, eg. Morrisons</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Barr Drinks (owner of Irn Bru)</span><span style="color:#556633;">&quot;
+</span><span>        ],
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">category</span><span style="color:#556633;">&quot;</span><span>: [
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">drinks</span><span style="color:#556633;">&quot;
+</span><span>        ],
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">description</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Soft drink, a distributed internationally by PepsiCo</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">howToBoycott</span><span style="color:#556633;">&quot;</span><span>: [
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Don&#39;t buy 7up products.</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Don&#39;t sell 7up products</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Don&#39;t work for the PepsiCo Company</span><span style="color:#556633;">&quot;
+</span><span>        ],
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">id</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">7up</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">logo</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://assets.turbologo.com/blog/en/2020/02/19084627/7up-cover.jpg</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">name</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">7up</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">reason</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">The international distributer of 7up, PepsiCo, bought SodaStream for $3.2bn and owns 50% of Sabra both of which had taken advantage of the Israeli occupation of Palestine.</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">source</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://www.bloomberg.com/view/articles/2018-08-22/pepsico-s-sodastream-purchase-is-sweet-news-for-israelis?leadSource=uverify%20wall</span><span style="color:#556633;">&quot;
+</span><span>    },
+</span><span>    {
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">alternatives</span><span style="color:#556633;">&quot;</span><span>: [
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Supermarket own brand products, eg. Morrisons</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Saka water (from Turkiye)</span><span style="color:#556633;">&quot;
+</span><span>        ],
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">category</span><span style="color:#556633;">&quot;</span><span>: [
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">drinks</span><span style="color:#556633;">&quot;
+</span><span>        ],
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">description</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Acqua Panna is a water brand owned by Nestle.</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">howToBoycott</span><span style="color:#556633;">&quot;</span><span>: [
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Don&#39;t buy Acqua Panna products</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Avoid Nestle products until they divest all operations in Occupied Palestine.</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Especially avoid any Osem brands such as Sabra and others which can be found via the wikipedia page in the source.</span><span style="color:#556633;">&quot;
+</span><span>        ],
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">id</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">acquapanna</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">logo</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Acqua_Panna_logo.svg/513px-Acqua_Panna_logo.svg.png</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">name</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Acqua Panna</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">reason</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">The owner of the Acqua Panna brand, Nestle, owns a controlling stake in Osem. Osem is an Israeli food manufacturer which operates in Occupied Palestine.</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">source</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://en.wikipedia.org/wiki/Osem_(company)</span><span style="color:#556633;">&quot;
+</span><span>    },
+</span><span>    ...
+</span></code></pre>
+<p>But as you scroll on the starting 'Brands' pane pf the app, it <em>loads the logo of each app</em>. Like Boycat, this exposes your IP to various brands, this one with the user-agent <code>Boycott/2 CFNetwork/1492.0.1 Darwin/23.3.0</code>. </p>
+<p>This seems to have a much wider footprint.</p>
+<p>When you scan an barcode, it makes a query like <code>GET https://world.openfoodfacts.org/api/v2/product/0086600709123.json?fields=code,product_name,brands,brands_tags,image_url HTTP/2.0</code>, with a response body like</p>
+<pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">code</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">0086600709123</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">product</span><span style="color:#556633;">&quot;</span><span>: {
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">brands</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Bumble Bee</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">brands_tags</span><span style="color:#556633;">&quot;</span><span>: [
+</span><span>            </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">bumble-bee</span><span style="color:#556633;">&quot;
+</span><span>        ],
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">code</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">0086600709123</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">image_url</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://images.openfoodfacts.org/images/products/008/660/070/9123/front_en.3.400.jpg</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">product_name</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Bumble Bee protein on the run</span><span style="color:#556633;">&quot;
+</span><span>    },
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">status</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#cf6a4c;">1</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">status_verbose</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">product found</span><span style="color:#556633;">&quot;
+</span><span>}
+</span></code></pre>
+<p>and then loads the image. It's a bit less complex than BoyCat.</p>
+<h1 id="nothanks-facebook-google-and-no-terms-of-service-or-privacy-policy">&quot;NoThanks&quot;: Facebook, Google, and no Terms of Service or Privacy Policy</h1>
+<p>When I opened the app, it made seven calls to <code>graph.facebook.com</code>, four to <code>googleads.g.doubleclick.net</code>, four to <code>pagead2.googlesyndication.com</code>, one to <code>googletagservices.com</code>, and then while I was typing this, four more to <code>googleapis.com</code> and two more to <code>googleads.g.doubleclick.net</code>.</p>
+<p>To make matters worse, the app falsely claims &quot;No data collected&quot; on the iOS App Store, and has a broken link to a Privacy Policy at &quot;termly.io&quot;, another third party. Visiting that site invokes a binding arbitration agreement.</p>
+<p>I'm not going to spend much time analyzing this app. There is no reason for the dev to falsely claim no data is collected.</p>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h"></span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://lynndotpy.xyz/posts/reso-2023/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">Reso: Rewritten in Rust and now 20000x faster!!</span>
+                        </a>
+                    </span>
+                
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>
