@@ -25,7 +25,7 @@ copyright_html = "© Lynn Pepin, and <a href='https://creativecommons.org/licens
 katex = true
 
 # One of: blue, green, orange, pink, red, dark (background)
-accent_color = "lynn-auto"
+accent_color = "lynn-auto-2"
 background_color = "auto" 
 #logo_home_link = "/take/me/away!" # TODO
 

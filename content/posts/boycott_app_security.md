@@ -8,7 +8,7 @@ tags  = ["post", "security", "privacy", "activism"]
 
 > **Super short TLDR:** I looked at three barcode-scanning boycott apps. "Boycat" and "Boycott for Peace" have reasonable network traces, but loading images exposes your IP to third parties. "No Thanks" has no Privacy Policy, falsely claims to collect no data, and makes numerous unnecessary calls to Facebook and Google.
 
----
+<br> 
 
 > **Longer TLDR:**
 > 
@@ -19,6 +19,8 @@ tags  = ["post", "security", "privacy", "activism"]
 > Boycat has aims to be a more general purpose boycotting platform, whereas Boycott for Peace is focused singularly on the BDS movement.
 > 
 > "No Thanks" makes many tracking calls to Facebook and Google and has integrated advertisements. It offers no compelling features over Boycat or Boycott for Peace, and cannot be recommended. Further, it does not have a working link to a Privacy Policy, and falsely claims "No Data Collected" on the iOS app store.
+
+<br> 
 
 ---
 
@@ -372,6 +374,9 @@ When you scan an barcode, it makes a query like `GET https://world.openfoodfacts
 ```
 
 and then loads the image. It's a bit less complex than BoyCat.
+
+
+---
 
 # "NoThanks": Facebook, Google, and no Terms of Service or Privacy Policy
 

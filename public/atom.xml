@@ -25,7 +25,7 @@
         <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Super short TLDR:&lt;&#x2F;strong&gt; I looked at three barcode-scanning boycott apps. &amp;quot;Boycat&amp;quot; and &amp;quot;Boycott for Peace&amp;quot; have reasonable network traces, but loading images exposes your IP to third parties. &amp;quot;No Thanks&amp;quot; has no Privacy Policy, falsely claims to collect no data, and makes numerous unnecessary calls to Facebook and Google.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;hr &#x2F;&gt;
+&lt;br&gt; 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Longer TLDR:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;The iOS versions of these apps were analyzed in February.&lt;&#x2F;p&gt;
@@ -33,6 +33,7 @@
 &lt;p&gt;Boycat has aims to be a more general purpose boycotting platform, whereas Boycott for Peace is focused singularly on the BDS movement.&lt;&#x2F;p&gt;
 &lt;p&gt;&amp;quot;No Thanks&amp;quot; makes many tracking calls to Facebook and Google and has integrated advertisements. It offers no compelling features over Boycat or Boycott for Peace, and cannot be recommended. Further, it does not have a working link to a Privacy Policy, and falsely claims &amp;quot;No Data Collected&amp;quot; on the iOS app store.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;br&gt; 
 &lt;hr &#x2F;&gt;
 &lt;p&gt;Boycotting a corporation is hard to do when there are so many corporations to keep track of.&lt;&#x2F;p&gt;
 &lt;p&gt;There are a number of apps coming out lately which promise to make it easier to participate &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Boycott,_Divestment_and_Sanctions&quot;&gt;in BDS boycotts&lt;&#x2F;a&gt;. Thirty-seven US states &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Anti-BDS_laws&quot;&gt;have passed anti-BDS laws&lt;&#x2F;a&gt; alongside Canada, France, Germany, Spain, and the UK. Given the US Government&#x27;s long history of using apps to spy, &lt;a href=&quot;https:&#x2F;&#x2F;www.vice.com&#x2F;en&#x2F;article&#x2F;jgqm5x&#x2F;us-military-location-data-xmode-locate-x&quot;&gt;such as with the U.S. Military buying location data from Muslim prayer and Quran apps&lt;&#x2F;a&gt;,&lt;&#x2F;p&gt;
