@@ -10,6 +10,7 @@ tags = ["how-to", "project", "python", "circuitpython", "embedded"]
 > 
 > This is a prototype-- I've had a hankering to learn embedded rust and this is how I did it. [A picture and comments are on my Mastodon](https://mastodon.social/@lynndotpy/112144884913215202). 
 
+<!-- more -->
 ---
 
 # Life's hard with two laptops that are eager to nap...
