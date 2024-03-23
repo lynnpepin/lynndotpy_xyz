@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>&#x2F;&#x2F; lynndotpy</title>
+    <title>Prototyping a USB mouse wiggler with CircuitPython &#x2F;&#x2F; lynndotpy</title>
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -18,6 +18,29 @@
         <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.xyz/rss.xml">
     
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+        
+<link rel="stylesheet" href="https://lynndotpy.xyz/katex/katex.min.css">
+<script defer src="https://lynndotpy.xyz/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.xyz/katex/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+      ]
+      });
+  });
+</script>
+
     
     </head>
 
@@ -62,11 +85,8 @@
 
     <div class="content">
         
-        <div class="posts">
-            <!-- This points `index.html` to `posts` -->
-            
-                <div class="post on-list">
-                    
+    <div class="post">
+        
     <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/mouse-wiggler-python/">Prototyping a USB mouse wiggler with CircuitPython</a></h1>
     <div class="post-meta-inline">
         
@@ -86,7 +106,7 @@
                 <a class="post-tag" href="https://lynndotpy.xyz/tags/python/">#python</a></span>
     
 
-                    
+        
         <div class="post-content">
             <blockquote>
 <p><strong>tldr:</strong> I need a USB mouse wiggler and I want to make it myself. I used a spare <a href="https://www.adafruit.com/product/4870">Adafruit Neopixel Trinkey</a> with CircuitPython to prototype a simple mouse wiggler, which can be enabled/disabled with a touch. Handling &quot;wiggling&quot; state and input required some debouncing code, which was the most complicated part. The whole <code>code.py</code> script is available at the end.</p>
@@ -348,196 +368,25 @@
 
         </div>
 
-                </div>
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/iframe-manipulation/">Oh no, your website makes it easy to put malware in an iFrame.</a></h1>
-    <div class="post-meta-inline">
         
-    <span class="post-date">
-            2024-03-09
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/security/">#security</a></span>
-    
-
-                    
-        <div class="post-content">
-            <p>I was searching for hits on an CreditKarma.com error-phrase &quot;It looks like we're having some trouble accessing your Credit Karma account&quot; when I found a result at <code>https://www.middlesex.mass.edu/templateinframes/?Site=Help&amp;Url=https://lrmdz.bartikus.site</code>.</p>
-<p>Look at the structure of this URL! You can put <code>https://www.middlesex.mass.edu/templateinframes/?Site=Help&amp;Url={ANYTHING YOU WANT}</code>, and in this case, it looks like <code>bartikus.site</code> is using the legitimacy of Middlesex Massachusetts to host a CreditKarma phishing link.</p>
-<p>This is similar to <a href="https://lynndotpy.xyz/posts/seo-dating-spam/">how scam sites abuse improperly-configured internal search engines to hit Google's frontpage</a>.</p>
-<p>Generally speaking, it's best to avoid letting arbitrary people fill out an iFrame on your website. <a href="https://www.middlesex.mass.edu/templateinframes/?Site=Help&amp;Url=https://lynndotpy.xyz/posts/iframe-manipulation/">To prove this point, I'm sending this webpage to Middlesex Community College within an iframe on their own site.</a> One could easily replace my post with a URL to malware, pornography, etc.</p>
-
-        </div>
-
-                </div>
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/boycott-app-security/">Privacy breakdown of three recent boycott apps</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2024-02-29
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/activism/">#activism</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/privacy/">#privacy</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/security/">#security</a></span>
-    
-
-                    
-        <div class="post-content">
-            <blockquote>
-<p><strong>Super short TLDR:</strong> I looked at three barcode-scanning boycott apps. &quot;Boycat&quot; and &quot;Boycott for Peace&quot; have reasonable network traces, but loading images exposes your IP to third parties. &quot;No Thanks&quot; has no Privacy Policy, falsely claims to collect no data, and makes numerous unnecessary calls to Facebook and Google.</p>
-</blockquote>
-<br> 
-<blockquote>
-<p><strong>Longer TLDR:</strong></p>
-<p>The iOS versions of these apps were analyzed in February.</p>
-<p><a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">&quot;Boycat&quot;</a> and <a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">&quot;Boycott for Peace&quot;</a> expose your IPs to some third parties to load images, and have similar features. Both are good and easy to recommend, but Boycat has an overly-broad Privacy Policy and a Terms of Service which includes Arbitration.</p>
-<p>Boycat has aims to be a more general purpose boycotting platform, whereas Boycott for Peace is focused singularly on the BDS movement.</p>
-<p>&quot;No Thanks&quot; makes many tracking calls to Facebook and Google and has integrated advertisements. It offers no compelling features over Boycat or Boycott for Peace, and cannot be recommended. Further, it does not have a working link to a Privacy Policy, and falsely claims &quot;No Data Collected&quot; on the iOS app store.</p>
-</blockquote>
-<br> 
-<hr />
-<p>Boycotting a corporation is hard to do when there are so many corporations to keep track of.</p>
-<p>There are a number of apps coming out lately which promise to make it easier to participate <a href="https://en.wikipedia.org/wiki/Boycott,_Divestment_and_Sanctions">in BDS boycotts</a>. Thirty-seven US states <a href="https://en.wikipedia.org/wiki/Anti-BDS_laws">have passed anti-BDS laws</a> alongside Canada, France, Germany, Spain, and the UK. Given the US Government's long history of using apps to spy, <a href="https://www.vice.com/en/article/jgqm5x/us-military-location-data-xmode-locate-x">such as with the U.S. Military buying location data from Muslim prayer and Quran apps</a>,</p>
-<p>I'm one of those big skeptical privacy freaks. Apps, either through malice or unawareness, can leak huge amounts of data that can later be used to surveil and suppress people.</p>
-<p>So I decided to take a look into these apps. I used mitmproxy to inspect and modify traffic between the app and the server for this analysis, but I did not touch the server or internal code in any other way.</p>
-
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.xyz/posts/boycott-app-security/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/reso-2023/">Reso: Rewritten in Rust and now 20000x faster!!</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2024-01-13
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/project/">#project</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/reso/">#reso</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/rust/">#rust</a></span>
-    
-
-                    
-        <div class="post-content">
-            <blockquote>
-<p><strong>tldr:</strong> Reso has been re-implemented in Rust, deprecating the Python original. The underlying datastructure is new, with an incidence-map based algorithm. This makes Reso very fast, at about 20000x faster than the original in some cases.</p>
-</blockquote>
-<p>Reso is a logic circuit language and simulator, <a href="https://lynndotpy.xyz/posts/reso-intro/">first written in Python</a> and now revived in Rust. It's a visual language, where inputs and outputs are both <code>.png</code> images, making MS Paint a totally appropriate IDE. :)</p>
-<p>This post assumes you already know the idea behind Reso. You can <a href="https://github.com/resolang/reso">check Reso out on GitHub</a> and <a href="https://crates.io/crates/reso">crates.io</a>. You can install it with <code>cargo install reso</code>.</p>
-
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.xyz/posts/reso-2023/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/written-in-rust/">Yes, I want to know if your project is written in Rust</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2024-01-06
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/post/">#post</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/rust/">#rust</a></span>
-    
-
-                    
-        <div class="post-content">
-            <blockquote>
-<p><strong>tldr:</strong> A post is titled &quot;My cool new thing, written in Rust.&quot; The top comment asks, &quot;Why should I care that it's written in Rust?&quot;</p>
-<p>Well, I care! I love knowing when something is written in Rust. The main thing is that it's probably easy to <code>cargo install your_cool_new_thing</code>. I can't say the same for anything asking me to interact with <code>npm</code>, <code>pip</code>, <code>make</code>, <code>apt</code>, flatpaks or appimages, etc.</p>
-<p>This post starts with a diatribe about <code>pip</code> and <code>npm</code>, evangelizing the virtues of <code>cargo</code>. The other benefits listed are the performance benefits from Rust's memory safety, and reassurances that Rust won't die anything soon (meaning it won't drag other projects down with it.) </p>
-<p>So, yes, I want to know your thing is written in Rust!</p>
-</blockquote>
-<p>Over the past few years, line after line, project after project, I've become one of those annoying Rust evangelists. It's hard to go back to the old way of doing things, and a big reason is <code>cargo</code>.</p>
-<p>On occasion, a new Rust project will be posted to a site like <a href="https://lobste.rs/s/hheh5v/cli_email_client_written_rust">lobste.rs</a>, with a title like &quot;A <code>$THING</code>, written in Rust&quot;. Somone will invariable reply &quot;Why should I care it's written in Rust?&quot;</p>
-<p>Well, I care, and this is why.</p>
-
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.xyz/posts/written-in-rust/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-            <div class="pagination">
-                <div class="pagination__buttons">
-                    <span class="button next">
-                        <a href="https://lynndotpy.xyz/posts/page/2/">
-                            <span class="button__text">Older posts</span>&nbsp;
-                            <span class="button__icon">→</span>
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h"></span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://lynndotpy.xyz/posts/iframe-manipulation/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">Oh no, your website makes it easy to put malware in an iFrame.</span>
                         </a>
                     </span>
+                
                 </div>
-            </div>
         </div>
-        
+    
+    </div>
+
     </div>
 
 

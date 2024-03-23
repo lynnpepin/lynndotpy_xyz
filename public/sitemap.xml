@@ -60,6 +60,10 @@
         <lastmod>2022-01-07</lastmod>
     </url>
     <url>
+        <loc>https://lynndotpy.xyz/posts/mouse-wiggler-python/</loc>
+        <lastmod>2024-03-23</lastmod>
+    </url>
+    <url>
         <loc>https://lynndotpy.xyz/posts/page/1/</loc>
     </url>
     <url>
@@ -70,6 +74,9 @@
     </url>
     <url>
         <loc>https://lynndotpy.xyz/posts/page/4/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.xyz/posts/page/5/</loc>
     </url>
     <url>
         <loc>https://lynndotpy.xyz/posts/python-main-main/</loc>
@@ -125,6 +132,12 @@
     </url>
     <url>
         <loc>https://lynndotpy.xyz/tags/caddy/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.xyz/tags/circuitpython/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.xyz/tags/embedded/</loc>
     </url>
     <url>
         <loc>https://lynndotpy.xyz/tags/gimp/</loc>

@@ -4,8 +4,284 @@
     <link rel="self" type="application/atom+xml" href="https://lynndotpy.xyz/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-03-09T00:00:00+00:00</updated>
+    <updated>2024-03-23T00:00:00+00:00</updated>
     <id>https://lynndotpy.xyz/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Prototyping a USB mouse wiggler with CircuitPython</title>
+        <published>2024-03-23T00:00:00+00:00</published>
+        <updated>2024-03-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lynndotpy.xyz/posts/mouse-wiggler-python/"/>
+        <id>https://lynndotpy.xyz/posts/mouse-wiggler-python/</id>
+        
+        <content type="html" xml:base="https://lynndotpy.xyz/posts/mouse-wiggler-python/">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; I need a USB mouse wiggler and I want to make it myself. I used a spare &lt;a href=&quot;https:&#x2F;&#x2F;www.adafruit.com&#x2F;product&#x2F;4870&quot;&gt;Adafruit Neopixel Trinkey&lt;&#x2F;a&gt; with CircuitPython to prototype a simple mouse wiggler, which can be enabled&#x2F;disabled with a touch. Handling &amp;quot;wiggling&amp;quot; state and input required some debouncing code, which was the most complicated part. The whole &lt;code&gt;code.py&lt;&#x2F;code&gt; script is available at the end.&lt;&#x2F;p&gt;
+&lt;p&gt;This is a prototype-- I&#x27;ve had a hankering to learn embedded rust and this is how I did it. &lt;a href=&quot;https:&#x2F;&#x2F;mastodon.social&#x2F;@lynndotpy&#x2F;112144884913215202&quot;&gt;A picture and comments are on my Mastodon&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;hr &#x2F;&gt;
+&lt;h1 id=&quot;life-s-hard-with-two-laptops-that-are-eager-to-nap&quot;&gt;Life&#x27;s hard with two laptops that are eager to nap...&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; Juggling two work laptops with work-mandated screen shutoffs required I dig into my microcontroller reserves.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;In my day job, I have a problem: I have two laptops, a Mac and a Windows machine, both of which have a mandatory 5-minute screen timeouts.&lt;&#x2F;p&gt;
+&lt;p&gt;I often find myself swapping between both laptops, working on one for a bit, while the other locks. So, I am punished by these screen timeouts, even while sitting infront of both latpops! Logging in several times an hour is laborious and breaks my flow-state, and extended sleep turns off network-connections.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve heard of &amp;quot;USB mouse wigglers&amp;quot; as the solution to this, but I can&#x27;t just &lt;em&gt;trust&lt;&#x2F;em&gt; that these won&#x27;t do something nefarious while it&#x27;s at it. So, I decided to create one myself. &lt;a href=&quot;https:&#x2F;&#x2F;xkcd.com&#x2F;196&#x2F;&quot;&gt;I am sure I will not regret this.&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;My requirements are:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;A microcontroller (like the PiPico) I can connect via USB C.&lt;&#x2F;li&gt;
+&lt;li&gt;An integrated button to enable &#x2F; disable the functionality, and&lt;&#x2F;li&gt;
+&lt;li&gt;an LED indicator of whether the functionality is enabled or not.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Over the years, I&#x27;ve purchased many Raspberry Pi&#x27;s from Adafruit, and many microcontrollers to bring myself over the &amp;quot;free shipping&amp;quot; bump. The &lt;a href=&quot;https:&#x2F;&#x2F;learn.adafruit.com&#x2F;adafruit-feather-rp2040-pico&#x2F;overview&quot;&gt;Adafruit Feather RP2040&lt;&#x2F;a&gt; with an &lt;a href=&quot;https:&#x2F;&#x2F;www.adafruit.com&#x2F;product&#x2F;5328&quot;&gt;USB-C to USB-C adapter&lt;&#x2F;a&gt; looked like just the thing I need.&lt;&#x2F;p&gt;
+&lt;p&gt;This has an integrated button and an LED, and is based on the RP 2040 (the microcontroller powering the Pi Pico). I want to prototype with CircuitPython and eventually reimplement this in Rust. Adafruit products almost universally have good CircuitPython support, and the RP 2040 platform (which powers the Pi Pico) is popular enough that I imagine it must be well-supported for embedded Rust by now. (&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;adafruit-feather-rp2040&quot;&gt;Plus, there is also a whole crate titled &lt;code&gt;adafruit-feather-rp2040&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;, so my hopes are pretty high.])&lt;&#x2F;p&gt;
+&lt;p&gt;This blogpost will cover the prototype in CircuitPython.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;and-python-makes-life-too-easy&quot;&gt;... And Python makes life too easy.&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr,&lt;&#x2F;strong&gt; I want to prototype with CircuitPython first. To do this, I&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install CircuitPython:&lt;&#x2F;li&gt;
+&lt;li&gt;Plug the RP2040 Feather board in to your laptop via USB while holding the &lt;code&gt;BOOTSEL&lt;&#x2F;code&gt; button, so it&#x27;ll act as a flash drive. Then,&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;circuitpython.org&#x2F;board&#x2F;adafruit_feather_rp2040&#x2F;&quot;&gt;Download the latest CircuitPython UF2 to the board&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Start the CircuitPython REPL:&lt;&#x2F;li&gt;
+&lt;li&gt;From my terminal, use &lt;code&gt;ls &#x2F;dev&#x2F;tty.*&lt;&#x2F;code&gt; to find the name of the TTY (&amp;quot;shell&amp;quot;) which exposes the CircuitPython REPL.&lt;&#x2F;li&gt;
+&lt;li&gt;Then I use &lt;code&gt;screen &#x2F;dev&#x2F;tty.usbmodem101&lt;&#x2F;code&gt; to connect to the REPL.&lt;&#x2F;li&gt;
+&lt;li&gt;Iteratively implement the bits and pieces of work I need to do. During this process, I switch instead to &lt;a href=&quot;https:&#x2F;&#x2F;www.adafruit.com&#x2F;product&#x2F;4870&quot;&gt;my Adafruit Neopixel Trinkey&lt;&#x2F;a&gt; with a USB A-to-C adapter.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;You can skip this section-- the actual &lt;code&gt;code.py&lt;&#x2F;code&gt; is at the end. &lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;i-want-to-use-circuitpython-to-prototype-but-i-need-to-actually-install-it-first&quot;&gt;I want to use CircuitPython to prototype but I need to actually install it first.&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; I &lt;a href=&quot;https:&#x2F;&#x2F;circuitpython.org&#x2F;board&#x2F;adafruit_feather_rp2040&#x2F;&quot;&gt;download the latest CircuitPython UF2 for this board&lt;&#x2F;a&gt;, copy over the &lt;code&gt;.uf2&lt;&#x2F;code&gt; file. CircuitPython starts instantly! Then, one uses &lt;code&gt;ls &#x2F;dev&#x2F;tty.*&lt;&#x2F;code&gt; to find where the REPL lives. For me, it&#x27;s on &lt;code&gt;&#x2F;dev&#x2F;tty.usbmodel101&lt;&#x2F;code&gt;, so I run &lt;code&gt;screen &#x2F;dev&#x2F;tty.usbmodem101&lt;&#x2F;code&gt;, and voila, I&#x27;m in the REPL.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;So, an aside: The Feather comes with a USB &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;uf2&quot;&gt;UF2 bootloader&lt;&#x2F;a&gt;, which means adding new firmware is &lt;em&gt;just drag-and-drop&lt;&#x2F;em&gt;. This is pretty great.&lt;&#x2F;p&gt;
+&lt;p&gt;I wanted to do this in Rust, but the Rust code-compile-flash-repeat loop has a lot of questions: How to build to a &amp;quot;hello world&amp;quot;? How exactly to address the LED? How to move the mouse?&lt;&#x2F;p&gt;
+&lt;p&gt;... Actually, those are pretty much the only questions I have. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;micropython&#x2F;micropython&quot;&gt;MicroPython&lt;&#x2F;a&gt; and it&#x27;s easier-fork &lt;a href=&quot;https:&#x2F;&#x2F;learn.adafruit.com&#x2F;welcome-to-circuitpython&quot;&gt;CircuitPython&lt;&#x2F;a&gt; are fantastic for iterating. It exposes a USB filesystem with a &lt;code&gt;code.py&lt;&#x2F;code&gt; with a REPL and live-reload. &lt;&#x2F;p&gt;
+&lt;p&gt;Adafruit has examples and code for CircuitPython, so I&#x27;m starting by &lt;a href=&quot;https:&#x2F;&#x2F;circuitpython.org&#x2F;board&#x2F;adafruit_feather_rp2040&#x2F;&quot;&gt;downloading the latest CircuitPython UF2 for this board&lt;&#x2F;a&gt;, which instantly starts running CircuitPython. Hooray :)&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;learn.adafruit.com&#x2F;welcome-to-circuitpython&#x2F;advanced-serial-console-on-mac-and-linux&quot;&gt;Per Adafruit, on MacOS and Linux,&lt;&#x2F;a&gt; you can find the TTY where CircuitPython exposes the terminal using &lt;code&gt;ls &#x2F;dev&#x2F;tty.*&lt;&#x2F;code&gt;. For me, it&#x27;s &lt;code&gt;&#x2F;dev&#x2F;tty.usbmodem101&lt;&#x2F;code&gt;, so I run &lt;code&gt;screen &#x2F;dev&#x2F;tty.usbmodem101&lt;&#x2F;code&gt; to connect to it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;prototype-priority-one-this-led-is-hurting-my-eyes-so-i-want-to-turn-it-off&quot;&gt;Prototype priority one: This LED is hurting my eyes so I want to turn it off&lt;&#x2F;h2&gt;
+&lt;p&gt;When plugged in, the bright neopixel activates. This LED (an Adafruit &amp;quot;neopixel&amp;quot;) is hurting my eyes, so I want to turn it off. A quick &lt;code&gt;help(&amp;quot;modules&amp;quot;)&lt;&#x2F;code&gt; shows me the &lt;code&gt;neopixel_write&lt;&#x2F;code&gt;, so I use &lt;code&gt;help&lt;&#x2F;code&gt; to figure things out and...&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# this LED is hurting my eyes so I want to turn it off
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;neopixel_write &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;nw
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;help&lt;&#x2F;span&gt;&lt;span&gt;(nw)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;#object &amp;lt;module &amp;#39;neopixel_write&amp;#39;&amp;gt; is of type module
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;#  __name__ -- neopixel_write
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;#  neopixel_write -- &amp;lt;function&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;help&lt;&#x2F;span&gt;&lt;span&gt;(nw.neopixel_write)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;#object &amp;lt;function&amp;gt; is of type function
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# ... okay, that is not helpful
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The &lt;code&gt;help&lt;&#x2F;code&gt; in CircuitPython is not as complete as real-Python, so I instead &lt;a href=&quot;https:&#x2F;&#x2F;docs.circuitpython.org&#x2F;en&#x2F;9.0.x&#x2F;shared-bindings&#x2F;neopixel_write&#x2F;index.html&quot;&gt;look at the neopixel docs&lt;&#x2F;a&gt;. From this example, I&#x27;m able to push some lines and turn it off.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;board
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;neopixel_write
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;digitalio
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;pin = digitalio.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;DigitalInOut&lt;&#x2F;span&gt;&lt;span&gt;(board.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;NEOPIXEL&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# this is &amp;quot;DigitalInOut&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;pin.direction = digitalio.Direction.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;OUTPUT
+&lt;&#x2F;span&gt;&lt;span&gt;pixel_off = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bytearray&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;])
+&lt;&#x2F;span&gt;&lt;span&gt;neopixel_write.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;neopixel_write&lt;&#x2F;span&gt;&lt;span&gt;(pin, pixel_off)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Wonderful. So, I start to build my &amp;quot;grimoire&amp;quot; (collection of code snippets).&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;board
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;neopixel_write &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;neopixel_write
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;digitalio
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Constants
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;pin = digitalio.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;DigitalInOut&lt;&#x2F;span&gt;&lt;span&gt;(board.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;NEOPIXEL&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;pin.direction = digitalio.Direction.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;OUTPUT
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;_led_off = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;lambda&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;neopixel_write&lt;&#x2F;span&gt;&lt;span&gt;(pin, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bytearray&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]))
+&lt;&#x2F;span&gt;&lt;span&gt;_led_red = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;lambda&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;neopixel_write&lt;&#x2F;span&gt;&lt;span&gt;(pin, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bytearray&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]))
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;(Btw, my neopixel is indexed GRB, and even &lt;code&gt;[0,1,0]&lt;&#x2F;code&gt; of 255 is bright enough for me. &lt;a href=&quot;https:&#x2F;&#x2F;mastodon.social&#x2F;@lynndotpy&#x2F;112144884913215202&quot;&gt;This is because these values control wattage and aren&#x27;t normalized for perceived brightness.&lt;&#x2F;a&gt;.) &lt;&#x2F;p&gt;
+&lt;h2 id=&quot;prototype-priority-two-oh-wait-i-have-a-way-better-adafruit-devboard&quot;&gt;Prototype priority two: Oh wait I have a way better Adafruit devboard&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; I switched to &lt;a href=&quot;https:&#x2F;&#x2F;www.adafruit.com&#x2F;product&#x2F;4870&quot;&gt;my Adafruit Neopixel Trinkey&lt;&#x2F;a&gt;. I needed to flash a different version of CircuitPython, and because this has four neopixels and not one, I have to push a 12-byte array and not a 3-byte array.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Like I said, I&#x27;ve bought a lot of Adafruit devboards over the years to bump my Raspberry Pi&#x27;s over to free shipping.&lt;&#x2F;p&gt;
+&lt;p&gt;It was at this point I realized &lt;a href=&quot;https:&#x2F;&#x2F;www.adafruit.com&#x2F;product&#x2F;4870&quot;&gt;my Adafruit Neopixel Trinkey&lt;&#x2F;a&gt; was way more appropriate for this. It has four LEDs, so I write a twelve-byte bytearray.&lt;&#x2F;p&gt;
+&lt;p&gt;A quick update to my grimoire:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;board
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;neopixel_write &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;neopixel_write
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;digitalio
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Constants
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;pin = digitalio.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;DigitalInOut&lt;&#x2F;span&gt;&lt;span&gt;(board.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;NEOPIXEL&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;pin.direction = digitalio.Direction.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;OUTPUT
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;_led_off = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;lambda&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;neopixel_write&lt;&#x2F;span&gt;&lt;span&gt;(pin, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bytearray&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;12&lt;&#x2F;span&gt;&lt;span&gt;))
+&lt;&#x2F;span&gt;&lt;span&gt;_led_red = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;lambda&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;neopixel_write&lt;&#x2F;span&gt;&lt;span&gt;(pin, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bytearray&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;))
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;_led_off&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;prototype-priority-three-okay-rad-let-s-activate-those-buttons-and-wiggle-that-mouse&quot;&gt;Prototype priority three: Okay rad, let&#x27;s activate those buttons and wiggle that mouse&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;learn.adafruit.com&#x2F;adafruit-proximity-trinkey&#x2F;capacitive-touch&quot;&gt;Adafruit&#x27;s examples make this very straightforward.&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;touchio
+&lt;&#x2F;span&gt;&lt;span&gt;touch = touchio.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;TouchIn&lt;&#x2F;span&gt;&lt;span&gt;(board.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;TOUCH1&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(touch.value)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;prototype-priority-four-and-let-s-wiggle-that-mouse&quot;&gt;Prototype priority four: And let&#x27;s wiggle that mouse&lt;&#x2F;h2&gt;
+&lt;p&gt;The first reference I ended up finding &lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;raspberrypipico&#x2F;comments&#x2F;16accfj&#x2F;circuitpython_mouse_jiggler&#x2F;&quot;&gt;was &lt;code&gt;user&#x2F;daedalusesq&lt;&#x2F;code&gt;&#x27;s post on &lt;code&gt;r&#x2F;raspberrypipico&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;usb_hid
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;adafruit_hid.mouse &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;Mouse
+&lt;&#x2F;span&gt;&lt;span&gt;m = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Mouse&lt;&#x2F;span&gt;&lt;span&gt;(usb_hid.devices)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# yesss
+&lt;&#x2F;span&gt;&lt;span&gt;m.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;move&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;m.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;move&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;m.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;move&lt;&#x2F;span&gt;&lt;span&gt;(-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;prototype-priority-five-handle-the-basic-input&quot;&gt;Prototype priority five: Handle the basic input.&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; I want to toggle the mouse wiggler by touching either of the capacitive buttons. This requires debouncing the input, otherwise the state will rapidly invert while the buttons are pressed.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;First, we need to get inputs and set a state (wiggling on &#x2F; off). We&#x27;ll have the usual process loop. We&#x27;ll also want any inputs not to be &amp;quot;repeated&amp;quot; when held. This is called &amp;quot;debouncing&amp;quot;, which I love because that means I get to have two booleans titled &lt;code&gt;wiggling&lt;&#x2F;code&gt; and &lt;code&gt;debouncing&lt;&#x2F;code&gt;, which are far more whimsical names than the average boolean.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;board
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;neopixel_write &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;neopixel_write
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;digitalio
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;touchio
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;usb_hid
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;time &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;sleep
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;adafruit_hid.mouse &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;Mouse
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Set up constants for input&#x2F;output
+&lt;&#x2F;span&gt;&lt;span&gt;pin = digitalio.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;DigitalInOut&lt;&#x2F;span&gt;&lt;span&gt;(board.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;NEOPIXEL&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;pin.direction = digitalio.Direction.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;OUTPUT
+&lt;&#x2F;span&gt;&lt;span&gt;touch1 = touchio.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;TouchIn&lt;&#x2F;span&gt;&lt;span&gt;(board.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;TOUCH1&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;touch2 = touchio.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;TouchIn&lt;&#x2F;span&gt;&lt;span&gt;(board.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;TOUCH2&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;mouse = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Mouse&lt;&#x2F;span&gt;&lt;span&gt;(usb_hid.devices)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;_led_off = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;lambda&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;neopixel_write&lt;&#x2F;span&gt;&lt;span&gt;(pin, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bytearray&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;12&lt;&#x2F;span&gt;&lt;span&gt;))
+&lt;&#x2F;span&gt;&lt;span&gt;_led_red = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;lambda&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;neopixel_write&lt;&#x2F;span&gt;&lt;span&gt;(pin, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bytearray&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;))
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Wiggling is activated by default
+&lt;&#x2F;span&gt;&lt;span&gt;wiggling = True
+&lt;&#x2F;span&gt;&lt;span&gt;debouncing = False
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;_led_red&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;True:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sleep&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0.25&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;  
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# If the pads are touched, invert wiggling state
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(touch1.value or touch2.value) and not debouncing:
+&lt;&#x2F;span&gt;&lt;span&gt;    debouncing = True
+&lt;&#x2F;span&gt;&lt;span&gt;    wiggling = not wiggling
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    debouncing = False
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Display the state
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;wiggling:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;_led_red&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;_led_off&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;  
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Awesome. Now all that&#x27;s left is to add mouse wiggling :)&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;prototype-complete-sunglasses-let-s-wiggle-sunglasses&quot;&gt;Prototype complete. 😎 Let&#x27;s wiggle 😎&lt;&#x2F;h1&gt;
+&lt;p&gt;All that&#x27;s left is to add the appropriate &lt;code&gt;mouse.move&lt;&#x2F;code&gt; and &lt;code&gt;_led_red()&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;_led_off()&lt;&#x2F;code&gt; calls.&lt;&#x2F;p&gt;
+&lt;p&gt;This will wiggle the mosue every four minutes while active :) This is the code you can copy-and-paste directly into &lt;code&gt;code.py&lt;&#x2F;code&gt;. Keep in mind you&#x27;ll need to change specifics for different Adafruit boards.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;board
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;neopixel_write &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;neopixel_write
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;digitalio
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;touchio
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;usb_hid
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;time &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;sleep
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;time
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;adafruit_hid.mouse &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;Mouse
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Set up constants for input&#x2F;output
+&lt;&#x2F;span&gt;&lt;span&gt;pin = digitalio.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;DigitalInOut&lt;&#x2F;span&gt;&lt;span&gt;(board.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;NEOPIXEL&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;pin.direction = digitalio.Direction.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;OUTPUT
+&lt;&#x2F;span&gt;&lt;span&gt;touch1 = touchio.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;TouchIn&lt;&#x2F;span&gt;&lt;span&gt;(board.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;TOUCH1&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;touch2 = touchio.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;TouchIn&lt;&#x2F;span&gt;&lt;span&gt;(board.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;TOUCH2&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;mouse = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Mouse&lt;&#x2F;span&gt;&lt;span&gt;(usb_hid.devices)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Methods to turn LEDs on and off
+&lt;&#x2F;span&gt;&lt;span&gt;_led_off = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;lambda&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;neopixel_write&lt;&#x2F;span&gt;&lt;span&gt;(pin, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bytearray&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;12&lt;&#x2F;span&gt;&lt;span&gt;))
+&lt;&#x2F;span&gt;&lt;span&gt;_led_red = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;lambda&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;neopixel_write&lt;&#x2F;span&gt;&lt;span&gt;(pin, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bytearray&lt;&#x2F;span&gt;&lt;span&gt;([&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;))
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Input state
+&lt;&#x2F;span&gt;&lt;span&gt;wiggling = True
+&lt;&#x2F;span&gt;&lt;span&gt;debouncing = False
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Maintain timers for wiggling.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;WIGGLE_INTERVAL &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;60
+&lt;&#x2F;span&gt;&lt;span&gt;start_time = time.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;monotonic&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Turn the lights on to represent the wiggling state
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;_led_red&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Let&amp;#39;s go:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;True:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sleep&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0.25&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;  
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# If the pads are touched, invert wiggling state
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(touch1.value or touch2.value) and not debouncing:
+&lt;&#x2F;span&gt;&lt;span&gt;    debouncing = True
+&lt;&#x2F;span&gt;&lt;span&gt;    wiggling = not wiggling
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    debouncing = False
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Time to wiggle
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;wiggling:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Display the state and wiggle
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;_led_red&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;time.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;monotonic&lt;&#x2F;span&gt;&lt;span&gt;() &amp;gt;= start_time + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;WIGGLE_INTERVAL&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Time to wiggle!
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Restart timer
+&lt;&#x2F;span&gt;&lt;span&gt;      start_time = time.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;monotonic&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Wiggle diagonally
+&lt;&#x2F;span&gt;&lt;span&gt;      mouse.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;move&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;,  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;      time.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sleep&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0.0625&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;      mouse.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;move&lt;&#x2F;span&gt;&lt;span&gt;(-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;, -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;      time.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sleep&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0.0625&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;      mouse.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;move&lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;,  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    start_time = time.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;monotonic&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;_led_off&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h1 id=&quot;p-s-what-s-next&quot;&gt;P.S. What&#x27;s next?&lt;&#x2F;h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; More complicated LED control, and underclocking. &lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;As a bonus, I replaced &lt;code&gt;_led_red()&lt;&#x2F;code&gt; with this function which provides a slow &amp;quot;rotating&amp;quot; effect to the LEDs with a time period of &lt;code&gt;8&lt;&#x2F;code&gt; and a maximum brightness of &lt;code&gt;tt&lt;&#x2F;code&gt;. As mentioned, brightness is not logarithmic, so it&#x27;s less of a &#x27;smooth spinning&#x27; and more of a rotating blinking. Still, it feels fancy and fun.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;_tri&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tt&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;pp&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# triangle wave maxing at pp&#x2F;&#x2F;2
+&lt;&#x2F;span&gt;&lt;span&gt;  tp = tt%pp
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;tp - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;min&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, pp&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span&gt;- tp)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;_led_spin_red&lt;&#x2F;span&gt;&lt;span&gt;():
+&lt;&#x2F;span&gt;&lt;span&gt;    pp = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;8 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# time period
+&lt;&#x2F;span&gt;&lt;span&gt;    tt = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;(time.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;monotonic&lt;&#x2F;span&gt;&lt;span&gt;())
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;neopixel_write&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;      pin,
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bytearray&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;        [
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;_tri&lt;&#x2F;span&gt;&lt;span&gt;(tt, pp), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;_tri&lt;&#x2F;span&gt;&lt;span&gt;(tt+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;, pp), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;_tri&lt;&#x2F;span&gt;&lt;span&gt;(tt+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;4&lt;&#x2F;span&gt;&lt;span&gt;, pp), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;_tri&lt;&#x2F;span&gt;&lt;span&gt;(tt+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt;, pp), &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;        ]
+&lt;&#x2F;span&gt;&lt;span&gt;      )
+&lt;&#x2F;span&gt;&lt;span&gt;    )
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;What else is left? Well, I&#x27;d like to reimplement this in Rust, and then dynamically underclock the processor as needed. This code still works in terms of absolute time, which I &lt;em&gt;think&lt;&#x2F;em&gt; is read independent of clock-speed.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Oh no, your website makes it easy to put malware in an iFrame.</title>
         <published>2024-03-09T00:00:00+00:00</published>
