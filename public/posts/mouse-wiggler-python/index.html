@@ -262,9 +262,10 @@
 </span><span>  </span><span style="color:#ffb964;">sleep</span><span>(</span><span style="color:#cf6a4c;">0.25</span><span>)
 </span><span>  
 </span><span>  </span><span style="color:#888888;"># If the pads are touched, invert wiggling state
-</span><span>  </span><span style="color:#8fbfdc;">if </span><span>(touch1.value or touch2.value) and not debouncing:
-</span><span>    debouncing = True
-</span><span>    wiggling = not wiggling
+</span><span>  </span><span style="color:#8fbfdc;">if </span><span>touch1.value or touch2.value:
+</span><span>    </span><span style="color:#8fbfdc;">if </span><span>not debouncing:
+</span><span>      debouncing = True
+</span><span>      wiggling = not wiggling
 </span><span>  </span><span style="color:#8fbfdc;">else</span><span>:
 </span><span>    debouncing = False
 </span><span>
@@ -315,9 +316,10 @@
 </span><span>  </span><span style="color:#ffb964;">sleep</span><span>(</span><span style="color:#cf6a4c;">0.25</span><span>)
 </span><span>  
 </span><span>  </span><span style="color:#888888;"># If the pads are touched, invert wiggling state
-</span><span>  </span><span style="color:#8fbfdc;">if </span><span>(touch1.value or touch2.value) and not debouncing:
-</span><span>    debouncing = True
-</span><span>    wiggling = not wiggling
+</span><span>  </span><span style="color:#8fbfdc;">if </span><span>(touch1.value or touch2.value):
+</span><span>    </span><span style="color:#8fbfdc;">if </span><span>not debouncing:
+</span><span>      debouncing = True
+</span><span>      wiggling = not wiggling
 </span><span>  </span><span style="color:#8fbfdc;">else</span><span>:
 </span><span>    debouncing = False
 </span><span>

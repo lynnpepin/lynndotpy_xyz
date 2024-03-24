@@ -201,9 +201,10 @@ while True:
   sleep(0.25)
   
   # If the pads are touched, invert wiggling state
-  if (touch1.value or touch2.value) and not debouncing:
-    debouncing = True
-    wiggling = not wiggling
+  if touch1.value or touch2.value:
+    if not debouncing:
+      debouncing = True
+      wiggling = not wiggling
   else:
     debouncing = False
 
@@ -261,9 +262,10 @@ while True:
   sleep(0.25)
   
   # If the pads are touched, invert wiggling state
-  if (touch1.value or touch2.value) and not debouncing:
-    debouncing = True
-    wiggling = not wiggling
+  if (touch1.value or touch2.value):
+    if not debouncing:
+      debouncing = True
+      wiggling = not wiggling
   else:
     debouncing = False
 
