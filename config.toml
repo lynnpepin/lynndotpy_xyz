@@ -44,8 +44,8 @@ menu_items = [
     
     # set newtab to true to make the link open in new tab
     {name = "github", url = "https://github.com/lynnpepin", newtab = true},
-    {name = "gitlab", url = "https://gitlab.com/lynnpepin", newtab = true},
-    {name = "mastodon", url = "https://mastodon.social/@lynndotpy", newtab = true},
+    #{name = "gitlab", url = "https://gitlab.com/lynnpepin", newtab = true},
+    #{name = "mastodon", url = "https://mastodon.social/@lynndotpy", newtab = true},
 ]
 
 

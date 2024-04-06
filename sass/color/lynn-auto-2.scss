@@ -13,10 +13,6 @@
     --background: #201828;
     --color: #e8e8e8;
     --border-color: rgba(255,240,224,.125);
-
-    h1, h2, h3, h4, h5, h6, h1.post-title {
-      text-shadow: 0px -2px 1px var(--accent-alpha-20);
-    }
   
   }
   @media (prefers-color-scheme: light) {
@@ -34,19 +30,13 @@
     --color: #201020; 
     --border-color: rgba(0,0,16,.125);
 
-    h1, h2, h3, h4, h5, h6, h1.post-title {
-      text-shadow: 0px -2px 1px var(--accent-alpha-20);
-    }
   }
   
-  div.logo {
-    border-radius: 16px 4px 16px 4px;
-    text-shadow: 0 1px 2px var(--color);
-  }
+  div.logo { border-radius: 6px; }
 
   div.logo:hover {
     background-color: var(--color);
-    transition: 0.5s;
+    transition: 0.125s;
   }
 
   a {
