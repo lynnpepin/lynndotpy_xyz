@@ -5,7 +5,4 @@ render = true
 template = "index.html"
 
 aliases = ["/index.html", "/index"]
-
-paginate_by = 5
-sort_by = "date"
 +++
