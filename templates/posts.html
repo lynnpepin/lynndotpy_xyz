@@ -3,6 +3,7 @@
 {% import "macros/menu.html" as menu_macros -%}
 {% import "macros/post.html" as post_macros -%}
 {% import "macros/title.html" as title_macros -%}
+{% import "macros/katex.html" as katex_macros -%}
 
 <!DOCTYPE html>
 <html lang="{%- if config.default_language -%}{{ config.default_language }}{%- else -%}en{%- endif -%}">
@@ -18,6 +19,9 @@
     {%- if config.extra.favicon %}
         <link rel="shortcut icon" type="{{ config.extra.favicon_mimetype | default(value="image/x-icon") | safe }}" href="{{ config.extra.favicon | safe }}">
     {% endif -%}
+    {%- if config.extra.katex %}
+        {{ katex_macros::katex() }}
+    {% endif %}
 
     {%- block extra_head %}
     {% endblock extra_head -%}

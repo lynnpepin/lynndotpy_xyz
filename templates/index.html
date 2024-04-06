@@ -68,7 +68,6 @@
             {% else %}
                 {%- set show_pages = section.pages -%}
             {% endif -%}
-
             {%- for page in show_pages %}
                 <div class="post on-list">
                     {{ post_macros::header(page=page) }}
