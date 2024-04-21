@@ -24,7 +24,7 @@
         
         <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; I need a USB mouse wiggler and I want to make it myself. I used a spare &lt;a href=&quot;https:&#x2F;&#x2F;www.adafruit.com&#x2F;product&#x2F;4870&quot;&gt;Adafruit Neopixel Trinkey&lt;&#x2F;a&gt; with CircuitPython to prototype a simple mouse wiggler, which can be enabled&#x2F;disabled with a touch. Handling &amp;quot;wiggling&amp;quot; state and input required some debouncing code, which was the most complicated part. The whole &lt;code&gt;code.py&lt;&#x2F;code&gt; script is available at the end.&lt;&#x2F;p&gt;
-&lt;p&gt;This is a prototype-- I&#x27;ve had a hankering to learn embedded rust and this is how I did it. &lt;a href=&quot;https:&#x2F;&#x2F;mastodon.social&#x2F;@lynndotpy&#x2F;112144884913215202&quot;&gt;A picture and comments are on my Mastodon&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;This is a prototype-- I&#x27;ve had a hankering to learn embedded rust, and this is how I made a quick prototype with CircuitPython. &lt;a href=&quot;https:&#x2F;&#x2F;mastodon.social&#x2F;@lynndotpy&#x2F;112144884913215202&quot;&gt;A picture and comments are on my Mastodon&lt;&#x2F;a&gt;. &lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 </summary>
         

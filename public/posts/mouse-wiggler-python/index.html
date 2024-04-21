@@ -106,13 +106,13 @@
         <div class="post-content">
             <blockquote>
 <p><strong>tldr:</strong> I need a USB mouse wiggler and I want to make it myself. I used a spare <a href="https://www.adafruit.com/product/4870">Adafruit Neopixel Trinkey</a> with CircuitPython to prototype a simple mouse wiggler, which can be enabled/disabled with a touch. Handling &quot;wiggling&quot; state and input required some debouncing code, which was the most complicated part. The whole <code>code.py</code> script is available at the end.</p>
-<p>This is a prototype-- I've had a hankering to learn embedded rust and this is how I did it. <a href="https://mastodon.social/@lynndotpy/112144884913215202">A picture and comments are on my Mastodon</a>. </p>
+<p>This is a prototype-- I've had a hankering to learn embedded rust, and this is how I made a quick prototype with CircuitPython. <a href="https://mastodon.social/@lynndotpy/112144884913215202">A picture and comments are on my Mastodon</a>. </p>
 </blockquote>
 <span id="continue-reading"></span>
 <hr />
 <h1 id="life-s-hard-with-two-laptops-that-are-eager-to-nap">Life's hard with two laptops that are eager to nap...</h1>
 <blockquote>
-<p><strong>tldr:</strong> Juggling two work laptops with work-mandated screen shutoffs required I dig into my microcontroller reserves.</p>
+<p><strong>tldr:</strong> My employer enforces a 10-minute screen shutoff, but I have the atypical case of juggling two laptops which I often have to switch between I dug into my microcontroller reserves with the goal of making a USB mouse wiggler that I can keep active while I am at my desk.</p>
 </blockquote>
 <p>In my day job, I have a problem: I have two laptops, a Mac and a Windows machine, both of which have a mandatory 5-minute screen timeouts.</p>
 <p>I often find myself swapping between both laptops, working on one for a bit, while the other locks. So, I am punished by these screen timeouts, even while sitting infront of both latpops! Logging in several times an hour is laborious and breaks my flow-state, and extended sleep turns off network-connections.</p>
@@ -128,7 +128,7 @@
 <p>This blogpost will cover the prototype in CircuitPython.</p>
 <h1 id="and-python-makes-life-too-easy">... And Python makes life too easy.</h1>
 <blockquote>
-<p><strong>tldr,</strong> I want to prototype with CircuitPython first. To do this, I</p>
+<p><strong>tldr,</strong> I want to prototype with CircuitPython first. Here are the steps to replicate:</p>
 <ol>
 <li>Install CircuitPython:</li>
 <li>Plug the RP2040 Feather board in to your laptop via USB while holding the <code>BOOTSEL</code> button, so it'll act as a flash drive. Then,</li>
@@ -138,7 +138,7 @@
 <li>Then I use <code>screen /dev/tty.usbmodem101</code> to connect to the REPL.</li>
 <li>Iteratively implement the bits and pieces of work I need to do. During this process, I switch instead to <a href="https://www.adafruit.com/product/4870">my Adafruit Neopixel Trinkey</a> with a USB A-to-C adapter.</li>
 </ol>
-<p>You can skip this section-- the actual <code>code.py</code> is at the end. </p>
+<p>You can skip this section if you're already familiar-- the actual <code>code.py</code> you install onto the Trinkey is at the end. </p>
 </blockquote>
 <hr />
 <h2 id="i-want-to-use-circuitpython-to-prototype-but-i-need-to-actually-install-it-first">I want to use CircuitPython to prototype but I need to actually install it first.</h2>

@@ -8,14 +8,14 @@ tags = ["how-to", "project", "python", "circuitpython", "embedded"]
 
 > **tldr:** I need a USB mouse wiggler and I want to make it myself. I used a spare [Adafruit Neopixel Trinkey](https://www.adafruit.com/product/4870) with CircuitPython to prototype a simple mouse wiggler, which can be enabled/disabled with a touch. Handling "wiggling" state and input required some debouncing code, which was the most complicated part. The whole `code.py` script is available at the end.
 > 
-> This is a prototype-- I've had a hankering to learn embedded rust and this is how I did it. [A picture and comments are on my Mastodon](https://mastodon.social/@lynndotpy/112144884913215202). 
+> This is a prototype-- I've had a hankering to learn embedded rust, and this is how I made a quick prototype with CircuitPython. [A picture and comments are on my Mastodon](https://mastodon.social/@lynndotpy/112144884913215202). 
 
 <!-- more -->
 ---
 
 # Life's hard with two laptops that are eager to nap...
 
-> **tldr:** Juggling two work laptops with work-mandated screen shutoffs required I dig into my microcontroller reserves.
+> **tldr:** My employer enforces a 10-minute screen shutoff, but I have the atypical case of juggling two laptops which I often have to switch between I dug into my microcontroller reserves with the goal of making a USB mouse wiggler that I can keep active while I am at my desk.
 
 In my day job, I have a problem: I have two laptops, a Mac and a Windows machine, both of which have a mandatory 5-minute screen timeouts.
 
@@ -37,7 +37,7 @@ This blogpost will cover the prototype in CircuitPython.
 
 # ... And Python makes life too easy.
 
-> **tldr,** I want to prototype with CircuitPython first. To do this, I
+> **tldr,** I want to prototype with CircuitPython first. Here are the steps to replicate:
 > 
 > 1. Install CircuitPython:
 >   1. Plug the RP2040 Feather board in to your laptop via USB while holding the `BOOTSEL` button, so it'll act as a flash drive. Then,
@@ -47,8 +47,7 @@ This blogpost will cover the prototype in CircuitPython.
 >   2. Then I use `screen /dev/tty.usbmodem101` to connect to the REPL.
 > 3. Iteratively implement the bits and pieces of work I need to do. During this process, I switch instead to [my Adafruit Neopixel Trinkey](https://www.adafruit.com/product/4870) with a USB A-to-C adapter.
 > 
-> You can skip this section-- the actual `code.py` is at the end. 
-
+> You can skip this section if you're already familiar-- the actual `code.py` you install onto the Trinkey is at the end. 
 
 
 ---
