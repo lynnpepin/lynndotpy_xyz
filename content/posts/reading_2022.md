@@ -13,7 +13,7 @@ tags = ["post"]
 > **TLDR:** Leaving a PhD gives someone a lot of time to read new things. Here's some of my takeaways:
 > 
 > - ChatGPT and StableDiffusion are scary and new and cool.
-> - Philip Rogaway's work presents some important ethical considerations for cryptographers.
+> - Phillip Rogaway's work presents some important ethical considerations for cryptographers.
 > - ThreeBlueOneBrown is one of many educational YouTubers that I'm enjoying.
 > - Anyone writing Rust would benefit from reading the cursed words in the Rustonomicon.
 > - As usual, 538 podcasts are worth listening to around elections.
@@ -72,7 +72,7 @@ For more reading, I recommend [Ted Chiang's "ChatGPT Is a Blurry JPEG of the Web
 
 # Phillip Rogaway is one of many incredibly cool cryptographers
 
-> **tldr:** Remember when "crypto" meant "cryptography" and "crypto is a human right" didn't sound so silly? Then you might like to browse Philip Rogaway's works.
+> **tldr:** Remember when "crypto" meant "cryptography" and "crypto is a human right" didn't sound so silly? Then you might like to browse Phillip Rogaway's works.
 > 
 > Here's a list of papers I recommend:
 > 
@@ -85,7 +85,7 @@ Cryptography is a fascinating field, but in my PhD studies I've almost only read
 
 There are, of course, [the venerable 2015 *"Keys Under Doormats"*](https://dspace.mit.edu/bitstream/handle/1721.1/97690/MIT-CSAIL-TR-2015-026.pdf) paper and [the lesser-known 2021 *"Bugs In Our Pockets*"](https://arxiv.org/pdf/2110.07450.pdf) paper, both of which are required reading for the intersection of cryptography and society.
 
-For anyone hungry to read more, I must recommend Philip Rogaway, a cryptographer at the UCD: https://www.cs.ucdavis.edu/~rogaway/. Specifically, his paper [*"The Moral Character of Cryptographic Work*"](https://www.cs.ucdavis.edu/~rogaway/papers/moral.html), a 2015 paper that describes cryptography as a political tool that redistributes power. This is how I view cryptography, and it's why it is so important to me. But the paper is 33 pages long and I haven't read it all the way through yet.[^reading_rogaway: To be honest, I probably won't. If an academic says they skimmed a paper, it means they looked at the abstract. If they say they read a paper through, they probably skimmed it. This is a secret though, don't tell anyone.]
+For anyone hungry to read more, I must recommend Phillip Rogaway, a cryptographer at the UCD: https://www.cs.ucdavis.edu/~rogaway/. Specifically, his paper [*"The Moral Character of Cryptographic Work*"](https://www.cs.ucdavis.edu/~rogaway/papers/moral.html), a 2015 paper that describes cryptography as a political tool that redistributes power. This is how I view cryptography, and it's why it is so important to me. But the paper is 33 pages long and I haven't read it all the way through yet.[^reading_rogaway: To be honest, I probably won't. If an academic says they skimmed a paper, it means they looked at the abstract. If they say they read a paper through, they probably skimmed it. This is a secret though, don't tell anyone.]
 
 The abstract is as follows: 
 
