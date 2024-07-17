@@ -15,8 +15,6 @@
     
     <link rel="stylesheet" href="https://lynndotpy.xyz/font-hack-subset.css">
 
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.xyz/atom.xml">
-    
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
     </head>
@@ -220,7 +218,7 @@
 
 <blockquote>
 <p><strong>TLDR:</strong> Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in $O(n \log n)$ time is still true, but that assumes you're sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)</p>
-<p>See the <a href="https://github.com/lynnpepin/rust_projects/blob/master/countsort/plot_stats.ipynb">Python notebook</a> wrapping an unoptimized <a href="https://github.com/lynnpepin/rust_projects/tree/master/countsort">Rust countsort implementation</a>: </p>
+<p>See the <a href="https://github.com/lynnpepin/rust_projects/blob/master/countsort/plot_stats.ipynb">Python notebook</a> wrapping an unoptimized <a href="https://github.com/lynnpepin/rust_projects/tree/master/countsort">Rust countsort implementation</a>:</p>
 </blockquote>
 <p>--</p>
 <p>Is this truly $O(n)$? Yes!</p>
@@ -228,7 +226,7 @@
 <li>Counting sort is not a randomized algorithm, it always outputs the correct solution.</li>
 <li>Counting sort is not a parallelized algorithm. (And you can't use parallelism to speed past a worst-case big-O run time anyway!)</li>
 <li>Counting sort is not an amortized algorithm. It is truly $O(n)$, not 'expected' or 'amortized' $O(n)$.</li>
-<li>Counting sort is technically $Θ(n)$, that is, the worst and best case running time is linear. </li>
+<li>Counting sort is technically $Θ(n)$, that is, the worst and best case running time is linear.</li>
 <li>This can be used in the real world.</li>
 <li>However, it is not an in-place sorting algorithm.</li>
 </ul>

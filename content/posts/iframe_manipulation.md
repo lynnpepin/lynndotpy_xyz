@@ -14,3 +14,8 @@ Look at the structure of this URL! You can put `https://www.middlesex.mass.edu/t
 This is similar to [how scam sites abuse improperly-configured internal search engines to hit Google's frontpage](https://lynndotpy.xyz/posts/seo-dating-spam/).
 
 Generally speaking, it's best to avoid letting arbitrary people fill out an iFrame on your website. [To prove this point, I'm sending this webpage to Middlesex Community College within an iframe on their own site.](https://www.middlesex.mass.edu/templateinframes/?Site=Help&Url=https://lynndotpy.xyz/posts/iframe-manipulation/) One could easily replace my post with a URL to malware, pornography, etc.
+
+
+---
+
+**Update** 2024-July-17th: It appears that Middlesex has recently stopped allowing this iFrame manipulation! I made this post after being unable to reach them in any other capacity-- I guess this post is what finally got through. 

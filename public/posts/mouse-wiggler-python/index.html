@@ -15,8 +15,6 @@
     
     <link rel="stylesheet" href="https://lynndotpy.xyz/font-hack-subset.css">
 
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.xyz/rss.xml">
-    
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
         
@@ -105,8 +103,8 @@
         
         <div class="post-content">
             <blockquote>
-<p><strong>tldr:</strong> I need a USB mouse wiggler and I want to make it myself. I used a spare <a href="https://www.adafruit.com/product/4870">Adafruit Neopixel Trinkey</a> with CircuitPython to prototype a simple mouse wiggler, which can be enabled/disabled with a touch. Handling &quot;wiggling&quot; state and input required some debouncing code, which was the most complicated part. The whole <code>code.py</code> script is available at the end.</p>
-<p>This is a prototype-- I've had a hankering to learn embedded rust, and this is how I made a quick prototype with CircuitPython. <a href="https://mastodon.social/@lynndotpy/112144884913215202">A picture and comments are on my Mastodon</a>. </p>
+<p><strong>tldr:</strong> I need a USB mouse wiggler and I want to make it myself. I used a spare <a href="https://www.adafruit.com/product/4870">Adafruit Neopixel Trinkey</a> with CircuitPython to prototype a simple mouse wiggler, which can be enabled/disabled with a touch. Handling "wiggling" state and input required some debouncing code, which was the most complicated part. The whole <code>code.py</code> script is available at the end.</p>
+<p>This is a prototype-- I've had a hankering to learn embedded rust, and this is how I made a quick prototype with CircuitPython. <a href="https://mastodon.social/@lynndotpy/112144884913215202">A picture and comments are on my Mastodon</a>.</p>
 </blockquote>
 <span id="continue-reading"></span>
 <hr />
@@ -116,14 +114,14 @@
 </blockquote>
 <p>In my day job, I have a problem: I have two laptops, a Mac and a Windows machine, both of which have a mandatory 5-minute screen timeouts.</p>
 <p>I often find myself swapping between both laptops, working on one for a bit, while the other locks. So, I am punished by these screen timeouts, even while sitting infront of both latpops! Logging in several times an hour is laborious and breaks my flow-state, and extended sleep turns off network-connections.</p>
-<p>I've heard of &quot;USB mouse wigglers&quot; as the solution to this, but I can't just <em>trust</em> that these won't do something nefarious while it's at it. So, I decided to create one myself. <a href="https://xkcd.com/196/">I am sure I will not regret this.</a></p>
+<p>I've heard of "USB mouse wigglers" as the solution to this, but I can't just <em>trust</em> that these won't do something nefarious while it's at it. So, I decided to create one myself. <a href="https://xkcd.com/196/">I am sure I will not regret this.</a></p>
 <p>My requirements are:</p>
 <ol>
 <li>A microcontroller (like the PiPico) I can connect via USB C.</li>
 <li>An integrated button to enable / disable the functionality, and</li>
 <li>an LED indicator of whether the functionality is enabled or not.</li>
 </ol>
-<p>Over the years, I've purchased many Raspberry Pi's from Adafruit, and many microcontrollers to bring myself over the &quot;free shipping&quot; bump. The <a href="https://learn.adafruit.com/adafruit-feather-rp2040-pico/overview">Adafruit Feather RP2040</a> with an <a href="https://www.adafruit.com/product/5328">USB-C to USB-C adapter</a> looked like just the thing I need.</p>
+<p>Over the years, I've purchased many Raspberry Pi's from Adafruit, and many microcontrollers to bring myself over the "free shipping" bump. The <a href="https://learn.adafruit.com/adafruit-feather-rp2040-pico/overview">Adafruit Feather RP2040</a> with an <a href="https://www.adafruit.com/product/5328">USB-C to USB-C adapter</a> looked like just the thing I need.</p>
 <p>This has an integrated button and an LED, and is based on the RP 2040 (the microcontroller powering the Pi Pico). I want to prototype with CircuitPython and eventually reimplement this in Rust. Adafruit products almost universally have good CircuitPython support, and the RP 2040 platform (which powers the Pi Pico) is popular enough that I imagine it must be well-supported for embedded Rust by now. (<a href="https://crates.io/crates/adafruit-feather-rp2040">Plus, there is also a whole crate titled <code>adafruit-feather-rp2040</code></a>, so my hopes are pretty high.])</p>
 <p>This blogpost will cover the prototype in CircuitPython.</p>
 <h1 id="and-python-makes-life-too-easy">... And Python makes life too easy.</h1>
@@ -134,11 +132,11 @@
 <li>Plug the RP2040 Feather board in to your laptop via USB while holding the <code>BOOTSEL</code> button, so it'll act as a flash drive. Then,</li>
 <li><a href="https://circuitpython.org/board/adafruit_feather_rp2040/">Download the latest CircuitPython UF2 to the board</a>.</li>
 <li>Start the CircuitPython REPL:</li>
-<li>From my terminal, use <code>ls /dev/tty.*</code> to find the name of the TTY (&quot;shell&quot;) which exposes the CircuitPython REPL.</li>
+<li>From my terminal, use <code>ls /dev/tty.*</code> to find the name of the TTY ("shell") which exposes the CircuitPython REPL.</li>
 <li>Then I use <code>screen /dev/tty.usbmodem101</code> to connect to the REPL.</li>
 <li>Iteratively implement the bits and pieces of work I need to do. During this process, I switch instead to <a href="https://www.adafruit.com/product/4870">my Adafruit Neopixel Trinkey</a> with a USB A-to-C adapter.</li>
 </ol>
-<p>You can skip this section if you're already familiar-- the actual <code>code.py</code> you install onto the Trinkey is at the end. </p>
+<p>You can skip this section if you're already familiar-- the actual <code>code.py</code> you install onto the Trinkey is at the end.</p>
 </blockquote>
 <hr />
 <h2 id="i-want-to-use-circuitpython-to-prototype-but-i-need-to-actually-install-it-first">I want to use CircuitPython to prototype but I need to actually install it first.</h2>
@@ -146,12 +144,12 @@
 <p><strong>tldr:</strong> I <a href="https://circuitpython.org/board/adafruit_feather_rp2040/">download the latest CircuitPython UF2 for this board</a>, copy over the <code>.uf2</code> file. CircuitPython starts instantly! Then, one uses <code>ls /dev/tty.*</code> to find where the REPL lives. For me, it's on <code>/dev/tty.usbmodel101</code>, so I run <code>screen /dev/tty.usbmodem101</code>, and voila, I'm in the REPL.</p>
 </blockquote>
 <p>So, an aside: The Feather comes with a USB <a href="https://github.com/microsoft/uf2">UF2 bootloader</a>, which means adding new firmware is <em>just drag-and-drop</em>. This is pretty great.</p>
-<p>I wanted to do this in Rust, but the Rust code-compile-flash-repeat loop has a lot of questions: How to build to a &quot;hello world&quot;? How exactly to address the LED? How to move the mouse?</p>
-<p>... Actually, those are pretty much the only questions I have. <a href="https://github.com/micropython/micropython">MicroPython</a> and it's easier-fork <a href="https://learn.adafruit.com/welcome-to-circuitpython">CircuitPython</a> are fantastic for iterating. It exposes a USB filesystem with a <code>code.py</code> with a REPL and live-reload. </p>
+<p>I wanted to do this in Rust, but the Rust code-compile-flash-repeat loop has a lot of questions: How to build to a "hello world"? How exactly to address the LED? How to move the mouse?</p>
+<p>... Actually, those are pretty much the only questions I have. <a href="https://github.com/micropython/micropython">MicroPython</a> and it's easier-fork <a href="https://learn.adafruit.com/welcome-to-circuitpython">CircuitPython</a> are fantastic for iterating. It exposes a USB filesystem with a <code>code.py</code> with a REPL and live-reload.</p>
 <p>Adafruit has examples and code for CircuitPython, so I'm starting by <a href="https://circuitpython.org/board/adafruit_feather_rp2040/">downloading the latest CircuitPython UF2 for this board</a>, which instantly starts running CircuitPython. Hooray :)</p>
 <p><a href="https://learn.adafruit.com/welcome-to-circuitpython/advanced-serial-console-on-mac-and-linux">Per Adafruit, on MacOS and Linux,</a> you can find the TTY where CircuitPython exposes the terminal using <code>ls /dev/tty.*</code>. For me, it's <code>/dev/tty.usbmodem101</code>, so I run <code>screen /dev/tty.usbmodem101</code> to connect to it.</p>
 <h2 id="prototype-priority-one-this-led-is-hurting-my-eyes-so-i-want-to-turn-it-off">Prototype priority one: This LED is hurting my eyes so I want to turn it off</h2>
-<p>When plugged in, the bright neopixel activates. This LED (an Adafruit &quot;neopixel&quot;) is hurting my eyes, so I want to turn it off. A quick <code>help(&quot;modules&quot;)</code> shows me the <code>neopixel_write</code>, so I use <code>help</code> to figure things out and...</p>
+<p>When plugged in, the bright neopixel activates. This LED (an Adafruit "neopixel") is hurting my eyes, so I want to turn it off. A quick <code>help("modules")</code> shows me the <code>neopixel_write</code>, so I use <code>help</code> to figure things out and...</p>
 <pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># this LED is hurting my eyes so I want to turn it off
 </span><span style="color:#8fbfdc;">import </span><span>neopixel_write </span><span style="color:#8fbfdc;">as </span><span>nw
 </span><span style="color:#ffb964;">help</span><span>(nw)
@@ -173,7 +171,7 @@
 </span><span>pixel_off = </span><span style="color:#ffb964;">bytearray</span><span>([</span><span style="color:#cf6a4c;">0</span><span>, </span><span style="color:#cf6a4c;">0</span><span>, </span><span style="color:#cf6a4c;">0</span><span>])
 </span><span>neopixel_write.</span><span style="color:#ffb964;">neopixel_write</span><span>(pin, pixel_off)
 </span></code></pre>
-<p>Wonderful. So, I start to build my &quot;grimoire&quot; (collection of code snippets).</p>
+<p>Wonderful. So, I start to build my "grimoire" (collection of code snippets).</p>
 <pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">import </span><span>board
 </span><span style="color:#8fbfdc;">from </span><span>neopixel_write </span><span style="color:#8fbfdc;">import </span><span>neopixel_write
 </span><span style="color:#8fbfdc;">import </span><span>digitalio
@@ -186,7 +184,7 @@
 </span><span>_led_off = </span><span style="color:#8fbfdc;">lambda</span><span>: </span><span style="color:#ffb964;">neopixel_write</span><span>(pin, </span><span style="color:#ffb964;">bytearray</span><span>([</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#cf6a4c;">0</span><span>]))
 </span><span>_led_red = </span><span style="color:#8fbfdc;">lambda</span><span>: </span><span style="color:#ffb964;">neopixel_write</span><span>(pin, </span><span style="color:#ffb964;">bytearray</span><span>([</span><span style="color:#cf6a4c;">0</span><span>,</span><span style="color:#cf6a4c;">1</span><span>,</span><span style="color:#cf6a4c;">0</span><span>]))
 </span></code></pre>
-<p>(Btw, my neopixel is indexed GRB, and even <code>[0,1,0]</code> of 255 is bright enough for me. <a href="https://mastodon.social/@lynndotpy/112144884913215202">This is because these values control wattage and aren't normalized for perceived brightness.</a>.) </p>
+<p>(Btw, my neopixel is indexed GRB, and even <code>[0,1,0]</code> of 255 is bright enough for me. <a href="https://mastodon.social/@lynndotpy/112144884913215202">This is because these values control wattage and aren't normalized for perceived brightness.</a>.)</p>
 <h2 id="prototype-priority-two-oh-wait-i-have-a-way-better-adafruit-devboard">Prototype priority two: Oh wait I have a way better Adafruit devboard</h2>
 <blockquote>
 <p><strong>tldr:</strong> I switched to <a href="https://www.adafruit.com/product/4870">my Adafruit Neopixel Trinkey</a>. I needed to flash a different version of CircuitPython, and because this has four neopixels and not one, I have to push a 12-byte array and not a 3-byte array.</p>
@@ -229,7 +227,7 @@
 <blockquote>
 <p><strong>tldr:</strong> I want to toggle the mouse wiggler by touching either of the capacitive buttons. This requires debouncing the input, otherwise the state will rapidly invert while the buttons are pressed.</p>
 </blockquote>
-<p>First, we need to get inputs and set a state (wiggling on / off). We'll have the usual process loop. We'll also want any inputs not to be &quot;repeated&quot; when held. This is called &quot;debouncing&quot;, which I love because that means I get to have two booleans titled <code>wiggling</code> and <code>debouncing</code>, which are far more whimsical names than the average boolean.</p>
+<p>First, we need to get inputs and set a state (wiggling on / off). We'll have the usual process loop. We'll also want any inputs not to be "repeated" when held. This is called "debouncing", which I love because that means I get to have two booleans titled <code>wiggling</code> and <code>debouncing</code>, which are far more whimsical names than the average boolean.</p>
 <pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">import </span><span>board
 </span><span style="color:#8fbfdc;">from </span><span>neopixel_write </span><span style="color:#8fbfdc;">import </span><span>neopixel_write
 </span><span style="color:#8fbfdc;">import </span><span>digitalio
@@ -340,9 +338,9 @@
 </span></code></pre>
 <h1 id="p-s-what-s-next">P.S. What's next?</h1>
 <blockquote>
-<p><strong>tldr:</strong> More complicated LED control, and underclocking. </p>
+<p><strong>tldr:</strong> More complicated LED control, and underclocking.</p>
 </blockquote>
-<p>As a bonus, I replaced <code>_led_red()</code> with this function which provides a slow &quot;rotating&quot; effect to the LEDs with a time period of <code>8</code> and a maximum brightness of <code>tt</code>. As mentioned, brightness is not logarithmic, so it's less of a 'smooth spinning' and more of a rotating blinking. Still, it feels fancy and fun.</p>
+<p>As a bonus, I replaced <code>_led_red()</code> with this function which provides a slow "rotating" effect to the LEDs with a time period of <code>8</code> and a maximum brightness of <code>tt</code>. As mentioned, brightness is not logarithmic, so it's less of a 'smooth spinning' and more of a rotating blinking. Still, it feels fancy and fun.</p>
 <pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">_tri</span><span>(</span><span style="color:#ffb964;">tt</span><span>, </span><span style="color:#ffb964;">pp</span><span>):
 </span><span>  </span><span style="color:#888888;"># triangle wave maxing at pp//2
 </span><span>  tp = tt%pp

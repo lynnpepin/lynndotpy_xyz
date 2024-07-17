@@ -15,8 +15,6 @@
     
     <link rel="stylesheet" href="https://lynndotpy.xyz/font-hack-subset.css">
 
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.xyz/rss.xml">
-    
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
         
@@ -114,14 +112,14 @@
 </blockquote>
 <span id="continue-reading"></span><h1 id="gimp-is-a-good-image-editor-and-you-can-automate-it-with-python">gimp is a good image editor, and you can automate it with python</h1>
 <p>For those unfamiliar with <a href="https://www.gimp.org/">GIMP (gimp.org)</a>, it is a free and open-source image editor, and one of my favorite tools.</p>
-<p>I'm a long-time GIMP user and a long-time Python user. GIMP has this nifty feature called &quot;PythonFu&quot; that allows you to modify images using Python code. (GIMP also exposes a Scheme interface.) With GIMP and Python knowledge, it enables one to automatically edit images.  There are plenty of tutorials and documentation, but none of them enabled me to &quot;get my hands dirty&quot;, which is why I'm writing this post.</p>
+<p>I'm a long-time GIMP user and a long-time Python user. GIMP has this nifty feature called "PythonFu" that allows you to modify images using Python code. (GIMP also exposes a Scheme interface.) With GIMP and Python knowledge, it enables one to automatically edit images.  There are plenty of tutorials and documentation, but none of them enabled me to "get my hands dirty", which is why I'm writing this post.</p>
 <p>Automating GIMP was useful for me when making a little Yu-Gi-Oh inspired card game. Instead of editing 60+ cards titles and descriptions by hand, I used a script to read a spreadsheet and do it for me. I'll edit this post once I have the code ready. :)</p>
 <h1 id="the-dev-experience-is-janky-here-s-how-i-do-it">the dev experience is janky! here's how i do it</h1>
 <blockquote>
 <p><strong>tldr:</strong> In four corners: GIMP editor, GIMP Python procedure browser for documentation, Python console, and a Python editor. Run scripts by copy and pasting them.</p>
 </blockquote>
 <p>If you have experience with GIMP and Python and want to learn how to automate GIMP, then let me show you my basic GIMP Python scripting setup:</p>
-<p><img src="/posts/images/gimp-python-dev-setup.png" alt="A screenshot showing four windows open in tiled configuration: (1) A GIMP image-editing window with  a card-template reminiscent of Yu-Gi-Oh, (2) A 'procedure browser' showing a list of GIMP procedures with corresponding documentation, (3) An interactive Python console that programatically modifies the GIMP image, and (4) A text editor used as a 'scratch space' with a list of commands." title="A screenshot showing four windows open in tiled configuration: (1) A GIMP image-editing window with  a card-template reminiscent of Yu-Gi-Oh, (2) A 'procedure browser' showing a list of GIMP procedures with corresponding documentation, (3) An interactive Python console that programatically modifies the GIMP image, and (4) A text editor used as a 'scratch space' with a list of commands." /></p>
+<p><img src="/posts/images/gimp-python-dev-setup.png" alt="A screenshot showing four windows open in tiled configuration: (1) A GIMP image-editing window with  a card-template reminiscent of Yu-Gi-Oh, (2) A &#39;procedure browser&#39; showing a list of GIMP procedures with corresponding documentation, (3) An interactive Python console that programatically modifies the GIMP image, and (4) A text editor used as a &#39;scratch space&#39; with a list of commands." title="A screenshot showing four windows open in tiled configuration: (1) A GIMP image-editing window with  a card-template reminiscent of Yu-Gi-Oh, (2) A &#39;procedure browser&#39; showing a list of GIMP procedures with corresponding documentation, (3) An interactive Python console that programatically modifies the GIMP image, and (4) A text editor used as a &#39;scratch space&#39; with a list of commands." /></p>
 <p>I keep keep these four windows open on one screen:</p>
 <ol>
 <li>The GIMP image I want to modify.</li>
@@ -135,19 +133,19 @@
 <p>Here are some other small things that I wish someone told me from the start:</p>
 <ul>
 <li>AFAIK, there is no officially-supported method to run <code>pdb</code> headless in Python scripts. Your interactions have to be through the GIMP executable's bundled Python interpreter.</li>
-<li>GIMP uses the &quot;<code>pdb</code>&quot; library for most interactions. This is <em>not</em> the same as the Python debugger.</li>
-<li>To use a function in the Procedure Browser, say, &quot;<code>gimp-image-set-active-layer</code>&quot;, you want to call &quot;<code>pdb.gimp_image_set_active_layer</code>&quot;.</li>
+<li>GIMP uses the "<code>pdb</code>" library for most interactions. This is <em>not</em> the same as the Python debugger.</li>
+<li>To use a function in the Procedure Browser, say, "<code>gimp-image-set-active-layer</code>", you want to call "<code>pdb.gimp_image_set_active_layer</code>".</li>
 <li>The Procedure Browser is the most complete and easy-to-search <code>pdb</code> documentation...</li>
-<li>... But some documented parameters will not match the Python libary. For example, the blur plugin &quot;<code>plug-in-gauss-iir</code>&quot; lists a &quot;<code>run-mode</code>&quot; parameter, but the function &quot;<code>pdb.plug_in_gauss_iir</code>&quot; does not use that parameter.</li>
+<li>... But some documented parameters will not match the Python libary. For example, the blur plugin "<code>plug-in-gauss-iir</code>" lists a "<code>run-mode</code>" parameter, but the function "<code>pdb.plug_in_gauss_iir</code>" does not use that parameter.</li>
 <li>GIMP uses Python 2.7, but should be using Python 3 in 2021.</li>
 </ul>
 <h1 id="hello-world">hello world!</h1>
-<p>As a quick &quot;hello world&quot; example, consider the following steps:</p>
+<p>As a quick "hello world" example, consider the following steps:</p>
 <ol>
 <li>Create a new image in GIMP</li>
-<li>Add a text layer, with layer title &quot;Title&quot;</li>
+<li>Add a text layer, with layer title "Title"</li>
 <li>Open the Python console (Filters &gt; Python-Fu &gt; Console)</li>
-<li>Enter the below lines into the console! Your text layer will be modified to say 'Hello world!&quot;.</li>
+<li>Enter the below lines into the console! Your text layer will be modified to say 'Hello world!".</li>
 </ol>
 <blockquote>
 <pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span>img = gimp.</span><span style="color:#ffb964;">image_list</span><span>()[</span><span style="color:#cf6a4c;">0</span><span>]

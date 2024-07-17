@@ -4,8 +4,7 @@ title = "// lynndotpy"
 
 # Sass compilation is required
 compile_sass = true
-
-generate_feed = true
+#generate_feed = true
 
 # Optional: enable tags
 taxonomies = [
