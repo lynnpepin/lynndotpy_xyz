@@ -21,9 +21,9 @@ lynn pepin ❖ 199X ❖ they/them
 
 | | |
 |-|-|
-| email  |[&#108;&#121;&#110;&#110;&#064;&#108;&#121;&#110;&#110;&#100;&#111;&#116;&#112;&#121;&#046;&#120;&#121;&#122;](mailto:&#108;&#121;&#110;&#110;&#064;&#108;&#121;&#110;&#110;&#100;&#111;&#116;&#112;&#121;&#046;&#120;&#121;&#122;)|
-| mastodon | [lynndotpy@mastodon.social](https://mastodon.social/web/accounts/1086597#) |
-| code repos |  [github.com/lynnpepin](https://github.com/lynnpepin/) and [gitlab.com/lynnpepin](https://gitlab.com/lynnpepin/) |
+| email  |[&#108;&#121;&#110;&#110;&#064;&#108;&#121;&#110;&#110;&#100;&#111;&#116;&#112;&#121;&#046;&#064;&#065;&#118;](mailto:&#108;&#121;&#110;&#110;&#064;&#108;&#121;&#110;&#110;&#100;&#111;&#116;&#112;&#121;&#046;&#064;&#065;&#118;)|
+| mastodon | [lynndotpy@mastodon.social](https://mastodon.social/@lynndotpy) |
+| git origin |  [github.com/lynnpepin](https://github.com/lynnpepin/) and [gitlab.com/lynnpepin](https://gitlab.com/lynnpepin/) |
 
 ---
 
@@ -31,11 +31,11 @@ Some more things about me
 
 - i've been called a "computer clown", a "delicate linux flower", and a "phd dropout"
 - big fan of opossums and crows
-- 
-- proud uconn alum
-- things i do:
+- uconn alum
+- things i currently do:
   - full-stack with Angular, C#/.NET, and postgres
   - datascience with python, for work and for activism
+  - rust and godot during side projects
   - art and gamedev
 - things i used to do:
   - research in cybersecurity and machine learning

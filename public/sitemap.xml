@@ -119,6 +119,10 @@
         <lastmod>2024-01-06</lastmod>
     </url>
     <url>
+        <loc>https://lynndotpy.dev/posts/xyz-now-dev/</loc>
+        <lastmod>2024-07-18</lastmod>
+    </url>
+    <url>
         <loc>https://lynndotpy.dev/projects/</loc>
     </url>
     <url>
@@ -150,6 +154,9 @@
     </url>
     <url>
         <loc>https://lynndotpy.dev/tags/legal/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.dev/tags/meta/</loc>
     </url>
     <url>
         <loc>https://lynndotpy.dev/tags/post/</loc>

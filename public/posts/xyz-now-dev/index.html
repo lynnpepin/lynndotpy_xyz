@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>lynndotpy.xyz is now lynndotpy.dev &#x2F;&#x2F; lynndotpy</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.dev/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.dev/color/lynn-auto-2.css">
+
+        <link rel="stylesheet" href="https://lynndotpy.dev/color/background_auto.css">
+    
+    <link rel="stylesheet" href="https://lynndotpy.dev/font-hack-subset.css">
+
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+        
+<link rel="stylesheet" href="https://lynndotpy.dev/katex/katex.min.css">
+<script defer src="https://lynndotpy.dev/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.dev/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.dev/katex/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+      ]
+      });
+  });
+</script>
+
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.dev/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.dev
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.dev/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.dev/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.dev/projects">projects</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/xyz-now-dev/">lynndotpy.xyz is now lynndotpy.dev</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-07-18
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/meta/">#meta</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/post/">#post</a></span>
+    
+
+        
+        <div class="post-content">
+            <blockquote>
+<p><strong>tldr:</strong> This site <a href="https://lynndotpy.xyz"><code>lynndotpy.xyz</code></a> is now hosted at <a href="https://lynndotpy.dev"><code>lynndotpy.dev</code></a>, because (1) <code>.xyz</code> domains are associated with spam, and (2) I am a developer.</p>
+</blockquote>
+<span id="continue-reading"></span>
+<p>I set up this blog in 2020 as a custom static-site generator. The <code>.xyz</code> domains were cheap, fun, and didn't require TLS.</p>
+<p>I would occasionally send my friends links to posts on my blog, and as <a href="https://www.spotvirtual.com/blog/the-perils-of-an-xyz-domain">SpotVirtual</a> noted, many cellular and email providers would <em>silently drop messages which contain any URL with a <code>.xyz</code> domain.</em></p>
+<p>So, I bought <code>lynndotpy.dev</code>, and set up my Caddyfile appropriately, which worked fine for awhile.</p>
+<pre data-lang="Caddyfile" style="background-color:#151515;color:#e8e8d3;" class="language-Caddyfile "><code class="language-Caddyfile" data-lang="Caddyfile"><span>lynndotpy.xyz {
+</span><span>  encode zstd gzip
+</span><span>  root * ./blog/public
+</span><span>  file_server
+</span><span>  header {
+</span><span>    # disable FLoC, Topics tracking
+</span><span>    Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;
+</span><span>  }
+</span><span>}
+</span><span>
+</span><span>https://lynndotpy.dev {
+</span><span>  redir https://lynndotpy.xyz{uri}
+</span><span>}
+</span></code></pre>
+<p>(You can read more about the <code>Permissions-Policy</code> in my header <a href="https://lynndotpy.dev/posts/caddy-topics-optout/">here</a>.)</p>
+<p>I liked my <code>.xyz</code> domain because it felt quirky and fun, and suited to the miscellania I wanted my blog to be about. I make card games! I make Blender renders! I make little Godot games! I contain multitudes, and all that jazz!</p>
+<p>But then I noticed something... "Big" XYZ sites like the aforementioned <a href="https://spot.xyz">spot.xyz</a> now redirects to <a href="https://www.spotvirtual.com/">spotvirtual.com</a>. There's a trend of leaving old <code>xyz</code> domains to redirect to a more traditional TLD,  like <a href="https://blueskyweb.xyz/">blueskyweb.xyz</a>. The ones which <em>aren't</em> redirecting are all "web3" things. NFTs, metaverse, the likes. <em>Yuck.</em></p>
+<p>Come to think of it, I've barely posted any art or anything here. I'm a developer and I'm getting a kick out of deveoping. I'm having a great time with the vimlike <a href="https://helix-editor.com/">Helix editor</a>. But I really don't want to be associated with the kind of cruft you see on <code>.xyz</code>.</p>
+<p>So, welcome to <code>lynndotpy.dev</code> :)</p>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h"></span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://lynndotpy.dev/posts/mouse-wiggler-python/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">Prototyping a USB mouse wiggler with CircuitPython</span>
+                        </a>
+                    </span>
+                
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>
