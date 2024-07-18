@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://lynndotpy.xyz/"
+base_url = "https://lynndotpy.dev/"
 title = "// lynndotpy"
 
 # Sass compilation is required
@@ -18,7 +18,7 @@ highlight_theme = "boron"
 
 [extra]
 # Put all your custom variables here
-logo_text = "lynndotpy.xyz"
+logo_text = "lynndotpy.dev"
 author = "Lynn Pepin"
 copyright_html = "© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr"
 katex = true

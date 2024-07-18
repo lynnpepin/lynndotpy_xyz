@@ -8,20 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="robots" content="noodp"/>
 
-    <link rel="stylesheet" href="https://lynndotpy.xyz/style.css">
-    <link rel="stylesheet" href="https://lynndotpy.xyz/color/lynn-auto-2.css">
+    <link rel="stylesheet" href="https://lynndotpy.dev/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.dev/color/lynn-auto-2.css">
 
-        <link rel="stylesheet" href="https://lynndotpy.xyz/color/background_auto.css">
+        <link rel="stylesheet" href="https://lynndotpy.dev/color/background_auto.css">
     
-    <link rel="stylesheet" href="https://lynndotpy.xyz/font-hack-subset.css">
+    <link rel="stylesheet" href="https://lynndotpy.dev/font-hack-subset.css">
 
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
         
-<link rel="stylesheet" href="https://lynndotpy.xyz/katex/katex.min.css">
-<script defer src="https://lynndotpy.xyz/katex/katex.min.js"></script>
-<script defer src="https://lynndotpy.xyz/katex/mathtex-script-type.min.js"></script>
-<script defer src="https://lynndotpy.xyz/katex/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://lynndotpy.dev/katex/katex.min.css">
+<script defer src="https://lynndotpy.dev/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.dev/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.dev/katex/auto-render.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
       renderMathInElement(document.body, {
@@ -49,10 +49,10 @@
         <div class="header__inner">
             <div class="header__logo">
                     
-                <a href="https://lynndotpy.xyz/" style="text-decoration: none;">
+                <a href="https://lynndotpy.dev/" style="text-decoration: none;">
                     <div class="logo">
                       
-                            lynndotpy.xyz
+                            lynndotpy.dev
                         
                     </div>
                 </a>
@@ -62,11 +62,11 @@
         
         <nav class="menu">
             <ul class="menu__inner">
-                <li><a href="https://lynndotpy.xyz/archive">archive</a></li>
+                <li><a href="https://lynndotpy.dev/archive">archive</a></li>
             
-                <li><a href="https://lynndotpy.xyz/about">about</a></li>
+                <li><a href="https://lynndotpy.dev/about">about</a></li>
             
-                <li><a href="https://lynndotpy.xyz/projects">projects</a></li>
+                <li><a href="https://lynndotpy.dev/projects">projects</a></li>
             
                 <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
             </ul>
@@ -81,7 +81,7 @@
         
     <div class="post">
         
-    <h1 class="post-title"><a href="https://lynndotpy.xyz/posts/reso-2023/">Reso: Rewritten in Rust and now 20000x faster!!</a></h1>
+    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/reso-2023/">Reso: Rewritten in Rust and now 20000x faster!!</a></h1>
     <div class="post-meta-inline">
         
     <span class="post-date">
@@ -93,9 +93,9 @@
     
         <span class="post-tags-inline">
                 :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/project/">#project</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/reso/">#reso</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.xyz/tags/rust/">#rust</a></span>
+                <a class="post-tag" href="https://lynndotpy.dev/tags/project/">#project</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/reso/">#reso</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/rust/">#rust</a></span>
     
 
         
@@ -103,7 +103,7 @@
             <blockquote>
 <p><strong>tldr:</strong> Reso has been re-implemented in Rust, deprecating the Python original. The underlying datastructure is new, with an incidence-map based algorithm. This makes Reso very fast, at about 20000x faster than the original in some cases.</p>
 </blockquote>
-<p>Reso is a logic circuit language and simulator, <a href="https://lynndotpy.xyz/posts/reso-intro/">first written in Python</a> and now revived in Rust. It's a visual language, where inputs and outputs are both <code>.png</code> images, making MS Paint a totally appropriate IDE. :)</p>
+<p>Reso is a logic circuit language and simulator, <a href="https://lynndotpy.dev/posts/reso-intro/">first written in Python</a> and now revived in Rust. It's a visual language, where inputs and outputs are both <code>.png</code> images, making MS Paint a totally appropriate IDE. :)</p>
 <p>This post assumes you already know the idea behind Reso. You can <a href="https://github.com/resolang/reso">check Reso out on GitHub</a> and <a href="https://crates.io/crates/reso">crates.io</a>. You can install it with <code>cargo install reso</code>.</p>
 <span id="continue-reading"></span><h1 id="the-story-behind-reso">The story behind Reso</h1>
 <blockquote>
@@ -133,7 +133,7 @@ It's ugly as hell, but I like it, and it showcases the basic language features: 
 <h1 id="here-s-to-a-bright-2024">Here's to a bright 2024</h1>
 <p>I have so many ideas, and so little time. I want to make Reso more colorblind-friendly, I want to build tooling to make it easier to build in Reso, I want to make prefab components (i.e. sprites), I want to build a circuit in Reso, I want to make it easy to run a Reso circuit on a microcontroller, to make it easy to connect Reso wires to real-world GPIO pins, etc.</p>
 <p>The main thing is I want Reso to be <em>a toy</em> people can use to make <em>cool things</em>. The ideal end state is a web editor with a bunch of tools builtin.</p>
-<p>I'm on a roll with Reso, but I'm pausing to do <a href="https://lynndotpy.xyz/posts/reso-2023/genuary.art">genuary</a> in Rust. <a href="https://github.com/lynnpepin/genuary">You can see my progress here.</a></p>
+<p>I'm on a roll with Reso, but I'm pausing to do <a href="https://lynndotpy.dev/posts/reso-2023/genuary.art">genuary</a> in Rust. <a href="https://github.com/lynnpepin/genuary">You can see my progress here.</a></p>
 <p>So, here's a list of what's coming the next time I get a chance to fixate on this:</p>
 <p><strong>A computer made in Reso:</strong> I started writing Reso at a time when I held all the knowledge in my head to build a computer, <a href="https://www.nand2tetris.org/">or even Tetris,</a> from logic gates. Now that Reso is written in Rust, such a</p>
 <p><strong>Onion-skin algorithm walkthrough:</strong> While working on Reso, I drew an example input circuit, and added "onion skin" layers explaining every step of the way: The mapping from pixel to <code>Resel</code>, the compilation to a <code>Vec&lt;Vec&lt;Resel&gt;&gt;</code> to a <code>ReselBoard</code>, the results from <code>RegionMap</code>, then from <code>IncidenceMap</code>, and then eventually the steps <code>ResoCircuit</code> takes to iterate. I <em>really</em> want to make this step-by-step onionskinner, and this is probably an easy-ish trick of SVG. But that kind of stuff is far outside the perview of my webdev skills.</p>
@@ -154,7 +154,7 @@ It's ugly as hell, but I like it, and it showcases the basic language features: 
             </div>
             <div class="pagination__buttons">
                     <span class="button previous">
-                        <a href="https://lynndotpy.xyz/posts/written-in-rust/">
+                        <a href="https://lynndotpy.dev/posts/written-in-rust/">
                             <span class="button__icon">←</span>&nbsp;
                             <span class="button__text">Yes, I want to know if your project is written in Rust</span>
                         </a>
@@ -162,7 +162,7 @@ It's ugly as hell, but I like it, and it showcases the basic language features: 
                 
                 
                     <span class="button next">
-                        <a href="https://lynndotpy.xyz/posts/boycott-app-security/">
+                        <a href="https://lynndotpy.dev/posts/boycott-app-security/">
                             <span class="button__text">Privacy breakdown of three recent boycott apps</span>&nbsp;
                             <span class="button__icon">→</span>
                         </a>

@@ -9,7 +9,7 @@ tags = ["how-to", "caddy", "privacy"]
 > **TLDR:** Set the following in your caddyfile for each site: `header Permissions-Policy "interest-cohort=(),browsing-topics=()"`. This disable both the old FLoC and the new Topics.
 
 
-Here is an abbreviated version of my Caddyfile, showing how I set the `header` directive in my Caddyfile for `lynndotpy.xyz`:
+Here is an abbreviated version of my Caddyfile, showing how I set the `header` directive in my Caddyfile for `lynndotpy.dev`:
 
 ```caddyfile
 lynndotpy.xyz {

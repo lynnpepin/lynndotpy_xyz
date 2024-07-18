@@ -196,7 +196,7 @@ There are a lot of very good command-line editors out there. I got good use out 
 
 # Personal email: Fastmail + IWantMyName
 
-I use [IWantMyName](https://iwantmyname.com/) for domains and [Fastmail](https://app.fastmail.com/) for emails. With these two, I'm able to have as many `*@*.lynndotpy.xyz` emails as I want.
+I use [IWantMyName](https://iwantmyname.com/) for domains and [Fastmail](https://app.fastmail.com/) for emails. With these two, I'm able to have as many `*@*.lynndotpy.dev` emails as I want.
 
 ## Fastmail: $5/mo for everything I need
 
