@@ -7,9 +7,11 @@ tags = ["post", "meta"]
 +++
 
 
-> **tldr:** This site [`lynndotpy.xyz`](https://lynndotpy.xyz) is now hosted at [`lynndotpy.dev`](https://lynndotpy.dev), because (1) `.xyz` domains are associated with spam, and (2) I am a developer.
+> **tldr:** This site [`lynndotpy.xyz`](https://lynndotpy.xyz) is now hosted at [`lynndotpy.dev`](https://lynndotpy.dev), because (1) `.xyz` domains are associated with spam, and (2) `.dev` domains are trendy!!
 
 <!-- more -->
+
+Exciting times, huh?
 
 I set up this blog in 2020 as a custom static-site generator. The `.xyz` domains were cheap, fun, and didn't require TLS.
 
