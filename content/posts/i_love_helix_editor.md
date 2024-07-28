@@ -74,7 +74,7 @@ I won't cover everything I love about Helix. Instead, [I recommend Dimitri Sabad
 
 While Xi brands itself as the editor "for the next 20 years", but I have to say that I think Helix will really take that moniker. This is because Helix is very good. I don't think Helix will displace Vim as "that text editor preinstalled on every server ever", but I do think Helix is better on its merits than the competition.  It was ten years ago I saw my friend fly through their code with Vim, like a nimble wizard. It is today that I finally don that wizard robe and hat. 
 
-It only took a few hours of practice over a week or two to go from "I know `i`/`esc`/`:q`/`:w`" to "Y'know what? `10` `x` `s` `\.` `<enter>` `&`*s your list".\*
+It only took a few hours of practice over a week or two to go from "I know `i`/`esc`/`:q`/`:w`" to "Y'know what? `10` `x` `s` `\.` `<enter>` `&`s your list".\*
 
 ## Seriously, Helix only took a week of some practice to learn.
 
@@ -106,7 +106,7 @@ I love a short configuration file.
 
 ---
 
-\* `10x` performs the "select line" action 10 times, to select 10 lines. Then `s` "searches in selection`. We search for `\.` for a literal ".", since `.` is Regex for "any character". Then `<enter>` finishes the selection and puts the cursor on each `.`, and `&` aligns the characters.
+\* Regarding the  `10` `x` `s` `\.` `<enter>` `&` command above: `10x` performs the "select line" action 10 times, to select 10 lines. Then `s` "searches in selection". We search for `\.` for a literal ".", since `.` is Regex for "any character". Then `<enter>` finishes the selection and puts the cursor on each `.`, and `&` aligns the characters.
 
 
 ---
