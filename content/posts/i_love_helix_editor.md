@@ -1,7 +1,7 @@
 
 +++
 title = "Goodbye, Vim. I'm in love with Helix."
-date = 2024-07-18
+date = 2024-07-28
 
 [taxonomies]
 tags = ["post", "rust"]
