@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Goodbye, Vim. I&#x27;m in love with Helix. &#x2F;&#x2F; lynndotpy</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.dev/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.dev/color/lynn-auto-2.css">
+
+        <link rel="stylesheet" href="https://lynndotpy.dev/color/background_auto.css">
+    
+    <link rel="stylesheet" href="https://lynndotpy.dev/font-hack-subset.css">
+
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+        
+<link rel="stylesheet" href="https://lynndotpy.dev/katex/katex.min.css">
+<script defer src="https://lynndotpy.dev/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.dev/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.dev/katex/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+      ]
+      });
+  });
+</script>
+
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.dev/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.dev
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.dev/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.dev/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.dev/projects">projects</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/i-love-helix-editor/">Goodbye, Vim. I&#x27;m in love with Helix.</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-07-18
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/post/">#post</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/rust/">#rust</a></span>
+    
+
+        
+        <div class="post-content">
+            <p>Oh Vim, you have been a constant in my life, but try as I might, I cannot love you the way others have. You demand incantations, arcane and obtuse, and I'll have no more of it. I'm in love with another editor. Its name is Helix. We're getting married. Goodbye, vim.</p>
+<span id="continue-reading"></span><h1 id="vim-curious-but-never-embraced">Vim-curious, but never embraced.</h1>
+<p>I've been programming off and on since the naughts, when my age was in the single digits, making silly GameMaker 5 games and modifying phpBB posting-gamification plugins. I would contort and twist those arcane ruins as best I could.  I've used Notepad, GameMaker, Gedit, Eclipse, Atom, Sublime, and VSCode as my IDEs.</p>
+<p>I first dipped my toes into Linux in ~2009, which was a gateway drug to "proper development". I fell in love with Linux while chasing performance to play Minecraft on my pathetic hand-me-down laptop. From there, I quickly learned that (1) you need to learn enough Vim to be useful for configuring files, and (2) people who like Vim become <em>very good at Vim</em>.</p>
+<p>I knew of Vim's fame, but it would be many years before I <em>saw</em> someone using Vim. His name was Dylan, and this was 2014. Standing tall, thinkpad in his right hand, typing with his left, I saw him <em>fly</em> through his code with vimbindings, making edits that seemed bonkers-style.</p>
+<p>Seeing someone code so gracefully? That appealed to me a lot. I could <em>feel</em> how much closer the developer was to thought, I could see how much was encoded into each keystroke. I would see vim coders again, sporadically, over the years. Much of what made me love Linux was how responsive and simple it was. It demanded so little of me. The simplicity of the terminal meant that it could <em>all</em> live in my head, and I could interact with it at the speed of thought. That feedback loop felt, frankly, <em>intimate</em>. The flow state came readily, because it required so little activation energy. It compared very favorably to the cognitive load of modern IDEs with their thousand-degrees of indirection and constant blocking loadings. I wanted to write my code, and I wanted to run it in a terminal, and I want to keep doing that until someone finds a better way.</p>
+<p>So far, Microsoft, the Eclipse working group, and Yoyo Games have <em>not</em> found a better way. These dinky command-line apps and terminal-interface programs remain supreme.</p>
+<p>But, try as I might, all my experiences with Vim were <em>awful</em>. There was simply too much cognitive load up-front to memorize roughly 100 different keybindings. And, as it turned out, I did very much appreciate IDE features when working on large projects in languages I didn't use often. I liked having a filepicker built-in, I liked having access to my system clipboard, I liked being able to tab-complete those paths that I remembered 50% or even 95%.</p>
+<p>I had heard of <a href="https://xi-editor.io/">Xi</a>, <a href="https://kakoune.org/">Kakoune</a>, etc. but I never tried them. After four years of vim-curiosity, I settled on <a href="https://micro-editor.github.io/">the Micro editor</a> for a bit, a mouse-aware terminal editor that's as simple as it gets. I can highly recommend it, as it's effectively Gedit/Notepad++/Kate/etc. for your terminal. And, as a bonus, it's <em>really</em> easy to install, since it's just a binary you download and place on the $PATH. (More on that later.)</p>
+<p>But, my vim-curiosity remained. "Try <a href="https://neovim.io/">NeoVim</a>," I was told. It has much of what I was missing from Vim, but it had a heavy emphasis on custom configs. I'm a big believer in sensible defaults. If my configuration hits more than 10 lines across two files, that's a bit too much for me. But people in the NeoVim community say they spend <em>hours</em> configuring their setups? I can't do that. Contrary to popular belief, I think the big benefit of FOSS is the ability to go with your favorite set of defaults. Sure, there's the pre-configured NeoVim called <a href="https://www.lunarvim.org/">LunarVim</a>, but it's noticably slower than <code>vi</code> or <code>hx</code>, and every install I've tried was buggy from the get-go, with treesitter bugs on launch.</p>
+<p>So, as the story goes, I was stuck with VS Code. It felt like the natural extension of Atom. But VS Code is a Microsoft product, and for decades of reasons, my trust in Microsoft remains low. Watching VSCode's insidious influence grow over the years, spreading through novice and senior developers alike, was a bit existentially concerning! It's bad enough that Microsoft controls GitHub, now they want to control every developer's dev environment too? Have we learned nothing from the years? Now we're stuck with the whole "steal every developer's code and convince orgs they need CoPilot in order to keep up" thing.</p>
+<p>Ideological reasons aside, with VS Code's slow startup and me being constantly in the terminal, I figured it was time to find greater pastures.</p>
+<p>I had been toying with Rust off and on since 2016, but it wasn't until early 2022 <a href="https://lynndotpy.dev/posts/linear-sorting/">with my "linear time sorting"</a> experiments did I discover <code>cargo</code>. (I had been using <code>rustc</code> manually all the time prior!) I fell in love with <code>cargo</code> in many ways, but especially as a package manager (<code>cargo install</code> my beloved), and later in 2022, I fell in love with the Go project <a href="https://caddyserver.com/"><code>caddy</code></a> as a web-server. That's when I realized a pretty powerful feature both Rust and Go share: They're both (mostly) statically linked (with only a reliance on libc by default).</p>
+<p>Statically linked executables come at a cost: Longer compile times, larger compiled binaries, and a need to re-build whenever even one dependency has a security update. But it has a <em>huge</em> benefit: There's just <em>one</em> binary to drop into the $PATH. (Unless you're on a system that uses musl instead of libc. Sorry, Alpine users, you'll have to <code>apk install</code> it.)</p>
+<p>Anyways, the big impetus for using Helix was that I was also using Caddy... I needed a way to modify my increasingly-large <code>Caddyfile</code> on my server. Micro was nice, but I wanted to learn something else, and Caddyfiles are relatively shallow and simple.</p>
+<p>Then I heard about the "Helix" editor.</p>
+<h1 id="on-again-off-again-goodbye-forever-helix-is-my-new-best-friend-forever">On again, off again, goodbye forever. Helix is my new best friend, forever</h1>
+<p><a href="https://helix-editor.com/">Helix</a> is wonderful.</p>
+<p>Mouse reporting like in Micro. LSP support like in NeoVim. Syntax highlighting. Multiple cursors. TUI file-picker. Buffers (aka 'tabs'). The <code>:o</code> previews files and folders as you type. Menu for the register picker, buffer picker, windows, etc. Themes. All of this is built in.</p>
+<p>But, most important compared to Vim: Helix uses visual editing, which lets you see what you're doing before you do it. I'm never surprised by the result of my actions in Helix. Combined with the excellent mouse support, this yielded a gentle learning curve.</p>
+<p>I won't cover everything I love about Helix. Instead, <a href="https://phaazon.net/blog/more-hindsight-vim-helix-kakoune">I recommend Dimitri Sabadie "Phaazon"'s excellent post on Helix, Kakoune, and Vim.</a> If you've never used Vim or Helix, here is everything you need to know to get started once you've installed it:</p>
+<ul>
+<li>
+<p>Invoke Helix with <code>hx</code>, or <code>hx my_cool_file.rs</code>,</p>
+</li>
+<li>
+<p><code>i</code> to enter "insert mode",</p>
+</li>
+<li>
+<p><code>esc</code> to leave "insert mode",</p>
+</li>
+<li>
+<p><code>:q</code> to quit, and <code>:q!</code> to force-quit, and</p>
+</li>
+<li>
+<p><code>:w</code> to save (write to disk).</p>
+<p>And as a mnemononic for the basic editor commands, remember "W.E.B. DuBois:"</p>
+</li>
+<li>
+<p><code>w,e,b</code>: Move across words at a time. (<code>w</code> for "next word", <code>e</code> for "until end of this word", and <code>b</code> for "backwards")</p>
+</li>
+<li>
+<p><code>.</code> : Repeat last action</p>
+</li>
+<li>
+<p><code>d</code> : Delete</p>
+</li>
+<li>
+<p><code>u</code> : Undo (<code>U</code> to redo)</p>
+</li>
+<li>
+<p><code>b</code> : <code>Space; b</code> for the buffer picker :)</p>
+</li>
+<li>
+<p><code>o</code> : Open a new line under your cursor</p>
+</li>
+<li>
+<p><code>i</code> : Insert mode</p>
+</li>
+<li>
+<p><code>s</code> : Search-and-select within selection</p>
+</li>
+<li>
+<p><code>:</code> : Enter commands.</p>
+</li>
+</ul>
+<p>(Mnemonics and flashcards did help me get over the hump to "getting really good at Helix.")</p>
+<p>While Xi brands itself as the editor "for the next 20 years", but I have to say that I think Helix will really take that moniker. This is because Helix is very good. I don't think Helix will displace Vim as "that text editor preinstalled on every server ever", but I do think Helix is better on its merits than the competition.  It was ten years ago I saw my friend fly through their code with Vim, like a nimble wizard. It is today that I finally don that wizard robe and hat.</p>
+<p>It only took a few hours of practice over a week or two to go from "I know <code>i</code>/<code>esc</code>/<code>:q</code>/<code>:w</code>" to "Y'know what? <code>10</code> <code>x</code> <code>s</code> <code>\.</code> <code>&lt;enter&gt;</code> <code>&amp;</code>*s your list".*</p>
+<h2 id="seriously-helix-only-took-a-week-of-some-practice-to-learn">Seriously, Helix only took a week of some practice to learn.</h2>
+<p>I spent two hours going through <code>hx tutor</code> and making flashcards, which I use with <a href="https://obsidian.md/">Obsidian's</a> <a href="https://github.com/st3v3nmw/obsidian-spaced-repetition">Spaced Repetition</a> plugin. Then I think I've spent a cumulative three more hours using the flashcards, and a few dozen cumulative hours actually using Helix.  That's what took me over the top to becoming <em>pretty good with Helix</em>. It really just took a week of moderate effort! I'm not a genius, and you can learn Helix too!</p>
+<p>The only thorn on the Helix rose is in language servers, specifically C#. I'm using dotnet 6, and as far as I can tell, the best C# language server is one Microsoft makes only for VS Code. For all the nice things about C#, I'm happy to continue not using it in my day to day life.</p>
+<p>Btw, here's my Helix <code>~/.config/helix/config.toml</code> file. The <code>auto-format</code> stops configured formatters from operating on write, <code>auto-pairs</code> prevents matching <code>[brackets]</code> and <code>"quotes"</code> and whatnot from being inserted, <code>bufferline</code> shows a "tab bar" when I have multiple buffers open, <code>indent-guides.render</code> renders helpful <code>|</code> indicators on whitespace, <code>cursorline</code> softly highlight the line my cursor is at, <code>color-modes</code> uses a color-coded guide for <code>INS</code>, <code>NOR</code>, <code>SEL</code> modes. Finally, <code>editor.soft-wrap.enable</code> makes it so that lines wrap, breaking on whitespace. (Very good for writing markdown, like this post).</p>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">github_light</span><span style="color:#556633;">&quot;
+</span><span>
+</span><span>[</span><span style="color:#ffb964;">editor</span><span>]
+</span><span style="color:#ffb964;">auto-format </span><span>= false
+</span><span style="color:#ffb964;">auto-pairs </span><span>= false
+</span><span style="color:#ffb964;">bufferline </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">multiple</span><span style="color:#556633;">&quot;
+</span><span style="color:#ffb964;">indent-guides</span><span>.</span><span style="color:#ffb964;">render </span><span>= true
+</span><span style="color:#ffb964;">cursorline </span><span>= true
+</span><span style="color:#ffb964;">color-modes </span><span>= true
+</span><span style="color:#ffb964;">soft-wrap</span><span>.</span><span style="color:#ffb964;">enable </span><span>= true
+</span></code></pre>
+<p>I love a short configuration file.</p>
+<p><strong>TLDR:</strong> I've fallen in love with the Helix editor. Perhaps I'm in the honeymoon period, but I've learned more in a few weeks than I have in years of Vim, and I'm already more productive than I am in VS Code. I highly recommend it to those who have been Vim-curious.</p>
+<hr />
+<p>* <code>10x</code> performs the "select line" action 10 times, to select 10 lines. Then <code>s</code> "searches in selection<code>. We search for </code>.<code>for a literal ".", since</code>.<code>is Regex for "any character". Then</code><enter><code>finishes the selection and puts the cursor on each</code>.<code>, and </code>&amp;` aligns the characters.</p>
+<hr />
+<p>P.S. Sorry emacs people. I really never even gave it a shot.</p>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h"></span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://lynndotpy.dev/posts/xyz-now-dev/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">lynndotpy.xyz is now lynndotpy.dev</span>
+                        </a>
+                    </span>
+                
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

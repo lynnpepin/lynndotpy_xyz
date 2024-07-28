@@ -61,6 +61,48 @@
             
                 <div class="post on-list">
                     
+    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/reso-2023/">Reso: Rewritten in Rust and now 20000x faster!!</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-01-13
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/project/">#project</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/reso/">#reso</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/rust/">#rust</a></span>
+    
+
+                    
+        <div class="post-content">
+            <blockquote>
+<p><strong>tldr:</strong> Reso has been re-implemented in Rust, deprecating the Python original. The underlying datastructure is new, with an incidence-map based algorithm. This makes Reso very fast, at about 20000x faster than the original in some cases.</p>
+</blockquote>
+<p>Reso is a logic circuit language and simulator, <a href="https://lynndotpy.dev/posts/reso-intro/">first written in Python</a> and now revived in Rust. It's a visual language, where inputs and outputs are both <code>.png</code> images, making MS Paint a totally appropriate IDE. :)</p>
+<p>This post assumes you already know the idea behind Reso. You can <a href="https://github.com/resolang/reso">check Reso out on GitHub</a> and <a href="https://crates.io/crates/reso">crates.io</a>. You can install it with <code>cargo install reso</code>.</p>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.dev/posts/reso-2023/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
     <h1 class="post-title"><a href="https://lynndotpy.dev/posts/written-in-rust/">Yes, I want to know if your project is written in Rust</a></h1>
     <div class="post-meta-inline">
         
@@ -220,45 +262,6 @@
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
             <a class="read-more button" href="https://lynndotpy.dev/posts/college-course-success/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/hardening-bastion/">sshaudit.com gave my Bastion an F, now it&#x27;s an A</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2023-11-22
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.dev/tags/post/">#post</a></span>
-    
-
-                    
-        <div class="post-content">
-            <p>I maintain an SSH bastion server for all my beloved VPSes. The server I host this blog on only accepts SSH connections from the IP of that bastion, and I keep that bastion hardened. It's a minimal Alpine install with nothing but an SSH server.</p>
-<p>So I felt some dismay when I found the server got a score of F on <a href="https://www.sshaudit.com/">sshaudit.com</a>. I got an F! My bastion failed 2 of 5 host key tests, 4 of 9 key-exchange tests, and 7 of 10 MAC tests.</p>
-<p>These are the steps I took. Although I'm on Alpine, I was able to cherry pick commands from <a href="https://www.ssh-audit.com/hardening_guides.html">the Debian-focused server guides hardening guides on sshaudit.com.</a></p>
-<p><strong>TLDR</strong> provided below the cut, with some script script to do the work for you.</p>
-
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.dev/posts/hardening-bastion/">
                 <span class="button__text">Read more</span>&nbsp;
                 <span class="button__icon">&#8617;&#xFE0E;</span>
             </a>
