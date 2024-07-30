@@ -4,7 +4,7 @@ title = "Goodbye, Vim. I'm in love with Helix."
 date = 2024-07-28
 
 [taxonomies]
-tags = ["post", "rust"]
+tags = ["post", "rust", "helix-editor"]
 +++
 
 Oh Vim, you have been a constant in my life, but try as I might, I cannot love you the way others have. You demand incantations, arcane and obtuse, and I'll have no more of it. I'm in love with another editor. Its name is Helix. We're getting married. Goodbye, vim.

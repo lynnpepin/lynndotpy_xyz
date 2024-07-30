@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The flashcards I used to memorize Helix commands &#x2F;&#x2F; lynndotpy</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.dev/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.dev/color/lynn-auto-2.css">
+
+        <link rel="stylesheet" href="https://lynndotpy.dev/color/background_auto.css">
+    
+    <link rel="stylesheet" href="https://lynndotpy.dev/font-hack-subset.css">
+
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+        
+<link rel="stylesheet" href="https://lynndotpy.dev/katex/katex.min.css">
+<script defer src="https://lynndotpy.dev/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.dev/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.dev/katex/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+      ]
+      });
+  });
+</script>
+
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.dev/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.dev
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.dev/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.dev/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.dev/projects">projects</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/helix-flashcards/">The flashcards I used to memorize Helix commands</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-07-30
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/helix-editor/">#helix-editor</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/post/">#post</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/regex/">#regex</a></span>
+    
+
+        
+        <div class="post-content">
+            <p>I compiled these flashcards when going through the <code>hx --tutor</code>. I then put them into my <a href="https://obsidian.md/">Obsidian</a>, using the <a href="https://forum.obsidian.md/t/plugin-for-flashcards-note-level-spaced-repetition-all-inside-obsidian/16498">spaced repetition</a> plugin. By the time I finished the tutor, I knew enough to mass-edit my notes to the specific format spaced repetition expects.</p>
+<p>Flashcards really help with my on-the-fly recollection, which helped me actually <em>use</em> the more advanced Helix actions in practice. I recommend making your own flashcards, if that's a thing you do.</p>
+<span id="continue-reading"></span><h1 id="the-flashcards">The flashcards</h1>
+<p>Copy this entire code block into any Helix note, then install and enable the spaced repetition plugin. :)</p>
+<pre style="background-color:#151515;color:#e8e8d3;"><code><span>#flashcards/helix
+</span><span>`hjkl`:::move
+</span><span>`d`::: delete
+</span><span>`i`::: insert before selection
+</span><span>`a`::: insert after selection
+</span><span>`I`::: insert start of line
+</span><span>`A`::: insert end of line
+</span><span>`o`::: to open new line under cursor
+</span><span>`O`::: to open new line above cursor
+</span><span>`w`::: select until start of next word
+</span><span>`W`::: select until start of next WORD
+</span><span>`e`::: select until end of current word
+</span><span>`E`::: select until end of current WORD
+</span><span>`b`::: select backward to start of current word
+</span><span>`B`::: select backward to start of current WORD
+</span><span>`x`::: select whole line
+</span><span>`X`::: select whole line (does not skip linebreaks)
+</span><span>`v`::: Begin selection
+</span><span>`*`::: Selection to search
+</span><span>`s`::: Search matches in the selection
+</span><span>`S`::: Select matches in selection and split into separate cursors
+</span><span>`alt+s`::: Split selection on newlines. Equivalent to `&lt;S&gt;&lt;enter&gt;`
+</span><span>`&amp;`::: Align heads of selection
+</span><span>`d`::: Delete
+</span><span>`r&lt;ch&gt;`::: Replace all of selection with character
+</span><span>`R`::: Replace selection with yanked text
+</span><span>`J`::: Join selected lines (remove break)
+</span><span>`&gt;`::: Indent selection
+</span><span>`&lt;`::: Dedent selection
+</span><span>`&lt;ctrl+a&gt;`::: Increment number in selection
+</span><span>`&lt;ctrl+x&gt;`::: Decrement number under selection
+</span><span>`f`::: Search and select forward to character; inclusive
+</span><span>`F`::: Search and select backward to character; inclusive
+</span><span>`t`::: Search and select forward to character; exclusive
+</span><span>`T`::: Search and select backward to character; exclusive
+</span><span>`/`::: Search forward
+</span><span>`n`, `N`-  Ccycle matches
+</span><span>`?`::: Search backwards
+</span><span>`%`::: Select entire document
+</span><span>`c`::: change selection (equivalent to `di`)
+</span><span>`C`::: new cursor below
+</span><span>`;`:::  to collapse to single cursor
+</span><span>`d`::: delete selection
+</span><span>`u`::: Undo
+</span><span>`U`::: Redo
+</span><span>`y`::: yank (copy)  selection
+</span><span>`p`::: Paste after cursor
+</span><span>`P`::: Paste before cursor
+</span><span> &lt;ctrl+c&gt;::: Toggle comment on selection
+</span><span>`.`::: Repeat last command
+</span><span>`Q`::: Start and stop recording macros
+</span><span>`q`::: Play macro
+</span><span>`mm`::: Select matching bracket
+</span><span>`mi(`::: Select inside `(` brackets
+</span><span>`ma(`::: Select around `(` brackets
+</span><span>`md(`::: Delete surrounding `(` brackets
+</span><span>`ms(`::: Add `(` brackets around selection
+</span><span>`mr([`::: Replace `(` brackets with `[` brackets
+</span><span>`space`::: Command menu
+</span><span>`g`::: Goto
+</span><span>`&lt;ctrl+w&gt;`::: Window menu
+</span><span>`space`::: Command menu
+</span><span>`&quot;`::: Register picker / menu. (Multiple clipboards / macros)
+</span><span>`m`::: Matching brace jump menu
+</span><span>`&lt;space&gt;&lt;f&gt;`::: File picker
+</span><span>`&lt;space&gt;&lt;F&gt;`::: File picker at cwd
+</span><span>`&lt;space&gt;&lt;b&gt;`::: Buffer picker
+</span><span>`g`    ::: goto
+</span><span>`gg`   ::: goto start
+</span><span>`ge`   ::: goto end
+</span><span>`g&lt;n&gt;g`::: goto nth line
+</span><span>`&lt;ctrl+w&gt;&lt;s&gt;`::: Split horizontally
+</span><span>`&lt;ctrl+w&gt;&lt;v&gt;`::: Split vertically
+</span><span>`&lt;ctrl+w&gt;&lt;o&gt;`::: Close to return to single window view
+</span><span>`&lt;ctrl+s&gt;`::: Save space into jumplist
+</span><span>`&lt;ctrl+o&gt;`::: Jump &quot;out&quot; from last movement
+</span><span>`&lt;ctrl+i&gt;`::: Jump &quot;in&quot; to next movement
+</span><span>`:clipboard-yank`::: `:cy`; Yank to clipboard
+</span><span>`:buffer-new`::: `:bn`; Open new buffer
+</span><span>`:vsplit`::: Split into two vertical buffers
+</span><span>`&lt;t&gt;&lt;enter&gt;&lt;S&gt;&lt; &gt;&lt;enter&gt;&lt;i&gt;&lt;enter&gt;`::: Break spaces to newlines until end of line
+</span><span>`&lt;10&gt;&lt;x&gt;&lt;s&gt;&lt;char&gt;&lt;enter&gt;&lt;&amp;&gt;`::: Align next 10 lines on character
+</span><span>`&lt;10&gt;&lt;x&gt;&lt;s&gt;&lt;char&gt;&lt;enter&gt;&lt;&amp;&gt;`::: Align next 10 lines on character
+</span><span>`&lt;*&gt;&lt;v&gt;&lt;n&gt;`::: Selection  to  search,  enter  visual  mode, and  add  matches  to  selection
+</span></code></pre>
+<h1 id="p-s-helix-made-writing-this-post-a-lot-easier">p.s. helix made writing this post a lot easier</h1>
+<p>When I added these flashcards here, they came with Spaced Repetition's tracking comments. The file looked like this:</p>
+<pre style="background-color:#151515;color:#e8e8d3;"><code><span>#flashcards/helix
+</span><span>
+</span><span> `hjkl`:::move
+</span><span>&lt;!--SR:!2024-08-04,14,290!2024-08-06,16,294--&gt;
+</span><span>`d`::: delete
+</span><span>&lt;!--SR:!2024-08-07,17,291!2024-08-05,15,294--&gt;
+</span><span>`i`::: insert before selection
+</span><span>&lt;!--SR:!2024-08-06,16,290!2024-07-31,10,270--&gt;
+</span><span>`a`::: insert after selection
+</span><span>&lt;!--SR:!2024-08-02,12,274!2024-08-01,12,277--&gt;
+</span><span>`I`::: insert start of line
+</span><span>(and so forth)
+</span></code></pre>
+<p>That's almost 100 lines of comments I'd have to remove manually! I was able to do so with the commands <code>%</code> <code>s</code> <code>^&lt;!--</code> <code>&lt;enter&gt;</code> <code>x</code> <code>d</code>, which tuned the edit from a three-minute-thing into a one-second-thing. This sequence of commands:</p>
+<ul>
+<li><code>%</code> selects the entire document (this post!)</li>
+<li><code>s</code> enters "selection mode", so I can search within my selection.</li>
+<li><code>^&lt;!--SR</code> is regex, which searches within my selection for any lines starting with <code>&lt;!--</code>. The <code>^</code> is important regex for "start of line".</li>
+<li><code>&lt;enter&gt;</code> confirms my selection, splitting into a separate cursor on each matching line.</li>
+<li><code>x</code> selects the entire line, and</li>
+<li><code>d</code> deletes my selection.</li>
+</ul>
+<h1 id="p-p-s-here-s-my-regex-flashcards-too">p.p.s. Here's my regex flashcards too</h1>
+<p>Thanks for reading this far :) Being good at regex was also super helpful. My regex flashcards helped me too. Flashcards are unreasonably effective.</p>
+<p>Sorry, "learning but never remembering regex", I've fallen in love with "learning and remembering regex".</p>
+<pre style="background-color:#151515;color:#e8e8d3;"><code><span>#flashcards/regex
+</span><span>
+</span><span>`\`:::Escape character
+</span><span>`^`:::Start of string/line
+</span><span>`$`:::End of string/line
+</span><span>`.`:::Match any character
+</span><span>`[ ]`:::Bracket expression
+</span><span>`|`:::Boolean or
+</span><span>`( )`:::Subpattern
+</span><span>`?`:::Zero or one quantifier
+</span><span>`*`:::Zero or more quantifier
+</span><span>`+`:::One or more quantifier
+</span><span>`{n}`:::Match exactly `n` times
+</span><span>`{min,max}`:::Match `min` to `max` times, exclusive
+</span><span>
+</span><span>
+</span><span>`\d+`:::Match a digit `[0-9]` one or more times
+</span><span>`colou?r`:::Match `color` or `colour`
+</span><span>`gr(a|e)y`:::Match `gray` or `grey`
+</span><span>`.at`:::Match `hat`, `cat`, `bat`, `gat`, `7at`, ` at`, etc.
+</span><span>`[hc]at`:::Match `hat` or `cat`
+</span><span>`[^b]at`:::Match any `.at` string other than `bat`
+</span><span>`^[hc]at`:::Match any string `hat` or `cat` starting a line.
+</span><span>`\[.\]`:::Match any single character surrounded by brackets
+</span><span>`s.*`:::Match any string starting with `&quot;s&quot;` and at least one other character. (Equivalent to `s+`?)
+</span><span>
+</span><span>`[a-z]`:::Lowercase characters
+</span><span>`[^abc]`:::Match any character OTHER than `abc`
+</span><span>`[A-Z]`:::Uppercase characters
+</span><span>`[0-9]`:::Numbers
+</span><span>`[A-Za-z0-9]`:::Alphanumeric characters
+</span><span>`[ \t]`:::Space and tab
+</span><span>`[A-Fa-f0-9]`:::Hex digits
+</span></code></pre>
+
+        </div>
+
+        
+        <div class="pagination">
+            <div class="pagination__title">
+                <span class="pagination__title-h"></span>
+                <hr />
+            </div>
+            <div class="pagination__buttons">
+                    <span class="button previous">
+                        <a href="https://lynndotpy.dev/posts/i-love-helix-editor/">
+                            <span class="button__icon">←</span>&nbsp;
+                            <span class="button__text">Goodbye, Vim. I&#x27;m in love with Helix.</span>
+                        </a>
+                    </span>
+                
+                </div>
+        </div>
+    
+    </div>
+
+    </div>
+
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

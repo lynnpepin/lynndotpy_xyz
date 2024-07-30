@@ -61,6 +61,47 @@
             
                 <div class="post on-list">
                     
+    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/bluesky-and-bitcoin/">If BlueSky takes off, Bitcoin will too</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-07-09
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/internet/">#internet</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/post/">#post</a></span>
+    
+
+                    
+        <div class="post-content">
+            <blockquote>
+<p><strong>TLDR:</strong> BlueSky is intended to eventually integrate with Bitcoin. If BlueSky becomes widely adopted, Bitcoin will too. I don't like Bitcoin, so I don't want BlueSky to become popular.</p>
+<p>Here's why I believe this: In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After helping kickstart the Lightning network, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.</p>
+</blockquote>
+<p>Jack Dorsey's "BlueSky" platform is taking off. Unfortunately, not only is Jack Dorsey a bonkers man who <a href="https://twitter.com/BrianJo78940026/status/1674770881955115009">endorses the belief that Jimmy Carter cried when he learned that aliens made up all the religions</a>^1 and is on a <em>big</em> pro-RFK Jr^2 streak, but he also is a longtime Bitcoin believer.</p>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.dev/posts/bluesky-and-bitcoin/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+            
+                <div class="post on-list">
+                    
     <h1 class="post-title"><a href="https://lynndotpy.dev/posts/python-main-main/">protip.py: the main-main pattern</a></h1>
     <div class="post-meta-inline">
         
@@ -296,66 +337,6 @@
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
             <a class="read-more button" href="https://lynndotpy.dev/posts/python-mobile/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/linear-sorting/">You can sort in linear time!</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2022-01-07
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.dev/tags/post/">#post</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.dev/tags/project/">#project</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.dev/tags/python/">#python</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.dev/tags/rust/">#rust</a></span>
-    
-
-                    
-        <div class="post-content">
-            
-  <figure class="center" >
-    <img src="/posts/images/countsort_graph.jpeg" alt="A log-scale graph showing the runtime (ns) of sorting N elements for different integer depths. They all show a trend towards linear runtime for large N." style="width:70%" />
-    
-      <figcaption class="center">A log-scale graph showing the linear runtime of count-sort</figcaption>
-    
-  </figure>
-
-<blockquote>
-<p><strong>TLDR:</strong> Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in $O(n \log n)$ time is still true, but that assumes you're sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)</p>
-<p>See the <a href="https://github.com/lynnpepin/rust_projects/blob/master/countsort/plot_stats.ipynb">Python notebook</a> wrapping an unoptimized <a href="https://github.com/lynnpepin/rust_projects/tree/master/countsort">Rust countsort implementation</a>:</p>
-</blockquote>
-<p>--</p>
-<p>Is this truly $O(n)$? Yes!</p>
-<ul>
-<li>Counting sort is not a randomized algorithm, it always outputs the correct solution.</li>
-<li>Counting sort is not a parallelized algorithm. (And you can't use parallelism to speed past a worst-case big-O run time anyway!)</li>
-<li>Counting sort is not an amortized algorithm. It is truly $O(n)$, not 'expected' or 'amortized' $O(n)$.</li>
-<li>Counting sort is technically $Θ(n)$, that is, the worst and best case running time is linear.</li>
-<li>This can be used in the real world.</li>
-<li>However, it is not an in-place sorting algorithm.</li>
-</ul>
-
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.dev/posts/linear-sorting/">
                 <span class="button__text">Read more</span>&nbsp;
                 <span class="button__icon">&#8617;&#xFE0E;</span>
             </a>

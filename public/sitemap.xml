@@ -52,6 +52,10 @@
         <lastmod>2023-11-22</lastmod>
     </url>
     <url>
+        <loc>https://lynndotpy.dev/posts/helix-flashcards/</loc>
+        <lastmod>2024-07-30</lastmod>
+    </url>
+    <url>
         <loc>https://lynndotpy.dev/posts/i-love-helix-editor/</loc>
         <lastmod>2024-07-28</lastmod>
     </url>
@@ -119,6 +123,10 @@
         <lastmod>2023-12-08</lastmod>
     </url>
     <url>
+        <loc>https://lynndotpy.dev/posts/unlisted/template/</loc>
+        <lastmod>2024-07-20</lastmod>
+    </url>
+    <url>
         <loc>https://lynndotpy.dev/posts/written-in-rust/</loc>
         <lastmod>2024-01-06</lastmod>
     </url>
@@ -151,6 +159,9 @@
         <loc>https://lynndotpy.dev/tags/gimp/</loc>
     </url>
     <url>
+        <loc>https://lynndotpy.dev/tags/helix-editor/</loc>
+    </url>
+    <url>
         <loc>https://lynndotpy.dev/tags/how-to/</loc>
     </url>
     <url>
@@ -173,6 +184,9 @@
     </url>
     <url>
         <loc>https://lynndotpy.dev/tags/python/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.dev/tags/regex/</loc>
     </url>
     <url>
         <loc>https://lynndotpy.dev/tags/reso/</loc>
