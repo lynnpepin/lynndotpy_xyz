@@ -1,4 +1,4 @@
-{% macro content(page, summary, show_only_description) %}
+{% macro content(page, summary, show_only_description=false) %}
     {%- if show_only_description %}
         <div class="post-content">
             {{ page.description | safe }}
