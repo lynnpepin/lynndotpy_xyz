@@ -1,8 +1,8 @@
 +++
-title = "TODO: content _index.md title"
-description = "TODO: content _index.md description"
+title = "TODO: posts _index.md title"
+description = "TODO: posts _index.md description"
+paginate_by = 7
+sort_by = "date"
 render = true
-template = "index.html"
-
-aliases = ["/index.html", "/index"]
+template = "posts.html"
 +++

@@ -68,14 +68,18 @@
     <div class="content">
         {% block content %}
         <div class="posts">
-            <!-- This points `index.html` to `posts` -->
+            <!-- This points `index.html` to `posts`, when pagination is not enabledi -->
+            <!-- There is no get_paginator; see https://github.com/getzola/zola/issues/250 -->
+            
             {% set section = get_section(path="posts/_index.md") %}
             {%- if paginator %}
                 {%- set show_pages = paginator.pages -%}
+                <!-- {%- set show_pages = section.pages -%} -->
             {% else %}
                 {%- set show_pages = section.pages -%}
             {% endif -%}
 
+            <!-- 
             {%- for page in show_pages %}
                 <div class="post on-list">
                     {{ post_macros::header(page=page) }}
