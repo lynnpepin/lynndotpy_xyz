@@ -25,6 +25,10 @@
     display: flex;
     flex: 1;
 
+    a {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
   }
 
   .menu {
