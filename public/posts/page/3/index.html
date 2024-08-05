@@ -15,6 +15,8 @@
     
     <link rel="stylesheet" href="https://lynndotpy.dev/font-hack-subset.css">
 
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://lynndotpy.dev/atom.xml">
+    
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
     </head>
@@ -128,7 +130,7 @@
                     
         <div class="post-content">
             <p>I maintain an SSH bastion server for all my beloved VPSes. The server I host this blog on only accepts SSH connections from the IP of that bastion, and I keep that bastion hardened. It's a minimal Alpine install with nothing but an SSH server.</p>
-<p>So I felt some dismay when I found the server got a score of F on <a href="https://www.sshaudit.com/">sshaudit.com</a>. I got an F! My bastion failed 2 of 5 host key tests, 4 of 9 key-exchange tests, and 7 of 10 MAC tests.</p>
+<p>So I felt some dismay when I found the server got a score of F on <a href="https://www.sshaudit.com/">sshaudit.com</a>. I got an F! My bastion failed 2 of 5 host key tests, 4 of 9 key-exchange tests, and 7 of 10 MAC tests. </p>
 <p>These are the steps I took. Although I'm on Alpine, I was able to cherry pick commands from <a href="https://www.ssh-audit.com/hardening_guides.html">the Debian-focused server guides hardening guides on sshaudit.com.</a></p>
 <p><strong>TLDR</strong> provided below the cut, with some script script to do the work for you.</p>
 
@@ -184,7 +186,7 @@
 <li>Fastmail + IWantMyName for personal email.</li>
 </ul>
 </blockquote>
-<p>I've had friends ask me for recommendations for software. They ask me this because I am a hollow person who has spent too much of my life on the computer. I love when people ask me these questions, because my strong opinions on software are usually otherwise "offputting" and considered a "personality flaw".</p>
+<p>I've had friends ask me for recommendations for software. They ask me this because I am a hollow person who has spent too much of my life on the computer. I love when people ask me these questions, because my strong opinions on software are usually otherwise &quot;offputting&quot; and considered a &quot;personality flaw&quot;.</p>
 <p>All jokes aside, I wanted one place to chronicle recommendations I tend to make. In no particular order, here are some of my favorites.</p>
 
         </div>
@@ -226,7 +228,7 @@
             <p>I read and Consumed™️ a number of things the first half of 2023. Let me detail some of them:</p>
 <ul>
 <li><em>Braiding Sweetgrass</em> by Robin Wall Kimmerer helped me reconcile disillusionment and frustration I had with academic science, and to help me appreciate different philosophies of thought.</li>
-<li><em>The Magicians</em> by Lev Grossman is a grounded examination of the fantasy genre within a well-fleshed fantasy world. If "Houlden Caulfield seeks Narnia but goes to Hogwarts" sounds interesting, then check this out.</li>
+<li><em>The Magicians</em> by Lev Grossman is a grounded examination of the fantasy genre within a well-fleshed fantasy world. If &quot;Houlden Caulfield seeks Narnia but goes to Hogwarts&quot; sounds interesting, then check this out.</li>
 <li><em>This is How You Lose the Time War</em> by Amal El-Mohtar and Max Gladstone is a short story about star-crossed lovers from two advanced, warring, timeline-hopping scifi empires. I didn't like it that much, but it was 200 pages and fun to read.</li>
 <li>The <em>Before Me</em> podcast series is a well-constructed narrative built around interviews with the narrators mother, who arrived to America fleeing the Khmer Rouge in Cambodia. It's worth a listen.</li>
 </ul>
@@ -270,7 +272,7 @@
                     
         <div class="post-content">
             <blockquote>
-<p><strong>TLDR:</strong> Set the following in your caddyfile for each site: <code>header Permissions-Policy "interest-cohort=(),browsing-topics=()"</code>. This disable both the old FLoC and the new Topics.</p>
+<p><strong>TLDR:</strong> Set the following in your caddyfile for each site: <code>header Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;</code>. This disable both the old FLoC and the new Topics.</p>
 </blockquote>
 <p>Here is an abbreviated version of my Caddyfile, showing how I set the <code>header</code> directive in my Caddyfile for <code>lynndotpy.dev</code>:</p>
 <pre data-lang="caddyfile" style="background-color:#151515;color:#e8e8d3;" class="language-caddyfile "><code class="language-caddyfile" data-lang="caddyfile"><span>lynndotpy.xyz {

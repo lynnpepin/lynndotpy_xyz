@@ -28,6 +28,9 @@
     <meta property="twitter:domain" content="lynndotpy.dev&#x2F;">
     <meta property="twitter:url" content="https://lynndotpy.dev/posts/reso-2023/">
 
+            
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lynndotpy.dev/atom.xml">
+    
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
         
@@ -119,7 +122,7 @@
 <p>This post assumes you already know the idea behind Reso. You can <a href="https://github.com/resolang/reso">check Reso out on GitHub</a> and <a href="https://crates.io/crates/reso">crates.io</a>. You can install it with <code>cargo install reso</code>.</p>
 <span id="continue-reading"></span><h1 id="the-story-behind-reso">The story behind Reso</h1>
 <blockquote>
-<p><strong>TLDR:</strong> I made Reso out of the desire to have a Redstone-like circuit tool.</p>
+<p><strong>TLDR:</strong> I made Reso out of the desire to have a Redstone-like circuit tool. </p>
 </blockquote>
 <p>In 2015, I took a digital logic design course, and I finally started to understand how those magnificent Minecraft redstone computers were built. But Minecraft was such an unwieldy tool for making circuits, and the existing digital logic design tools felt too stuffy and un-fun. I wanted something quick and direct.</p>
 <p>In 2017, I started working on Reso, inspired by redstone, piet, and other esolangs. Rather than a simple cellular-automata based system, the language would be made from a series of connected components. The first release was in 2018, with this dinky logo, which doubles as a functional Reso circuit:</p>
@@ -135,22 +138,22 @@ It's ugly as hell, but I like it, and it showcases the basic language features: 
 <p>I expected swapping to Rust alone would yield a 10x to 100x performance boost, as would the algorithmic changes, so a 10000x boost was the upper limit of what I expected. A very welcome surprise :)</p>
 <h1 id="the-big-algorithmic-change-is-in-the-logic-graph">The big algorithmic change is in the logic graph</h1>
 <blockquote>
-<p><strong>tldr:</strong> The Python version uses an <a href="https://en.wikipedia.org/wiki/Adjacency_list">adjacency list</a> based on a dictionary (hashmap) to identify which nodes are adjacent to one another. The Rust rewrite uses an incidence list based on dense indices to identify which nodes are adjacent to one another, using no hashmaps to maintain relationships.</p>
-<p>Generally, direct integer indexing is faster than using a hashmap.</p>
-<p>Both versions only maintain "relevant" adjacencies: Wire-to-inputs, input-to-logics, input-to-outputs, logic-to-outputs, and output-to-wires. We don't care about some adjacencies, like wires adjacent to logic nodes.</p>
+<p><strong>tldr:</strong> The Python version uses an <a href="https://en.wikipedia.org/wiki/Adjacency_list">adjacency list</a> based on a dictionary (hashmap) to identify which nodes are adjacent to one another. The Rust rewrite uses an incidence list based on dense indices to identify which nodes are adjacent to one another, using no hashmaps to maintain relationships. </p>
+<p>Generally, direct integer indexing is faster than using a hashmap. </p>
+<p>Both versions only maintain &quot;relevant&quot; adjacencies: Wire-to-inputs, input-to-logics, input-to-outputs, logic-to-outputs, and output-to-wires. We don't care about some adjacencies, like wires adjacent to logic nodes.</p>
 </blockquote>
-<p>Reso works by compiling down to a list of nodes and their adjacencies. A minimal "AND" has six elements: Two input wires, an input node, the "AND" node, the output node, and an output wire.</p>
-<p>The key thing here is that every region has a global "region index" integer which identifies it, as well as a "dense index" which identifies it among a class. (Wires, inputs, outputs, and logic nodes each have their own indices.) So, a wire might be the 10th region, but the 3rd wire.</p>
+<p>Reso works by compiling down to a list of nodes and their adjacencies. A minimal &quot;AND&quot; has six elements: Two input wires, an input node, the &quot;AND&quot; node, the output node, and an output wire. </p>
+<p>The key thing here is that every region has a global &quot;region index&quot; integer which identifies it, as well as a &quot;dense index&quot; which identifies it among a class. (Wires, inputs, outputs, and logic nodes each have their own indices.) So, a wire might be the 10th region, but the 3rd wire.</p>
 <p>The code is the best description of the algorithms, <a href="https://github.com/resolang/reso">check Reso out on GitHub</a>.</p>
 <h1 id="here-s-to-a-bright-2024">Here's to a bright 2024</h1>
 <p>I have so many ideas, and so little time. I want to make Reso more colorblind-friendly, I want to build tooling to make it easier to build in Reso, I want to make prefab components (i.e. sprites), I want to build a circuit in Reso, I want to make it easy to run a Reso circuit on a microcontroller, to make it easy to connect Reso wires to real-world GPIO pins, etc.</p>
-<p>The main thing is I want Reso to be <em>a toy</em> people can use to make <em>cool things</em>. The ideal end state is a web editor with a bunch of tools builtin.</p>
+<p>The main thing is I want Reso to be <em>a toy</em> people can use to make <em>cool things</em>. The ideal end state is a web editor with a bunch of tools builtin. </p>
 <p>I'm on a roll with Reso, but I'm pausing to do <a href="https://lynndotpy.dev/posts/reso-2023/genuary.art">genuary</a> in Rust. <a href="https://github.com/lynnpepin/genuary">You can see my progress here.</a></p>
 <p>So, here's a list of what's coming the next time I get a chance to fixate on this:</p>
-<p><strong>A computer made in Reso:</strong> I started writing Reso at a time when I held all the knowledge in my head to build a computer, <a href="https://www.nand2tetris.org/">or even Tetris,</a> from logic gates. Now that Reso is written in Rust, such a</p>
-<p><strong>Onion-skin algorithm walkthrough:</strong> While working on Reso, I drew an example input circuit, and added "onion skin" layers explaining every step of the way: The mapping from pixel to <code>Resel</code>, the compilation to a <code>Vec&lt;Vec&lt;Resel&gt;&gt;</code> to a <code>ReselBoard</code>, the results from <code>RegionMap</code>, then from <code>IncidenceMap</code>, and then eventually the steps <code>ResoCircuit</code> takes to iterate. I <em>really</em> want to make this step-by-step onionskinner, and this is probably an easy-ish trick of SVG. But that kind of stuff is far outside the perview of my webdev skills.</p>
+<p><strong>A computer made in Reso:</strong> I started writing Reso at a time when I held all the knowledge in my head to build a computer, <a href="https://www.nand2tetris.org/">or even Tetris,</a> from logic gates. Now that Reso is written in Rust, such a </p>
+<p><strong>Onion-skin algorithm walkthrough:</strong> While working on Reso, I drew an example input circuit, and added &quot;onion skin&quot; layers explaining every step of the way: The mapping from pixel to <code>Resel</code>, the compilation to a <code>Vec&lt;Vec&lt;Resel&gt;&gt;</code> to a <code>ReselBoard</code>, the results from <code>RegionMap</code>, then from <code>IncidenceMap</code>, and then eventually the steps <code>ResoCircuit</code> takes to iterate. I <em>really</em> want to make this step-by-step onionskinner, and this is probably an easy-ish trick of SVG. But that kind of stuff is far outside the perview of my webdev skills.</p>
 <p><strong>A cool new logo :) The current one is ugly :)</strong></p>
-<p><strong>Docs:</strong> Right now, there are no docs outside of what's contained in the code. This is probably a huge barrier to contributing, but I really want to make a tool that walks you through how Reso compiles.</p>
+<p><strong>Docs:</strong> Right now, there are no docs outside of what's contained in the code. This is probably a huge barrier to contributing, but I really want to make a tool that walks you through how Reso compiles. </p>
 <p><strong>Better ASCII support:</strong> Right now, Reso only operates on images, but is pretty close to ASCII support. Right now, I imagine it'd be hard to make Reso circuits while colorblind.</p>
 <p><strong>Palette support:</strong> The default colors are chosen to be nice and easy to remember, but they're not the prettiest. An optional <code>palette.png</code> mapping should be simple to add.</p>
 <p><strong>A Reso editor:</strong> I want to make an editor specifically for Reso circuits, with no reliance on color, and in-editor compilation and running.</p>

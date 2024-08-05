@@ -28,6 +28,9 @@
     <meta property="twitter:domain" content="lynndotpy.dev&#x2F;">
     <meta property="twitter:url" content="https://lynndotpy.dev/posts/written-in-rust/">
 
+            
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lynndotpy.dev/atom.xml">
+    
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
         
@@ -112,13 +115,13 @@
 
         <div class="post-content">
             <blockquote>
-<p><strong>tldr:</strong> A post is titled "My cool new thing, written in Rust." The top comment asks, "Why should I care that it's written in Rust?"</p>
+<p><strong>tldr:</strong> A post is titled &quot;My cool new thing, written in Rust.&quot; The top comment asks, &quot;Why should I care that it's written in Rust?&quot;</p>
 <p>Well, I care! I love knowing when something is written in Rust. The main thing is that it's probably easy to <code>cargo install your_cool_new_thing</code>. I can't say the same for anything asking me to interact with <code>npm</code>, <code>pip</code>, <code>make</code>, <code>apt</code>, flatpaks or appimages, etc.</p>
-<p>This post starts with a diatribe about <code>pip</code> and <code>npm</code>, evangelizing the virtues of <code>cargo</code>. The other benefits listed are the performance benefits from Rust's memory safety, and reassurances that Rust won't die anything soon (meaning it won't drag other projects down with it.)</p>
+<p>This post starts with a diatribe about <code>pip</code> and <code>npm</code>, evangelizing the virtues of <code>cargo</code>. The other benefits listed are the performance benefits from Rust's memory safety, and reassurances that Rust won't die anything soon (meaning it won't drag other projects down with it.) </p>
 <p>So, yes, I want to know your thing is written in Rust!</p>
 </blockquote>
 <p>Over the past few years, line after line, project after project, I've become one of those annoying Rust evangelists. It's hard to go back to the old way of doing things, and a big reason is <code>cargo</code>.</p>
-<p>On occasion, a new Rust project will be posted to a site like <a href="https://lobste.rs/s/hheh5v/cli_email_client_written_rust">lobste.rs</a>, with a title like "A <code>$THING</code>, written in Rust". Somone will invariable reply "Why should I care it's written in Rust?"</p>
+<p>On occasion, a new Rust project will be posted to a site like <a href="https://lobste.rs/s/hheh5v/cli_email_client_written_rust">lobste.rs</a>, with a title like &quot;A <code>$THING</code>, written in Rust&quot;. Somone will invariable reply &quot;Why should I care it's written in Rust?&quot;</p>
 <p>Well, I care, and this is why.</p>
 <span id="continue-reading"></span><h1 id="first-a-love-letter-to-rust-s-cargo">First, a love letter to Rust's <code>cargo</code></h1>
 <blockquote>
@@ -135,14 +138,14 @@
 <p>A major source of pain is that <code>pip</code> tooling is generally focused around maintaining <em>environments</em> which are detached from <em>projects</em>. It does little of the work for you, which means it's very easy for a tired grad student crunching for a deadline to simply <em>not</em> publish a <code>requirements.txt</code> or even a CUDA version with their code.</p>
 <p>Example: When you, say, <code>python3 -m pip install yodalist</code>, you're installing it to the currently active environment. Activating environments requires running <code>source path_to_environment/bin/activate</code>. There is no <code>package.json</code> or equivalent: If you want one env per project, you need to handle that yourself. (This is also true for <code>conda</code>, but the <a href="https://python-poetry.org/docs/"><code>poetry</code></a> project seems promising.)</p>
 <p>Things are worse is when you try to <em>publish</em> a project. <a href="https://pypi.org/project/yodalist/">When I wrote <code>yodalist</code></a>, I did so with the goal of learning how to publish a project to PyPi. It is a bit of an ordeal, it took an hour to figure out, and I forget the steps which are necessary. With Rust, it's a breeze, with a simple <code>cargo publish</code>.</p>
-<p>For a better breakdown of the differences between pip and cargo, please see this <a href="https://blog.williammanley.net/2022/02/23/pip-and-cargo-are-not-the-same.html">"pip and cargo are not the same" (2022) at williammanley.net</a>.</p>
+<p>For a better breakdown of the differences between pip and cargo, please see this <a href="https://blog.williammanley.net/2022/02/23/pip-and-cargo-are-not-the-same.html">&quot;pip and cargo are not the same&quot; (2022) at williammanley.net</a>. </p>
 <h2 id="a-breakup-letter-to-npm-too">A breakup letter to NPM, too</h2>
 <blockquote>
 <p><strong>tldr:</strong> While <code>pip</code> can learn a lot from <code>npm</code>, I still quite enjoy my experience with <code>cargo</code> compared to <code>npm</code>.</p>
 </blockquote>
 <p>Later on, as a webdev, I had similar problems with NPM. NPM generally handles dependencies per-project (think your <code>package.json</code> file per-repository) as well as allowing you to install things globally (e.g. <code>npm install -g @angular/cli</code>).</p>
-<p>One big issue is that <code>package.json</code> is used to generate the <em>real</em> list of packages, <code>package-lock.json</code>, and that <code>package.json -&gt; package-lock.json</code> mapping is not deterministic. This means, counterintuitively, you cannot delete your <code>package-lock.json</code>. <a href="https://stackoverflow.com/questions/54124033/deleting-package-lock-json-to-resolve-conflicts-quickly">As "skyboyer" on StackExchange puts it, if you do, "it can and will affect all the project in really bad way."</a></p>
-<p>Generally, being a proper web developer requires using <code>nvm</code> (the "node version manager") to manage different versions of <code>npm</code>. This is a bit annoying and I've pulled my hair out trying to solve dependency issues with NPM too.</p>
+<p>One big issue is that <code>package.json</code> is used to generate the <em>real</em> list of packages, <code>package-lock.json</code>, and that <code>package.json -&gt; package-lock.json</code> mapping is not deterministic. This means, counterintuitively, you cannot delete your <code>package-lock.json</code>. <a href="https://stackoverflow.com/questions/54124033/deleting-package-lock-json-to-resolve-conflicts-quickly">As &quot;skyboyer&quot; on StackExchange puts it, if you do, &quot;it can and will affect all the project in really bad way.&quot;</a></p>
+<p>Generally, being a proper web developer requires using <code>nvm</code> (the &quot;node version manager&quot;) to manage different versions of <code>npm</code>. This is a bit annoying and I've pulled my hair out trying to solve dependency issues with NPM too.</p>
 <h2 id="the-rest">The rest</h2>
 <p>There are similar stories for dynamic-linking with libraries built from <code>C</code> and <code>C++</code>, but I think that's really on me for trying to compile from source.</p>
 <p>But <code>cargo</code> does static linking by default, which means I never have any problems compiling from source. Computer disks start at &gt;200GB nowadays, so <a href="https://stackoverflow.com/questions/29008127/why-are-rust-executables-so-huge">I'd much rather have a 3MB <code>hello-world</code></a> than have to worry about dynamic linking.</p>
@@ -171,13 +174,13 @@
 <p>Rust is widely adopted enough to the point where, if Rust stops being supported, it will be mildly existential across the industry. Rust is now used in <a href="https://lore.kernel.org/lkml/202210010816.1317F2C@keescook/">the Linux kernel</a>, in <a href="https://www.youtube.com/watch?v=8T6ClX-y2AE">NT (the Windows kernel)</a>, in <a href="https://www.rust-lang.org/static/pdfs/Rust-npm-Whitepaper.pdf">npm</a>. Rust is the dominant language of <a href="https://fuchsia.googlesource.com/">Fuchsia, if it counts.</a> Rust is supported for <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-rust.html">AWS Lambdas</a>, and soon, Rust will be inside <a href="https://github.com/chromium/chromium/blob/2bdef254aec631e268c4b8d57482624449257588/docs/rust.md">Google Chrome</a>.</p>
 <p>Rust is also widely adopted to the point where Rust devs will continue to exist for a decade or two. Rust has a notable amount of popularity <a href="https://github.blog/2023-11-08-the-state-of-open-source-and-ai/">according</a> to <a href="https://survey.stackoverflow.co/2023/#section-admired-and-desired-programming-scripting-and-markup-languages">survey</a> and <a href="https://www.tiobe.com/tiobe-index/">index</a> and <a href="https://pypl.github.io/PYPL.html">ranking</a> and <a href="https://madnight.github.io/githut/#/pull_requests/2023/3">analysis</a> I can find.</p>
 <p>I compare this to something like Julia, which <em>seems</em> excellent, but leaves me worried that I'll learn it well and then see it become deprecated. Even if the language is maintained, today's Julia dependencies might be deprecated tomorrow, and todays Julia developers might 9 years out-of-date in a decade.</p>
-<h1 id="written-in-rust-considered-cool-and-good-to-say">"Written in Rust" considered cool and good to say</h1>
+<h1 id="written-in-rust-considered-cool-and-good-to-say">&quot;Written in Rust&quot; considered cool and good to say</h1>
 <blockquote>
 <p><strong>tldr:</strong> Please boast about Rust :)</p>
 </blockquote>
 <p>As a developer, I just feel more confident working with Rust projects. When I get error messages, I often refer to the source-code on how to proceed. Because I write Rust, I can dig deeper and leave better bug reports. (I even feel more confident about contributing, because again, <em>cargo makes it easy.</em> But this isn't about <em>writing</em> Rust, it's about <em>using</em> it.)</p>
 <p>This is why the occasional Rust community kerfuffles don't phase me. Rust has cemented itself as something that cannot be allowed to die. Maybe in 40 years, that will be something we curse. But for now, I feel stable and happy writing Rust and using applications written in Rust.</p>
-<p>And, let's be honest: The big reason to add "written in Rust" is when aiming at the other Rust enthusiasts. Being enthusiastic is a good thing!</p>
+<p>And, let's be honest: The big reason to add &quot;written in Rust&quot; is when aiming at the other Rust enthusiasts. Being enthusiastic is a good thing!</p>
 
         </div>
 

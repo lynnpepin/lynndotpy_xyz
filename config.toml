@@ -4,7 +4,8 @@ title = "// lynndotpy"
 
 # Sass compilation is required
 compile_sass = true
-#generate_feed = true
+generate_feed = true
+feed_filename = "atom.xml"
 
 # Optional: enable tags
 taxonomies = [

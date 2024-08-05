@@ -28,6 +28,9 @@
     <meta property="twitter:domain" content="lynndotpy.dev&#x2F;">
     <meta property="twitter:url" content="https://lynndotpy.dev/posts/seo-dating-spam/">
 
+            
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lynndotpy.dev/atom.xml">
+    
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
         
@@ -116,7 +119,7 @@
 </blockquote>
 <span id="continue-reading"></span><h1 id="a-mystery-of-malware-in-my-school-s-search-results">A Mystery of Malware in My School's Search Results</h1>
 <p>Recently, a colleague of mine was trying to see if our university had any carbon dating expertise. A search on Google for <code>uconn carbon dating</code> yielded some results she considered sus:</p>
-<p><img src="/posts/images/datego-edu-spam-uconn.png" alt="A screenshot of a Google Search for &#39;UConn Carbon Dating&#39;, showing some malicious looking results promoting some malicious dating sites." title="A screenshot of a Google Search for &#39;UConn Carbon Dating&#39;, showing some malicious looking results promoting some malicious dating sites." /></p>
+<p><img src="/posts/images/datego-edu-spam-uconn.png" alt="A screenshot of a Google Search for 'UConn Carbon Dating', showing some malicious looking results promoting some malicious dating sites." title="A screenshot of a Google Search for 'UConn Carbon Dating', showing some malicious looking results promoting some malicious dating sites." /></p>
 <p>Like any fool, I clicked through the link to see what was going on. Here's that first link, with linebreaks to make it easier to interpret:</p>
 <pre style="background-color:#151515;color:#e8e8d3;"><code><span>https://chemistry.uconn.edu/?s=
 </span><span>%F0%9F%AA%80%E2%9D%A4%EF%B8%8F%EF%B8%8Fwww.datego.xyz
@@ -144,7 +147,7 @@
 <p>where '🪀' and '❤️️', if you can't see it, are Yo-Yo and Heart emojis, respectively. Upon inspection, it seems that these are just searches abusing the sites internal search engine. They become emoji in the URL.</p>
 <p>It's pretty standard, you can make searches for arbitrary text. For example, <code>chemistry.uconn.edu/?s=some+arbitrary+text</code> yields such a URL: <a href="https://lynndotpy.dev/posts/seo-dating-spam/chemistry.uconn.edu/?s=some+arbitrary+text">https://chemistry.uconn.edu/?s=some+arbitrary+text</a></p>
 <p>It seems UConn isn't the only one impacted. While not exclusive to .edu domains, it looks like they're the primary targets. Here, we see the same thing for other .edu domains:</p>
-<p><img src="/posts/images/datego-edu-spam.png" alt="A screenshot of a Google Search for &#39;datego.xyz site:edu&#39;, showing some malicious looking results promoting some malicious dating sites." title="A screenshot of a Google Search for &#39;datego.xyz site:edu&#39;, showing some malicious looking results promoting some malicious dating sites." /></p>
+<p><img src="/posts/images/datego-edu-spam.png" alt="A screenshot of a Google Search for 'datego.xyz site:edu', showing some malicious looking results promoting some malicious dating sites." title="A screenshot of a Google Search for 'datego.xyz site:edu', showing some malicious looking results promoting some malicious dating sites." /></p>
 <p>So, what's going on here? I think I have an idea.</p>
 <h1 id="an-explanation-for-these-egregious-search-results">An Explanation for these Egregious Search Results</h1>
 <p>So, my guess here is that the attack works like this:</p>
@@ -160,7 +163,7 @@
 <h1 id="how-to-stop-for-this-salacious-shady-search-meta-seo">How to Stop for this Salacious Shady Search Meta-SEO</h1>
 <p>I'm not a web developer, but one usually doesn't want their search results to be indexed on other search engines. They clutter up results for the end-user, and, as we see here, it opens you up for a rather ugly attack. As far as I can tell, there are two main ways to fix this. Luckily, they're both easy!</p>
 <ol>
-<li><strong>Fix the <code>robots.txt</code></strong></li>
+<li><strong>Fix the <code>robots.txt</code></strong> </li>
 <li><strong>Add the <code>noindex</code> metatag.</strong></li>
 </ol>
 <p>We can see both of these in action by observing Google (which uses <code>robots.txt</code>) and DuckDuckGo (which uses both <code>robots.txt</code> and the <code>noindex</code>.) While not strictly required, major search engines will respect these tags.</p>
@@ -204,9 +207,9 @@
 <pre data-lang="html" style="background-color:#151515;color:#e8e8d3;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;</span><span style="color:#ffb964;">meta name</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">robots</span><span style="color:#556633;">&quot; </span><span style="color:#ffb964;">content</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">noindex,nofollow</span><span style="color:#556633;">&quot;</span><span>&gt;
 </span></code></pre>
 <p>Now, because of DuckDuckGo's <code>robots.txt</code> file, an indexer won't even see this. But if it did, it would know not to index it (per <code>noindex</code>) and not to index any links on the page (per <code>nofollow</code>).</p>
-<p>One can also, alternatively, add <code>X-Robots-Tag: noindex</code> to the HTTP response header. Google has more information on their page <a href="https://developers.google.com/search/docs/advanced/crawling/block-indexing">"Block Search indexing with 'noindex'" at developers.google.com/search/docs/advanced/crawling/block-indexing</a></p>
+<p>One can also, alternatively, add <code>X-Robots-Tag: noindex</code> to the HTTP response header. Google has more information on their page <a href="https://developers.google.com/search/docs/advanced/crawling/block-indexing">&quot;Block Search indexing with 'noindex'&quot; at developers.google.com/search/docs/advanced/crawling/block-indexing</a></p>
 <h1 id="neat-so-did-you-disclose-this-disaster">Neat! So, Did you disclose this disaster?</h1>
-<p>Regarding responsible disclosure, I did give a heads up to UConn's IT department, since I am a UConn student and employee. But given the low impact of this attack and how widespread it is, I figured a blogpost would be more than appropriate.</p>
+<p>Regarding responsible disclosure, I did give a heads up to UConn's IT department, since I am a UConn student and employee. But given the low impact of this attack and how widespread it is, I figured a blogpost would be more than appropriate. </p>
 
         </div>
 

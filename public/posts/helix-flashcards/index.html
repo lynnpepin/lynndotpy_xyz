@@ -28,6 +28,9 @@
     <meta property="twitter:domain" content="lynndotpy.dev&#x2F;">
     <meta property="twitter:url" content="https://lynndotpy.dev/posts/helix-flashcards/">
 
+            
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lynndotpy.dev/atom.xml">
+    
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
         
@@ -219,15 +222,15 @@
 <p>That's almost 100 lines of comments I'd have to remove manually! I was able to do so with the commands <code>%</code> <code>s</code> <code>^&lt;!--</code> <code>&lt;enter&gt;</code> <code>x</code> <code>d</code>, which tuned the edit from a three-minute-thing into a one-second-thing. This sequence of commands:</p>
 <ul>
 <li><code>%</code> selects the entire document (this post!)</li>
-<li><code>s</code> enters "selection mode", so I can search within my selection.</li>
-<li><code>^&lt;!--SR</code> is regex, which searches within my selection for any lines starting with <code>&lt;!--</code>. The <code>^</code> is important regex for "start of line".</li>
+<li><code>s</code> enters &quot;selection mode&quot;, so I can search within my selection.</li>
+<li><code>^&lt;!--SR</code> is regex, which searches within my selection for any lines starting with <code>&lt;!--</code>. The <code>^</code> is important regex for &quot;start of line&quot;.</li>
 <li><code>&lt;enter&gt;</code> confirms my selection, splitting into a separate cursor on each matching line.</li>
 <li><code>x</code> selects the entire line, and</li>
 <li><code>d</code> deletes my selection.</li>
 </ul>
 <h1 id="p-p-s-here-s-my-regex-flashcards-too">p.p.s. Here's my regex flashcards too</h1>
 <p>Thanks for reading this far :) Being good at regex was also super helpful. My regex flashcards helped me too. Flashcards are unreasonably effective.</p>
-<p>Sorry, "learning but never remembering regex", I've fallen in love with "learning and remembering regex".</p>
+<p>Sorry, &quot;learning but never remembering regex&quot;, I've fallen in love with &quot;learning and remembering regex&quot;.</p>
 <pre style="background-color:#151515;color:#e8e8d3;"><code><span>#flashcards/regex
 </span><span>
 </span><span>`\`:::Escape character

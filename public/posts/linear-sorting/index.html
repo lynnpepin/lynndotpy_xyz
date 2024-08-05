@@ -28,6 +28,9 @@
     <meta property="twitter:domain" content="lynndotpy.dev&#x2F;">
     <meta property="twitter:url" content="https://lynndotpy.dev/posts/linear-sorting/">
 
+            
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lynndotpy.dev/atom.xml">
+    
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
         
@@ -124,7 +127,7 @@
 
 <blockquote>
 <p><strong>TLDR:</strong> Yes-- you can sort numbers in linear time. Yes, including floats! The proof that you can sort in $O(n \log n)$ time is still true, but that assumes you're sorting on the infinite set of real numbers (or integers.) We can sort in linear time because we work with finite sets: Floats and ints.  The algorithm is very simple, and is called counting sort (or bin sort or radix sort.)</p>
-<p>See the <a href="https://github.com/lynnpepin/rust_projects/blob/master/countsort/plot_stats.ipynb">Python notebook</a> wrapping an unoptimized <a href="https://github.com/lynnpepin/rust_projects/tree/master/countsort">Rust countsort implementation</a>:</p>
+<p>See the <a href="https://github.com/lynnpepin/rust_projects/blob/master/countsort/plot_stats.ipynb">Python notebook</a> wrapping an unoptimized <a href="https://github.com/lynnpepin/rust_projects/tree/master/countsort">Rust countsort implementation</a>: </p>
 </blockquote>
 <p>--</p>
 <p>Is this truly $O(n)$? Yes!</p>
@@ -132,7 +135,7 @@
 <li>Counting sort is not a randomized algorithm, it always outputs the correct solution.</li>
 <li>Counting sort is not a parallelized algorithm. (And you can't use parallelism to speed past a worst-case big-O run time anyway!)</li>
 <li>Counting sort is not an amortized algorithm. It is truly $O(n)$, not 'expected' or 'amortized' $O(n)$.</li>
-<li>Counting sort is technically $Θ(n)$, that is, the worst and best case running time is linear.</li>
+<li>Counting sort is technically $Θ(n)$, that is, the worst and best case running time is linear. </li>
 <li>This can be used in the real world.</li>
 <li>However, it is not an in-place sorting algorithm.</li>
 </ul>
@@ -190,7 +193,7 @@
 </ol>
 <p>This algorithm is <code>O(|L| + |K|)</code>. This is also written as <code>O(n + k)</code>, where <code>k</code> is the size of the set we want to sort.</p>
 <h1 id="tell-me-more-about-sorting">tell me more about sorting</h1>
-<p>So far we assume you need to perfectly sort an arbitrary list of values.</p>
+<p>So far we assume you need to perfectly sort an arbitrary list of values. </p>
 <p>You can speed things up if:</p>
 <ol>
 <li>You know something about the distribution of values, or</li>
@@ -200,12 +203,12 @@
 <p>What if your sort doesn't need to be super accurate? Say, for a very niche case, you want to sort a histogram on the logarithm of some list of values. Then, you can sort your float64s on the 11-bit exponent, which means <code>k = 2^11 = 2048</code>, which means you can use counting-sort!</p>
 <h1 id="okay-so-what-s-the-take-away-here">okay so what's the take-away here</h1>
 <p>Well, I've only ever written sorting algorithms in job-interviews and university exams. I'm happy to say some of them were linear, and I'm very happy to say I've never had to performance-engineer things like this.</p>
-<p>There is a small rift between the model of computing used in computer-science and the actual computers we use. The space between that rift is really cool, and leads to fun facts like "you can sort in linear time".</p>
+<p>There is a small rift between the model of computing used in computer-science and the actual computers we use. The space between that rift is really cool, and leads to fun facts like &quot;you can sort in linear time&quot;.</p>
 <p>Remember to like, comment, and subscribe* for more fun blog-posts, such as:</p>
 <ol>
-<li>"Sorry Amdahl, but parallel computing DOES give you superlinear speedup"</li>
-<li>"P and NP don't matter if you're not in aerospace because randomized algorithms are magic"</li>
-<li>"Moore's Law isn't exponential, and it's not sigmoidal either. It's a distribution, I'm afraid we're nearing it's peak, and I'm frightened about the world beyond it: A Short Treatise on Why 640KB ought to be enough for anyone because you won't have a choice in 200 years"</li>
+<li>&quot;Sorry Amdahl, but parallel computing DOES give you superlinear speedup&quot;</li>
+<li>&quot;P and NP don't matter if you're not in aerospace because randomized algorithms are magic&quot;</li>
+<li>&quot;Moore's Law isn't exponential, and it's not sigmoidal either. It's a distribution, I'm afraid we're nearing it's peak, and I'm frightened about the world beyond it: A Short Treatise on Why 640KB ought to be enough for anyone because you won't have a choice in 200 years&quot;</li>
 </ol>
 <hr />
 <p>*This is a joke, I'm not actually writing these blogposts, and you can't like, comment, or subscribe.</p>

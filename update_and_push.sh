@@ -1,5 +1,5 @@
 # Update posts
-zola build
+zola_18 build
 
 # Get commit message and push
 read -p "Enter commit message: " commit_message

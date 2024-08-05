@@ -28,6 +28,9 @@
     <meta property="twitter:domain" content="lynndotpy.dev&#x2F;">
     <meta property="twitter:url" content="https://lynndotpy.dev/posts/boycott-app-security/">
 
+            
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lynndotpy.dev/atom.xml">
+    
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
         
@@ -114,15 +117,15 @@
 
         <div class="post-content">
             <blockquote>
-<p><strong>Super short TLDR:</strong> I looked at three barcode-scanning boycott apps. "Boycat" and "Boycott for Peace" have reasonable network traces, but loading images exposes your IP to third parties. "No Thanks" has no Privacy Policy, falsely claims to collect no data, and makes numerous unnecessary calls to Facebook and Google.</p>
+<p><strong>Super short TLDR:</strong> I looked at three barcode-scanning boycott apps. &quot;Boycat&quot; and &quot;Boycott for Peace&quot; have reasonable network traces, but loading images exposes your IP to third parties. &quot;No Thanks&quot; has no Privacy Policy, falsely claims to collect no data, and makes numerous unnecessary calls to Facebook and Google.</p>
 </blockquote>
 <br> 
 <blockquote>
 <p><strong>Longer TLDR:</strong></p>
 <p>The iOS versions of these apps were analyzed in February.</p>
-<p><a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">"Boycat"</a> and <a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">"Boycott for Peace"</a> expose your IPs to some third parties to load images, and have similar features. Both are good and easy to recommend, but Boycat has an overly-broad Privacy Policy and a Terms of Service which includes Arbitration.</p>
+<p><a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">&quot;Boycat&quot;</a> and <a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">&quot;Boycott for Peace&quot;</a> expose your IPs to some third parties to load images, and have similar features. Both are good and easy to recommend, but Boycat has an overly-broad Privacy Policy and a Terms of Service which includes Arbitration.</p>
 <p>Boycat has aims to be a more general purpose boycotting platform, whereas Boycott for Peace is focused singularly on the BDS movement.</p>
-<p>"No Thanks" makes many tracking calls to Facebook and Google and has integrated advertisements. It offers no compelling features over Boycat or Boycott for Peace, and cannot be recommended. Further, it does not have a working link to a Privacy Policy, and falsely claims "No Data Collected" on the iOS app store.</p>
+<p>&quot;No Thanks&quot; makes many tracking calls to Facebook and Google and has integrated advertisements. It offers no compelling features over Boycat or Boycott for Peace, and cannot be recommended. Further, it does not have a working link to a Privacy Policy, and falsely claims &quot;No Data Collected&quot; on the iOS app store.</p>
 </blockquote>
 <br> 
 <hr />
@@ -140,7 +143,7 @@
 </blockquote>
 <p><a href="https://apps.apple.com/us/app/boycat/id6474510742">Boycat</a> is one of the many new barcode-scanning apps meant to make boycotting easier. Initially aimed at the BDS boycotts, it's promising to be useful for any particular boycott campaign.</p>
 <p>This is going to be a dry post about pretty rote security analysis. This post only looks at the legal promises (in the Terms of Service and Privacy Policy), as well as the actual network calls thea pp makes, but I can't say anything else about what goes on inside the app or the servers it talks to.</p>
-<p>I reached out to the dev on 2024-Feb-21, detailing two issues with the Terms of Service and Privacy Policy, the IP-leakage to third parties when loading images, and an exploit allowing technical users to manipulate votes.</p>
+<p>I reached out to the dev on 2024-Feb-21, detailing two issues with the Terms of Service and Privacy Policy, the IP-leakage to third parties when loading images, and an exploit allowing technical users to manipulate votes. </p>
 <h2 id="suggestions-to-the-devs">Suggestions to the devs</h2>
 <ol>
 <li>Currently, devices request images directly from third-party servers, like <code>walmartimages.com</code>. Consider proxying images, so that users IP address is not leaked to third parties.</li>
@@ -150,16 +153,16 @@
 </ol>
 <h2 id="the-boycat-legal-promises">The Boycat legal promises</h2>
 <blockquote>
-<p><strong>TLDR:</strong> Boycat's Privacy Policy has the standard red-flags, including the sale of location data to third-parties. The ToS has a mandatory arbitration clause with no opt-out, but the developer says an opt-out is coming. Until arbitration is opt-out, this is "proceed with caution". But the app thankfully is far less invasive than its ToS and Privacy Policy suggests.</p>
+<p><strong>TLDR:</strong> Boycat's Privacy Policy has the standard red-flags, including the sale of location data to third-parties. The ToS has a mandatory arbitration clause with no opt-out, but the developer says an opt-out is coming. Until arbitration is opt-out, this is &quot;proceed with caution&quot;. But the app thankfully is far less invasive than its ToS and Privacy Policy suggests.</p>
 </blockquote>
-<p>Boycat on the iOS app store has these "privacy card" disclaimers, which are never reviewed by Apple:</p>
+<p>Boycat on the iOS app store has these &quot;privacy card&quot; disclaimers, which are never reviewed by Apple:</p>
 <ul>
 <li>Data Linked to You: Identifiers, Usage Data, and Diagnostics</li>
 <li>Data Not Linked to You: Usage Data</li>
 </ul>
-<p>The <a href="https://www.boycat.io/privacy-policy">Privacy Policy</a> is brief and, according to the founder, <a href="https://twitter.com/adilbuilds/status/1759758998449107363">"was a generic template from legal".</a></p>
+<p>The <a href="https://www.boycat.io/privacy-policy">Privacy Policy</a> is brief and, according to the founder, <a href="https://twitter.com/adilbuilds/status/1759758998449107363">&quot;was a generic template from legal&quot;.</a> </p>
 <ul>
-<li>Personal Identification Information: Collect name, email address, and "other contact details"</li>
+<li>Personal Identification Information: Collect name, email address, and &quot;other contact details&quot;</li>
 <li>Usage data (frequency, navigation paths)</li>
 <li>Device information (model, OS, unique IDs, IP.)</li>
 <li>Location Data</li>
@@ -170,7 +173,7 @@
 <p>To make things worse, <a href="https://www.boycat.io/terms-of-service">the Terms of Service</a> has a mandatory arbitration clause. These are widely upheld in the United States and are a red flag for any consumer. *(P.S.! I maintain <a href="https://github.com/lynnpepin/arbitration-opt-out-templates/">arbitration opt-out templates</a> to make it easier to opt out of these. If Boycat adds an arbitration opt-out, I'll update this at the earliest convenience.)</p>
 <h2 id="boycat-network-activity">Boycat network activity</h2>
 <blockquote>
-<p><strong>TLDR:</strong> This app has a very clean network trace. The only concerning things are calls to third-parties like Walmart Images.</p>
+<p><strong>TLDR:</strong> This app has a very clean network trace. The only concerning things are calls to third-parties like Walmart Images. </p>
 </blockquote>
 <p>![[IMG_3604.png]]</p>
 <p>There are <strong>no network pings</strong> when you start the app, which is fantastic, and the app's UI is very simple. There are three things you can do in this app:</p>
@@ -208,14 +211,14 @@
 <li>Install the MITM cert from <code>mitm.it</code>:
 <ol>
 <li>Visit <code>mitm.it</code> on Safari on the iOS device.</li>
-<li>Click the "Get mitmproxy-ca-cert.pem" to install the profile onto your iPhone.</li>
-<li>Open the "Settings" app, find the "Profile downloaded" icon, and install it.</li>
-<li>From Settings, find the "Certificate Trust Settings" and trust <code>mitmproxy</code>.</li>
+<li>Click the &quot;Get mitmproxy-ca-cert.pem&quot; to install the profile onto your iPhone.</li>
+<li>Open the &quot;Settings&quot; app, find the &quot;Profile downloaded&quot; icon, and install it.</li>
+<li>From Settings, find the &quot;Certificate Trust Settings&quot; and trust <code>mitmproxy</code>.</li>
 </ol>
 </li>
 </ol>
 </blockquote>
-<p>First, I tried scanning a few things without signing in. Each time, it yielded a predictable and clean set of calls. Scanning that barcode yields a <code>POST</code> to <code>https://tjqnayzkemnkjthmraae.supabase.co/functions/v1/check-barcode-compliance</code> with a body <code>{"barcode": "0051500025017"}</code>, with a bearer token which may operate as an API key. In response, we get</p>
+<p>First, I tried scanning a few things without signing in. Each time, it yielded a predictable and clean set of calls. Scanning that barcode yields a <code>POST</code> to <code>https://tjqnayzkemnkjthmraae.supabase.co/functions/v1/check-barcode-compliance</code> with a body <code>{&quot;barcode&quot;: &quot;0051500025017&quot;}</code>, with a bearer token which may operate as an API key. In response, we get</p>
 <pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>{
 </span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">alternatives</span><span style="color:#556633;">&quot;</span><span>: [],
 </span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">boycott</span><span style="color:#556633;">&quot;</span><span>: false,
@@ -234,9 +237,9 @@
 </span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">upc</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">0051500025017</span><span style="color:#556633;">&quot;
 </span><span>}
 </span></code></pre>
-<p>This is as expected. A list of possible alternatives, a boycott boolean, brand information, etc. The <code>"campaign": "doesn't matter for now"</code> is in-line with the apps intentions to allow users to pick a campaign to choose from.</p>
-<p>Things get more concerning when the app processes the items under <code>"image"</code>. The app makes a <code>GET</code> call to <code>https://openfoodfacts-images.s3.eu-west-3.amazonaws.com/data/005/150/002/5017/1.full.jpg</code> in this example, but the app also makes calls directly to a variety of other domains, such as <code>walmartimages.com</code>. These calls are made with the user agent <code>boycatfrontend/3 CFNetwork/1492.0.1 Darwin/23.3.0</code>. Because they are made directly from the phone, this also leaks the users IP address.</p>
-<p>I'm going to try to find something which returns <code>"boycott": true</code>, so I looked for SodaStream photos on eBay and found one with a very high-resolution barcode. Scanning the SodaStream yielded this body:</p>
+<p>This is as expected. A list of possible alternatives, a boycott boolean, brand information, etc. The <code>&quot;campaign&quot;: &quot;doesn't matter for now&quot;</code> is in-line with the apps intentions to allow users to pick a campaign to choose from.</p>
+<p>Things get more concerning when the app processes the items under <code>&quot;image&quot;</code>. The app makes a <code>GET</code> call to <code>https://openfoodfacts-images.s3.eu-west-3.amazonaws.com/data/005/150/002/5017/1.full.jpg</code> in this example, but the app also makes calls directly to a variety of other domains, such as <code>walmartimages.com</code>. These calls are made with the user agent <code>boycatfrontend/3 CFNetwork/1492.0.1 Darwin/23.3.0</code>. Because they are made directly from the phone, this also leaks the users IP address.</p>
+<p>I'm going to try to find something which returns <code>&quot;boycott&quot;: true</code>, so I looked for SodaStream photos on eBay and found one with a very high-resolution barcode. Scanning the SodaStream yielded this body:</p>
 <pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>{
 </span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">alternatives</span><span style="color:#556633;">&quot;</span><span>: [],
 </span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">boycott</span><span style="color:#556633;">&quot;</span><span>: true,
@@ -303,9 +306,9 @@
 <p>Then a call to <code>https://tjqnayzkemnkjthmraae.supabase.co/functions/v1/fetch-recent-no-alternatives</code> which lists only Pringles, Oreos, and Tide, and then another call to <code>ttps://tjqnayzkemnkjthmraae.supabase.co/functions/v1/fetch-campaign-data</code>. Not sure why.</p>
 <h3 id="what-happens-when-you-scan-an-alternative">What happens when you scan an alternative?</h3>
 <blockquote>
-<p><strong>TLDR:</strong> Nothing surprising or concerning, but it is possible to push alternatives to the top of the leaderboard by modifying network calls.</p>
+<p><strong>TLDR:</strong> Nothing surprising or concerning, but it is possible to push alternatives to the top of the leaderboard by modifying network calls. </p>
 </blockquote>
-<p>The <code>alternatives</code> array is empty, but I know of an alternative to SodaStream! I'm a logged in user, so I suggest the "OTE Portable Sparking Water Machine". A POST to search by name, a few GETs from Walmart Images, and a POST to recommend the alternative.</p>
+<p>The <code>alternatives</code> array is empty, but I know of an alternative to SodaStream! I'm a logged in user, so I suggest the &quot;OTE Portable Sparking Water Machine&quot;. A POST to search by name, a few GETs from Walmart Images, and a POST to recommend the alternative.</p>
 <p>I forgot to get screenshots here, but the call stack was minimal (save for the concerning WalMart requests.)</p>
 <p>My suggestion showed up right away, this time, with <code>alternatives</code>:</p>
 <pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>  </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">alternatives</span><span style="color:#556633;">&quot;</span><span>: [
@@ -338,7 +341,7 @@
 <p>I found it was possible to manipulate the vote count, but I won't explain how in this post. I undid the exploit and let the devs know.</p>
 <hr />
 <h1 id="boycott-for-peace-close-second">Boycott for Peace: Close second</h1>
-<p>The app privacy policy reports "Data Not Linked to You" might be collected, and <a href="https://boycottforpeace.org/privacy-policy/">the privacy policy</a> correctly reports that embedded content from other apps might allow them to collect data from you. It's super straightforward.</p>
+<p>The app privacy policy reports &quot;Data Not Linked to You&quot; might be collected, and <a href="https://boycottforpeace.org/privacy-policy/">the privacy policy</a> correctly reports that embedded content from other apps might allow them to collect data from you. It's super straightforward.</p>
 <h2 id="boycott-for-peace-s-network-activity">Boycott for Peace's network activity</h2>
 <p>When you start the <a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">'Boycott for Peace'</a> app, it makes one <code>GET</code> call to <code>https://apps.apple.com/us/app/boycott-for-peace/id6472617524</code> with a body like</p>
 <pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>[
@@ -403,7 +406,7 @@
 </span><span>    },
 </span><span>    ...
 </span></code></pre>
-<p>But as you scroll on the starting 'Brands' pane pf the app, it <em>loads the logo of each app</em>. Like Boycat, this exposes your IP to various brands, this one with the user-agent <code>Boycott/2 CFNetwork/1492.0.1 Darwin/23.3.0</code>.</p>
+<p>But as you scroll on the starting 'Brands' pane pf the app, it <em>loads the logo of each app</em>. Like Boycat, this exposes your IP to various brands, this one with the user-agent <code>Boycott/2 CFNetwork/1492.0.1 Darwin/23.3.0</code>. </p>
 <p>This seems to have a much wider footprint.</p>
 <p>When you scan an barcode, it makes a query like <code>GET https://world.openfoodfacts.org/api/v2/product/0086600709123.json?fields=code,product_name,brands,brands_tags,image_url HTTP/2.0</code>, with a response body like</p>
 <pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>{
@@ -423,9 +426,9 @@
 </span></code></pre>
 <p>and then loads the image. It's a bit less complex than BoyCat.</p>
 <hr />
-<h1 id="nothanks-facebook-google-and-no-terms-of-service-or-privacy-policy">"NoThanks": Facebook, Google, and no Terms of Service or Privacy Policy</h1>
+<h1 id="nothanks-facebook-google-and-no-terms-of-service-or-privacy-policy">&quot;NoThanks&quot;: Facebook, Google, and no Terms of Service or Privacy Policy</h1>
 <p>When I opened the app, it made seven calls to <code>graph.facebook.com</code>, four to <code>googleads.g.doubleclick.net</code>, four to <code>pagead2.googlesyndication.com</code>, one to <code>googletagservices.com</code>, and then while I was typing this, four more to <code>googleapis.com</code> and two more to <code>googleads.g.doubleclick.net</code>.</p>
-<p>To make matters worse, the app falsely claims "No data collected" on the iOS App Store, and has a broken link to a Privacy Policy at "termly.io", another third party. Visiting that site invokes a binding arbitration agreement.</p>
+<p>To make matters worse, the app falsely claims &quot;No data collected&quot; on the iOS App Store, and has a broken link to a Privacy Policy at &quot;termly.io&quot;, another third party. Visiting that site invokes a binding arbitration agreement.</p>
 <p>I'm not going to spend much time analyzing this app. There is no reason for the dev to falsely claim no data is collected.</p>
 
         </div>

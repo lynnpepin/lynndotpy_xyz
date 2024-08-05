@@ -28,6 +28,9 @@
     <meta property="twitter:domain" content="lynndotpy.dev&#x2F;">
     <meta property="twitter:url" content="https://lynndotpy.dev/posts/hardening-bastion/">
 
+            
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lynndotpy.dev/atom.xml">
+    
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
         
@@ -111,7 +114,7 @@
 
         <div class="post-content">
             <p>I maintain an SSH bastion server for all my beloved VPSes. The server I host this blog on only accepts SSH connections from the IP of that bastion, and I keep that bastion hardened. It's a minimal Alpine install with nothing but an SSH server.</p>
-<p>So I felt some dismay when I found the server got a score of F on <a href="https://www.sshaudit.com/">sshaudit.com</a>. I got an F! My bastion failed 2 of 5 host key tests, 4 of 9 key-exchange tests, and 7 of 10 MAC tests.</p>
+<p>So I felt some dismay when I found the server got a score of F on <a href="https://www.sshaudit.com/">sshaudit.com</a>. I got an F! My bastion failed 2 of 5 host key tests, 4 of 9 key-exchange tests, and 7 of 10 MAC tests. </p>
 <p>These are the steps I took. Although I'm on Alpine, I was able to cherry pick commands from <a href="https://www.ssh-audit.com/hardening_guides.html">the Debian-focused server guides hardening guides on sshaudit.com.</a></p>
 <p><strong>TLDR</strong> provided below the cut, with some script script to do the work for you.</p>
 <span id="continue-reading"></span><pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#888888;"># You can&#39;t just copy and paste this! You need to edit some parts, run some parts as su and some parts as user, etc.
@@ -171,9 +174,9 @@
 </li>
 <li><strong>Fixing host keys:</strong> This was simple to run. As root,
 <ul>
-<li><code>rm /etc/ssh/ssh_host_*; ssh-keygen -t rsa -b 4096 -f /etc/ssh/ssh_host_rsa_key -N "";ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N ""</code></li>
+<li><code>rm /etc/ssh/ssh_host_*; ssh-keygen -t rsa -b 4096 -f /etc/ssh/ssh_host_rsa_key -N &quot;&quot;;ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N &quot;&quot;</code></li>
 <li>This improved my score to a 49/100! I now fail no Host Key checks, 4 of 10 Key Exchange tests, and 7 of 10 MAC checks.</li>
-<li>This changes the host keys, so I had to hand-modify my entries in <code>~/.ssh/known_hosts</code> on all my clients.</li>
+<li>This changes the host keys, so I had to hand-modify my entries in <code>~/.ssh/known_hosts</code> on all my clients. </li>
 </ul>
 </li>
 </ol>
@@ -189,7 +192,7 @@
 <li><strong>Restricting algorithms:</strong> As root,
 <ul>
 <li>OpenSSH on Alpine does not have <code>sshd_config.d</code> by default. So, <code>mkdir /etc/ssh/sshd_config.d/; sudo sed -i.bak '1i Include /etc/ssh/sshd_config.d/*' /etc/ssh/sshd_config</code></li>
-<li>The OpenSSH shipped with Alpine doesn't support all the algorithms from the OG hardening guide. Add the following: <code>echo -e "\n# Restrict key exchange, cipher, and MAC algorithms, as per sshaudit.com hardening guide.\nKexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,gss-curve25519-sha256-,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha256\nCiphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr\nMACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,umac-128-etm@openssh.com\nHostKeyAlgorithms ssh-ed25519,ssh-ed25519-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256,rsa-sha2-256-cert-v01@openssh.com" &gt; /etc/ssh/sshd_config.d/ssh-audit_hardening.conf</code></li>
+<li>The OpenSSH shipped with Alpine doesn't support all the algorithms from the OG hardening guide. Add the following: <code>echo -e &quot;\n# Restrict key exchange, cipher, and MAC algorithms, as per sshaudit.com hardening guide.\nKexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,gss-curve25519-sha256-,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha256\nCiphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr\nMACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,umac-128-etm@openssh.com\nHostKeyAlgorithms ssh-ed25519,ssh-ed25519-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256,rsa-sha2-256-cert-v01@openssh.com&quot; &gt; /etc/ssh/sshd_config.d/ssh-audit_hardening.conf</code></li>
 <li>After a reboot, this brought me to an A+ score! :)</li>
 </ul>
 </li>
