@@ -4,41 +4,8 @@
     <link href="https://lynndotpy.dev/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lynndotpy.dev/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-08-02T00:00:00+00:00</updated>
+    <updated>2024-07-30T00:00:00+00:00</updated>
     <id>https://lynndotpy.dev/atom.xml</id>
-    <entry xml:lang="en">
-        <title>Liberty Mutual caught red-handed evading data privacy obligations</title>
-        <published>2024-08-02T00:00:00+00:00</published>
-        <updated>2024-08-02T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://lynndotpy.dev/posts/unlisted/liberty-mutual-wtf/" type="text/html"/>
-        <id>https://lynndotpy.dev/posts/unlisted/liberty-mutual-wtf/</id>
-        
-        <content type="html">&lt;p&gt;On 2024-March-15th, I created a request with Subaru to delete personal data, from Subaru and from its partners.&lt;&#x2F;p&gt;
-&lt;p&gt;Timeline:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;2024-March-15th - Original request&lt;&#x2F;li&gt;
-&lt;li&gt;2024-Aug-2nd
-&lt;ul&gt;
-&lt;li&gt;10:55 AM: Automated response from Privacy@libertymutual.com, claims &amp;quot;Once that is completed, we will review your request and respond within 45 days&amp;quot;&lt;&#x2F;li&gt;
-&lt;li&gt;I do that...&lt;&#x2F;li&gt;
-&lt;li&gt;4:05 PM: &amp;quot;Two more steps are required&amp;quot;&lt;&#x2F;li&gt;
-&lt;li&gt;I do that...&lt;&#x2F;li&gt;
-&lt;li&gt;4:07 PM: &amp;quot;Please Visit LM to Validate Your Identity&amp;quot;, no link included&lt;&#x2F;li&gt;
-&lt;li&gt;4:25 PM, I email them.&lt;&#x2F;li&gt;
-&lt;li&gt;4:53 PM, I call Michelle who tells me to email them.
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;privacy@libertymutual.com&lt;&#x2F;code&gt; -- Michelle at LibertyMutual, told me: Let them know I have filled out the requested form, but the email I received lacked the link.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</content>
-        
-    </entry>
     <entry xml:lang="en">
         <title>The flashcards I used to memorize Helix commands</title>
         <published>2024-07-30T00:00:00+00:00</published>
