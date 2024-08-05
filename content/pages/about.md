@@ -27,7 +27,8 @@ lynn pepin ❖ 199X ❖ they/them
 
 ---
 
-Some more things about me
+<details>
+<summary>Some more things about me:</summary>
 
 - i've been called a "computer clown", a "delicate linux flower", and a "phd dropout"
 - big fan of opossums and crows
@@ -45,14 +46,14 @@ Some more things about me
 - art tools i love to work with:
   - procreate and GIMP
   - blender and godot
-- languages i'm fast in:
+- languages:
   - rust fan
   - python enjoyer
   - javascript tolerator
   - reformed java dev, now in C#/.NET
   - bash, of course
 
+</details>
 Between 2020 and 2023, this site ran on my [diy-static-site-generator](https://github.com/diy-static-site-generator) from 2020 to 2023 until I switched to [Zola](https://getzola.org).
-
 
 ---
