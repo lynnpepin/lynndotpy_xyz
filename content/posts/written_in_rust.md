@@ -107,10 +107,10 @@ I compare this to something like Julia, which *seems* excellent, but leaves me w
 
 # "Written in Rust" considered cool and good to say
 
-> **tldr:** Please boast about Rust :)
+> **tldr:** I care about technology I use and Rust is one of those. I want to know when your project is written at Rust.
 
 As a developer, I just feel more confident working with Rust projects. When I get error messages, I often refer to the source-code on how to proceed. Because I write Rust, I can dig deeper and leave better bug reports. (I even feel more confident about contributing, because again, *cargo makes it easy.* But this isn't about *writing* Rust, it's about *using* it.)
 
 This is why the occasional Rust community kerfuffles don't phase me. Rust has cemented itself as something that cannot be allowed to die. Maybe in 40 years, that will be something we curse. But for now, I feel stable and happy writing Rust and using applications written in Rust.
 
-And, let's be honest: The big reason to add "written in Rust" is when aiming at the other Rust enthusiasts. Being enthusiastic is a good thing!
+And, let's be honest: The big reason to add "written in Rust" is when aiming at the other Rust enthusiasts. Being enthusiastic is a good thing! There is nothing wrong with being enthusiastic on the internet.

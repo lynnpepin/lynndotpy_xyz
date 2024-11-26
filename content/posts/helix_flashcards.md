@@ -16,7 +16,7 @@ Flashcards really help with my on-the-fly recollection, which helped me actually
 
 # The flashcards
 
-Copy this entire code block into any Helix note, then install and enable the spaced repetition plugin. :)
+Copy this entire code block into any Obsidian note, then install and enable the spaced repetition plugin. :)
 
 ```
 #flashcards/helix
@@ -174,4 +174,3 @@ Sorry, "learning but never remembering regex", I've fallen in love with "learnin
 `[ \t]`:::Space and tab
 `[A-Fa-f0-9]`:::Hex digits
 ```
-
