@@ -159,6 +159,10 @@
         <id>https://lynndotpy.dev/posts/written-in-rust/</id>
         
         <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr-tldr:&lt;&#x2F;strong&gt; If your project is written in Rust, it&#x27;s probably &lt;strong&gt;easy to install&lt;&#x2F;strong&gt;, &lt;strong&gt;fast&lt;&#x2F;strong&gt;, and because &lt;strong&gt;Rust is here to stay,&lt;&#x2F;strong&gt; it&#x27;s unlikely to die a premature death.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;hr &#x2F;&gt;
+&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;tldr:&lt;&#x2F;strong&gt; A post is titled &amp;quot;My cool new thing, written in Rust.&amp;quot; The top comment asks, &amp;quot;Why should I care that it&#x27;s written in Rust?&amp;quot;&lt;&#x2F;p&gt;
 &lt;p&gt;Well, I care! I love knowing when something is written in Rust. The main thing is that it&#x27;s probably easy to &lt;code&gt;cargo install your_cool_new_thing&lt;&#x2F;code&gt;. I can&#x27;t say the same for anything asking me to interact with &lt;code&gt;npm&lt;&#x2F;code&gt;, &lt;code&gt;pip&lt;&#x2F;code&gt;, &lt;code&gt;make&lt;&#x2F;code&gt;, &lt;code&gt;apt&lt;&#x2F;code&gt;, flatpaks or appimages, etc.&lt;&#x2F;p&gt;
 &lt;p&gt;This post starts with a diatribe about &lt;code&gt;pip&lt;&#x2F;code&gt; and &lt;code&gt;npm&lt;&#x2F;code&gt;, evangelizing the virtues of &lt;code&gt;cargo&lt;&#x2F;code&gt;. The other benefits listed are the performance benefits from Rust&#x27;s memory safety, and reassurances that Rust won&#x27;t die anything soon (meaning it won&#x27;t drag other projects down with it.) &lt;&#x2F;p&gt;

@@ -7,6 +7,10 @@ tags = ["post", "rust"]
 +++
 
 
+> **tldr-tldr:** If your project is written in Rust, it's probably **easy to install**, **fast**, and because **Rust is here to stay,** it's unlikely to die a premature death.
+
+---
+
 > **tldr:** A post is titled "My cool new thing, written in Rust." The top comment asks, "Why should I care that it's written in Rust?"
 > 
 > Well, I care! I love knowing when something is written in Rust. The main thing is that it's probably easy to `cargo install your_cool_new_thing`. I can't say the same for anything asking me to interact with `npm`, `pip`, `make`, `apt`, flatpaks or appimages, etc.
