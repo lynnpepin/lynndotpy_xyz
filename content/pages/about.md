@@ -54,6 +54,7 @@ lynn pepin ❖ 199X ❖ they/them
   - bash, of course
 
 </details>
+
 Between 2020 and 2023, this site ran on my [diy-static-site-generator](https://github.com/diy-static-site-generator) from 2020 to 2023 until I switched to [Zola](https://getzola.org).
 
 ---
