@@ -6,6 +6,11 @@ date = 2023-07-09
 tags = ["post", "internet",]
 +++
 
+> **Updated 2024-Dec-20:** What a year. I followed BlueSky since 2019, and it always seemed like Dorsey's baby, even as it took on longtime players in the decentralized space (especially from Secure Scuttlebutt!) But, in May this year, Dorsey gave up on BlueSky and was bullied off the site in favor of X. While I still prefer the Mastodons of the world and have no Twitter nostalgia, I have *far* less reservations about BlueSky than I did when I wrote this post.
+
+---
+
+
 > **TLDR:** BlueSky is intended to eventually integrate with Bitcoin. If BlueSky becomes widely adopted, Bitcoin will too. I don't like Bitcoin, so I don't want BlueSky to become popular.
 > 
 > Here's why I believe this: In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After helping kickstart the Lightning network, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.
