@@ -4,8 +4,25 @@
     <link href="https://lynndotpy.dev/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lynndotpy.dev/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-07-30T00:00:00+00:00</updated>
+    <updated>2024-12-31T00:00:00+00:00</updated>
     <id>https://lynndotpy.dev/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Looking back on a productive 2024</title>
+        <published>2024-12-31T00:00:00+00:00</published>
+        <updated>2024-12-31T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.dev/posts/2024-retrospective/" type="text/html"/>
+        <id>https://lynndotpy.dev/posts/2024-retrospective/</id>
+        
+        <summary type="html">&lt;p&gt;Whew, 2024 was quite a year. This was a year where I had a surplus of free time. I twiddled away on Blender projects, I picked up photography and guitar, I made a new friend, and &lt;em&gt;Sonic the Hedgehog 3&lt;&#x2F;em&gt; released, which was maybe the highlight of my year.&lt;&#x2F;p&gt;
+&lt;p&gt;But this is a &lt;em&gt;devblog&lt;&#x2F;em&gt;, so, much as I&#x27;d love to, this won&#x27;t be a &lt;em&gt;Sonic the Hedgehog 3&lt;&#x2F;em&gt; blogpost.&lt;&#x2F;p&gt;
+&lt;p&gt;In my day job, I&#x27;m still just doing fullstack dev: Docker, Postgres, C#&#x2F;.NET, TypeScript, Angular, some Python, and a teensy bit of Go and Rust. It&#x27;s all proprietary, so I can&#x27;t tell you more here. Womp womp.&lt;&#x2F;p&gt;
+&lt;p&gt;But I got &lt;em&gt;a lot&lt;&#x2F;em&gt; done in 2024. &lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
     <entry xml:lang="en">
         <title>The flashcards I used to memorize Helix commands</title>
         <published>2024-07-30T00:00:00+00:00</published>
