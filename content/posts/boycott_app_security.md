@@ -86,7 +86,6 @@ To make things worse, [the Terms of Service](https://www.boycat.io/terms-of-serv
 
 > **TLDR:** This app has a very clean network trace. The only concerning things are calls to third-parties like Walmart Images. 
 
-![[IMG_3604.png]]
 
 There are **no network pings** when you start the app, which is fantastic, and the app's UI is very simple. There are three things you can do in this app:
 
