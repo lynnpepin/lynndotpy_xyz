@@ -10,14 +10,14 @@ tags = ["post"]
 > **TLDR:** Here are things I like and can recommend.
 > - Pop! OS for a Linux distribution.
 > - Blender for 3D graphics.
-> - Python or Javascript for those learning programming, but it's complicated.
+> - Python or Javascript (when my friends ask for a programming language they should learn).
 > - 1password for password managers.
 > - Signal for messaging.
 > - Obsidian for notetaking.
-> - Wirecutter and Rtings for prodcut reviews (to replace Reddit.)
+> - Wirecutter and Rtings for product reviews (to replace Reddit.)
 > - OBS for screen recording and streaming.
 > - DaVinci Resolve for video editing.
-> - micro for an easy-to-use terminal editor... But also vim.
+> - micro for an easy-to-use terminal editor... But also Helix.
 > - Fastmail + IWantMyName for personal email.
 
 
@@ -186,13 +186,15 @@ It's proprietary, but it has a powerful free version, and it's cross platform: W
 For anyone who wishes to stick with FOSS, I've tried a lot of videoeditors and I've found [Kdenlive](https://kdenlive.org/) and Blender's built-in video editor to be the second best I've used.
 
 
-# Command-line / terminal editors: `micro`, but also learn `vim`
+# Command-line / terminal editors: `micro`, but also learn ~~`vim`~~ Helix.
 
 [Micro](https://micro-editor.github.io/) is a terminal editor that's easy to use. It has familiar shortcuts (`ctrl+c`, `ctrl+s`, etc.), mouse support, and syntax highlighting. It's fantastic, and I wholeheartedly recommend it to anyone new to Linux.
 
 That said, I also recommend learning enough vim (or `vi`) to be useful. The reason is that it's pre-installed on every Linux distribution I've heard of, and you don't want to be stuck in a locked-down server with `nano` as your only other option.
 
-There are a lot of very good command-line editors out there. I got good use out of [`helix`](https://helix-editor.com/) and [`neovim`](https://neovim.io/), but I keep finding myself coming back to `vim` and `micro`.
+There are a lot of very good command-line editors out there. I got good use out of [`helix`](https://helix-editor.com/) and [`neovim`](https://neovim.io/), ~~but I keep finding myself coming back to `vim` and `micro`.~~ and, since 2024, I use Helix regularly for writing posts and my IDE.
+
+(Updated 2025-Mar-9; Helix is excellent. I sparingly use anything else in the terminal.)
 
 # Personal email: Fastmail + IWantMyName
 
