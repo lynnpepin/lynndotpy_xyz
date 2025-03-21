@@ -13,6 +13,9 @@ aliases = ["/projects.html/"]
 <hr>
 <!-- TODO Blog photo -->
 
+
+<!-- Demale86, Data analysis and scraping in New Haven, rayhunter -->
+
 # ResoLang
 
 {{image(
@@ -24,7 +27,7 @@ aliases = ["/projects.html/"]
 
 [⛏️ Reso⛏️ ](https://gitlab.com/lynnpepin/reso), 2018, Python. is a graph-automata circuit-programming language inspired by redstone and wireworld. It is Turing complete, but not very pretty to use. I might revisit this later, it'd be better if it was interactive, web-based, and would interact with GPIO pins (say, on a Raspberry Pi)!
 
-See an explanatory blogpost here: [https://lynndotpy.xyz/posts/reso_intro.html](/posts/reso_intro.html)
+See an explanatory blogpost here: [https://lynndotpy.dev/posts/reso_intro.html](/posts/reso_intro.html)
 
 ---
 
@@ -37,17 +40,17 @@ See an explanatory blogpost here: [https://lynndotpy.xyz/posts/reso_intro.html](
   style=""
 )}}
 
-**Apocalypse Sirens**, 2020-ongoing is a small GIMP Python (PythonFu) script to automate editing for a trading card game.
+**Apocalypse Sirens**, 2020 is a small GIMP Python (PythonFu) script to automate editing for a trading card game. The rules are forgotten and bad.
 
 Modifying images by hand is a chore, especially when you have 60+ cards that follow the same structure. Scripting GIMP lets us automate most of this work.
 
-Source code isn't out yet, because (1) GIMP's script-fu is in flux, and (2) the art is completely stolen and not free for me to release. Expect it soon :)
+[Check out the source code here.](https://github.com/lynnpepin/apocalypsesirens_full)
 
 ---
 
 # DIY static-site-generator
 
-[📝This blog📝](https://gitlab.com/lynnpepin/diy-static-site-generator), 2020-2023, Python, HTML, CSS. Using Pandoc for the real work, this was a quick-and-dirty static site generator! I started this in 2020 to learn basic web design. I like to think I made a minimal, lightweight, and nice looking static site. :)
+[📝This blog📝](https://gitlab.com/lynnpepin/diy-static-site-generator), 2020-2023, Python, HTML, CSS. Using Pandoc for the real work, this was a quick-and-dirty static site generator! I started this in 2020 to learn basic web design. I like to think I made a minimal, lightweight, and nice looking static site. :) I started using Zola instead.
 
 <!-- TODO: Photo, diy-ssg history -->
 
