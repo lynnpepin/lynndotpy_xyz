@@ -103,55 +103,6 @@
             
                 <div class="post on-list">
                     
-    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/college-course-success/">Prescriptions for success in college courses</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2023-12-04
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.dev/tags/post/">#post</a></span>
-    
-
-                    
-        <div class="post-content">
-            <p>There is no replacement for doing the work of studying. There are no shortcuts, there is no way to make it more fun. However, there are ways to make sure you make good use of your time and to maximize the chance of a good grade.</p>
-<p>Here's a list of prescriptions I took away from my time at the University of Connecticut. I graduated with a 3.99 GPA, taking a Computer Science and Engineering major and a Mathematics minor, and later got a Masters in the same area.</p>
-<blockquote>
-<p><strong>TLDR:</strong></p>
-<ul>
-<li>Do the syllabus reading and homework in advance. This maintains a time buffer that will save you when the going gets rough.</li>
-<li>Write notes by hand, and digitally transcribe them later. This helps cement knowledge in your mind.</li>
-<li>Take practice exams like real exams. This is the best way to practice for an exam. Grade yourself after.</li>
-<li>Foundational courses like calc 1 or or general chemistry don't change much over the years. This means old practice exams and other coursework can be useful studying tools.</li>
-<li>These prescriptions require budgeting your time, and it's okay if you don't budget for all of this. Your time at college shouldn't just be about getting straight As.</li>
-</ul>
-</blockquote>
-
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.dev/posts/college-course-success/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <!--
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-                -->
-            
-                <div class="post on-list">
-                    
     <h1 class="post-title"><a href="https://lynndotpy.dev/posts/hardening-bastion/">sshaudit.com gave my Bastion an F, now it&#x27;s an A</a></h1>
     <div class="post-meta-inline">
         
@@ -277,6 +228,56 @@
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
             <a class="read-more button" href="https://lynndotpy.dev/posts/reading-2023/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <!--
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+                -->
+            
+                <div class="post on-list">
+                    
+    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/caddy-topics-optout/">How to Opt out of Chrome Topics API on Caddy servers</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2023-07-13
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/caddy/">#caddy</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/how-to/">#how-to</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/privacy/">#privacy</a></span>
+    
+
+                    
+        <div class="post-content">
+            <blockquote>
+<p><strong>TLDR:</strong> Set the following in your caddyfile for each site: <code>header Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;</code>. This disable both the old FLoC and the new Topics.</p>
+</blockquote>
+<p>Here is an abbreviated version of my Caddyfile, showing how I set the <code>header</code> directive in my Caddyfile for <code>lynndotpy.dev</code>:</p>
+<pre data-lang="caddyfile" style="background-color:#151515;color:#e8e8d3;" class="language-caddyfile "><code class="language-caddyfile" data-lang="caddyfile"><span>lynndotpy.xyz {
+</span><span>  header {
+</span><span>    Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<p>To confirm the header is set, you can use a Firefox or Chrome's devtools, open the networking tab, and look for the Permissions-Policy response header. More context below the cut.</p>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.dev/posts/caddy-topics-optout/">
                 <span class="button__text">Read more</span>&nbsp;
                 <span class="button__icon">&#8617;&#xFE0E;</span>
             </a>
