@@ -43,7 +43,7 @@ Oh, I also made [a few music SVGs for study.](https://github.com/lynnpepin/music
 
 **In November,** I started on a fork of the Obsidian plugin [spaced repetition](https://github.com/st3v3nmw/obsidian-spaced-repetition/), i.e. flashcards, to add a feature I thought was missing: *Reshuffle*. When I use flashcards and I miss one, I like to reshuffle into the back of the deck, making sure I answer it correctly at least once. The plugin lacks this feature. This is still a work-in-progress, but would greatly improve the usefulness of the plugin for me.
 
-**In December,** I also started working on [Genuary](https://genuary.art) for 2025, with the goal of getting a simple Bevy-to-wasm export set up. While Genuary is about  [You can see the fruit of that labor here!](https://genuary2025.lynndotpy.dev/20241219/) As well as [the first day of genuary](https://genuary2025.lynndotpy.dev/01/).
+**In December,** I also started working on [Genuary](https://genuary.art) for 2025, with the goal of getting a simple Bevy-to-wasm export set up. While Genuary is about writing algorithms which generate interesting pieces of art, I played a bit with implementing the first two as tiny in-browser wasm games.  [You can see the fruit of that labor here!](https://genuary2025.lynndotpy.dev/20241219/) As well as [the first day of genuary](https://genuary2025.lynndotpy.dev/01/).
 
 I also got myself my first proper, mirrorless camera, a Sony Alpha a6400. I spent some quality time with that camera this month. :)
 
