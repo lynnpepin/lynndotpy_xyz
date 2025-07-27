@@ -17,7 +17,7 @@ tags = ["post"]
 > - Wirecutter and Rtings for product reviews (to replace Reddit.)
 > - OBS for screen recording and streaming.
 > - DaVinci Resolve for video editing.
-> - micro for an easy-to-use terminal editor... But also Helix.
+> - micro for an easy-to-use terminal editor... But also Helix, for those wanting a more powerful terminal editor.
 > - Fastmail + Porkbun for personal email.
 
 
@@ -32,6 +32,7 @@ Changelog:
 | Date | What changed |
 | ---- | ------------ |
 | 2023-11-15 | Added `micro` editor and the Fastmail+IWantMyName email combo |
+| 2025-03-09 | Added an enthusiastic positive review for the Helix editor :) |
 | 2025-07-27 | Swapped IWantMyName DNS recommendation for Porkbun |
 
 # Best Linux distribution: Pop! OS
