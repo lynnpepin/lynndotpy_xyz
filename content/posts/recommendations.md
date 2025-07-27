@@ -18,7 +18,7 @@ tags = ["post"]
 > - OBS for screen recording and streaming.
 > - DaVinci Resolve for video editing.
 > - micro for an easy-to-use terminal editor... But also Helix.
-> - Fastmail + IWantMyName for personal email.
+> - Fastmail + Porkbun for personal email.
 
 
 I've had friends ask me for recommendations for software. They ask me this because I am a hollow person who has spent too much of my life on the computer. I love when people ask me these questions, because my strong opinions on software are usually otherwise "offputting" and considered a "personality flaw".
@@ -32,6 +32,7 @@ Changelog:
 | Date | What changed |
 | ---- | ------------ |
 | 2023-11-15 | Added `micro` editor and the Fastmail+IWantMyName email combo |
+| 2025-07-27 | Swapped IWantMyName DNS recommendation for Porkbun |
 
 # Best Linux distribution: Pop! OS
 
@@ -196,9 +197,9 @@ There are a lot of very good command-line editors out there. I got good use out 
 
 (Updated 2025-Mar-9; Helix is excellent. I sparingly use anything else in the terminal.)
 
-# Personal email: Fastmail + IWantMyName
+# Personal email: Fastmail + Porkbun
 
-I use [IWantMyName](https://iwantmyname.com/) for domains and [Fastmail](https://app.fastmail.com/) for emails. With these two, I'm able to have as many `*@*.lynndotpy.dev` emails as I want.
+I use [Porkbun](https://porkbun.com/) for domains and [Fastmail](https://app.fastmail.com/) for emails. With these two, I'm able to have as many `*@*.lynndotpy.dev` emails as I want.
 
 ## Fastmail: $5/mo for everything I need
 
@@ -208,15 +209,13 @@ The setup for using custom domains on Fastmail is a bit involved, but that's bec
 
 I also chose Fastmail because it was able to replace a lot of what I used NextCloud for. Fastmail supports CalDAV and CardDAV, which lets me sync my contacts, calendars, and reminders easily across all the major desktop and mobile operating systems. (Yes, even iOS and MacOS!)
 
-## IWantMyName: Good reputation and good ToS
+## Porkbun: My current favorite domain registrar.
 
 Google Domains was the last thing I used Google for during a whole de-googling journey (which involved a lot of time with Nextcloud). I wanted to move off Google Domains [because of the long list of product lines Google has killed](https://killedbygoogle.com/), which is 293 items long as of this writing and includes Domains! They sold to *SquareSpace*, which I hold to low repute for other reasons.
 
-I read up on a few different domain registrars, and I also read their Terms of Service. (I actually emailed them a correction!) Some things I like about it:
+I used to recommend IWantMyName, but then they were bought by 'TeamInternet'. That was shaky, and support reportedly dwindled. But then they updated their domain management panel and made it much worse, especially for someone like me (who uses many tabs in parallel when doing internet browser activities). The new IWMN panel is slow, and breaks if you open things in multiple tabs.
 
-- They actively encourage you to read the ToS on signup
-- There is no arbitration clause or similar provision in the ToS.
-- The privacy policy is decent.
+I mainly use Porkbun now, although I don't like that Porkbun has a mandatory arbitration clause.
 
 
 # Anti-recommendations
