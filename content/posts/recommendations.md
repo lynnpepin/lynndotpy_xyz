@@ -188,7 +188,7 @@ It's proprietary, but it has a powerful free version, and it's cross platform: W
 For anyone who wishes to stick with FOSS, I've tried a lot of videoeditors and I've found [Kdenlive](https://kdenlive.org/) and Blender's built-in video editor to be the second best I've used.
 
 
-# Command-line / terminal editors: `micro`, but also learn ~~`vim`~~ Helix.
+# Command-line / terminal editors: micro, but also learn ~~vim~~ Helix
 
 [Micro](https://micro-editor.github.io/) is a terminal editor that's easy to use. It has familiar shortcuts (`ctrl+c`, `ctrl+s`, etc.), mouse support, and syntax highlighting. It's fantastic, and I wholeheartedly recommend it to anyone new to Linux.
 
