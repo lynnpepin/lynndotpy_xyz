@@ -4,8 +4,25 @@
     <link href="https://lynndotpy.dev/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lynndotpy.dev/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-12-31T00:00:00+00:00</updated>
+    <updated>2026-01-09T00:00:00+00:00</updated>
     <id>https://lynndotpy.dev/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Zed is easy to build which makes me happy</title>
+        <published>2026-01-09T00:00:00+00:00</published>
+        <updated>2026-01-09T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.dev/posts/zed-is-easy-to-build/" type="text/html"/>
+        <id>https://lynndotpy.dev/posts/zed-is-easy-to-build/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;strong&gt;tldr&lt;&#x2F;strong&gt;: I have very low trust in Microsoft and their products. I am in the market for a GUI code editor to recommend and use in lieu of VS Code. I&#x27;ve used Atom, KATE, Lapce, VS Code, and VS Codium. &lt;&#x2F;p&gt;
+&lt;p&gt;At a minimum, I want something that is open source and easy to build. Zed was annoying to build on MacOS because of Xcode, but &lt;strong&gt;Zed was effortless to build on Linux!&lt;&#x2F;strong&gt; This makes me think Zed would be less likely to be able to do a successful rugpull. (Plus, Zed does not have the same market position as Microsoft).&lt;&#x2F;p&gt;
+&lt;p&gt;Zed is familiar and good and it&#x27;s easy to disable all the AI features with one toggle.&lt;&#x2F;p&gt;
+&lt;p&gt;As a note: This is one of the things I really love about Rust. The only painful thing about the build was that it took awhile to bake. But I had no debugging steps or effort to do when building Zed (on Linux).&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Looking back on a differently productive 2025</title>
         <published>2025-12-31T00:00:00+00:00</published>
@@ -17,23 +34,6 @@
         <id>https://lynndotpy.dev/posts/2025-retrospective/</id>
         
         <summary type="html">&lt;p&gt;In my &lt;a href=&quot;https:&#x2F;&#x2F;lynndotpy.dev&#x2F;posts&#x2F;2025-retrospective&#x2F;2024_retrospective&quot;&gt;post for 2024&lt;&#x2F;a&gt;, I took sum of a number of accomplishments and things I created. But this 2025, I produced less software. What gives?&lt;&#x2F;p&gt;
-</summary>
-        
-    </entry>
-    <entry xml:lang="en">
-        <title>Zed is easy to build which makes me happy</title>
-        <published>2025-01-09T00:00:00+00:00</published>
-        <updated>2025-01-09T00:00:00+00:00</updated>
-        <author>
-          <name>Unknown</name>
-        </author>
-        <link rel="alternate" href="https://lynndotpy.dev/posts/zed-is-easy-to-build/" type="text/html"/>
-        <id>https://lynndotpy.dev/posts/zed-is-easy-to-build/</id>
-        
-        <summary type="html">&lt;p&gt;&lt;strong&gt;tldr&lt;&#x2F;strong&gt;: I have very low trust in Microsoft and their products. I am in the market for a GUI code editor to recommend and use in lieu of VS Code. I&#x27;ve used Atom, KATE, Lapce, VS Code, and VS Codium. &lt;&#x2F;p&gt;
-&lt;p&gt;At a minimum, I want something that is open source and easy to build. Zed was annoying to build on MacOS because of Xcode, but &lt;strong&gt;Zed was effortless to build on Linux!&lt;&#x2F;strong&gt; This makes me think Zed would be less likely to be able to do a successful rugpull. (Plus, Zed does not have the same market position as Microsoft).&lt;&#x2F;p&gt;
-&lt;p&gt;Zed is familiar and good and it&#x27;s easy to disable all the AI features with one toggle.&lt;&#x2F;p&gt;
-&lt;p&gt;As a note: This is one of the things I really love about Rust. The only painful thing about the build was that it took awhile to bake. But I had no debugging steps or effort to do when building Zed (on Linux).&lt;&#x2F;p&gt;
 </summary>
         
     </entry>

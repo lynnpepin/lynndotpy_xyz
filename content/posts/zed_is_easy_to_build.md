@@ -2,7 +2,7 @@
 
 +++
 title = "Zed is easy to build which makes me happy"
-date = 2025-01-09
+date = 2026-01-09
 
 [taxonomies]
 tags = ["post", "rust"]
