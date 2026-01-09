@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zed is easy to build which makes me happy | &#x2F;&#x2F; lynndotpy</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.dev/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.dev/color/lynn-auto-3.css">
+
+    <link rel="stylesheet" href="https://lynndotpy.dev/font-hack-subset.css">
+
+    <meta name="description" content="">
+
+    <meta property="og:description" content="">
+    <meta property="og:title" content="Zed is easy to build which makes me happy | // lynndotpy">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://lynndotpy.dev/posts/zed-is-easy-to-build/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="Zed is easy to build which makes me happy | // lynndotpy">
+    <meta property="twitter:domain" content="lynndotpy.dev&#x2F;">
+    <meta property="twitter:url" content="https://lynndotpy.dev/posts/zed-is-easy-to-build/">
+
+            
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lynndotpy.dev/atom.xml">
+    
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+        
+<link rel="stylesheet" href="https://lynndotpy.dev/katex/katex.min.css">
+<script defer src="https://lynndotpy.dev/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.dev/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.dev/katex/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+      ]
+      });
+  });
+</script>
+
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.dev/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.dev
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.dev/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.dev/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.dev/projects">projects</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/zed-is-easy-to-build/">Zed is easy to build which makes me happy</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2025-01-09
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/post/">#post</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/rust/">#rust</a></span>
+    
+
+        <div class="post-content">
+            <p><strong>tldr</strong>: I have very low trust in Microsoft and their products. I am in the market for a GUI code editor to recommend and use in lieu of VS Code. I've used Atom, KATE, Lapce, VS Code, and VS Codium. </p>
+<p>At a minimum, I want something that is open source and easy to build. Zed was annoying to build on MacOS because of Xcode, but <strong>Zed was effortless to build on Linux!</strong> This makes me think Zed would be less likely to be able to do a successful rugpull. (Plus, Zed does not have the same market position as Microsoft).</p>
+<p>Zed is familiar and good and it's easy to disable all the AI features with one toggle.</p>
+<p>As a note: This is one of the things I really love about Rust. The only painful thing about the build was that it took awhile to bake. But I had no debugging steps or effort to do when building Zed (on Linux).</p>
+<span id="continue-reading"></span><h1 id="microsoft-products-considered-harmful">Microsoft products considered harmful</h1>
+<blockquote>
+<p><strong>tldr</strong>: Microsoft bought GitHub and started ruining it in 2022. It's gotten worse every year since. We've also seen Microsoft Windows and Office get worse. So, I do not want to use VS Code.</p>
+<p>I've used a number of text editors. I like Helix and Gedit but VS Code has been the default recommendation for a GUI editor since about 2016. I would like a GUI editor and Zed is an appealing option, but I am worried about a rugpull. So, I will try to build it as the first part of my evaluation. </p>
+</blockquote>
+<p>In the Vista years, Linux nerds online told me I should check out &quot;Linux&quot;. I was a small child at the time, but I was pretty amazed at how much quicker the GIMP loaded, how much faster browsers were (Chrome and Firefox only had 64 bit builds at the time), and once Minecraft released, I found Windows too heavy to play it on while I was able to achieve a comfortable 20 fps on Ubuntu.</p>
+<p>I was sad to leave behind the very cool Windows Vista orb, but Linux did one better by giving me multiple desktops I could put in a cube and light on fire. That was very cool.</p>
+<p>For years, I used to do the majority of my programming in Gedit, GNOME's text-editor with some nice programming features like syntax highlighting, tabs, and line numbers, but nothing else. This was suitable up to a few ~KLoC in languages I knew well, but I became dependent on nice features like LSP.</p>
+<p>I came to love the <a href="https://helix-editor.com/">Helix editor</a> quite a bit, but I became dependent on VS Code at my previous employer for its superior C# support. (The C# LSP Roslyn just didn't cut it, and the VS Code specific C# extension helped me out on the very large C# codebases I worked on.)</p>
+<p>But if you're one of the dozen of readers of this blog, you probably already know it's existentially risky to be dependent on a product owned by Microsoft. VS Code users are mice nibbling at cheese on a spring-loaded trap. Microsoft does what Microsoft does, and I don't want my neck in the way when Microsoft sends the bar down. Just look at GitHub: We found out that the law does not matter after Microsoft gobbled up every line of <em>our</em> painstakingly written code, and then as a second &quot;fuck you&quot; Microsoft made GitHub increasingly worse, releasing a <a href="https://github.blog/engineering/architecture-optimization/the-technology-behind-githubs-new-code-search/">new search</a> which anecdotally (including in my experience) [became much worse](https://news.ycombinator.com/item?id=3514425 which now <a href="https://news.ycombinator.com/item?id=39322838">blocks users who are not signed in</a> and <a href="https://news.ycombinator.com/item?id=35741608">failing to surface simple string matches</a>, while replacing the instantaneous server-side rendered HTML with a slower and <a href="https://news.ycombinator.com/item?id=33576722">React-based frontend</a>, while also <a href="https://github.blog/changelog/2025-12-16-coming-soon-simpler-pricing-and-a-better-experience-for-github-actions/">significantly increasing pricing</a>. This isn't an exhaustive list of what's gone wrong with GitHub since Microsoft acquired GitHub in 2018.</p>
+<p>The point is that Microsoft has done a huge amount of damage to the developer experience in their (not yet complete) task of hollowing out what was once great about GitHub.</p>
+<p>But VS Code is also owned by Microsoft, and using it feels like being a mouse seeking cheese from a spring loaded trap. Microsoft has an incentive to increase user dependency to a point where it can be abused, and a long history of it. But sometimes, I want a GUI editor.</p>
+<p>VS Code is also an electron app, much like its predecessor Atom. Alternatives today include Atom fork <a href="https://pulsar-edit.dev/">Pulsar</a> and and Rust-based <a href="https://lap.dev/lapce/">Lapce</a>, as well as KDE's <a href="https://kate-editor.org/">Kate</a> editor. </p>
+<blockquote>
+<p>(aside) I'm in a minority in that I think Electron apps are actually <em>good</em>. Electron apps usually mean they work cross-platform with minimal effort, and many thousands of lifetimes of effort have gone into making web interfaces accessible and into making the Javascript engine fast.</p>
+</blockquote>
+<p>The <a href="https://zed.dev/">Zed</a> editor is one I've been aware of but hadn't used yet. It interests me for the following reasons:</p>
+<ol>
+<li>It's written in Rust. It may be cliche, but I actually do very much value speed and security in my editors. And since I know Rust, I anticipate it being very hackable.</li>
+<li>It's open source! Zed does not have the spread that Microsoft does to do the same rugpull.</li>
+<li>I really, <em>really</em> want an editor I can recommend to my non-programmer friends which is not VS Code.</li>
+</ol>
+<p>But its hackability and how useful it being open source is depends on how easy it is to build. For <em>most</em> Rust projects, it's a simple <code>cargo run</code> to build and run the project. So, in addition to the usual &quot;is this a good tool for editing code&quot;, I want to check at least </p>
+<ol>
+<li>Is Zed easy to build?</li>
+<li>But also, is it easy for an end-user to disable all the AI stuff? (Especially relevant when recommending a GUI editor for my non-programmer friends!)</li>
+</ol>
+<p>So, <strong>for Zed to be something I can consider</strong>, I need to be able to build it, and to do so easily.</p>
+<p>On MacOS, the Zed editor's provided <code>.dmg</code> installer <em>does not work</em>, which is not a promising sign. So, my first assessment of Zed will be in building it.</p>
+<h1 id="zed-is-annoying-to-build-on-a-mac-but-that-s-because-of-xcode">zed is annoying to build on a Mac, but that's because of xcode</h1>
+<blockquote>
+<p><strong>tldr</strong>: Building on a Mac sucks because I have to install Xcode (which uses up much of my 512GB space and has other annoyances), because Rust uses a lot of RAM (and my Mac only has 16GB). But it's doable!</p>
+</blockquote>
+<p>Zed's <a href="https://github.com/zed-industries/zed/blob/main/docs/src/development/macos.md">building for MacOS</a> instructions are pretty discouraging, since they require installing Xcode. The <a href="https://github.com/zed-industries/zed/blob/main/docs/src/development/windows.md">Windows build instructions</a> are also rather harrowing, but that's not a problem for me.</p>
+<p>But <a href="https://github.com/zed-industries/zed/blob/main/docs/src/development/linux.md">the Linux instructions show me what I like to see</a>: <a href="https://github.com/zed-industries/zed/blob/main/script/linux">Some required dependencies</a> alongside Rustup, and building is just a <code>cargo run</code>. (I prefer when Rust programs require <em>no</em> system dependencies, but this is still really straightforward as far as building goes!)</p>
+<p>But <strong>building on a Mac kind of sucks</strong>: Being that I am sitting at a cafe and typing on a Mac, I've decided to bite the bullet and install Xcode and build here. <strong>Xcode is the part which sucks</strong>: You need to access <a href="https://developer.apple.com/xcode/">the Apple developer website</a>, apply for a Developer account, wait for access to that, and then download Xcode, which downloads 12GB and installs to about twice that. I already have access to that, though. <strong>After installing Xcode</strong>, you have to configure it further in the CLI:</p>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">xcode-select --install
+</span><span style="color:#ffb964;">sudo</span><span> xcode-select</span><span style="color:#ffb964;"> --switch</span><span> /Applications/Xcode.app/Contents/Developer
+</span><span style="color:#ffb964;">sudo</span><span> xcodebuild</span><span style="color:#ffb964;"> -license</span><span> accept
+</span><span style="color:#ffb964;">brew</span><span> install cmake
+</span></code></pre>
+<p>After that, it's a simple process to build and install...</p>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone git@github.com:zed-industries/zed.git
+</span><span>cd zed
+</span><span style="color:#ffb964;">cargo</span><span> run</span><span style="color:#ffb964;"> --release
+</span></code></pre>
+<p>But I end up failing on a Metal error and the <a href="https://github.com/zed-industries/zed/blob/main/docs/src/development/macos.md#troubleshooting">troubleshooting steps</a> lead me to run:</p>
+<p>So, I also run this:</p>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">sudo</span><span> xcode-select</span><span style="color:#ffb964;"> --switch</span><span> /Applications/Xcode.app/Contents/Developer
+</span><span style="color:#ffb964;">xcodebuild -downloadComponent</span><span> MetalToolchain
+</span></code></pre>
+<p>But this also fails, since it's a universal truth that Xcode is an unwieldy mess which hates you. I also needed to run <code>xcodebuild -runFirstLaunch</code> before downloading <code>MetalToolchain</code>. </p>
+<p>All combined, this is a combined script to build and run Zed on MacOS:</p>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">brew</span><span> install cmake
+</span><span>
+</span><span style="color:#ffb964;">xcode-select --install
+</span><span style="color:#ffb964;">sudo</span><span> xcode-select</span><span style="color:#ffb964;"> --switch</span><span> /Applications/Xcode.app/Contents/Developer
+</span><span style="color:#ffb964;">sudo</span><span> xcodebuild</span><span style="color:#ffb964;"> -license</span><span> accept
+</span><span style="color:#ffb964;">xcodebuild -runFirstLaunch
+</span><span style="color:#ffb964;">xcodebuild -downloadComponent</span><span> MetalToolchain
+</span><span>
+</span><span style="color:#ffb964;">git</span><span> clone git@github.com:zed-industries/zed.git
+</span><span>cd zed
+</span><span>
+</span><span style="color:#ffb964;">cargo</span><span> run</span><span style="color:#ffb964;"> --release
+</span></code></pre>
+<p>My Mac only has 16GB RAM, so I close out all other applications while this runs. </p>
+<h1 id="the-zed-experience">the zed experience</h1>
+<blockquote>
+<p><strong>tldr</strong>: It's snappy, and has a simple &quot;Disable AI&quot; toggle for those who don't want a single hint of the stuff. But I didn't do much more editing, since I got stuck on a tab switching annoyance.</p>
+</blockquote>
+<p>After using up 70% of my battery, Zed finally compiled and ran! I opened up a Christmas project, Post Clicker, and was immediately impressed by how snappy Zed was. In VS Code, things pop into place bit by bit. In Zed, everything happened in the same frame.</p>
+<p>Many of the interface buttons are on the bottom, which lead to annoying interactions invoking the Dock on a Mac. But they're not buttons I expect to use often, and they have keyboard shortcuts in their tooltip.</p>
+<p>There was an &quot;Introducing: Claude Code&quot; nag, but it brought me to the interaction button where I could install Extensions. I'd like an automatically-refreshing Web preview for this project (it's pure HTML+CSS+JS), but I could not find one. </p>
+<p>Refreshingly, Zed offers both a settings interface and the ability to edit the underlying json, much like VS Code. Zed's settings has a &quot;Disable AI&quot; tab which purports to &quot;disable all AI features in Zed&quot;. Toggling that setting won't, say, remove the &quot;MCP Servers&quot; or &quot;Agent Servers&quot; categories from extensions, but that's reasonable, the only other mention of AI I could find was in the keyboard shortcuts. The &quot;Sign In&quot; button can also be disabled.</p>
+<p>I couldn't figure out how to get tabs to behave the way I prefer (like a browser, i.e. cycle by order on screen and not open order) and that made it hard for me to get into a deeper editing workflow. I also couldn't figure out how to reset the keymap to default. Whoops.</p>
+<p>My laptop battery now nearing 0%, I decide to pack it up and go home. I hope Zed is not difficult to build on Linux.</p>
+<h1 id="zed-is-incredibly-easy-to-build-on-linux">Zed is incredibly easy to build on Linux</h1>
+<p>Zed was incredibly easy to build on Linux. The installation steps <em>just work</em>:</p>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone git@github.com:zed-industries/zed.git
+</span><span>cd zed/script
+</span><span style="color:#ffb964;">./linux
+</span><span style="color:#ffb964;">./install-wild
+</span><span>cd ..
+</span><span style="color:#ffb964;">cargo</span><span> run</span><span style="color:#ffb964;"> --release
+</span></code></pre>
+<p>(The <code>./install-wild</code> is optional, but I had no problems with it.)</p>
+<h1 id="i-feel-good-about-zed">I feel good about Zed</h1>
+<p>So, I'm someone who feels very cautious about VC funding and VC rugpulls. I use Astral's tooling with caution, I use Brave while being ready to jump ship any day, I use TrueNAS while worrying quite a bit about it going proprietary, I use Obsidian (proprietary!) with the hope that the community will be able to create an alternative should the author go haywire.</p>
+<p>Zed looks like something I can happily add to that same pile of software I have a tenuous relationship with. That's a good thing!</p>
+
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">(„• ֊ •„)੭</span>
+                    <hr />
+                </div>
+                <div class="pagination__buttons">
+                        <span class="button previous">
+                            <a href="https://lynndotpy.dev/posts/2024-retrospective/">
+                                <span class="button__icon">←</span>&nbsp;
+                                <span class="button__text">Looking back on a productive 2024</span>
+                            </a>
+                        </span>
+                    
+                    
+                        <span class="button next">
+                            <a href="https://lynndotpy.dev/posts/2025-retrospective/">
+                                <span class="button__text">Looking back on a differently productive 2025</span>&nbsp;
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    </div>
+            </div>
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>
