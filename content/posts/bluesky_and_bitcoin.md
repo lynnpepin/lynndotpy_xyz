@@ -1,5 +1,5 @@
 +++
-title = "If BlueSky takes off, Bitcoin will too"
+title = "If BlueSky takes off, Bitcoin will too. (edit - i was wrong)"
 date = 2023-07-09
 
 [taxonomies]

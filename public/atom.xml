@@ -4,8 +4,61 @@
     <link href="https://lynndotpy.dev/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lynndotpy.dev/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-01-09T00:00:00+00:00</updated>
+    <updated>2026-02-11T00:00:00+00:00</updated>
     <id>https://lynndotpy.dev/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Discord is dying, Stoat looks like the replacement we need</title>
+        <published>2026-02-11T00:00:00+00:00</published>
+        <updated>2026-02-11T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.dev/posts/stoat-chat/" type="text/html"/>
+        <id>https://lynndotpy.dev/posts/stoat-chat/</id>
+        
+        <summary type="html">&lt;hr &#x2F;&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TLDR&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Discord is already bad&lt;&#x2F;strong&gt;, but now it&#x27;s going to require IDs and video selfies.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Stoat looks like the best&lt;&#x2F;strong&gt;. I think it is the ship to jump to.
+&lt;ul&gt;
+&lt;li&gt;Of the alternatives, all of them are either proprietary or use LLM-generated code, and a lot of the proprietary ones seem Evil.&lt;&#x2F;li&gt;
+&lt;li&gt;If you are concerned about Stoat having had a few small LLM commits, know that &lt;strong&gt;Stoat is the most anti-AI alternative&lt;&#x2F;strong&gt;. &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;The Stoat LLM controversy is blown out of the water, since (1) Stoat has a very rare anti-AI policy, and (2) almost everything else has AI in it now anyways. You are definitely using software with LLM-generated code in it, directly and indirectly.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This article goes over the criteria for an alternative, why TeamSpeak, Mumble, etc. aren&#x27;t up to par, and why the &amp;quot;LLM controversy&amp;quot; about Stoat is ill-informed.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;In a few weeks, it will be March, and Discord will require every user to upload their ID or a video-selfie (&lt;a href=&quot;https:&#x2F;&#x2F;www.theverge.com&#x2F;tech&#x2F;875309&#x2F;discord-age-verification-global-roll-out&quot;&gt;The Verge&lt;&#x2F;a&gt;), the latter of which will be analyzed using AI, and both of which will be sent to a third party vendor, only months after one of those vendors suffered a data breach. &lt;&#x2F;p&gt;
+&lt;p&gt;This is on top of Discord having a &lt;a href=&quot;https:&#x2F;&#x2F;lynndotpy.dev&#x2F;posts&#x2F;discord-optout-2023&#x2F;&quot;&gt;mandatory arbitration clause and class action waiver&lt;&#x2F;a&gt; which prevents you from being able to sue them in court (and, yes, this works in the United States), and this is on top of Discord scanning all your messages to train its AI models.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Discord has been bad for years and is getting worse, it&#x27;s time to jump ship&lt;&#x2F;strong&gt;. I&#x27;ve been gaming on The Computer for years, and I&#x27;ve used IRC, Skype, Steam chat, TeamSpeak, Mumble, Ventrilo, and integrated game chats in everything from huge games like RuneScape to tiny long-defunct games like Goomba Online or Halo Crusades. I&#x27;m also a cybersecurity person, software engineer, and deep learning researcher who left in 2022 as I started to sour on the industry.&lt;&#x2F;p&gt;
+&lt;p&gt;Having had looked at the alternatives, I believe &lt;strong&gt;Stoat is the ship to jump to&lt;&#x2F;strong&gt;. But it &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;stoatchat&#x2F;discussions&#x2F;1022&quot;&gt;is facing some backlash over having had a few small LLM commits&lt;&#x2F;a&gt;, which I believe is disproportionate.&lt;&#x2F;p&gt;
+&lt;p&gt;A good alternative should be:&lt;&#x2F;p&gt;
+&lt;ol start=&quot;0&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;User friendly&lt;&#x2F;strong&gt;. It should be easy for someone to start using this software on MacOS, Linux, Windows, Android, iOS, or in the web app. This is a minimum.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Open source&lt;&#x2F;strong&gt;, both so we can jump ship if things turn to shit, but also so we can &lt;em&gt;look at the code&lt;&#x2F;em&gt;. This is increasingly important in an era of vibe-coded. You can &lt;strong&gt;assume anything proprietary is vibe coded&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Not vibe coded&lt;&#x2F;strong&gt;. There&#x27;s a difference between code that was created in part using LLMs, and someone lazily asking a chatbot to change a feature. Lots of bad software is being made by vibe coding, and some of them are crazy people who believe vibe-coding is a way to birth God. That&#x27;s, uh, &lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;LLM guidelines that emphasize transparency and quality&lt;&#x2F;strong&gt;. As I&#x27;ll argue later, &lt;em&gt;LLM generated code is everywhere now&lt;&#x2F;em&gt;. There is no way to discern LLM generated code from human generated code, and the only option is to &lt;strong&gt;hold code to a high standard in review&lt;&#x2F;strong&gt;. A contribution policy can never ban LLM generated code, it can only ban people from disclosing when they use LLM generated code. In the interest of quality and transparency, Forgejo&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;codeberg.org&#x2F;forgejo&#x2F;governance&#x2F;src&#x2F;branch&#x2F;main&#x2F;AIAgreement.md&quot;&gt;AI Agreement&lt;&#x2F;a&gt; is a reasonable one.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Privacy friendly&lt;&#x2F;strong&gt;. What&#x27;s &lt;em&gt;far far worse&lt;&#x2F;em&gt; than having LLM generated code is having a privacy policy that &lt;em&gt;sends all your messages to an AI model&lt;&#x2F;em&gt;. You should rather take a privacy-friendly vibe-coded app with code you can inspect, versus something like TeamSpeak, which is proprietary and sends your data to train Grok&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;No mandatory arbitration clause&lt;&#x2F;strong&gt;: This is a huge thing. It&#x27;s increasingly common to include a section in the Terms of Service which requires users to agree &lt;em&gt;never to sue the company&lt;&#x2F;em&gt;. In the United States, these are almost always upheld, even in extreme cases.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</summary>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Zed is easy to build which makes me happy</title>
         <published>2026-01-09T00:00:00+00:00</published>
@@ -373,7 +426,7 @@
         
     </entry>
     <entry xml:lang="en">
-        <title>If BlueSky takes off, Bitcoin will too</title>
+        <title>If BlueSky takes off, Bitcoin will too. (edit - i was wrong)</title>
         <published>2023-07-09T00:00:00+00:00</published>
         <updated>2023-07-09T00:00:00+00:00</updated>
         <author>

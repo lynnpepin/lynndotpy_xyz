@@ -148,6 +148,10 @@
         <lastmod>2023-12-08</lastmod>
     </url>
     <url>
+        <loc>https://lynndotpy.dev/posts/stoat-chat/</loc>
+        <lastmod>2026-02-11</lastmod>
+    </url>
+    <url>
         <loc>https://lynndotpy.dev/posts/unlisted/template/</loc>
         <lastmod>2024-07-20</lastmod>
     </url>
@@ -180,6 +184,9 @@
     </url>
     <url>
         <loc>https://lynndotpy.dev/tags/circuitpython/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.dev/tags/discord/</loc>
     </url>
     <url>
         <loc>https://lynndotpy.dev/tags/embedded/</loc>
