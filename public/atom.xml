@@ -4,8 +4,56 @@
     <link href="https://lynndotpy.dev/atom.xml" rel="self" type="application/atom+xml"/>
     <link href="https://lynndotpy.dev/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-02-11T00:00:00+00:00</updated>
+    <updated>2026-02-14T00:00:00+00:00</updated>
     <id>https://lynndotpy.dev/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Digital minimalism through two smartphones works for me</title>
+        <published>2026-02-14T00:00:00+00:00</published>
+        <updated>2026-02-14T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://lynndotpy.dev/posts/digital-minimalism-two-smartphones/" type="text/html"/>
+        <id>https://lynndotpy.dev/posts/digital-minimalism-two-smartphones/</id>
+        
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;tldr&lt;&#x2F;strong&gt;: Your phone is online and going online is distracting. Instead of replacing your smartphone with many bulky purpose-built devices, consider using an old smartphone that you keep offline.&lt;&#x2F;p&gt;
+&lt;p&gt;I do this and it works very very well for me, using an old iPhone 13 Mini running iOS 18. The battery lasts a long time in Airplane mode.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;My relationship to technology as a consumer is atypical.&lt;&#x2F;p&gt;
+&lt;p&gt;I did not own a cell phone until the age of 17, while my peers acquired theirs mostly in elementary and middle school. I did not own a proper smartphone until the age of 19. I don&#x27;t have play games on my phone, I don&#x27;t use and never have used &amp;quot;short form video content&amp;quot; apps like TikTok or Instagram Reels, and I don&#x27;t have algorithmic feeds (besides the frontpages of Lobste.rs and Hacker News). I only get notifications for messages, and my phone stays on &amp;quot;do not disturb&amp;quot; at most times. I don&#x27;t have a problem with &amp;quot;smartphone addiction&amp;quot;. I don&#x27;t even like to listen to music in the background.&lt;&#x2F;p&gt;
+&lt;p&gt;And yet, I have the same problem many others have: I also get distracted by my phone.&lt;&#x2F;p&gt;
+&lt;p&gt;The reason is that I have an iPhone 16 Pro, and when I put myself to the two-handed task of heaving this towering behemoth and meeting its gaze long enough for the Facial Recognition to meander upon my features and grant me entry, I find myself inclined to complete other tasks: Checking emails, catching up on my Mastodon feed, responding to people, opening up an Internet Browser, or any other myriad minutia. &lt;&#x2F;p&gt;
+&lt;p&gt;This giant internet-connected Apple phablet breaks ones piece of mind. Even without online features, how could it not? As of iOS 26, the UI is composed of elements glowing, throbbing, jiggling, wiggling, and refracting. This is called &amp;quot;Liquid Glass&amp;quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;But throughout a day, I might time my stretches, set a cooking timer, change my sleep alarm, turn on background noises, navigate with a map, or take a note. These can all be accomplished without &amp;quot;Going Online&amp;quot; if one can maintain perfect mental discipline in the face of a system adversarially designed to break your attention and get you to Go Online.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: At this point, I apologize if I am repeating text from Cal Newport&#x27;s thinking on &amp;quot;Digital Minimalism&amp;quot;. I feel that I am implicitly responding to people who &lt;em&gt;have&lt;&#x2F;em&gt; read his book, and I have probably absorbed many of the thoughts through osmosis and I am probably retreading much of the same ground. So, I searched &lt;code&gt;&amp;quot;cal newport&amp;quot; &amp;quot;two phones&amp;quot;&lt;&#x2F;code&gt; and the only results that came up were comments on his blog. Hooray!&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Some advocates for minimalism wish to replace their phone with purpose-built devices. It conjures up the ludicrous image of someone heaving an overflowing pack. There is no minimalism in replacing one tiny device with the heft of a camera, a flashlight, a noise generator, a watch, a wallet, a level, a notepad, a world atlas, an emergency radio, a walkie talkie, a music player, a magnifying glass, etc. Need I go on? To me, this is clearly maximalist. We can achieve minimalism through technology with a bit of intentionality.&lt;&#x2F;p&gt;
+&lt;p&gt;See, the iPhone 16 Pro is not my first smart phone! I have sadly broken every viable Android I&#x27;ve used (one by losing its password, another by trying to replace the battery, and a third by leaving it on the hood of my car during a camping trip.)&lt;&#x2F;p&gt;
+&lt;p&gt;But I still own an iPhone 13 Mini which, save for its lack of a telephoto lens and dedicated camera button, I find to be a far more reasonably sized phone than anything on the market. Plus, it still runs iOS 18, which is a far superior experience compared to iOS 26. I have not connected it to the internet since 2024.&lt;&#x2F;p&gt;
+&lt;p&gt;So, I maintain a second phone, for:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ocean sounds and other background sounds&lt;&#x2F;li&gt;
+&lt;li&gt;Clocks: Timers, stopwatches, and alarms&lt;&#x2F;li&gt;
+&lt;li&gt;A compass and a level&lt;&#x2F;li&gt;
+&lt;li&gt;Flashlight&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;(As a fun bonus, a second phone allows you to have two sources of background sounds, two sources of flashlight, or an off-camera source of light when taking photos, etc.)&lt;&#x2F;p&gt;
+&lt;p&gt;In my day to day life, this has already been useful. I often read a book as I time my stretches, and I am reading with the same focus I had in my youth. I can walk along cliffs and throw off rocks and estimate their height using the stopwatch.&lt;&#x2F;p&gt;
+&lt;p&gt;While not for the goal of digital minimalism, I have difficulty getting up in the morning, and a second physical alarm is useful for getting me out of bed.&lt;&#x2F;p&gt;
+&lt;p&gt;I think I would like to periodically connect this second smartphone to the internet. If I were to connect this to the internet a few times a year, I think I would like to also use this phone for:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Obsidian, which I use frequently. I would set up a second vault, so as to avoid sync issues.&lt;&#x2F;li&gt;
+&lt;li&gt;Maps, which can be used offline.&lt;&#x2F;li&gt;
+&lt;li&gt;Photography. It is difficult to get photos &lt;em&gt;off&lt;&#x2F;em&gt; the device by wire, and Halide refuses to work unless I connect online.&lt;&#x2F;li&gt;
+&lt;li&gt;Credit cards, which can be used offline, but have to be set up online.&lt;&#x2F;li&gt;
+&lt;li&gt;Translations. (Apple has on-device offline translation, but one needs to be online to download the models.)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;em&gt;Maybe&lt;&#x2F;em&gt; reading, such as a copy of Wikipedia, or e-books.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Discord is dying, Stoat looks like the replacement we need</title>
         <published>2026-02-11T00:00:00+00:00</published>

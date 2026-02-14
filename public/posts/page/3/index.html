@@ -61,6 +61,63 @@
             
                 <div class="post on-list">
                     
+    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/boycott-app-security/">Privacy breakdown of three recent boycott apps</a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2024-02-29
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/activism/">#activism</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/post/">#post</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/privacy/">#privacy</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/security/">#security</a></span>
+    
+
+                    
+        <div class="post-content">
+            <blockquote>
+<p><strong>Super short TLDR:</strong> I looked at three barcode-scanning boycott apps. &quot;Boycat&quot; and &quot;Boycott for Peace&quot; have reasonable network traces, but loading images exposes your IP to third parties. &quot;No Thanks&quot; has no Privacy Policy, falsely claims to collect no data, and makes numerous unnecessary calls to Facebook and Google.</p>
+</blockquote>
+<br> 
+<blockquote>
+<p><strong>Longer TLDR:</strong></p>
+<p>The iOS versions of these apps were analyzed in February.</p>
+<p><a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">&quot;Boycat&quot;</a> and <a href="https://apps.apple.com/us/app/boycott-for-peace/id6472617524">&quot;Boycott for Peace&quot;</a> expose your IPs to some third parties to load images, and have similar features. Both are good and easy to recommend, but Boycat has an overly-broad Privacy Policy and a Terms of Service which includes Arbitration.</p>
+<p>Boycat has aims to be a more general purpose boycotting platform, whereas Boycott for Peace is focused singularly on the BDS movement.</p>
+<p>&quot;No Thanks&quot; makes many tracking calls to Facebook and Google and has integrated advertisements. It offers no compelling features over Boycat or Boycott for Peace, and cannot be recommended. Further, it does not have a working link to a Privacy Policy, and falsely claims &quot;No Data Collected&quot; on the iOS app store.</p>
+</blockquote>
+<br> 
+<hr />
+<p>Boycotting a corporation is hard to do when there are so many corporations to keep track of.</p>
+<p>There are a number of apps coming out lately which promise to make it easier to participate <a href="https://en.wikipedia.org/wiki/Boycott,_Divestment_and_Sanctions">in BDS boycotts</a>. Thirty-seven US states <a href="https://en.wikipedia.org/wiki/Anti-BDS_laws">have passed anti-BDS laws</a> alongside Canada, France, Germany, Spain, and the UK. Given the US Government's long history of using apps to spy, <a href="https://www.vice.com/en/article/jgqm5x/us-military-location-data-xmode-locate-x">such as with the U.S. Military buying location data from Muslim prayer and Quran apps</a>,</p>
+<p>I'm one of those big skeptical privacy freaks. Apps, either through malice or unawareness, can leak huge amounts of data that can later be used to surveil and suppress people.</p>
+<p>So I decided to take a look into these apps. I used mitmproxy to inspect and modify traffic between the app and the server for this analysis, but I did not touch the server or internal code in any other way.</p>
+
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.dev/posts/boycott-app-security/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <!--
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+                -->
+            
+                <div class="post on-list">
+                    
     <h1 class="post-title"><a href="https://lynndotpy.dev/posts/reso-2023/">Reso: Rewritten in Rust and now 20000x faster!!</a></h1>
     <div class="post-meta-inline">
         
@@ -225,47 +282,6 @@
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
             <a class="read-more button" href="https://lynndotpy.dev/posts/ssds-bad-2023/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <!--
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-                -->
-            
-                <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/hardening-bastion/">sshaudit.com gave my Bastion an F, now it&#x27;s an A</a></h1>
-    <div class="post-meta-inline">
-        
-    <span class="post-date">
-            2023-11-22
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.dev/tags/post/">#post</a></span>
-    
-
-                    
-        <div class="post-content">
-            <p>I maintain an SSH bastion server for all my beloved VPSes. The server I host this blog on only accepts SSH connections from the IP of that bastion, and I keep that bastion hardened. It's a minimal Alpine install with nothing but an SSH server.</p>
-<p>So I felt some dismay when I found the server got a score of F on <a href="https://www.sshaudit.com/">sshaudit.com</a>. I got an F! My bastion failed 2 of 5 host key tests, 4 of 9 key-exchange tests, and 7 of 10 MAC tests. </p>
-<p>These are the steps I took. Although I'm on Alpine, I was able to cherry pick commands from <a href="https://www.ssh-audit.com/hardening_guides.html">the Debian-focused server guides hardening guides on sshaudit.com.</a></p>
-<p><strong>TLDR</strong> provided below the cut, with some script script to do the work for you.</p>
-
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.dev/posts/hardening-bastion/">
                 <span class="button__text">Read more</span>&nbsp;
                 <span class="button__icon">&#8617;&#xFE0E;</span>
             </a>
