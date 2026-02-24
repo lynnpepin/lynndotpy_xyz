@@ -1,6 +1,6 @@
 +++
 title = "(Pt 1) Schemes for the Passwords you Don't Put in the Password Manager"
-date = 2025-02-24
+date = 2026-02-24
 
 [taxonomies]
 tags = ["post", "security", "passwords"]
