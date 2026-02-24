@@ -156,6 +156,10 @@
         <lastmod>2026-02-11</lastmod>
     </url>
     <url>
+        <loc>https://lynndotpy.dev/posts/suboptimal-password-schemes/</loc>
+        <lastmod>2025-02-24</lastmod>
+    </url>
+    <url>
         <loc>https://lynndotpy.dev/posts/unlisted/template/</loc>
         <lastmod>2024-07-20</lastmod>
     </url>
@@ -212,6 +216,9 @@
     </url>
     <url>
         <loc>https://lynndotpy.dev/tags/meta/</loc>
+    </url>
+    <url>
+        <loc>https://lynndotpy.dev/tags/passwords/</loc>
     </url>
     <url>
         <loc>https://lynndotpy.dev/tags/post/</loc>
