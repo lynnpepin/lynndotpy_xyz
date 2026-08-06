@@ -1,7 +1,7 @@
 
 +++
-title = ""
-date = 2023-03-08
+title = "Demake86, the Legally Distinct Action Adventure Platforming Game set on a METEOROID, released today in homage to Metroid for its 40th anniversary"
+date = 2026-08-06
 
 
 [taxonomies]

@@ -15,7 +15,5 @@ Since September of 2025, Apple has been changing longstanding norms about how th
 
 If you, like me, have been trying to stay off Liquid Glass on any of your devices, you should know that Apple recently pushed a new update for iOS 18 users. The update has the iOS 18 icon, but an "Update to iOS 26" label, and then a fuller page which explains that the update will **install iOS 18.7.8**, not 26.5.
 
-To put it simply, it's a dirty lie.
-
-Quite simply, Apple completely lied about the software that was installed. As far as I know, this is something they've never done before. This is even worse than Microsoft's ["press X to upgrade to Windows 10"](https://tech.slashdot.org/story/16/05/24/171215/windows-10-upgrade-activates-by-clicking-red-x-close-button-in-prompt-message) trickery from a decade ago.
+To put it simply, it's a dirty lie. Apple lied about the software that was installed. As far as I know, this is something they've never done before. This is even worse than Microsoft's ["press X to upgrade to Windows 10"](https://tech.slashdot.org/story/16/05/24/171215/windows-10-upgrade-activates-by-clicking-red-x-close-button-in-prompt-message) trickery from a decade ago.
 
