@@ -21,6 +21,8 @@ tags = ["post", "internet", "discord"]
 
 In a few weeks, it will be March, and Discord will require every user to upload their ID or a video-selfie ([The Verge](https://www.theverge.com/tech/875309/discord-age-verification-global-roll-out)), the latter of which will be analyzed using AI, and both of which will be sent to a third party vendor, only months after one of those vendors suffered a data breach. 
 
+<!-- more -->
+
 This is on top of Discord having a [mandatory arbitration clause and class action waiver](https://lynndotpy.dev/posts/discord-optout-2023/) which prevents you from being able to sue them in court (and, yes, this works in the United States), and this is on top of Discord scanning all your messages to train its AI models.
 
 **Discord has been bad for years and is getting worse, it's time to jump ship**. I've been gaming on The Computer for years, and I've used IRC, Skype, Steam chat, TeamSpeak, Mumble, Ventrilo, and integrated game chats in everything from huge games like RuneScape to tiny long-defunct games like Goomba Online or Halo Crusades. I'm also a cybersecurity person, software engineer, and deep learning researcher who left in 2022 as I started to sour on the industry.
