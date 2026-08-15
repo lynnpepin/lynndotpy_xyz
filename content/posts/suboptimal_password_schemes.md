@@ -20,6 +20,8 @@ In practice, the attacker wants to construct a distribution $P$ of passwords *yo
 
 With all that said... *You still need to memorize some passwords*. Deriving passwords has worked well for me and many others before adopting a password manager. 
 
+<!-- more -->
+
 There are three main choices:
 
 1. Write the password down
