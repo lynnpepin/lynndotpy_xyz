@@ -13,6 +13,8 @@ tags = ["how-to", "blog", "post"]
 
 My relationship to technology as a consumer is atypical.
 
+<!-- more -->
+
 I did not own a cell phone until the age of 17, while my peers acquired theirs mostly in elementary and middle school. I did not own a proper smartphone until the age of 19. I don't have play games on my phone, I don't use and never have used "short form video content" apps like TikTok or Instagram Reels, and I don't have algorithmic feeds (besides the frontpages of Lobste.rs and Hacker News). I only get notifications for messages, and my phone stays on "do not disturb" at most times. I don't have a problem with "smartphone addiction". I don't even like to listen to music in the background.
 
 And yet, I have the same problem many others have: I also get distracted by my phone.
