@@ -1,17 +1,12 @@
-{% import "macros/date.html" as date_macros -%}
-{% import "macros/head.html" as head_macros -%}
-{% import "macros/menu.html" as menu_macros -%}
-{% import "macros/post.html" as post_macros -%}
-{% import "macros/title.html" as title_macros -%}
 
 <!DOCTYPE html>
 <html lang="{%- if config.default_language -%}{{ config.default_language }}{%- else -%}en{%- endif -%}">
 
 <head>
     <title>{%- block title %}{{ config.title }}{% endblock title -%}</title>
-    {{ head_macros::head(config=config) }}
+    {% include "partials/head.html" %}
 
-    {%- if config.generate_feed %}
+    {%- if config.generate_feeds %}
         <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="atom.xml") | safe }}">
     {% endif -%}
 
@@ -49,7 +44,7 @@
         </div>
 
         {% block header_menu %}
-        {{ menu_macros::menu(config=config, current_path=current_path) }}
+        {% include "partials/menu.html" %}
         {% endblock header_menu %}
     </header>
     {% endblock header %}
@@ -66,8 +61,8 @@
             {% endif -%}
             {%- for page in show_pages %}
                 <div class="post on-list">
-                    {{ post_macros::header(page=page) }}
-                    {{ post_macros::content(page=page, summary=true) }}
+                    {% include "partials/post_header.html" %}
+                    {% set summary = true %}{% set show_only_description = false %}{% include "partials/post_content.html" %}
                 </div>
                 <!--
                 <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
@@ -108,9 +103,9 @@
             {% else %}
                 <div class="copyright">
                     {%- if config.extra.author %}
-                        <span>© {{ date_macros::now_year() }} {{ config.extra.author }}</span>
+                        <span>© {% include "partials/now_year.html" %} {{ config.extra.author }}</span>
                     {% else %}
-                        <span>© {{ date_macros::now_year() }} Powered by <a href="https://www.getzola.org/">Zola</a></span>
+                        <span>© {% include "partials/now_year.html" %} Powered by <a href="https://www.getzola.org/">Zola</a></span>
                     {% endif -%}
 
                     <span class="copyright-theme">

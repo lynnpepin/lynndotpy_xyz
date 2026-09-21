@@ -1,0 +1,18 @@
+{#- Expects: current_item -#}
+    {%- if config.extra.menu_items %}
+        {%- set menu_items = config.extra.menu_items -%}
+
+        <nav class="menu">
+            <ul class="menu__inner">
+            {%- for item in menu_items %}
+                <li {%- if current_item and current_item == item %} class="active" {%- endif %}>
+                    {%- if item.newtab -%}
+                        <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}" target="_blank" rel="noopener noreferrer">{{ item.name | safe }}</a>
+                    {%- else -%}
+                        <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) | safe }}">{{ item.name | safe }}</a>
+                    {%- endif -%}
+                </li>
+            {% endfor -%}
+            </ul>
+        </nav>
+    {% endif -%}

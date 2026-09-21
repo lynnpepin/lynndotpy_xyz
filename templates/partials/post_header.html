@@ -1,0 +1,7 @@
+{#- Expects: page -#}
+    <h1 class="post-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
+    <div class="post-meta-inline">
+        {% include "partials/post_date.html" %}
+    </div>
+
+    {% set short = false %}{% include "partials/post_tags.html" %}

@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {%- block title -%}
-{{ title_macros::title(page_title="Tags", main_title=config.title) }}
+{% set page_title = "Tags" %}{% set main_title = config.title %}{% include "partials/title.html" %}
 {%- endblock -%}
 
 {% block content %}

@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Python on your phone sucks less with `ooo.py` and the `-i` flag. | &#x2F;&#x2F; lynndotpy</title>
-    
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Python on your phone sucks less with `ooo.py` and the `-i` flag. | // lynndotpy</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="robots" content="noodp"/>
 
@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="https://lynndotpy.dev/color/lynn-auto-3.css">
 
     <link rel="stylesheet" href="https://lynndotpy.dev/font-hack-subset.css">
-
-    <meta name="description" content="">
+<meta name="description" content="">
 
     <meta property="og:description" content="">
     <meta property="og:title" content="Python on your phone sucks less with `ooo.py` and the `-i` flag. | // lynndotpy">
@@ -23,7 +22,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="">
     <meta name="twitter:title" content="Python on your phone sucks less with `ooo.py` and the `-i` flag. | // lynndotpy">
-    <meta property="twitter:domain" content="lynndotpy.dev&#x2F;">
+    <meta property="twitter:domain" content="lynndotpy.dev/">
     <meta property="twitter:url" content="https://lynndotpy.dev/posts/python-mobile/">
 
             
@@ -31,8 +30,7 @@
     
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
-        
-<link rel="stylesheet" href="https://lynndotpy.dev/katex/katex.min.css">
+        <link rel="stylesheet" href="https://lynndotpy.dev/katex/katex.min.css">
 <script defer src="https://lynndotpy.dev/katex/katex.min.js"></script>
 <script defer src="https://lynndotpy.dev/katex/mathtex-script-type.min.js"></script>
 <script defer src="https://lynndotpy.dev/katex/auto-render.min.js"></script>
@@ -94,11 +92,9 @@
     <div class="content">
         
     <div class="post">
-        
-    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/python-mobile/">Python on your phone sucks less with `ooo.py` and the `-i` flag.</a></h1>
+        <h1 class="post-title"><a href="https://lynndotpy.dev/posts/python-mobile/">Python on your phone sucks less with `ooo.py` and the `-i` flag.</a></h1>
     <div class="post-meta-inline">
-        
-    <span class="post-date">
+        <span class="post-date">
             2022-05-22
         </span>
 
@@ -116,47 +112,45 @@
             <blockquote>
 <p><strong>TLDR:</strong> Copy the script below, and run it as <code>python -i ooo.py</code>. This will give you a bunch of useful imports with short aliases, and throw you into an interactive shell.</p>
 </blockquote>
-<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;">&#39;&#39;&#39;Run as `python3 -i ooo.py`
-</span><span style="color:#888888;">
-</span><span style="color:#888888;">I use this when writing Python scripts on my phone (through Termux). The point is to minimize the keypresses needed when writing Python on a phone.
-</span><span style="color:#888888;">
-</span><span style="color:#888888;">This will start Python, import a bunch of modules with short names, and then throw you into an interpreter.
-</span><span style="color:#888888;">&#39;&#39;&#39;
-</span><span>
-</span><span style="color:#8fbfdc;">import </span><span>numpy </span><span style="color:#8fbfdc;">as </span><span>np
-</span><span style="color:#8fbfdc;">import </span><span>pandas </span><span style="color:#8fbfdc;">as </span><span>pd
-</span><span style="color:#8fbfdc;">import </span><span>math </span><span style="color:#8fbfdc;">as </span><span>mt
-</span><span style="color:#8fbfdc;">import </span><span>random </span><span style="color:#8fbfdc;">as </span><span>rd
-</span><span style="color:#8fbfdc;">import </span><span>time
-</span><span style="color:#8fbfdc;">import </span><span>itertools </span><span style="color:#8fbfdc;">as </span><span>it
-</span><span style="color:#8fbfdc;">import </span><span>functools </span><span style="color:#8fbfdc;">as </span><span>ft
-</span><span style="color:#8fbfdc;">import </span><span>re
-</span><span style="color:#8fbfdc;">import </span><span>os
-</span><span style="color:#8fbfdc;">import </span><span>sys
-</span><span style="color:#8fbfdc;">import </span><span>glob
-</span><span style="color:#8fbfdc;">import </span><span>pickle </span><span style="color:#8fbfdc;">as </span><span>pl
-</span><span style="color:#8fbfdc;">import </span><span>hashlib </span><span style="color:#8fbfdc;">as </span><span>hl
-</span><span style="color:#8fbfdc;">import </span><span>secrets </span><span style="color:#8fbfdc;">as </span><span>ss
-</span><span style="color:#8fbfdc;">import </span><span>socket </span><span style="color:#8fbfdc;">as </span><span>sk
-</span><span>
-</span><span style="color:#ffb964;">print</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">imported numpy as np, pandas as pd, math as mt, random as rd, time, itertools as it, functools as ft, re, os, sys, glob, pickle as pl, hashlib as hl, secrets as ss, and socket as sk!</span><span style="color:#556633;">&quot;</span><span>)
-</span><span>
-</span><span>A = np.array
-</span><span>
-</span><span style="color:#ffb964;">PI </span><span>= mt.pi
-</span><span style="color:#ffb964;">TAU </span><span>= mt.tau
-</span><span>E = mt.e
-</span><span>
-</span><span style="color:#ffb964;">print</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Constants available: PI, TAU, E .</span><span style="color:#556633;">&quot;</span><span>)
-</span><span>
-</span><span>H = help
-</span><span>Q = quit
-</span><span>
-</span><span style="color:#ffb964;">print</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Functions `help(...)` and `quit()` available as `H(...)` and `Q()`.</span><span style="color:#556633;">&quot;</span><span>)
-</span></code></pre>
-<span id="continue-reading"></span>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;" ><code data-lang="python"><span class="giallo-l"><span style="color: #9ECBFF;">&#39;&#39;&#39;Run as `python3 -i ooo.py`</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9ECBFF;">I use this when writing Python scripts on my phone (through Termux). The point is to minimize the keypresses needed when writing Python on a phone.</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #9ECBFF;">This will start Python, import a bunch of modules with short names, and then throw you into an interpreter.</span></span>
+<span class="giallo-l"><span style="color: #9ECBFF;">&#39;&#39;&#39;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> numpy</span><span style="color: #F97583;"> as</span><span> np</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> pandas</span><span style="color: #F97583;"> as</span><span> pd</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> math</span><span style="color: #F97583;"> as</span><span> mt</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> random</span><span style="color: #F97583;"> as</span><span> rd</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> time</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> itertools</span><span style="color: #F97583;"> as</span><span> it</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> functools</span><span style="color: #F97583;"> as</span><span> ft</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> re</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> os</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> sys</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> glob</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> pickle</span><span style="color: #F97583;"> as</span><span> pl</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> hashlib</span><span style="color: #F97583;"> as</span><span> hl</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> secrets</span><span style="color: #F97583;"> as</span><span> ss</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> socket</span><span style="color: #F97583;"> as</span><span> sk</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #79B8FF;">print</span><span>(</span><span style="color: #9ECBFF;">&quot;imported numpy as np, pandas as pd, math as mt, random as rd, time, itertools as it, functools as ft, re, os, sys, glob, pickle as pl, hashlib as hl, secrets as ss, and socket as sk!&quot;</span><span>)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>A</span><span style="color: #F97583;"> =</span><span> np.array</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #79B8FF;">PI</span><span style="color: #F97583;"> =</span><span> mt.pi</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">TAU</span><span style="color: #F97583;"> =</span><span> mt.tau</span></span>
+<span class="giallo-l"><span>E</span><span style="color: #F97583;"> =</span><span> mt.e</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #79B8FF;">print</span><span>(</span><span style="color: #9ECBFF;">&quot;Constants available: PI, TAU, E .&quot;</span><span>)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>H</span><span style="color: #F97583;"> =</span><span style="color: #79B8FF;"> help</span></span>
+<span class="giallo-l"><span>Q</span><span style="color: #F97583;"> =</span><span style="color: #79B8FF;"> quit</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #79B8FF;">print</span><span>(</span><span style="color: #9ECBFF;">&quot;Functions `help(...)` and `quit()` available as `H(...)` and `Q()`.&quot;</span><span>)</span></span></code></pre><span id="continue-reading"></span>
 <hr />
-<p>Here is a real-time video of the script in action, used for writing a Monte Carlo simulation to estimate the value of Pi. </p>
+<p>Here is a real-time video of the script in action, used for writing a Monte Carlo simulation to estimate the value of Pi.</p>
 <!-- ![A screenrecording ](/posts/images/ooopy.webm){ width=240px } -->
 <!-- centered video -->
 <video controls width="360px" style="margin: 0 auto; display: block;" preload="metadata">
@@ -167,7 +161,7 @@
 <p>Python in the terminal has effectively replaced my graphing calculator for quick calculations. Its REPL allows for interactive coding, so there is no compile-run-debug loop. The great thing is, I can also use this on my phone! (I used Termux on Android, but this might work on iOS through iSH.)</p>
 <p>But coding on a phone sucks. But Python lets you bind almost anything to almost anything, so you can make it suck a bit less. I use a little script to set up a Python environment that is much more comfortable on the phone.</p>
 <p>I call it <code>ooo.py</code> because <code>ooo.py</code> is fast to type. The script imports a bunch of useful tools, and with short names (e.g. <code>np</code> instead of <code>numpy</code>, <code>it</code> instead of <code>itertools</code>). The script also binds common functions and constants to shorter names. e.g. <code>A(...)</code> instead of <code>np.array(...)</code>, <code>PI</code> instead of <code>math.pi</code>. The script also prints all these shortcuts out, so you don't need to remember them all.</p>
-<p>The real value comes from the <code>-i</code> flag. Running the script as <code>python -i ooo.py</code> will run all of <code>ooo.py</code>, but instead of exiting to shell, it'll throw you into a REPL! </p>
+<p>The real value comes from the <code>-i</code> flag. Running the script as <code>python -i ooo.py</code> will run all of <code>ooo.py</code>, but instead of exiting to shell, it'll throw you into a REPL!</p>
 
         </div>
 

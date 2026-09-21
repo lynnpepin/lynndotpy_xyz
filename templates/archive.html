@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {%- block title -%}
-{{ title_macros::title(page_title=page.title, main_title=config.title) }}
+{% set page_title = page.title %}{% set main_title = config.title %}{% include "partials/title.html" %}
 {%- endblock -%}
 
 {% block content %}
@@ -10,6 +10,6 @@
 
         {% set section = get_section(path="posts/_index.md") %}
 
-        {{ post_macros::list_posts(pages=section.pages) }}
+        {% set pages = section.pages %}{% include "partials/post_list.html" %}
     </div>
 {% endblock content %}

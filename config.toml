@@ -4,8 +4,8 @@ title = "// lynndotpy"
 
 # Sass compilation is required
 compile_sass = true
-generate_feed = true
-feed_filename = "atom.xml"
+generate_feeds = true
+feed_filenames = ["atom.xml"]
 
 # Optional: enable tags
 taxonomies = [
@@ -13,9 +13,9 @@ taxonomies = [
 ]
 
 # Code highlighting
-[markdown]
-highlight_code = true
-highlight_theme = "boron"
+[markdown.highlighting]
+style = "inline"
+theme = "github-dark"
 
 [extra]
 # Put all your custom variables here

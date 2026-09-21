@@ -1,0 +1,6 @@
+{#- Expects: page -#}
+    <span class="post-date">
+        {%- if page.date %}
+            {{ page.date | date(format="%Y-%m-%d") }}
+        {% endif -%}
+    </span>

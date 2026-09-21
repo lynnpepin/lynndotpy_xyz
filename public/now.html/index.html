@@ -1,6 +1,12 @@
 <!doctype html>
 <meta charset="utf-8">
-<link rel="canonical" href="https://lynndotpy.dev/pages/now/">
-<meta http-equiv="refresh" content="0; url=https://lynndotpy.dev/pages/now/">
 <title>Redirect</title>
+<script>
+  const target = "https://lynndotpy.dev/pages/now/";
+  const hash = window.location.hash || "";
+  window.location.replace(target + hash);
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="0; url=https://lynndotpy.dev/pages/now/">
+</noscript>
 <p><a href="https://lynndotpy.dev/pages/now/">Click here</a> to be redirected.</p>

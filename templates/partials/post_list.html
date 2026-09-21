@@ -1,0 +1,14 @@
+{#- Expects: pages -#}
+    <ul>
+    {%- for page in pages %}
+        {%- if page.draft %}
+            {% continue %}
+        {% endif -%}
+        <li class="post-list">
+            <a href="{{ page.permalink | safe }}">
+                <span class="post-date">{{ page.date }}</span>
+                :: <span class="post-list-title">{{ page.title }}</span></a>
+            {% set short = true %}{% include "partials/post_tags.html" %}
+        </li>
+    {% endfor -%}
+    </ul>

@@ -1,13 +1,13 @@
 {% extends "index.html" %}
 
 {%- block title -%}
-{{ title_macros::title(page_title=page.title, main_title=config.title) }}
+{% set page_title = page.title %}{% set main_title = config.title %}{% include "partials/title.html" %}
 {%- endblock -%}
 
 {% block content %}
     <div class="post">
-        {{ post_macros::header(page=page) }}
-        {{ post_macros::content(page=page, summary=false, show_only_description=false) }}
-        {{ post_macros::earlier_later(page=page) }}
+        {% include "partials/post_header.html" %}
+        {% set summary = false %}{% set show_only_description = false %}{% include "partials/post_content.html" %}
+        {% include "partials/post_earlier_later.html" %}
     </div>
 {% endblock content %}

@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>lynndotpy.xyz is now lynndotpy.dev | &#x2F;&#x2F; lynndotpy</title>
-    
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>lynndotpy.xyz is now lynndotpy.dev | // lynndotpy</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="robots" content="noodp"/>
 
@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="https://lynndotpy.dev/color/lynn-auto-3.css">
 
     <link rel="stylesheet" href="https://lynndotpy.dev/font-hack-subset.css">
-
-    <meta name="description" content="">
+<meta name="description" content="">
 
     <meta property="og:description" content="">
     <meta property="og:title" content="lynndotpy.xyz is now lynndotpy.dev | // lynndotpy">
@@ -23,7 +22,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="">
     <meta name="twitter:title" content="lynndotpy.xyz is now lynndotpy.dev | // lynndotpy">
-    <meta property="twitter:domain" content="lynndotpy.dev&#x2F;">
+    <meta property="twitter:domain" content="lynndotpy.dev/">
     <meta property="twitter:url" content="https://lynndotpy.dev/posts/xyz-now-dev/">
 
             
@@ -31,8 +30,7 @@
     
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
-        
-<link rel="stylesheet" href="https://lynndotpy.dev/katex/katex.min.css">
+        <link rel="stylesheet" href="https://lynndotpy.dev/katex/katex.min.css">
 <script defer src="https://lynndotpy.dev/katex/katex.min.js"></script>
 <script defer src="https://lynndotpy.dev/katex/mathtex-script-type.min.js"></script>
 <script defer src="https://lynndotpy.dev/katex/auto-render.min.js"></script>
@@ -94,11 +92,9 @@
     <div class="content">
         
     <div class="post">
-        
-    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/xyz-now-dev/">lynndotpy.xyz is now lynndotpy.dev</a></h1>
+        <h1 class="post-title"><a href="https://lynndotpy.dev/posts/xyz-now-dev/">lynndotpy.xyz is now lynndotpy.dev</a></h1>
     <div class="post-meta-inline">
-        
-    <span class="post-date">
+        <span class="post-date">
             2024-07-18
         </span>
 
@@ -113,31 +109,30 @@
 
         <div class="post-content">
             <blockquote>
-<p><strong>tldr:</strong> This site <a href="https://lynndotpy.xyz"><code>lynndotpy.xyz</code></a> is now hosted at <a href="https://lynndotpy.dev"><code>lynndotpy.dev</code></a>, because (1) <code>.xyz</code> domains are associated with spam, and (2) <code>.dev</code> domains are trendy!!</p>
+<p><strong>tldr:</strong> This site <a rel="external" href="https://lynndotpy.xyz"><code>lynndotpy.xyz</code></a> is now hosted at <a rel="external" href="https://lynndotpy.dev"><code>lynndotpy.dev</code></a>, because (1) <code>.xyz</code> domains are associated with spam, and (2) <code>.dev</code> domains are trendy!!</p>
 </blockquote>
 <span id="continue-reading"></span>
 <p>Exciting times, huh?</p>
 <p>I set up this blog in 2020 as a custom static-site generator. The <code>.xyz</code> domains were cheap, fun, and didn't require TLS.</p>
-<p>I would occasionally send my friends links to posts on my blog, and as <a href="https://www.spotvirtual.com/blog/the-perils-of-an-xyz-domain">SpotVirtual</a> noted, many cellular and email providers would <em>silently drop messages which contain any URL with a <code>.xyz</code> domain.</em></p>
+<p>I would occasionally send my friends links to posts on my blog, and as <a rel="external" href="https://www.spotvirtual.com/blog/the-perils-of-an-xyz-domain">SpotVirtual</a> noted, many cellular and email providers would <em>silently drop messages which contain any URL with a <code>.xyz</code> domain.</em></p>
 <p>So, I bought <code>lynndotpy.dev</code>, and set up my Caddyfile appropriately, which worked fine for awhile.</p>
-<pre data-lang="Caddyfile" style="background-color:#151515;color:#e8e8d3;" class="language-Caddyfile "><code class="language-Caddyfile" data-lang="Caddyfile"><span>lynndotpy.xyz {
-</span><span>  encode zstd gzip
-</span><span>  root * ./blog/public
-</span><span>  file_server
-</span><span>  header {
-</span><span>    # disable FLoC, Topics tracking
-</span><span>    Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;
-</span><span>  }
-</span><span>}
-</span><span>
-</span><span>https://lynndotpy.dev {
-</span><span>  redir https://lynndotpy.xyz{uri}
-</span><span>}
-</span></code></pre>
-<p>(You can read more about the <code>Permissions-Policy</code> in my header <a href="https://lynndotpy.dev/posts/caddy-topics-optout/">here</a>.)</p>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;" ><code data-lang="plain"><span class="giallo-l"><span>lynndotpy.xyz {</span></span>
+<span class="giallo-l"><span>  encode zstd gzip</span></span>
+<span class="giallo-l"><span>  root * ./blog/public</span></span>
+<span class="giallo-l"><span>  file_server</span></span>
+<span class="giallo-l"><span>  header {</span></span>
+<span class="giallo-l"><span>    # disable FLoC, Topics tracking</span></span>
+<span class="giallo-l"><span>    Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>https://lynndotpy.dev {</span></span>
+<span class="giallo-l"><span>  redir https://lynndotpy.xyz{uri}</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<p>(You can read more about the <code>Permissions-Policy</code> in my header <a rel="external" href="https://lynndotpy.dev/posts/caddy-topics-optout/">here</a>.)</p>
 <p>I liked my <code>.xyz</code> domain because it felt quirky and fun, and suited to the miscellania I wanted my blog to be about. I make card games! I make Blender renders! I make little Godot games! I contain multitudes, and all that jazz!</p>
-<p>But then I noticed something... &quot;Big&quot; XYZ sites like the aforementioned <a href="https://spot.xyz">spot.xyz</a> now redirects to <a href="https://www.spotvirtual.com/">spotvirtual.com</a>. There's a trend of leaving old <code>xyz</code> domains to redirect to a more traditional TLD,  like <a href="https://blueskyweb.xyz/">blueskyweb.xyz</a>. The ones which <em>aren't</em> redirecting are all &quot;web3&quot; things. NFTs, metaverse, the likes. <em>Yuck.</em></p>
-<p>Come to think of it, I've barely posted any art or anything here. I'm a developer and I'm getting a kick out of deveoping. I'm having a great time with the vimlike <a href="https://helix-editor.com/">Helix editor</a>. But I really don't want to be associated with the kind of cruft you see on <code>.xyz</code>.</p>
+<p>But then I noticed something... "Big" XYZ sites like the aforementioned <a rel="external" href="https://spot.xyz">spot.xyz</a> now redirects to <a rel="external" href="https://www.spotvirtual.com/">spotvirtual.com</a>. There's a trend of leaving old <code>xyz</code> domains to redirect to a more traditional TLD,  like <a rel="external" href="https://blueskyweb.xyz/">blueskyweb.xyz</a>. The ones which <em>aren't</em> redirecting are all "web3" things. NFTs, metaverse, the likes. <em>Yuck.</em></p>
+<p>Come to think of it, I've barely posted any art or anything here. I'm a developer and I'm getting a kick out of deveoping. I'm having a great time with the vimlike <a rel="external" href="https://helix-editor.com/">Helix editor</a>. But I really don't want to be associated with the kind of cruft you see on <code>.xyz</code>.</p>
 <p>So, welcome to <code>lynndotpy.dev</code> :)</p>
 
         </div>
@@ -159,7 +154,7 @@
                     
                         <span class="button next">
                             <a href="https://lynndotpy.dev/posts/i-love-helix-editor/">
-                                <span class="button__text">Goodbye, Vim. I&#x27;m in love with Helix.</span>&nbsp;
+                                <span class="button__text">Goodbye, Vim. I&#39;m in love with Helix.</span>&nbsp;
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

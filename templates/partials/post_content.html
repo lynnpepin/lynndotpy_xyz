@@ -1,0 +1,22 @@
+{#- Expects: page, summary, show_only_description -#}
+    {%- if show_only_description %}
+        <div class="post-content">
+            {{ page.description | safe }}
+        </div>
+    {% elif summary and page.summary %}
+        <div class="post-content">
+            {{ page.summary | safe }}
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="{{ page.permalink | safe }}">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    {% else %}
+        {#- full content -#}
+        <div class="post-content">
+            {{ page.content | safe }}
+        </div>
+    {%- endif %}

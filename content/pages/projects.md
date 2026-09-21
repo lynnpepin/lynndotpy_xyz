@@ -18,12 +18,12 @@ aliases = ["/projects.html/"]
 
 # ResoLang
 
-{{image(
-  src="/../posts/images/reso_logo.gif",
-  alt="An image of a logo that looks almost like a circuit, blinking with the letters R E S O.",
-  position="center",
+{{ <image
+  src="/../posts/images/reso_logo.gif"
+  alt="An image of a logo that looks almost like a circuit, blinking with the letters R E S O."
+  position="center"
   style=""
-)}}
+/> }}
 
 [⛏️ Reso⛏️ ](https://gitlab.com/lynnpepin/reso), 2018, Python. is a graph-automata circuit-programming language inspired by redstone and wireworld. It is Turing complete, but not very pretty to use. I might revisit this later, it'd be better if it was interactive, web-based, and would interact with GPIO pins (say, on a Raspberry Pi)!
 
@@ -33,12 +33,12 @@ See an explanatory blogpost here: [https://lynndotpy.dev/posts/reso_intro.html](
 
 # Apocalypse Sirens: FOSS Trading Card Game
 
-{{image(
-  src="/../posts/images/sirens_proj.png",
-  alt="",
-  position="",
+{{ <image
+  src="/../posts/images/sirens_proj.png"
+  alt=""
+  position=""
   style=""
-)}}
+/> }}
 
 **Apocalypse Sirens**, 2020 is a small GIMP Python (PythonFu) script to automate editing for a trading card game. The rules are forgotten and bad.
 
@@ -105,12 +105,12 @@ These are a collection of proof-of-concept projects that I did to teach myself a
 
 ## Godot Animal Crossing "rolling log" shader
 
-{{image(
-  src="/../posts/images/displacement_video_smol_optimized.gif",
-  alt="A two-second clip showing a white figure navigating a green landscape, which is distorted so it appears to roll 'away' from the viewer.",
-  position="center",
+{{ <image
+  src="/../posts/images/displacement_video_smol_optimized.gif"
+  alt="A two-second clip showing a white figure navigating a green landscape, which is distorted so it appears to roll 'away' from the viewer."
+  position="center"
   style=""
-)}}
+/> }}
 
 [🪵Rolling Log "Animal Crossing" shader🪵](https://gitlab.com/lynnpepin/rollinglogshader), 2020, Godot 3. This is a vertex shader that recreates the "rolling log" effect that is popular in the Animal Crossing series. Watch as your planar world wraps itself over an invisible cylinder, and hangs as if cloth!
 
@@ -120,19 +120,19 @@ These are a collection of proof-of-concept projects that I did to teach myself a
 ## Cellular Automata
 
 <div>
-{{figure(
-  src="/../posts/images/rgblife_med.gif",
-  alt="A conways-game-of-life esque simulation, with three parties intermingling.",
-  position="center",
-  style="display: flex; justify-content: center;",
+{{ <figure
+  src="/../posts/images/rgblife_med.gif"
+  alt="A conways-game-of-life esque simulation, with three parties intermingling."
+  position="center"
+  style="display: flex; justify-content: center;"
   caption="RGBLife"
-)}} {{figure(
-  src="/../posts/images/brainbow_med.gif",
-  alt="A brians-brain esque automata with three colored states, bouncing around.",
-  position="center",
+/> }} {{ <figure
+  src="/../posts/images/brainbow_med.gif"
+  alt="A brians-brain esque automata with three colored states, bouncing around."
+  position="center"
   style="display: flex; justify-content: center;"
   caption="Brainbow"
-)}}
+/> }}
 </div>
 
 

@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>&#x2F;&#x2F; lynndotpy</title>
-    
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>// lynndotpy</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="robots" content="noodp"/>
 
@@ -60,11 +60,9 @@
             <!-- This points `index.html` to `posts` -->
             
                 <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/recommendations/">Software I recommend</a></h1>
+                    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/recommendations/">Software I recommend</a></h1>
     <div class="post-meta-inline">
-        
-    <span class="post-date">
+        <span class="post-date">
             2023-09-30
         </span>
 
@@ -94,9 +92,8 @@
 <li>Fastmail + Porkbun for personal email.</li>
 </ul>
 </blockquote>
-<p>I've had friends ask me for recommendations for software. They ask me this because I am a hollow person who has spent too much of my life on the computer. I love when people ask me these questions, because my strong opinions on software are usually otherwise &quot;offputting&quot; and considered a &quot;personality flaw&quot;.</p>
+<p>I've had friends ask me for recommendations for software. They ask me this because I am a hollow person who has spent too much of my life on the computer. I love when people ask me these questions, because my strong opinions on software are usually otherwise "offputting" and considered a "personality flaw".</p>
 <p>All jokes aside, I wanted one place to chronicle recommendations I tend to make. In no particular order, here are some of my favorites.</p>
-
         </div>
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
@@ -115,11 +112,9 @@
                 -->
             
                 <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/reading-2023/">Things I read, first half of 2023</a></h1>
+                    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/reading-2023/">Things I read, first half of 2023</a></h1>
     <div class="post-meta-inline">
-        
-    <span class="post-date">
+        <span class="post-date">
             2023-08-26
         </span>
 
@@ -136,11 +131,10 @@
             <p>I read and Consumed™️ a number of things the first half of 2023. Let me detail some of them:</p>
 <ul>
 <li><em>Braiding Sweetgrass</em> by Robin Wall Kimmerer helped me reconcile disillusionment and frustration I had with academic science, and to help me appreciate different philosophies of thought.</li>
-<li><em>The Magicians</em> by Lev Grossman is a grounded examination of the fantasy genre within a well-fleshed fantasy world. If &quot;Houlden Caulfield seeks Narnia but goes to Hogwarts&quot; sounds interesting, then check this out.</li>
+<li><em>The Magicians</em> by Lev Grossman is a grounded examination of the fantasy genre within a well-fleshed fantasy world. If "Houlden Caulfield seeks Narnia but goes to Hogwarts" sounds interesting, then check this out.</li>
 <li><em>This is How You Lose the Time War</em> by Amal El-Mohtar and Max Gladstone is a short story about star-crossed lovers from two advanced, warring, timeline-hopping scifi empires. I didn't like it that much, but it was 200 pages and fun to read.</li>
 <li>The <em>Before Me</em> podcast series is a well-constructed narrative built around interviews with the narrators mother, who arrived to America fleeing the Khmer Rouge in Cambodia. It's worth a listen.</li>
 </ul>
-
         </div>
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
@@ -159,11 +153,9 @@
                 -->
             
                 <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/caddy-topics-optout/">How to Opt out of Chrome Topics API on Caddy servers</a></h1>
+                    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/caddy-topics-optout/">How to Opt out of Chrome Topics API on Caddy servers</a></h1>
     <div class="post-meta-inline">
-        
-    <span class="post-date">
+        <span class="post-date">
             2023-07-13
         </span>
 
@@ -180,17 +172,15 @@
                     
         <div class="post-content">
             <blockquote>
-<p><strong>TLDR:</strong> Set the following in your caddyfile for each site: <code>header Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;</code>. This disable both the old FLoC and the new Topics.</p>
+<p><strong>TLDR:</strong> Set the following in your caddyfile for each site: <code>header Permissions-Policy "interest-cohort=(),browsing-topics=()"</code>. This disable both the old FLoC and the new Topics.</p>
 </blockquote>
 <p>Here is an abbreviated version of my Caddyfile, showing how I set the <code>header</code> directive in my Caddyfile for <code>lynndotpy.dev</code>:</p>
-<pre data-lang="caddyfile" style="background-color:#151515;color:#e8e8d3;" class="language-caddyfile "><code class="language-caddyfile" data-lang="caddyfile"><span>lynndotpy.xyz {
-</span><span>  header {
-</span><span>    Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;
-</span><span>  }
-</span><span>}
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;" ><code data-lang="plain"><span class="giallo-l"><span>lynndotpy.xyz {</span></span>
+<span class="giallo-l"><span>  header {</span></span>
+<span class="giallo-l"><span>    Permissions-Policy &quot;interest-cohort=(),browsing-topics=()&quot;</span></span>
+<span class="giallo-l"><span>  }</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
 <p>To confirm the header is set, you can use a Firefox or Chrome's devtools, open the networking tab, and look for the Permissions-Policy response header. More context below the cut.</p>
-
         </div>
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
@@ -209,11 +199,9 @@
                 -->
             
                 <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/bluesky-and-bitcoin/">If BlueSky takes off, Bitcoin will too. (edit - i was wrong)</a></h1>
+                    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/bluesky-and-bitcoin/">If BlueSky takes off, Bitcoin will too. (edit - i was wrong)</a></h1>
     <div class="post-meta-inline">
-        
-    <span class="post-date">
+        <span class="post-date">
             2023-07-09
         </span>
 
@@ -236,8 +224,7 @@
 <p><strong>TLDR:</strong> BlueSky is intended to eventually integrate with Bitcoin. If BlueSky becomes widely adopted, Bitcoin will too. I don't like Bitcoin, so I don't want BlueSky to become popular.</p>
 <p>Here's why I believe this: In 2019, Jack Dorsey was an early adopter of Bitcoin Lightning network. After helping kickstart the Lightning network, Jack announced BlueSky, emphasized the importance of blockchain protocols, and later promised to integrate BlueSky into the Bitcoin Lightning network.</p>
 </blockquote>
-<p>Jack Dorsey's &quot;BlueSky&quot; platform is taking off. Unfortunately, not only is Jack Dorsey a bonkers man who <a href="https://twitter.com/BrianJo78940026/status/1674770881955115009">endorses the belief that Jimmy Carter cried when he learned that aliens made up all the religions</a>^1 and is on a <em>big</em> pro-RFK Jr^2 streak, but he also is a longtime Bitcoin believer.</p>
-
+<p>Jack Dorsey's "BlueSky" platform is taking off. Unfortunately, not only is Jack Dorsey a bonkers man who <a rel="external" href="https://twitter.com/BrianJo78940026/status/1674770881955115009">endorses the belief that Jimmy Carter cried when he learned that aliens made up all the religions</a>^1 and is on a <em>big</em> pro-RFK Jr^2 streak, but he also is a longtime Bitcoin believer.</p>
         </div>
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
@@ -256,11 +243,9 @@
                 -->
             
                 <div class="post on-list">
-                    
-    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/python-main-main/">protip.py: the main-main pattern</a></h1>
+                    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/python-main-main/">protip.py: the main-main pattern</a></h1>
     <div class="post-meta-inline">
-        
-    <span class="post-date">
+        <span class="post-date">
             2023-06-24
         </span>
 
@@ -280,40 +265,37 @@
 </blockquote>
 <p>Consider a Python program <code>leftpad.py</code>, which takes an input string (say, <code>trans rights</code>), and pads it to the left (so, <code>python leftpad.py -s 'trans rights' -n 16</code> prints <code>'    trans rights'</code>.)</p>
 <p>This is a great way to structure it:</p>
-<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad.py
-</span><span style="color:#8fbfdc;">import </span><span>argparse
-</span><span>
-</span><span style="color:#888888;"># leftpad function in global scope can be imported
-</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">leftpad</span><span>(</span><span style="color:#ffb964;">string</span><span>, </span><span style="color:#ffb964;">num_chars</span><span>):
-</span><span>    </span><span style="color:#8fbfdc;">if </span><span style="color:#ffb964;">len</span><span>(string) &gt;= num_chars:
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span>string
-</span><span>    </span><span style="color:#8fbfdc;">else</span><span>:
-</span><span>        pad = </span><span style="color:#556633;">&#39; &#39; </span><span>* (num_chars - </span><span style="color:#ffb964;">len</span><span>(string))
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span>pad + string
-</span><span>
-</span><span>parser = argparse.</span><span style="color:#ffb964;">ArgumentParser</span><span>()
-</span><span>parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--string</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-s</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=str, </span><span style="color:#ffb964;">nargs</span><span>=</span><span style="color:#cf6a4c;">1</span><span>)
-</span><span>parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--num</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-n</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=int)
-</span><span>
-</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
-</span><span>    args = parser.</span><span style="color:#ffb964;">parse_args</span><span>()
-</span><span>    </span><span style="color:#ffb964;">print</span><span>(</span><span style="color:#ffb964;">leftpad</span><span>(args.string[</span><span style="color:#cf6a4c;">0</span><span>], args.num))
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;" ><code data-lang="python"><span class="giallo-l"><span style="color: #6A737D;"># leftpad.py</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> argparse</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6A737D;"># leftpad function in global scope can be imported</span></span>
+<span class="giallo-l"><span style="color: #F97583;">def</span><span style="color: #B392F0;"> leftpad</span><span>(string, num_chars):</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    if</span><span style="color: #79B8FF;"> len</span><span>(string)</span><span style="color: #F97583;"> &gt;=</span><span> num_chars:</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span> string</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    else</span><span>:</span></span>
+<span class="giallo-l"><span>        pad</span><span style="color: #F97583;"> =</span><span style="color: #9ECBFF;"> &#39; &#39;</span><span style="color: #F97583;"> *</span><span> (num_chars</span><span style="color: #F97583;"> -</span><span style="color: #79B8FF;"> len</span><span>(string))</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span> pad</span><span style="color: #F97583;"> +</span><span> string</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>parser</span><span style="color: #F97583;"> =</span><span> argparse.ArgumentParser()</span></span>
+<span class="giallo-l"><span>parser.add_argument(</span><span style="color: #9ECBFF;">&quot;--string&quot;</span><span>,</span><span style="color: #9ECBFF;"> &quot;-s&quot;</span><span>,</span><span style="color: #FFAB70;"> type</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">str</span><span>,</span><span style="color: #FFAB70;"> nargs</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">1</span><span>)</span></span>
+<span class="giallo-l"><span>parser.add_argument(</span><span style="color: #9ECBFF;">&quot;--num&quot;</span><span>,</span><span style="color: #9ECBFF;">&quot;-n&quot;</span><span>,</span><span style="color: #FFAB70;"> type</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">int</span><span>)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">if</span><span style="color: #79B8FF;"> __name__</span><span style="color: #F97583;"> ==</span><span style="color: #9ECBFF;"> &#39;__main__&#39;</span><span>:</span></span>
+<span class="giallo-l"><span>    args</span><span style="color: #F97583;"> =</span><span> parser.parse_args()</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    print</span><span>(leftpad(args.string[</span><span style="color: #79B8FF;">0</span><span>], args.num))</span></span></code></pre>
 <p>The main functionality and the parser can be imported as <code>leftpad.leftpad(...)</code> and <code>leftpad.parser</code>. These could not be imported if <code>__main__</code> had the definition for <code>leftpad</code> and the instantiation of <code>parser</code>.</p>
 <p>Here's a template you can use for your Python scripts:</p>
-<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">import </span><span>sys
-</span><span>
-</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">main</span><span>():
-</span><span>    </span><span style="color:#8fbfdc;">try</span><span>:
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">1
-</span><span>    </span><span style="color:#8fbfdc;">except</span><span>:
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">0
-</span><span>
-</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
-</span><span>    sys.</span><span style="color:#ffb964;">exit</span><span>(</span><span style="color:#ffb964;">main</span><span>())
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;" ><code data-lang="python"><span class="giallo-l"><span style="color: #F97583;">import</span><span> sys</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">def</span><span style="color: #B392F0;"> main</span><span>():</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    try</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span style="color: #79B8FF;"> 1</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    except</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span style="color: #79B8FF;"> 0</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">if</span><span style="color: #79B8FF;"> __name__</span><span style="color: #F97583;"> ==</span><span style="color: #9ECBFF;"> &#39;__main__&#39;</span><span>:</span></span>
+<span class="giallo-l"><span>    sys.exit(main())</span></span></code></pre>
 <p>Let me explain why this is good, how it could be worse, and how it could be better.</p>
-
         </div>
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->

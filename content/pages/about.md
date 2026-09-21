@@ -5,13 +5,13 @@ aliases = ["/about.html/"]
 +++
 
 
-{{figure(
-  src="/images/irl_avatar.jpeg",
-  alt="A white person with circular glasses wearing orange clothing looking out a window",
-  position="center",
-  style="width: 128px;",
+{{ <figure
+  src="/images/irl_avatar.jpeg"
+  alt="A white person with circular glasses wearing orange clothing looking out a window"
+  position="center"
+  style="width: 128px; height: 128px; object-fit: cover; border-radius: 50%;"
   caption=""
-)}}
+/> }}
 
 
 <div style="text-align: center; display: flow">

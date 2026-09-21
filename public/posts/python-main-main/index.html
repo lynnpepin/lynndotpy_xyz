@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>protip.py: the main-main pattern | &#x2F;&#x2F; lynndotpy</title>
-    
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>protip.py: the main-main pattern | // lynndotpy</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="robots" content="noodp"/>
 
@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="https://lynndotpy.dev/color/lynn-auto-3.css">
 
     <link rel="stylesheet" href="https://lynndotpy.dev/font-hack-subset.css">
-
-    <meta name="description" content="">
+<meta name="description" content="">
 
     <meta property="og:description" content="">
     <meta property="og:title" content="protip.py: the main-main pattern | // lynndotpy">
@@ -23,7 +22,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="">
     <meta name="twitter:title" content="protip.py: the main-main pattern | // lynndotpy">
-    <meta property="twitter:domain" content="lynndotpy.dev&#x2F;">
+    <meta property="twitter:domain" content="lynndotpy.dev/">
     <meta property="twitter:url" content="https://lynndotpy.dev/posts/python-main-main/">
 
             
@@ -31,8 +30,7 @@
     
         <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
     
-        
-<link rel="stylesheet" href="https://lynndotpy.dev/katex/katex.min.css">
+        <link rel="stylesheet" href="https://lynndotpy.dev/katex/katex.min.css">
 <script defer src="https://lynndotpy.dev/katex/katex.min.js"></script>
 <script defer src="https://lynndotpy.dev/katex/mathtex-script-type.min.js"></script>
 <script defer src="https://lynndotpy.dev/katex/auto-render.min.js"></script>
@@ -94,11 +92,9 @@
     <div class="content">
         
     <div class="post">
-        
-    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/python-main-main/">protip.py: the main-main pattern</a></h1>
+        <h1 class="post-title"><a href="https://lynndotpy.dev/posts/python-main-main/">protip.py: the main-main pattern</a></h1>
     <div class="post-meta-inline">
-        
-    <span class="post-date">
+        <span class="post-date">
             2023-06-24
         </span>
 
@@ -117,38 +113,36 @@
 </blockquote>
 <p>Consider a Python program <code>leftpad.py</code>, which takes an input string (say, <code>trans rights</code>), and pads it to the left (so, <code>python leftpad.py -s 'trans rights' -n 16</code> prints <code>'    trans rights'</code>.)</p>
 <p>This is a great way to structure it:</p>
-<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad.py
-</span><span style="color:#8fbfdc;">import </span><span>argparse
-</span><span>
-</span><span style="color:#888888;"># leftpad function in global scope can be imported
-</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">leftpad</span><span>(</span><span style="color:#ffb964;">string</span><span>, </span><span style="color:#ffb964;">num_chars</span><span>):
-</span><span>    </span><span style="color:#8fbfdc;">if </span><span style="color:#ffb964;">len</span><span>(string) &gt;= num_chars:
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span>string
-</span><span>    </span><span style="color:#8fbfdc;">else</span><span>:
-</span><span>        pad = </span><span style="color:#556633;">&#39; &#39; </span><span>* (num_chars - </span><span style="color:#ffb964;">len</span><span>(string))
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span>pad + string
-</span><span>
-</span><span>parser = argparse.</span><span style="color:#ffb964;">ArgumentParser</span><span>()
-</span><span>parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--string</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-s</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=str, </span><span style="color:#ffb964;">nargs</span><span>=</span><span style="color:#cf6a4c;">1</span><span>)
-</span><span>parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--num</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-n</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=int)
-</span><span>
-</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
-</span><span>    args = parser.</span><span style="color:#ffb964;">parse_args</span><span>()
-</span><span>    </span><span style="color:#ffb964;">print</span><span>(</span><span style="color:#ffb964;">leftpad</span><span>(args.string[</span><span style="color:#cf6a4c;">0</span><span>], args.num))
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;" ><code data-lang="python"><span class="giallo-l"><span style="color: #6A737D;"># leftpad.py</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> argparse</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6A737D;"># leftpad function in global scope can be imported</span></span>
+<span class="giallo-l"><span style="color: #F97583;">def</span><span style="color: #B392F0;"> leftpad</span><span>(string, num_chars):</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    if</span><span style="color: #79B8FF;"> len</span><span>(string)</span><span style="color: #F97583;"> &gt;=</span><span> num_chars:</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span> string</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    else</span><span>:</span></span>
+<span class="giallo-l"><span>        pad</span><span style="color: #F97583;"> =</span><span style="color: #9ECBFF;"> &#39; &#39;</span><span style="color: #F97583;"> *</span><span> (num_chars</span><span style="color: #F97583;"> -</span><span style="color: #79B8FF;"> len</span><span>(string))</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span> pad</span><span style="color: #F97583;"> +</span><span> string</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>parser</span><span style="color: #F97583;"> =</span><span> argparse.ArgumentParser()</span></span>
+<span class="giallo-l"><span>parser.add_argument(</span><span style="color: #9ECBFF;">&quot;--string&quot;</span><span>,</span><span style="color: #9ECBFF;"> &quot;-s&quot;</span><span>,</span><span style="color: #FFAB70;"> type</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">str</span><span>,</span><span style="color: #FFAB70;"> nargs</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">1</span><span>)</span></span>
+<span class="giallo-l"><span>parser.add_argument(</span><span style="color: #9ECBFF;">&quot;--num&quot;</span><span>,</span><span style="color: #9ECBFF;">&quot;-n&quot;</span><span>,</span><span style="color: #FFAB70;"> type</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">int</span><span>)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">if</span><span style="color: #79B8FF;"> __name__</span><span style="color: #F97583;"> ==</span><span style="color: #9ECBFF;"> &#39;__main__&#39;</span><span>:</span></span>
+<span class="giallo-l"><span>    args</span><span style="color: #F97583;"> =</span><span> parser.parse_args()</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    print</span><span>(leftpad(args.string[</span><span style="color: #79B8FF;">0</span><span>], args.num))</span></span></code></pre>
 <p>The main functionality and the parser can be imported as <code>leftpad.leftpad(...)</code> and <code>leftpad.parser</code>. These could not be imported if <code>__main__</code> had the definition for <code>leftpad</code> and the instantiation of <code>parser</code>.</p>
 <p>Here's a template you can use for your Python scripts:</p>
-<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">import </span><span>sys
-</span><span>
-</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">main</span><span>():
-</span><span>    </span><span style="color:#8fbfdc;">try</span><span>:
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">1
-</span><span>    </span><span style="color:#8fbfdc;">except</span><span>:
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">0
-</span><span>
-</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
-</span><span>    sys.</span><span style="color:#ffb964;">exit</span><span>(</span><span style="color:#ffb964;">main</span><span>())
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;" ><code data-lang="python"><span class="giallo-l"><span style="color: #F97583;">import</span><span> sys</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">def</span><span style="color: #B392F0;"> main</span><span>():</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    try</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span style="color: #79B8FF;"> 1</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    except</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span style="color: #79B8FF;"> 0</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">if</span><span style="color: #79B8FF;"> __name__</span><span style="color: #F97583;"> ==</span><span style="color: #9ECBFF;"> &#39;__main__&#39;</span><span>:</span></span>
+<span class="giallo-l"><span>    sys.exit(main())</span></span></code></pre>
 <p>Let me explain why this is good, how it could be worse, and how it could be better.</p>
 <span id="continue-reading"></span>
 <ol>
@@ -156,93 +150,91 @@
 <li>Very little functionality is kept inside the <code>__main__</code> block. This allows one to <code>import leftpad</code> and use <code>leftpad.leftpad</code> and <code>leftpad.parser</code>. This is good for code reuse, for code testing, etc.</li>
 </ol>
 <p>Compare it to this naive version, where all the functionality lives inside the <code>__main__</code> block. This is bad!</p>
-<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad_naive.py -- bad!
-</span><span style="color:#8fbfdc;">import </span><span>argparse
-</span><span>
-</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
-</span><span>    </span><span style="color:#888888;"># parser can&#39;t be imported, it&#39;s trapped in __main__
-</span><span>    parser = argparse.</span><span style="color:#ffb964;">ArgumentParser</span><span>()
-</span><span>    parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--string</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-s</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=str, </span><span style="color:#ffb964;">nargs</span><span>=</span><span style="color:#cf6a4c;">1</span><span>)
-</span><span>    parser.</span><span style="color:#ffb964;">add_argument</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--num</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-n</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">type</span><span>=int)
-</span><span>    
-</span><span>    args = parser.</span><span style="color:#ffb964;">parse_args</span><span>()
-</span><span>    string = args.string[</span><span style="color:#cf6a4c;">0</span><span>]
-</span><span>    num_chars = args.num
-</span><span>    
-</span><span>    </span><span style="color:#888888;"># the leftpad functionality is also trapped in __main__
-</span><span>    </span><span style="color:#8fbfdc;">if </span><span style="color:#ffb964;">len</span><span>(string) &gt;= num_chars:
-</span><span>        </span><span style="color:#ffb964;">print</span><span>(string)
-</span><span>    </span><span style="color:#8fbfdc;">else</span><span>:
-</span><span>        pad = </span><span style="color:#556633;">&#39; &#39; </span><span>* (num_chars - </span><span style="color:#ffb964;">len</span><span>(string))
-</span><span>        </span><span style="color:#ffb964;">print</span><span>(pad + string)
-</span><span>        
-</span></code></pre>
-<p><a href="https://docs.python.org/3/library/__main__.html">The Python docs consider this pattern idiomatic</a>. Here is a more complete version, which extends the functionality, wraps <code>leftpad.leftpad</code> in a <code>main</code> function which returns exit codes, and provides a function to generate <code>parser</code> (rather than instantiating it as a singleton).</p>
-<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># leftpad_best.py
-</span><span>
-</span><span style="color:#8fbfdc;">import </span><span>sys
-</span><span style="color:#8fbfdc;">import </span><span>argparse
-</span><span>
-</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">leftpad</span><span>(</span><span style="color:#ffb964;">string</span><span>, </span><span style="color:#ffb964;">num_chars</span><span>, </span><span style="color:#ffb964;">pad_char</span><span>=</span><span style="color:#556633;">&#39; &#39;</span><span>):
-</span><span>    </span><span style="color:#888888;"># improvement 1: pad_char parameter
-</span><span>    </span><span style="color:#888888;"># pad_char defines a default, so we can call leftpad
-</span><span>    </span><span style="color:#888888;"># as leftpad(&#39;trans rights&#39;, 16), just as before.
-</span><span>    </span><span style="color:#8fbfdc;">if </span><span>pad_char is None:
-</span><span>        pad_char = </span><span style="color:#556633;">&#39; &#39;
-</span><span>    </span><span style="color:#8fbfdc;">if </span><span style="color:#ffb964;">len</span><span>(string) &gt;= num_chars:
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span>string
-</span><span>    </span><span style="color:#8fbfdc;">else</span><span>:
-</span><span>        pad = pad_char * (num_chars - </span><span style="color:#ffb964;">len</span><span>(string))
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span>pad + string
-</span><span>
-</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">main</span><span>(</span><span style="color:#ffb964;">string</span><span>, </span><span style="color:#ffb964;">num_chars</span><span>, </span><span style="color:#ffb964;">pad_char</span><span>=</span><span style="color:#556633;">&#39; &#39;</span><span>):
-</span><span>    </span><span style="color:#888888;"># improvement 2: `main()` returns an exit code
-</span><span>    </span><span style="color:#888888;"># 0 = good, 1 = error
-</span><span>    </span><span style="color:#888888;"># note: &#39;main&#39; is not a special function name
-</span><span>    </span><span style="color:#8fbfdc;">try</span><span>:
-</span><span>        </span><span style="color:#ffb964;">print</span><span>(
-</span><span>            </span><span style="color:#ffb964;">leftpad</span><span>(
-</span><span>                </span><span style="color:#ffb964;">string</span><span>=string,
-</span><span>                </span><span style="color:#ffb964;">num_chars</span><span>=num_chars,
-</span><span>                </span><span style="color:#ffb964;">pad_char</span><span>=pad_char
-</span><span>            )
-</span><span>        )
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">0
-</span><span>    </span><span style="color:#8fbfdc;">except</span><span>:
-</span><span>        </span><span style="color:#8fbfdc;">return </span><span style="color:#cf6a4c;">1
-</span><span>
-</span><span style="color:#888888;"># improvement 3: parser is provided by a function, not a singleton
-</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">get_parser</span><span>():
-</span><span>    parser = argparse.</span><span style="color:#ffb964;">ArgumentParser</span><span>(</span><span style="color:#ffb964;">description</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">like echo, but leftpad</span><span style="color:#556633;">&quot;</span><span>)
-</span><span>    parser.</span><span style="color:#ffb964;">add_argument</span><span>(
-</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--string</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-s</span><span style="color:#556633;">&quot;</span><span>,
-</span><span>        </span><span style="color:#ffb964;">help</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">String to pad.</span><span style="color:#556633;">&quot;</span><span>,
-</span><span>        </span><span style="color:#ffb964;">type</span><span>=str,
-</span><span>        </span><span style="color:#ffb964;">nargs</span><span>=</span><span style="color:#cf6a4c;">1
-</span><span>    )
-</span><span>    parser.</span><span style="color:#ffb964;">add_argument</span><span>(
-</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--num</span><span style="color:#556633;">&quot;</span><span>,</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-n</span><span style="color:#556633;">&quot;</span><span>,
-</span><span>        </span><span style="color:#ffb964;">help</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Number of integers to leftpad with</span><span style="color:#556633;">&quot;</span><span>,
-</span><span>        </span><span style="color:#ffb964;">type</span><span>=int
-</span><span>    )
-</span><span>    parser.</span><span style="color:#ffb964;">add_argument</span><span>(
-</span><span>        </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">--char</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">-c</span><span style="color:#556633;">&quot;</span><span>,
-</span><span>        </span><span style="color:#ffb964;">help</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Char to pad with</span><span style="color:#556633;">&quot;
-</span><span>    )
-</span><span>    </span><span style="color:#8fbfdc;">return </span><span>parser
-</span><span>
-</span><span style="color:#8fbfdc;">if </span><span>__name__ == </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">__main__</span><span style="color:#556633;">&#39;</span><span>:
-</span><span>    parser = </span><span style="color:#ffb964;">get_parser</span><span>()
-</span><span>    args = parser.</span><span style="color:#ffb964;">parse_args</span><span>()
-</span><span>    </span><span style="color:#888888;"># improvement 2 (see above): exit code returned here
-</span><span>    sys.</span><span style="color:#ffb964;">exit</span><span>(</span><span style="color:#ffb964;">main</span><span>(args.string[</span><span style="color:#cf6a4c;">0</span><span>], args.num, args.char))
-</span></code></pre>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;" ><code data-lang="python"><span class="giallo-l"><span style="color: #6A737D;"># leftpad_naive.py -- bad!</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> argparse</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">if</span><span style="color: #79B8FF;"> __name__</span><span style="color: #F97583;"> ==</span><span style="color: #9ECBFF;"> &#39;__main__&#39;</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    # parser can&#39;t be imported, it&#39;s trapped in __main__</span></span>
+<span class="giallo-l"><span>    parser</span><span style="color: #F97583;"> =</span><span> argparse.ArgumentParser()</span></span>
+<span class="giallo-l"><span>    parser.add_argument(</span><span style="color: #9ECBFF;">&quot;--string&quot;</span><span>,</span><span style="color: #9ECBFF;"> &quot;-s&quot;</span><span>,</span><span style="color: #FFAB70;"> type</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">str</span><span>,</span><span style="color: #FFAB70;"> nargs</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">1</span><span>)</span></span>
+<span class="giallo-l"><span>    parser.add_argument(</span><span style="color: #9ECBFF;">&quot;--num&quot;</span><span>,</span><span style="color: #9ECBFF;">&quot;-n&quot;</span><span>,</span><span style="color: #FFAB70;"> type</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">int</span><span>)</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span>    args</span><span style="color: #F97583;"> =</span><span> parser.parse_args()</span></span>
+<span class="giallo-l"><span>    string</span><span style="color: #F97583;"> =</span><span> args.string[</span><span style="color: #79B8FF;">0</span><span>]</span></span>
+<span class="giallo-l"><span>    num_chars</span><span style="color: #F97583;"> =</span><span> args.num</span></span>
+<span class="giallo-l"><span>    </span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    # the leftpad functionality is also trapped in __main__</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    if</span><span style="color: #79B8FF;"> len</span><span>(string)</span><span style="color: #F97583;"> &gt;=</span><span> num_chars:</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">        print</span><span>(string)</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    else</span><span>:</span></span>
+<span class="giallo-l"><span>        pad</span><span style="color: #F97583;"> =</span><span style="color: #9ECBFF;"> &#39; &#39;</span><span style="color: #F97583;"> *</span><span> (num_chars</span><span style="color: #F97583;"> -</span><span style="color: #79B8FF;"> len</span><span>(string))</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">        print</span><span>(pad</span><span style="color: #F97583;"> +</span><span> string)</span></span>
+<span class="giallo-l"><span>        </span></span></code></pre>
+<p><a rel="external" href="https://docs.python.org/3/library/__main__.html">The Python docs consider this pattern idiomatic</a>. Here is a more complete version, which extends the functionality, wraps <code>leftpad.leftpad</code> in a <code>main</code> function which returns exit codes, and provides a function to generate <code>parser</code> (rather than instantiating it as a singleton).</p>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;" ><code data-lang="python"><span class="giallo-l"><span style="color: #6A737D;"># leftpad_best.py</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> sys</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> argparse</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">def</span><span style="color: #B392F0;"> leftpad</span><span>(string, num_chars, pad_char</span><span style="color: #F97583;">=</span><span style="color: #9ECBFF;">&#39; &#39;</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    # improvement 1: pad_char parameter</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    # pad_char defines a default, so we can call leftpad</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    # as leftpad(&#39;trans rights&#39;, 16), just as before.</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    if</span><span> pad_char</span><span style="color: #F97583;"> is</span><span style="color: #79B8FF;"> None</span><span>:</span></span>
+<span class="giallo-l"><span>        pad_char</span><span style="color: #F97583;"> =</span><span style="color: #9ECBFF;"> &#39; &#39;</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    if</span><span style="color: #79B8FF;"> len</span><span>(string)</span><span style="color: #F97583;"> &gt;=</span><span> num_chars:</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span> string</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    else</span><span>:</span></span>
+<span class="giallo-l"><span>        pad</span><span style="color: #F97583;"> =</span><span> pad_char</span><span style="color: #F97583;"> *</span><span> (num_chars</span><span style="color: #F97583;"> -</span><span style="color: #79B8FF;"> len</span><span>(string))</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span> pad</span><span style="color: #F97583;"> +</span><span> string</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">def</span><span style="color: #B392F0;"> main</span><span>(string, num_chars, pad_char</span><span style="color: #F97583;">=</span><span style="color: #9ECBFF;">&#39; &#39;</span><span>):</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    # improvement 2: `main()` returns an exit code</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    # 0 = good, 1 = error</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    # note: &#39;main&#39; is not a special function name</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    try</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">        print</span><span>(</span></span>
+<span class="giallo-l"><span>            leftpad(</span></span>
+<span class="giallo-l"><span style="color: #FFAB70;">                string</span><span style="color: #F97583;">=</span><span>string,</span></span>
+<span class="giallo-l"><span style="color: #FFAB70;">                num_chars</span><span style="color: #F97583;">=</span><span>num_chars,</span></span>
+<span class="giallo-l"><span style="color: #FFAB70;">                pad_char</span><span style="color: #F97583;">=</span><span>pad_char</span></span>
+<span class="giallo-l"><span>            )</span></span>
+<span class="giallo-l"><span>        )</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span style="color: #79B8FF;"> 0</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    except</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span style="color: #79B8FF;"> 1</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6A737D;"># improvement 3: parser is provided by a function, not a singleton</span></span>
+<span class="giallo-l"><span style="color: #F97583;">def</span><span style="color: #B392F0;"> get_parser</span><span>():</span></span>
+<span class="giallo-l"><span>    parser</span><span style="color: #F97583;"> =</span><span> argparse.ArgumentParser(</span><span style="color: #FFAB70;">description</span><span style="color: #F97583;">=</span><span style="color: #9ECBFF;">&quot;like echo, but leftpad&quot;</span><span>)</span></span>
+<span class="giallo-l"><span>    parser.add_argument(</span></span>
+<span class="giallo-l"><span style="color: #9ECBFF;">        &quot;--string&quot;</span><span>,</span><span style="color: #9ECBFF;"> &quot;-s&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFAB70;">        help</span><span style="color: #F97583;">=</span><span style="color: #9ECBFF;">&quot;String to pad.&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFAB70;">        type</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">str</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFAB70;">        nargs</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">1</span></span>
+<span class="giallo-l"><span>    )</span></span>
+<span class="giallo-l"><span>    parser.add_argument(</span></span>
+<span class="giallo-l"><span style="color: #9ECBFF;">        &quot;--num&quot;</span><span>,</span><span style="color: #9ECBFF;">&quot;-n&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFAB70;">        help</span><span style="color: #F97583;">=</span><span style="color: #9ECBFF;">&quot;Number of integers to leftpad with&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFAB70;">        type</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">int</span></span>
+<span class="giallo-l"><span>    )</span></span>
+<span class="giallo-l"><span>    parser.add_argument(</span></span>
+<span class="giallo-l"><span style="color: #9ECBFF;">        &quot;--char&quot;</span><span>,</span><span style="color: #9ECBFF;"> &quot;-c&quot;</span><span>,</span></span>
+<span class="giallo-l"><span style="color: #FFAB70;">        help</span><span style="color: #F97583;">=</span><span style="color: #9ECBFF;">&quot;Char to pad with&quot;</span></span>
+<span class="giallo-l"><span>    )</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    return</span><span> parser</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">if</span><span style="color: #79B8FF;"> __name__</span><span style="color: #F97583;"> ==</span><span style="color: #9ECBFF;"> &#39;__main__&#39;</span><span>:</span></span>
+<span class="giallo-l"><span>    parser</span><span style="color: #F97583;"> =</span><span> get_parser()</span></span>
+<span class="giallo-l"><span>    args</span><span style="color: #F97583;"> =</span><span> parser.parse_args()</span></span>
+<span class="giallo-l"><span style="color: #6A737D;">    # improvement 2 (see above): exit code returned here</span></span>
+<span class="giallo-l"><span>    sys.exit(main(args.string[</span><span style="color: #79B8FF;">0</span><span>], args.num, args.char))</span></span></code></pre>
 <p>One can improve the above further with type hints, docstrings, and raising errors.</p>
 <p>For more reading,</p>
 <ul>
-<li><a href="https://tldp.org/LDP/abs/html/exitcodes.html">tldp.org/LDP/abs/html/exitcodes.html</a> for standard exit codes to exit on with <code>sys.exit()</code></li>
-<li>Read more about <code>__main__</code>, the top-level code environment, and the main-main pattern: <a href="https://docs.python.org/3/library/__main__.html">docs.python.org/3/library/__main__.html</a></li>
-<li>The <code>__main__</code> block is not the only special &quot;dunder&quot;. Read more about all the other special names here: <a href="https://docs.python.org/3/reference/datamodel.html#special-method-names">docs.python.org/3/reference/datamodel.html#special-method-names</a></li>
+<li><a rel="external" href="https://tldp.org/LDP/abs/html/exitcodes.html">tldp.org/LDP/abs/html/exitcodes.html</a> for standard exit codes to exit on with <code>sys.exit()</code></li>
+<li>Read more about <code>__main__</code>, the top-level code environment, and the main-main pattern: <a rel="external" href="https://docs.python.org/3/library/__main__.html">docs.python.org/3/library/__main__.html</a></li>
+<li>The <code>__main__</code> block is not the only special "dunder". Read more about all the other special names here: <a rel="external" href="https://docs.python.org/3/reference/datamodel.html#special-method-names">docs.python.org/3/reference/datamodel.html#special-method-names</a></li>
 </ul>
 
         </div>
@@ -257,7 +249,7 @@
                         <span class="button previous">
                             <a href="https://lynndotpy.dev/posts/discord-optout-2023/">
                                 <span class="button__icon">←</span>&nbsp;
-                                <span class="button__text">Opt out of Discord&#x27;s arbitration clause by sending a quick email. (Template included)</span>
+                                <span class="button__text">Opt out of Discord&#39;s arbitration clause by sending a quick email. (Template included)</span>
                             </a>
                         </span>
                     
