@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Before I write my markdown-tag preprocessor, I want to create a new standard for distributing software tools: The executable .html | // lynndotpy</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://lynndotpy.dev/style.css">
+    <link rel="stylesheet" href="https://lynndotpy.dev/color/lynn-auto-3.css">
+
+    <link rel="stylesheet" href="https://lynndotpy.dev/font-hack-subset.css">
+<meta name="description" content="">
+
+    <meta property="og:description" content="">
+    <meta property="og:title" content="Before I write my markdown-tag preprocessor, I want to create a new standard for distributing software tools: The executable .html | // lynndotpy">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://lynndotpy.dev/posts/executable-html-1/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="Before I write my markdown-tag preprocessor, I want to create a new standard for distributing software tools: The executable .html | // lynndotpy">
+    <meta property="twitter:domain" content="lynndotpy.dev/">
+    <meta property="twitter:url" content="https://lynndotpy.dev/posts/executable-html-1/">
+
+            
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://lynndotpy.dev/atom.xml">
+    
+        <link rel="shortcut icon" type="image/png" href="/favicon_package/favicon-32x32.png">
+    
+        <link rel="stylesheet" href="https://lynndotpy.dev/katex/katex.min.css">
+<script defer src="https://lynndotpy.dev/katex/katex.min.js"></script>
+<script defer src="https://lynndotpy.dev/katex/mathtex-script-type.min.js"></script>
+<script defer src="https://lynndotpy.dev/katex/auto-render.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+          {left: "\\begin{align}", right: "\\end{align}", display: true},
+          {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+          {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+          {left: "\\(", right: "\\)", display: false},
+          {left: "\\[", right: "\\]", display: true}
+      ]
+      });
+  });
+</script>
+
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://lynndotpy.dev/" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            lynndotpy.dev
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <nav class="menu">
+            <ul class="menu__inner">
+                <li><a href="https://lynndotpy.dev/archive">archive</a></li>
+            
+                <li><a href="https://lynndotpy.dev/about">about</a></li>
+            
+                <li><a href="https://lynndotpy.dev/projects">projects</a></li>
+            
+                <li><a href="https://github.com/lynnpepin" target="_blank" rel="noopener noreferrer">github</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        <h1 class="post-title"><a href="https://lynndotpy.dev/posts/executable-html-1/">Before I write my markdown-tag preprocessor, I want to create a new standard for distributing software tools: The executable .html</a></h1>
+    <div class="post-meta-inline">
+        <span class="post-date">
+            2026-09-25
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/project/">#project</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/rust/">#rust</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/web/">#web</a></span>
+    
+
+        <div class="post-content">
+            <blockquote>
+<p><strong>tldr tldr</strong>: I want to reboot my blog tooling with a <code>&lt;md&gt;</code> preprocessor tag. I want to write that in the executable <code>.html</code> files, with a combined GUI-TUI-CLI specification. I need to get these two ideas out of my head and into the real world.</p>
+</blockquote>
+<blockquote>
+<p><strong>tldr</strong>: I want to eschew static site generators in favor of writing almost-pure HTML. But I write all my posts in Markdown.</p>
+<p>Before I do that, I want to write a preprocessor which recognizes and processes a <code>&lt;md&gt;</code> tag.</p>
+<p>But I want to write it as a single-file HTML app, since I want to write the most portable code possible.</p>
+<p>But I also want to be able to execute this in the command line. So, I need to:</p>
+<ul>
+<li>Come up with a specification for combining GUI, interactive TUI, and CLI arguments.</li>
+<li>Come up with a specification for denoting CLI-accessible functionality inside a web browser.</li>
+<li>Come up with a (probably Rust) executable that exposes functionality in .html to a terminal user using a webdriver.</li>
+</ul>
+<p>As a first use case, I have <a rel="external" href="https://bbbradsmith.github.io/ipstool/">this IPS patcher</a> in my sights.</p>
+<p>Incidentally, I also want to get good at "vibe coding". Employability and whatnot. Rest assured I will never put LLM-generated prose in a post. Not even in this summary.</p>
+</blockquote>
+<span id="continue-reading"></span><h1 id="first-i-wanted-to-create-an-html-preprocessor-with-a-md-tag">First, i wanted to create an html preprocessor with a <code>&lt;md&gt;</code> tag...</h1>
+<p>For all its flaws, I write almost everything in Markdown, specifically Obsidian. I draft posts in Obsidian before pasting it elsewhere. For all the horrors of the LLM era, I have to admit that I very much do love that a mainstream tool is Markdown-first. It's akin to the era when social media sites came with vimbindings by default. (Tumblr still does!)</p>
+<p>But I've grown very disillusioned with static site generators. This site ran my own SSG, a Python script invoking Pandoc, from 2020 through 2023 until I switched to Zola. But Zola's regular breaking changes eventually forced me into a painful update process when I just wanted to post. And I find myself increasingly preferring to simply write html, as I did for <a rel="external" href="https://carrion.0xpossum.dev/demake86">the site for my game project</a>.</p>
+<p>But it's <em>painful</em> to write all those <code>&lt;p&gt;</code> tags. Maybe I could write a client-side JavaScript dom processor which takes a bespoke <code>&lt;md&gt;</code> tag and replaces it with HTML, but then I'd subject readers to need JavaScript. Instead, I'd like to write a preprocessor that can take my almost-HTML and produce real-HTML, doing very little else.</p>
+<p>But before I start work on this project, I have another.</p>
+<h1 id="but-i-am-insane">But I am insane,</h1>
+<blockquote>
+<p><strong>tldr</strong>:</p>
+<ul>
+<li>Single .html files are the most portable way to distribute software. So, I want to create new tooling in .html files when possible.</li>
+<li>But .html files are not accessible to CLI users such as myself. So, I want to create new tooling to expose CLI functionality in .html files.</li>
+<li>But CLIs are not accessible. So, I want to create tooling that falls back to an interactive TUI when flags are not presented. So, I want to create a combined way to represent the web GUI, the CLI, and the TUI all at once.</li>
+</ul>
+</blockquote>
+<p>Before I create any new tooling for myself, I have to address numerous ideas that have been eating at my mind for years and years and years.</p>
+<p>First is <strong>portability and accessibility</strong>. The single most portable and accessible way to distribute tooling is as a single <code>.html</code> file. It's how this <a rel="external" href="https://bbbradsmith.github.io/ipstool/">IPS ROM patcher works</a>, it's how the <a rel="external" href="https://grapheneos.org/install/web">GrapheneOS web installer works</a>, etc. It works on iPhones, Android phones, feature phones which run neither, Windows, Linux, BSD, etc. It runs on everything with a browser.</p>
+<p>The only problem here is that this excludes terminal users. There is no standard for exposing JavaScript functionality in a .html file in the CLI. So, I'll need a tool for that too which <em>does</em> run in the terminal. Luckily, the <strong>second most portable and accessible way</strong> to distribute tooling is with Rust. As I've noted before, <a rel="external" href="https://lynndotpy.dev/posts/written-in-rust/"><code>cargo</code> is better than <code>npm</code> et al, and statically-compiled executables are the best thing since sliced bread</a>.</p>
+<p>I think this "execute HTML in your terminal" will require:</p>
+<ol>
+<li>A specification for how to write the HTML. Tags, IDs, etc? How to define two different functions for the same command (considering how "echo" would operate differently in the browser)? Etc.</li>
+<li>A CLI tool (written in Rust) to invoke a webdriver to execute the .html.</li>
+</ol>
+<p>But at the same time, I want to improve CLIs first. My <a rel="external" href="https://github.com/lynnpepin/rust_bin_lib_plus">Rust bin-lib-plus</a> is an example of this: It's a binary which provides a library, and it's a CLI (written in <code>clap</code>) which falls back to a TUI (with <code>inquire</code>). When required CLI flags are not provided, one should fall-back to a TUI (with assumed or generated defaults). This way, one can simply run the binary and discover how to use the CLI by using the TUI. Those doing automation or writing shell scripts can simply provide all the necessary CLI flags.</p>
+<p>But this would mean combining the CLI, the TUI, <em>and</em> the web GUI. So, it would also need to answer:</p>
+<ol start="3">
+<li>Should we have a common specification to generate the GUI, TUI, and CLI interfaces? Or should we instead derive the TUI and CLI from specially-tagged web GUI interfaces?</li>
+<li>In either case, how?</li>
+</ol>
+<p>I don't really know the best way to do this. I think the best way to climb a mountain is to take a few steps first. So,</p>
+<h1 id="a-rough-map-of-the-road-ahead">A rough map of the road ahead</h1>
+<blockquote>
+<p><strong>tldr</strong>: A few MVPs and sample projects will provide the answers I seek.</p>
+</blockquote>
+<p>I don't have much free time any more, so I work on these projects in sprints of a few hours every month. I recently spent a lot of time on <a rel="external" href="https://opossumcarrion.itch.io/demake86">my tiny free Metroidvania Demake86</a>, a passion-project for which I used absolutely no AI.</p>
+<p>I much of the productivity gain from the LLM era comes from eschewing reliability standards and coding practices. But I simply must get more comfortable with using LLMs if I wish to be employed.</p>
+<blockquote>
+<p>Note that I will never use LLMs to write any prose for you to read. It's an insult and a disgrace to the audience and the author. I write in lists and have for awhile. If you check the web archive, you'll even see that ugly left-border that Claude-generated sites have was just a part of my site. I did it first, etc etc.</p>
+</blockquote>
+<p>So, I have roughly the next few tasks set out for myself. The goal is to get some fresh experience which will inform how the specifications for the argument parsing will take place, and how the best way to architect this will be.</p>
+<p>My goal is to minimize dependencies for the users, especially users of browser-based tools. So, everything should be in one .html file which can simply be downloaded, with the exception of the necessary executable which (probably using a webdriver) executes the .html file for terminal users.</p>
+<ol>
+<li>MVP: Take an existing browser tool (like the CC0 <a rel="external" href="https://bbbradsmith.github.io/ipstool/">IPStool</a> mentioned above) and hook it into a webdriver using Rust.
+<ul>
+<li>This will answer questions like "how to structure the code when the CLI and GUI will have slightly different functionality".</li>
+</ul>
+</li>
+<li>Improve the MVP with a "gold standard" CLI-falling-back-to-TUI.
+<ul>
+<li>I hope I can contrive this to involve every CLI primitive.</li>
+</ul>
+</li>
+<li>At this point, I hope I have a name for the (1) html "standard", the (2) Rust .html executor, and the concepts of (3) a CLI-falling-back-to-TUI and the combined GUI/TUI/CLI.</li>
+<li>Repeat steps 1 and 2 with my specialized Markdown preprocessor.</li>
+<li>At this point, I hope I can answer the rest of the questions above, and have a ready-made "specification".</li>
+</ol>
+<p>The universal GUI/TUI/CLI might best be done with a common, easy representation (JSON?) which generates a GUI with the proper tags. The .html executor would then parse this GUI to generate the CLI-falling-back-to-TUI.</p>
+
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">(„• ֊ •„)੭</span>
+                    <hr />
+                </div>
+                <div class="pagination__buttons">
+                        <span class="button previous">
+                            <a href="https://lynndotpy.dev/posts/demake86/">
+                                <span class="button__icon">←</span>&nbsp;
+                                <span class="button__text">Demake86, the Legally Distinct Action Adventure Platforming Game set on a METEOROID, released today in homage to Metroid for its 40th anniversary</span>
+                            </a>
+                        </span>
+                    
+                    </div>
+            </div>
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright copyright--user">© Lynn Pepin, and <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>cc by-nc-sa</a> except where specified.<br>Based on the <a href='https://github.com/pawroman/zola-theme-terminimal/'>Terminal theme</a> by  pawroman, panr</div>
+            </div>
+    </footer>
+    
+
+</div>
+</body>
+
+</html>

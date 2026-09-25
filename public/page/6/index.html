@@ -60,6 +60,77 @@
             <!-- This points `index.html` to `posts` -->
             
                 <div class="post on-list">
+                    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/python-main-main/">protip.py: the main-main pattern</a></h1>
+    <div class="post-meta-inline">
+        <span class="post-date">
+            2023-06-24
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/how-to/">#how-to</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/python/">#python</a></span>
+    
+
+                    
+        <div class="post-content">
+            <blockquote>
+<p><strong>TLDR:</strong> Your Python program will be better if you define a <code>main()</code> function separate from the <code>__main__</code> block.</p>
+</blockquote>
+<p>Consider a Python program <code>leftpad.py</code>, which takes an input string (say, <code>trans rights</code>), and pads it to the left (so, <code>python leftpad.py -s 'trans rights' -n 16</code> prints <code>'    trans rights'</code>.)</p>
+<p>This is a great way to structure it:</p>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;" ><code data-lang="python"><span class="giallo-l"><span style="color: #6A737D;"># leftpad.py</span></span>
+<span class="giallo-l"><span style="color: #F97583;">import</span><span> argparse</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6A737D;"># leftpad function in global scope can be imported</span></span>
+<span class="giallo-l"><span style="color: #F97583;">def</span><span style="color: #B392F0;"> leftpad</span><span>(string, num_chars):</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    if</span><span style="color: #79B8FF;"> len</span><span>(string)</span><span style="color: #F97583;"> &gt;=</span><span> num_chars:</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span> string</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    else</span><span>:</span></span>
+<span class="giallo-l"><span>        pad</span><span style="color: #F97583;"> =</span><span style="color: #9ECBFF;"> &#39; &#39;</span><span style="color: #F97583;"> *</span><span> (num_chars</span><span style="color: #F97583;"> -</span><span style="color: #79B8FF;"> len</span><span>(string))</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span> pad</span><span style="color: #F97583;"> +</span><span> string</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>parser</span><span style="color: #F97583;"> =</span><span> argparse.ArgumentParser()</span></span>
+<span class="giallo-l"><span>parser.add_argument(</span><span style="color: #9ECBFF;">&quot;--string&quot;</span><span>,</span><span style="color: #9ECBFF;"> &quot;-s&quot;</span><span>,</span><span style="color: #FFAB70;"> type</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">str</span><span>,</span><span style="color: #FFAB70;"> nargs</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">1</span><span>)</span></span>
+<span class="giallo-l"><span>parser.add_argument(</span><span style="color: #9ECBFF;">&quot;--num&quot;</span><span>,</span><span style="color: #9ECBFF;">&quot;-n&quot;</span><span>,</span><span style="color: #FFAB70;"> type</span><span style="color: #F97583;">=</span><span style="color: #79B8FF;">int</span><span>)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">if</span><span style="color: #79B8FF;"> __name__</span><span style="color: #F97583;"> ==</span><span style="color: #9ECBFF;"> &#39;__main__&#39;</span><span>:</span></span>
+<span class="giallo-l"><span>    args</span><span style="color: #F97583;"> =</span><span> parser.parse_args()</span></span>
+<span class="giallo-l"><span style="color: #79B8FF;">    print</span><span>(leftpad(args.string[</span><span style="color: #79B8FF;">0</span><span>], args.num))</span></span></code></pre>
+<p>The main functionality and the parser can be imported as <code>leftpad.leftpad(...)</code> and <code>leftpad.parser</code>. These could not be imported if <code>__main__</code> had the definition for <code>leftpad</code> and the instantiation of <code>parser</code>.</p>
+<p>Here's a template you can use for your Python scripts:</p>
+<pre class="giallo" style="color: #E1E4E8; background-color: #24292E;" ><code data-lang="python"><span class="giallo-l"><span style="color: #F97583;">import</span><span> sys</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">def</span><span style="color: #B392F0;"> main</span><span>():</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    try</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span style="color: #79B8FF;"> 1</span></span>
+<span class="giallo-l"><span style="color: #F97583;">    except</span><span>:</span></span>
+<span class="giallo-l"><span style="color: #F97583;">        return</span><span style="color: #79B8FF;"> 0</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #F97583;">if</span><span style="color: #79B8FF;"> __name__</span><span style="color: #F97583;"> ==</span><span style="color: #9ECBFF;"> &#39;__main__&#39;</span><span>:</span></span>
+<span class="giallo-l"><span>    sys.exit(main())</span></span></code></pre>
+<p>Let me explain why this is good, how it could be worse, and how it could be better.</p>
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.dev/posts/python-main-main/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <!--
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+                -->
+            
+                <div class="post on-list">
                     <h1 class="post-title"><a href="https://lynndotpy.dev/posts/discord-optout-2023/">Opt out of Discord&#39;s arbitration clause by sending a quick email. (Template included)</a></h1>
     <div class="post-meta-inline">
         <span class="post-date">
@@ -271,45 +342,6 @@
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
             <a class="read-more button" href="https://lynndotpy.dev/posts/linear-sorting/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <!--
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-                -->
-            
-                <div class="post on-list">
-                    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/reso-intro/">`reso`, a colorful pixel-art circuit simulator</a></h1>
-    <div class="post-meta-inline">
-        <span class="post-date">
-            2021-05-15
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.dev/tags/project/">#project</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.dev/tags/python/">#python</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.dev/tags/reso/">#reso</a></span>
-    
-
-                    
-        <div class="post-content">
-            <p>Reso is a circuit design language and simulator where the inputs and outputs are bitmap images!</p>
-<p><img src="/posts/images/reso_logo.gif" alt="Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds." title="Reso logo, incrementing over a truth table in an artistically-crafted circuit. Outputting AND, OR, and XOR to the diamonds. " /></p>
-<p>Reso is a pet project of mine that I've been working on in my free time for a little while. This logo is actually an animation of the execution of a Reso circuit.</p>
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.dev/posts/reso-intro/">
                 <span class="button__text">Read more</span>&nbsp;
                 <span class="button__icon">&#8617;&#xFE0E;</span>
             </a>
