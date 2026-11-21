@@ -60,6 +60,52 @@
             <!-- This points `index.html` to `posts` -->
             
                 <div class="post on-list">
+                    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/suboptimal-password-schemes/">(Pt 1) Schemes for the Passwords you Don&#39;t Put in the Password Manager</a></h1>
+    <div class="post-meta-inline">
+        <span class="post-date">
+            2026-02-24
+        </span>
+
+    </div>
+
+    
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/passwords/">#passwords</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/post/">#post</a>&nbsp;
+                <a class="post-tag" href="https://lynndotpy.dev/tags/security/">#security</a></span>
+    
+
+                    
+        <div class="post-content">
+            <p>The correct answers regarding passwords are the following:</p>
+<ol>
+<li>Prefer key authentication, such as with SSH, when possible.</li>
+<li>Use TOTP 2FA when possible.</li>
+<li>Use a password manager, with strong (highly entropic) and unique passwords.</li>
+</ol>
+<p>This is all fine and dandy, but what about your computer? Your phone? Your password manager itself? These are passwords you do <em>not</em> store in your password manager, and you should memorize strong and unique passwords for these.</p>
+<p>Keeping in mind that choosing a good password is not necessarily about having high entropy. A highly-entropic source could generate "password!123" as a random, twelve-character password. The actual goal is to choose a password that your attacker is very unlikely to guess.</p>
+<p>In practice, the attacker wants to construct a distribution $P$ of passwords <em>you</em> are most likely to have, and you want to anticipate this to choose a password from the complementary distribution $P'$. It's just the case that a dedicated attacker is usually much smarter than you, and by trying to anticipate what $P'$ is, you are more likely to choose a password higher up in the ranking implied by $P$ than if you just went with a long, random one to begin with.</p>
+<p>With all that said... <em>You still need to memorize some passwords</em>. Deriving passwords has worked well for me and many others before adopting a password manager.</p>
+        </div>
+        <div>
+            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
+            <a class="read-more button" href="https://lynndotpy.dev/posts/suboptimal-password-schemes/">
+                <span class="button__text">Read more</span>&nbsp;
+                <span class="button__icon">&#8617;&#xFE0E;</span>
+            </a>
+        </div>
+    
+
+                </div>
+                <!--
+                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
+                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
+                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
+                -->
+            
+                <div class="post on-list">
                     <h1 class="post-title"><a href="https://lynndotpy.dev/posts/digital-minimalism-two-smartphones/">Digital minimalism through two smartphones works for me</a></h1>
     <div class="post-meta-inline">
         <span class="post-date">
@@ -214,45 +260,6 @@
         <div>
             <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
             <a class="read-more button" href="https://lynndotpy.dev/posts/2025-retrospective/">
-                <span class="button__text">Read more</span>&nbsp;
-                <span class="button__icon">&#8617;&#xFE0E;</span>
-            </a>
-        </div>
-    
-
-                </div>
-                <!--
-                <p style="text-align: center; margin: 0; padding: 0; line-height: 1">❖◈◆◈❖</p>
-                <p style="text-align: center; margin: -0.6em; padding: 0; line-height: 1">❖◈◈❖</p>
-                <p style="text-align: center; margin: -0.5em; padding: 0; line-height: 1">◆</p>
-                -->
-            
-                <div class="post on-list">
-                    <h1 class="post-title"><a href="https://lynndotpy.dev/posts/2024-retrospective/">Looking back on a productive 2024</a></h1>
-    <div class="post-meta-inline">
-        <span class="post-date">
-            2024-12-31
-        </span>
-
-    </div>
-
-    
-        <span class="post-tags-inline">
-                :: tags:&nbsp;
-                <a class="post-tag" href="https://lynndotpy.dev/tags/blog/">#blog</a>&nbsp;
-                <a class="post-tag" href="https://lynndotpy.dev/tags/post/">#post</a></span>
-    
-
-                    
-        <div class="post-content">
-            <p>Whew, 2024 was quite a year. This was a year where I had a surplus of free time. I twiddled away on Blender projects, I picked up photography and guitar, I made a new friend, and <em>Sonic the Hedgehog 3</em> released, which was maybe the highlight of my year.</p>
-<p>But this is a <em>devblog</em>, so, much as I'd love to, this won't be a <em>Sonic the Hedgehog 3</em> blogpost.</p>
-<p>In my day job, I'm still just doing fullstack dev: Docker, Postgres, C#/.NET, TypeScript, Angular, some Python, and a teensy bit of Go and Rust. It's all proprietary, so I can't tell you more here. Womp womp.</p>
-<p>But I got <em>a lot</em> done in 2024.</p>
-        </div>
-        <div>
-            <!-- &#xFE0E; -- force text style - some devices render this as emoji -->
-            <a class="read-more button" href="https://lynndotpy.dev/posts/2024-retrospective/">
                 <span class="button__text">Read more</span>&nbsp;
                 <span class="button__icon">&#8617;&#xFE0E;</span>
             </a>
